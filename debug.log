@@ -1,0 +1,466 @@
+2024-07-08 15:03:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-08 15:04:28 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:04:38 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-08 09:34:38.368157+00:00
+2024-07-08 15:04:38 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 1chandailrc1@gmail.com
+2024-07-08 15:04:38 - tracking.views - INFO - Sending email to chandailrc@gmail.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:04:48 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrc@gmail.com at 2024-07-08 09:34:48.558501+00:00
+2024-07-08 15:04:48 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrc@gmail.com
+2024-07-08 15:04:48 - tracking.views - INFO - Sending email to chandailrc@hotmail.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:04:58 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrc@hotmail.com at 2024-07-08 09:34:58.741147+00:00
+2024-07-08 15:04:58 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrc@hotmail.com
+2024-07-08 15:04:58 - tracking.views - INFO - Sending email to singhal1959a@gmail.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:05:08 - tracking.email_utils - INFO - email_utils.py: Email db entry created for singhal1959a@gmail.com at 2024-07-08 09:35:08.911913+00:00
+2024-07-08 15:05:09 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to singhal1959a@gmail.com
+2024-07-08 15:05:09 - tracking.views - INFO - Sending email to singhal24a@gmail.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:05:19 - tracking.email_utils - INFO - email_utils.py: Email db entry created for singhal24a@gmail.com at 2024-07-08 09:35:19.104186+00:00
+2024-07-08 15:05:19 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to singhal24a@gmail.com
+2024-07-08 15:05:19 - tracking.views - INFO - Sending email to chandailrcsai@gmail.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:05:29 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrcsai@gmail.com at 2024-07-08 09:35:29.302864+00:00
+2024-07-08 15:05:29 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrcsai@gmail.com
+2024-07-08 15:05:29 - tracking.views - INFO - Sending email to chandailrcsai@yahoo.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:05:39 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrcsai@yahoo.com at 2024-07-08 09:35:39.467880+00:00
+2024-07-08 15:05:39 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrcsai@yahoo.com
+2024-07-08 15:05:39 - tracking.views - INFO - Sending email to chandailrcsai@aol.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:05:49 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrcsai@aol.com at 2024-07-08 09:35:49.912182+00:00
+2024-07-08 15:05:50 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrcsai@aol.com
+2024-07-08 15:05:50 - tracking.views - INFO - Sending email to chandailrcsai@outlook.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:06:00 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrcsai@outlook.com at 2024-07-08 09:36:00.109417+00:00
+2024-07-08 15:06:00 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrcsai@outlook.com
+2024-07-08 15:06:00 - tracking.views - INFO - Sending email to spamtestsai@outlook.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:06:10 - tracking.email_utils - INFO - email_utils.py: Email db entry created for spamtestsai@outlook.com at 2024-07-08 09:36:10.335876+00:00
+2024-07-08 15:06:10 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to spamtestsai@outlook.com
+2024-07-08 15:06:10 - tracking.views - INFO - Sending email to 4x8wu32z@temporary-mail.net. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:06:20 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 4x8wu32z@temporary-mail.net at 2024-07-08 09:36:20.522761+00:00
+2024-07-08 15:06:20 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 4x8wu32z@temporary-mail.net
+2024-07-08 15:06:20 - tracking.views - INFO - Sending email to tepanogudid@jollyfree.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:06:30 - tracking.email_utils - INFO - email_utils.py: Email db entry created for tepanogudid@jollyfree.com at 2024-07-08 09:36:30.714309+00:00
+2024-07-08 15:06:30 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to tepanogudid@jollyfree.com
+2024-07-08 15:06:30 - tracking.views - INFO - Sending email to averey@eachence.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:06:40 - tracking.email_utils - INFO - email_utils.py: Email db entry created for averey@eachence.com at 2024-07-08 09:36:40.875897+00:00
+2024-07-08 15:06:40 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to averey@eachence.com
+2024-07-08 15:06:40 - tracking.views - INFO - Sending email to lamoruze@pelagius.net. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:06:51 - tracking.email_utils - INFO - email_utils.py: Email db entry created for lamoruze@pelagius.net at 2024-07-08 09:36:51.057452+00:00
+2024-07-08 15:06:51 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to lamoruze@pelagius.net
+2024-07-08 15:06:51 - tracking.views - INFO - Sending email to hqszmzse@flymail.tk. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:07:01 - tracking.email_utils - INFO - email_utils.py: Email db entry created for hqszmzse@flymail.tk at 2024-07-08 09:37:01.295205+00:00
+2024-07-08 15:07:01 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to hqszmzse@flymail.tk
+2024-07-08 15:07:01 - tracking.views - INFO - Sending email to jixamo8511@carspure.com. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:07:11 - tracking.email_utils - INFO - email_utils.py: Email db entry created for jixamo8511@carspure.com at 2024-07-08 09:37:11.389749+00:00
+2024-07-08 15:07:11 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to jixamo8511@carspure.com
+2024-07-08 15:07:11 - tracking.views - INFO - Sending email to spamtestersai@maildrop.cc. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:07:21 - tracking.email_utils - INFO - email_utils.py: Email db entry created for spamtestersai@maildrop.cc at 2024-07-08 09:37:21.531835+00:00
+2024-07-08 15:07:21 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to spamtestersai@maildrop.cc
+2024-07-08 15:07:21 - tracking.views - INFO - Sending email to mtkzvf@vobau.net. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:07:31 - tracking.email_utils - INFO - email_utils.py: Email db entry created for mtkzvf@vobau.net at 2024-07-08 09:37:31.687282+00:00
+2024-07-08 15:07:31 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to mtkzvf@vobau.net
+2024-07-08 15:07:31 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2253
+2024-07-08 15:07:32 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 251258
+2024-07-08 15:07:32 - tracking.urls - INFO - urls.py: PIXEL Request received for email 1chandailrc1@gmail.com from ip: 127.0.0.1
+2024-07-08 15:07:32 - tracking.views - INFO - View2 called. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:07:32 - tracking.views - INFO - views.py/handle_tracking: Current time: 2024-07-08 09:37:32.126707+00:00 | Mail sent: 2024-07-08 09:34:38.295437+00:00 | Difference: 0:02:53.831270
+2024-07-08 15:07:32 - tracking.urls - INFO - urls.py: PIXEL Request received for email chandailrc@gmail.com from ip: 127.0.0.1
+2024-07-08 15:07:32 - tracking.views - INFO - View2 called. Process ID: 52663, Thread ID: 138477741573696
+2024-07-08 15:07:32 - tracking.views - INFO - views.py/handle_tracking: Current time: 2024-07-08 09:37:32.279086+00:00 | Mail sent: 2024-07-08 09:34:48.471402+00:00 | Difference: 0:02:43.807684
+2024-07-09 14:33:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:33:44 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/urls.py changed, reloading.
+2024-07-09 14:33:44 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:34:00 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:00 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:34:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:34:36 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:36 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:36 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:36 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:36 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:36 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:37 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:37 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:37 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:37 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:37 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:37 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:37 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:37 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:37 - django.request - WARNING - Not Found: /serve_image
+2024-07-09 14:34:37 - django.server - WARNING - "GET /serve_image HTTP/1.1" 404 3824
+2024-07-09 14:34:46 - django.server - INFO - "GET /serve-image HTTP/1.1" 301 0
+2024-07-09 14:34:46 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/image/transparent.png'
+2024-07-09 14:34:46 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72545
+2024-07-09 14:34:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:34:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:34:54 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:54 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:55 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:55 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:56 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:56 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:56 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:56 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:56 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:56 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:56 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:56 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:56 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:56 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:57 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:57 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:34:57 - django.request - ERROR - Internal Server Error: /serve-image/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/tracker/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py", line 171, in serve_image
+    with open(image_path, 'rb') as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/static/transparent.png'
+2024-07-09 14:34:57 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 72502
+2024-07-09 14:35:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:35:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:35:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:35:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:35:29 - django.server - ERROR - "GET /serve-image/ HTTP/1.1" 500 59
+2024-07-09 14:38:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:38:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:38:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:38:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:38:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:38:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:38:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:38:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:38:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/urls.py changed, reloading.
+2024-07-09 14:38:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:38:45 - django.request - WARNING - Not Found: /serve-image/
+2024-07-09 14:38:45 - django.server - WARNING - "GET /serve-image/ HTTP/1.1" 404 3821
+2024-07-09 14:38:50 - django.server - ERROR - "GET /image/ HTTP/1.1" 500 59
+2024-07-09 14:40:27 - django.server - ERROR - "GET /image/ HTTP/1.1" 500 59
+2024-07-09 14:41:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:41:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:41:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:41:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:41:45 - django.server - INFO - "GET /image/ HTTP/1.1" 200 95
+2024-07-09 14:42:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:42:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:42:39 - django.server - INFO - "GET /image/ HTTP/1.1" 200 95
+2024-07-09 14:42:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/views.py changed, reloading.
+2024-07-09 14:42:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 14:43:11 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker/tracking/urls.py changed, reloading.
+2024-07-09 14:43:11 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 15:32:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-09 15:33:23 - django.server - INFO - "GET /send-tracked-email/ HTTP/1.1" 200 2174
+2024-07-09 15:33:23 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-09 15:33:26 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 252570
+2024-07-09 15:33:26 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-09 15:33:34 - tracking.views - INFO - Sending email to test@test.com. Process ID: 83051, Thread ID: 129525456062016
+2024-07-09 15:33:45 - tracking.email_utils - INFO - email_utils.py: Email db entry created for test@test.com at 2024-07-09 10:03:45.037951+00:00
+2024-07-09 15:33:45 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to test@test.com
+2024-07-09 15:33:45 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-09 15:33:45 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-09 15:33:52 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-09 15:33:52 - tracking.views - INFO - View2 called. Process ID: 83051, Thread ID: 129525456062016
+2024-07-09 15:33:52 - tracking.views - INFO - views.py/handle_tracking: Current time: 2024-07-09 10:03:52.195691+00:00 | Mail sent: 2024-07-09 10:03:44.974250+00:00 | Difference: 0:00:07.221441
+2024-07-09 15:33:52 - django.server - INFO - "GET /track/0856d82a205144cd8ba67633047342f5/pixel.png HTTP/1.1" 200 67
+2024-07-09 15:33:56 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 253743
+2024-07-09 15:34:15 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-09 15:34:15 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-09 17:19:42 - django.request - WARNING - Not Found: /
+2024-07-09 17:19:43 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-09 17:19:56 - django.request - ERROR - Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "tracking_email" does not exist
+LINE 1: ...ng_email"."body", "tracking_email"."sent_at" FROM "tracking_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 212, in dashboard
+    return render(request, 'dashboard.html', {'emails': emails, 'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 198, in render
+    len_values = len(values)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "tracking_email" does not exist
+LINE 1: ...ng_email"."body", "tracking_email"."sent_at" FROM "tracking_...
+                                                             ^
+
+2024-07-09 19:04:12 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-09 20:19:56 - tracking.views - INFO - Sending email to 1chandairlc1@gmail.com. Process ID: 12978, Thread ID: 136044989118016
+2024-07-09 20:20:06 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandairlc1@gmail.com at 2024-07-09 14:50:06.120298+00:00
+2024-07-09 20:20:06 - tracking.email_utils - ERROR - email_utils.py: Error sending email to 1chandairlc1@gmail.com: [Errno 111] Connection refused
+2024-07-09 20:22:05 - tracking.views - INFO - Sending email to 1chandairlc1@gmail.com. Process ID: 41559, Thread ID: 128188309042752
+2024-07-09 20:22:15 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandairlc1@gmail.com at 2024-07-09 14:52:15.983360+00:00
+2024-07-09 20:22:22 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 1chandairlc1@gmail.com
+2024-07-09 21:12:58 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 49502, Thread ID: 136248683394624
+2024-07-09 21:13:08 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-09 15:43:08.226009+00:00
+2024-07-09 21:13:13 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 1chandailrc1@gmail.com
+2024-07-09 22:20:18 - django.request - ERROR - Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 229, in dashboard
+    return render(request, 'dashboard.html', {'emails': emails, 'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 77: 'endblock'. Did you forget to register or load this tag?
+2024-07-09 22:24:13 - django.request - ERROR - Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 229, in dashboard
+    return render(request, 'dashboard.html', {'emails': emails, 'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 77: 'endblock'. Did you forget to register or load this tag?
+2024-07-09 22:25:06 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:29:18 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:29:22 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:34:09 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:39:38 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:44:29 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:47:47 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:48:12 - django.request - ERROR - Internal Server Error: /empty-database/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 265, in _get_response_async
+    self.check_response(response, callback)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view tracking.views.empty_database didn't return an HttpResponse object. It returned None instead.
+2024-07-09 22:48:34 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:50:47 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:50:59 - django.request - WARNING - Not Found: /empty-database/dashboard.html
+2024-07-09 22:51:04 - django.request - WARNING - Not Found: /dashboard.html
+2024-07-09 22:51:07 - django.request - WARNING - Not Found: /dashboard.html

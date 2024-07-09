@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose Email</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        label { display: block; margin-top: 10px; }
+        input[type="text"], input[type="email"], input[type="number"], textarea, select { width: 100%; padding: 5px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px; }
+        .alert { background-color: #d4edda; border-color: #c3e6cb; color: #155724; padding: 10px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h2>Compose Email</h2>
+    {% if confirmation_message %}
+    <div class="alert">
+        {{ confirmation_message }}
+    </div>
+    {% endif %}
+    <form method="post" action="{% url 'send_tracked_email_view' %}">
+        {% csrf_token %}
+        
+        <label for="recipients">Recipients (one email per line):</label>
+        <textarea id="recipients" name="recipients" rows="5" required></textarea>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" rows="10" required></textarea>
+        
+        <label for="delay_type">Delay Type:</label>
+        <select id="delay_type" name="delay_type" required>
+            <option value="fixed">Fixed Delay</option>
+            <option value="random">Random Delay</option>
+        </select>
+        
+        <label for="delay_value">Fixed Delay (seconds):</label>
+        <input type="number" id="delay_value" name="delay_value" min="0" value="0" required>
+        
+        <label for="min_delay">Minimum Delay (seconds):</label>
+        <input type="number" id="min_delay" name="min_delay" min="0" value="0" required>
+        
+        <label for="max_delay">Maximum Delay (seconds):</label>
+        <input type="number" id="max_delay" name="max_delay" min="0" value="0" required>
+        
+        <button type="submit">Send Emails</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Email Tracking Dashboard{% endblock %}
+
+{% block header %}Email Tracking Dashboard{% endblock %}
+
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Recipient</th>
+            <th>Subject</th>
+            <th>Sent At</th>
+            <th>Opens</th>
+            <th>Tracking Logs</th>
+            <th>Links</th>
+            <th>Unsubscribed</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for email in emails %}
+            <tr>
+                <td>{{ email.id }}</td>
+                <td>{{ email.recipient }}</td>
+                <td>{{ email.subject }}</td>
+                <td>{{ email.sent_at }}</td>
+                <td>{{ email.trackinglog_set.count }}</td>
+                <td>
+                    {% if email.trackinglog_set.all %}
+                        <ul>
+                            {% for log in email.trackinglog_set.all %}
+                                <li>
+                                    {% if log.tracking_type == 'css' %}
+                                        <span class="css-tag">CSS</span>
+                                    {% elif log.tracking_type == 'pixel' %}
+                                        <span class="pixel-tag">PNG</span>
+                                    {% endif %}
+                                    <br>
+                                    <strong>Opened At:</strong> {{ log.opened_at }}<br>
+                                    <strong>IP Address:</strong> {{ log.ip_address }}<br>
+                                    <strong>User Agent:</strong> {{ log.user_agent }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        No tracking logs
+                    {% endif %}
+                </td>
+                <td>
+                    {% for link in email.link_set.all %}
+                        <a href="{{ link.url }}">{{ link.url }}</a><br>
+                        Clicks: {{ link.linkclick_set.count }}<br>
+                        {% for click in link.linkclick_set.all %}
+                            <strong>Clicked At:</strong> {{ click.clicked_at }}<br>
+                            <strong>IP Address:</strong> {{ click.ip_address }}<br>
+                            <strong>User Agent:</strong> {{ click.user_agent }}<br><br>
+                        {% endfor %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% if email.recipient in unsubscribed_emails %}
+                        Yes
+                    {% else %}
+                        No
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<form method="post" action="{% url 'empty_database' %}">
+    {% csrf_token %}
+    <button type="submit">Empty Database</button>
+</form>
+{% endblock %}
