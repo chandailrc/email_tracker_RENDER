@@ -17,18 +17,20 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+env = environ.Env()
+# Read the .env file
 env_file = os.path.join(BASE_DIR, '.env')
 if os.path.exists(env_file):
     environ.Env.read_env(env_file)
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-6qpp#&5@kf2krj#ya942c^zu#fdbtvwd-yosm2hlagh%9)&txu'
+SECRET_KEY = env('SECRET_KEY', default='django-insecure-6qpp#&5@kf2krj#ya942c^zu#fdbtvwd-yosm2hlagh%9)&txu')
+DEBUG = env.bool('DEBUG', default=False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = []
 
@@ -54,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -86,9 +89,21 @@ WSGI_APPLICATION = 'email_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+# Replace the SQLite DATABASES configuration with PostgreSQL:
+DATABASE_USER = env('POSTGRESQL_USER')
+DATABASE_PASS = env('POSTGRESQL_PASS')
+DATABASE_NAME = env('POSTGRESQL_DB_NAME')
+    
 DATABASES = {
     'default': dj_database_url.config(
-        default=f'postgresql://email_tracker_user:password@localhost:5432/email_tracker_db',
+        default= env.db(),
         #f'postgresql://{DATABASE_USER}:{DATABASE_PASS}@localhost:5432/{DATABASE_NAME}',
         #f'postgresql://email_tracker_user:password@localhost:5432/email_tracker_db',
         conn_max_age=600)
@@ -132,13 +147,20 @@ USE_TZ = True
 # STATIC_URL = 'static/'
 STATIC_URL = '/static/'
 
-# The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+# This production code might break development mode, so we check whether we're in DEBUG mode
+if not DEBUG:    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Additional locations the staticfiles app will traverse to collect static files.
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# # The absolute path to the directory where collectstatic will collect static files for deployment.
+# STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+
+# # Additional locations the staticfiles app will traverse to collect static files.
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -155,12 +177,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EXAMPLE: "GMAIL_EMAIL_USER"
 
 #Email settings
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
-# EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
+EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
 
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -184,13 +206,13 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # DEFAULT_FROM_EMAIL = env('MAILGUN_DEFAULT_EMAIL')  # Replace with your default email address
 
 # MAILHOG
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = False
 
 # Site URL for tracking pixel
 BASE_URL = 'http://127.0.0.1:8000'
