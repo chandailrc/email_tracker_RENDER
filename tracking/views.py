@@ -66,11 +66,11 @@ def handle_tracking(request, token, is_pixel):
                 time_diff = curr_time - last_log.opened_at
 
                 if time_diff <= timedelta(seconds=4):
-                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_difference}")
+                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
                     logger.warning(f"views.py/handle_tracking: Request received for for {recipient} with email_id {email_id} within 4 secs. Random fetching. Abandoning request!")
                     return HttpResponse("Not found", status=404)
                 else:
-                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_difference}")
+                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
                     print("Greater than 4 seconds since the last log")
                     
             else:
