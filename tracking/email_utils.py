@@ -32,7 +32,7 @@ def send_tracked_email(recipient, subject, body):
     if UnsubscribedUser.objects.filter(email=recipient).exists():
         logger.info(f"email_utils.py: Email not sent to {recipient} as they have unsubscribed.")
         return False
-    time.sleep(10)
+    # time.sleep(10)
 
     try:
         email = Email.objects.create(recipient=recipient, subject=subject, body=body, sent_at=timezone.now())
