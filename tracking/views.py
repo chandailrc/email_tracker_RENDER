@@ -52,27 +52,27 @@ def handle_tracking(request, token, is_pixel):
 
         # Compare the difference
         if time_difference <= timedelta(seconds=5):
-            # Do action A
-            logger.info(f"views.py/handle_tracking: Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
-            logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within 3 secs. Potential prefetching. Abandoning request!")
-            # Perform action A (e.g., set a variable, call a function, etc.)
+            
+            logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
+            logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within 5 secs. Potential prefetching. Abandoning request!")
+            
             return HttpResponse("Not found", status=404)
         else:
-            logger.info(f"views.py/handle_tracking: Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
+            logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
             # Retrieve the most recent TrackingLog for this email
             last_log = TrackingLog.objects.filter(email=mail).order_by('-opened_at').first()
 
             if last_log:
                 time_diff = curr_time - last_log.opened_at
 
-                if time_diff <= timedelta(seconds=2):
-                    # Do A
-                    logger.warning(f"views.py/handle_tracking: Request received for for {recipient} with email_id {email_id} within 2 secs. Random fetching. Abandoning request!")
+                if time_diff <= timedelta(seconds=4):
+                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_difference}")
+                    logger.warning(f"views.py/handle_tracking: Request received for for {recipient} with email_id {email_id} within 4 secs. Random fetching. Abandoning request!")
                     return HttpResponse("Not found", status=404)
                 else:
-                    # Do B
-                    print("Greater than 2 seconds since the last log")
-                    # Add your logic for B here
+                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_difference}")
+                    print("Greater than 4 seconds since the last log")
+                    
             else:
                 # If there is no previous log, you might want to treat it as case A or B
                 # depending on your application logic
