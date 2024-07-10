@@ -26,15 +26,19 @@ if os.path.exists(env_file):
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY', default='django-insecure-6qpp#&5@kf2krj#ya942c^zu#fdbtvwd-yosm2hlagh%9)&txu')
-DEBUG = env.bool('DEBUG', default=False)
+SECRET_KEY = env('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env('DEBUG').lower() == "true"
 
 # ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '1chandailrc1.pythonanywhere.com']
+ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(",")
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME') 
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'b28d-2405-201-5009-6022-8fef-7e89-a12e-b610.ngrok-free.app']
 
@@ -97,13 +101,13 @@ WSGI_APPLICATION = 'email_tracker.wsgi.application'
 # }
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:
-DATABASE_USER = env('POSTGRESQL_USER')
-DATABASE_PASS = env('POSTGRESQL_PASS')
-DATABASE_NAME = env('POSTGRESQL_DB_NAME')
+# DATABASE_USER = env('POSTGRESQL_USER')
+# DATABASE_PASS = env('POSTGRESQL_PASS')
+# DATABASE_NAME = env('POSTGRESQL_DB_NAME')
     
 DATABASES = {
     'default': dj_database_url.config(
-        default= env.db(),
+        default= env('DATABASE_URL'),
         #f'postgresql://{DATABASE_USER}:{DATABASE_PASS}@localhost:5432/{DATABASE_NAME}',
         #f'postgresql://email_tracker_user:password@localhost:5432/email_tracker_db',
         conn_max_age=600)
@@ -215,7 +219,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # EMAIL_USE_SSL = False
 
 # Site URL for tracking pixel
-BASE_URL = 'http://127.0.0.1:8000'
+BASE_URL = env('BASE_URL')#'http://127.0.0.1:8000'
 # BASE_URL = 'http://1chandailrc1.pythonanywhere.com'
 # BASE_URL = 'https://b28d-2405-201-5009-6022-8fef-7e89-a12e-b610.ngrok-free.app'
 
