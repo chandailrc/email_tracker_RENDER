@@ -851,3 +851,18 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_users' n
 2024-07-11 10:26:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-11 10:26:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
 2024-07-11 10:26:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-11 10:40:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-11 10:40:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-11 10:41:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-11 10:41:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-11 10:41:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-11 10:41:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-11 10:42:07 - tracking.views - INFO - Sending email to another@t.com. Process ID: 25019, Thread ID: 137823072024128
+2024-07-11 10:42:07 - tracking.email_utils - INFO - email_utils.py: Email db entry created for another@t.com at 2024-07-11 05:12:07.058251+00:00
+2024-07-11 10:42:07 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to another@t.com
+2024-07-11 10:42:07 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-11 10:42:16 - tracking.urls - INFO - urls.py: PIXEL Request received for email another@t.com from ip: 127.0.0.1
+2024-07-11 10:42:16 - tracking.views - INFO - View2 called. Process ID: 25019, Thread ID: 137823063631424
+2024-07-11 10:42:16 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-11 05:12:16.841199+00:00 | Mail sent: 2024-07-11 05:12:07.015337+00:00 | Difference: 0:00:09.825862
+2024-07-11 10:42:16 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-11 10:42:16 - django.server - INFO - "GET /track/1346ecea596e4bb093e97c99a7f7f68a/pixel.png HTTP/1.1" 200 67
