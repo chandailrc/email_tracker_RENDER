@@ -110,8 +110,8 @@ def handle_tracking(request, token, is_pixel):
                 
                 response = FileResponse(png_data, content_type='image/png')
                 response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-                response['Pragma'] = 'no-cache'
-                response['Expires'] = '0'
+                # response['Pragma'] = 'no-cache'
+                # response['Expires'] = '0'
 
                 # Delete the token after use to prevent reuse
                 # pixel_token.delete()
@@ -144,8 +144,8 @@ def serve_image(request, image_name):
             png_data = png_file.read()
             response = FileResponse(png_data, content_type="image/png")
             response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-            response['Pragma'] = 'no-cache'
-            response['Expires'] = '0'
+            # response['Pragma'] = 'no-cache'
+            # response['Expires'] = '0'
 
         return response#FileResponse(open(image_path, 'rb'), content_type='image/png')
     else:
