@@ -870,3 +870,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_users' n
 2024-07-11 10:46:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-11 10:46:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
 2024-07-11 10:46:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-11 12:42:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-11 12:42:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-11 12:43:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-11 12:43:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

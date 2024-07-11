@@ -102,11 +102,16 @@ def handle_tracking(request, token, is_pixel):
                 # base64_png = base64.b64encode(png_data).decode('utf-8')
 
                 # Return a 1x1 transparent pixel
-                response = HttpResponse(content_type="image/png")
+                # response = HttpResponse(content_type="image/png")
+                # response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+                # response['Pragma'] = 'no-cache'
+                # response['Expires'] = '0'
+                # response.write(png_data)
+                
+                response = FileResponse(png_data, content_type='image/png')
                 response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
                 response['Pragma'] = 'no-cache'
                 response['Expires'] = '0'
-                response.write(png_data)
 
                 # Delete the token after use to prevent reuse
                 # pixel_token.delete()
@@ -135,13 +140,13 @@ def handle_tracking(request, token, is_pixel):
 def serve_image(request, image_name):
     image_path = os.path.join(settings.BASE_DIR, 'static/images', image_name)
     if os.path.exists(image_path):
-        response = HttpResponse(content_type="image/png")
-        response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-        response['Pragma'] = 'no-cache'
-        response['Expires'] = '0'
         with open(image_path, 'rb') as png_file:
             png_data = png_file.read()
-        response.write(png_data)
+            response = FileResponse(png_data, content_type="image/png")
+            response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+            response['Pragma'] = 'no-cache'
+            response['Expires'] = '0'
+
         return response#FileResponse(open(image_path, 'rb'), content_type='image/png')
     else:
         return HttpResponse('Image not found.', status=404)
