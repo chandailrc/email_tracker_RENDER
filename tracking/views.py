@@ -109,7 +109,7 @@ def handle_tracking(request, token, is_pixel):
                 # response.write(png_data)
                 
                 response = FileResponse(png_data, content_type='image/png')
-                response['Cache-Control'] = 'private, no-cache, no-store, must-revalidate'
+                response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
                 response['Pragma'] = 'no-cache'
                 response['Expires'] = '0'
 
@@ -144,7 +144,7 @@ def serve_image(request, image_name):
         with open(image_path, 'rb') as png_file:
             png_data = png_file.read()
             response = FileResponse(png_data, content_type="image/png")
-            response['Cache-Control'] = 'private, no-cache, no-store, must-revalidate'
+            response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
             response['Pragma'] = 'no-cache'
             response['Expires'] = '0'
 
