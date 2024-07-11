@@ -19,4 +19,8 @@
         {% endfor %}
     </tbody>
 </table>
+<form method="post" action="{% url 'delete_unsubscribed_users' %}">
+    {% csrf_token %}
+    <button type="submit">Flush list</button>
+</form>
 {% endblock %}

@@ -132,46 +132,13 @@ def handle_tracking(request, token, is_pixel):
     except TrackingPixelToken.DoesNotExist:
         return HttpResponse("Not found", status=404)
 
-# def tracking_pixel(request, token):
-#     # Get the TrackingPixelToken or return 404 if not found
-#     pixel_token = get_object_or_404(TrackingPixelToken, token=token) #, expires_at__gt=timezone.now())
+def serve_image(request, image_name):
+    image_path = os.path.join(settings.BASE_DIR, 'static/images', image_name)
+    if os.path.exists(image_path):
+        return FileResponse(open(image_path, 'rb'), content_type='image/png')
+    else:
+        return HttpResponse('Image not found.', status=404)
 
-#     email = pixel_token.email
-
-#     # Log the email open event with a timestamp
-#     logger.info(f"views.py: Request received for email {email.id} at {timezone.now()}")
-
-#     TrackingLog.objects.create(
-#         email=email,
-#         ip_address=request.META.get('REMOTE_ADDR'),
-#         user_agent=request.META.get('HTTP_USER_AGENT'),
-#         opened_at=timezone.now()
-#     )
-
-#     # 1x1 transparent PNG pixel
-#     png_data = b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\x0aIDATx\x9c\x63\x60\x00\x00\x00\x02\x00\x01\xe2!\xbc\x33\x00\x00\x00\x00IEND\xaeB`\x82'
-
-#     # Encode the PNG data to base64
-#     # base64_png = base64.b64encode(png_data).decode('utf-8')
-
-#     # Return a 1x1 transparent pixel
-#     response = HttpResponse(content_type="image/png")
-#     response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-#     response['Pragma'] = 'no-cache'
-#     response['Expires'] = '0'
-#     response.write(png_data)  # Write the raw PNG data, not the base64 encoded version
-
-#     # Delete the token after use to prevent reuse
-#     # pixel_token.delete()
-
-#     return response
-
-# def serve_image(request):
-#     image_path = os.path.join(settings.BASE_DIR, 'static/images', 'transparent.png')
-#     if os.path.exists(image_path):
-#         return FileResponse(open(image_path, 'rb'), content_type='image/png')
-#     else:
-#         return HttpResponse('Image not found.', status=404)
 from django.urls import reverse
 def empty_database(request):
     # Ensure that only POST requests can trigger this action (for safety)
@@ -180,12 +147,14 @@ def empty_database(request):
         Email.objects.all().delete()
         TrackingLog.objects.all().delete()
         Link.objects.all().delete()
-        LinkClick.objects.all().delete()
-        UnsubscribedUser.objects.all().delete()
-        
+        LinkClick.objects.all().delete()        
         # Redirect to a success page or back to the dashboard
         return redirect(reverse('dashboard'))  # Adjust 'dashboard' to your actual dashboard URL name
 
+def delete_unsubscribed_users(request):
+    if request.method == 'POST':
+        UnsubscribedUser.objects.all().delete()
+        return redirect('unsubscribed_users_list')
 
 def track_email(request, email_id):
     try:

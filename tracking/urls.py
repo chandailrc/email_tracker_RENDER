@@ -38,6 +38,7 @@ def log_request_link(view_func):
     return wrapper
 
 urlpatterns = [
+    path('serve-image/<str:image_name>/', serve_image, name='serve_image'),
     path('empty-database/', empty_database, name='empty_database'),
     path('compose/', compose_email_view, name='compose_email'),
     path('send-tracked-email/', send_tracked_email_view, name='send_tracked_email_view'),
@@ -48,6 +49,7 @@ urlpatterns = [
     path('track-link/<int:link_id>/', log_request_link(track_link), name='track_link'),
     path('unsubscribe/', unsubscribe, name='unsubscribe'),
     path('unsubscribed_users/', unsubscribed_users_list, name='unsubscribed_users_list'),
+    path('delete-unsubscribed-users/', delete_unsubscribed_users, name='delete_unsubscribed_users'),
     # path('image/', serve_image, name='serve_image'),
 
 ]
