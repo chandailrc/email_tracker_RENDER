@@ -866,3 +866,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_users' n
 2024-07-11 10:42:16 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-11 05:12:16.841199+00:00 | Mail sent: 2024-07-11 05:12:07.015337+00:00 | Difference: 0:00:09.825862
 2024-07-11 10:42:16 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
 2024-07-11 10:42:16 - django.server - INFO - "GET /track/1346ecea596e4bb093e97c99a7f7f68a/pixel.png HTTP/1.1" 200 67
+2024-07-11 10:46:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-11 10:46:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-11 10:46:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-11 10:46:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

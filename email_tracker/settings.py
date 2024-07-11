@@ -181,12 +181,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EXAMPLE: "GMAIL_EMAIL_USER"
 
 #Email settings
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
-# EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
+EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
 
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -210,13 +210,13 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # DEFAULT_FROM_EMAIL = env('MAILGUN_DEFAULT_EMAIL')  # Replace with your default email address
 
 # MAILHOG
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = False
 
 # Site URL for tracking pixel
 BASE_URL = env('BASE_URL')#'http://127.0.0.1:8000'
