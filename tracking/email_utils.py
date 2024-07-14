@@ -99,6 +99,18 @@ def send_tracked_email(recipient, subject, body):
         </body>
         </html>
         """
+        
+        # <body>
+        #     <img src="{pixel_url}" alt="" width="1" height="1" style="display:none;">
+        #     <img src="{visible_image_url}" alt="Company Logo" width="44" height="55" class="logo">
+        #     <div>{html_body}</div>
+        #     <div class="footer">
+        #         <p>This email was sent to {recipient}. If you no longer wish to receive these emails, you can 
+        #         <a href="{settings.BASE_URL}/unsubscribe/?email={recipient}" class="unsubscribe">unsubscribe here</a>.</p>
+        #     </div>
+        # </body>
+        # </html>
+        # """
 
         # def replace_link(match):
         #     original_url = match.group(0)

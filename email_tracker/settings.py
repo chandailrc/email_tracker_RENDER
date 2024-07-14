@@ -180,43 +180,57 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #!!!!!!!!! IMPORTANT !!!!!!!!! CHECK .env file in the project root directory for env variables.
 # EXAMPLE: "GMAIL_EMAIL_USER"
 
-#Email settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
-EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
-
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# SENDGRID
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = env('SENDGRID_API_USER')  # This is the string 'apikey', not your username
-# EMAIL_HOST_PASSWORD = env('SENDGRID_API_PASS')  # Replace with your SendGrid API key
-# DEFAULT_FROM_EMAIL = env('SENDGRID_DEFAULT_EMAIL')  # Replace with your default email address
+mail_case = env('MAIL_SERVICE')
 
-# MAILGUN
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.mailgun.org'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = env('MAILGUN_SMTP_USER')  # Replace YOUR_DOMAIN with your Mailgun domain
-# EMAIL_HOST_PASSWORD = env('MAILGUN_SMTP_PASS')  # Replace with your Mailgun SMTP password
-# DEFAULT_FROM_EMAIL = env('MAILGUN_DEFAULT_EMAIL')  # Replace with your default email address
+if mail_case == 'GMAIL':
+    
+    #Email settings
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
+    EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
+    
+elif mail_case == 'MAILGUN':
+    
+    # MAILGUN
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.mailgun.org'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = env('MAILGUN_SMTP_USER')  # Replace YOUR_DOMAIN with your Mailgun domain
+    EMAIL_HOST_PASSWORD = env('MAILGUN_SMTP_PASS')  # Replace with your Mailgun SMTP password
+    DEFAULT_FROM_EMAIL = env('MAILGUN_DEFAULT_EMAIL')  # Replace with your default email address
 
-# MAILHOG
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'localhost'
-# EMAIL_PORT = 1025
-# EMAIL_HOST_USER = ''
-# EMAIL_HOST_PASSWORD = ''
-# EMAIL_USE_TLS = False
-# EMAIL_USE_SSL = False
+    # FOR API ONLY    
+    MAILGUN_API_KEY = env('MAILGUN_API_KEY')
+    MAILGUN_DOMAIN = env('MAILGUN_DOMAIN')
+    
+elif mail_case == 'SENDGRID':
+
+    # SENDGRID
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.sendgrid.net'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = env('SENDGRID_API_USER')  # This is the string 'apikey', not your username
+    EMAIL_HOST_PASSWORD = env('SENDGRID_API_PASS')  # Replace with your SendGrid API key
+    DEFAULT_FROM_EMAIL = env('SENDGRID_DEFAULT_EMAIL')  # Replace with your default email address
+    
+elif mail_case == 'MAILHOG':
+    
+    # MAILHOG
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'localhost'
+    EMAIL_PORT = 1025
+    EMAIL_HOST_USER = ''
+    EMAIL_HOST_PASSWORD = ''
+    EMAIL_USE_TLS = False
+    EMAIL_USE_SSL = False
 
 # Site URL for tracking pixel
 BASE_URL = env('BASE_URL')#'http://127.0.0.1:8000'

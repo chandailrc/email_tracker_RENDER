@@ -38,6 +38,7 @@ def log_request_link(view_func):
     return wrapper
 
 urlpatterns = [
+    path('send-mailgun-mail/', send_mailgun_mail_view, name='mailgun_mail'),
     path('serve-image/<str:image_name>/', serve_image, name='serve_image'),
     path('empty-database/', empty_database, name='empty_database'),
     path('compose/', compose_email_view, name='compose_email'),

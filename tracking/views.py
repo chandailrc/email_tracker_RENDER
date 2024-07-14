@@ -19,6 +19,40 @@ logger = logging.getLogger(__name__)
 
 import base64
 
+from .mailgun_utils import send_email, send_simple_message
+
+def send_mailgun_mail_view(request):
+    subject = "Hello from Mailgun"
+    message = "This is a test email sent via Mailgun. Link --> https://www.google.com"
+    from_email = settings.DEFAULT_FROM_EMAIL
+    recipient_list = [
+                    "1chandailrc1@gmail.com",
+                    "chandailrc@gmail.com",
+                    "chandailrc@hotmail.com",
+                    "singhal1959a@gmail.com",
+                    "singhal24a@gmail.com",
+                    "chandailrcsai@gmail.com",
+                    "chandailrcsai@outlook.com",
+                    "spamtestsai@outlook.com",
+                    "dpo0qnhg@temporary-mail.net",
+                    "bucofomopudi@gotgel.org",
+                    "ines850@magicth.com",
+                    "lamoruze@pelagius.net",
+                    "afoweitbf@10mail.org",
+                    "jixamo8511@carspure.com",
+                    "spamtestersai@maildrop.cc",
+                    "mtkzvf@vobau.net"
+                    ]
+    for recip in [recipient_list[-3]]:
+        # response = send_email(subject, message, from_email, recip)
+        response = send_simple_message(subject, message, from_email, recip)
+    
+    if response.status_code == 200:
+        return HttpResponse("Email sent successfully!")
+    else:
+        return HttpResponse(f"Failed to send email. Status code: {response.status_code}")
+
+
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:

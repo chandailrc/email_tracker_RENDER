@@ -886,3 +886,604 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_users' n
 2024-07-11 14:48:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-11 15:46:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
 2024-07-11 15:46:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 13:27:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 13:27:17 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-13 13:27:21 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-13 13:27:22 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-13 13:27:23 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-13 13:27:50 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 40574, Thread ID: 124392843507264
+2024-07-13 13:27:50 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-13 07:57:50.904709+00:00
+2024-07-13 13:27:55 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 1chandailrc1@gmail.com
+2024-07-13 13:27:55 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-13 13:36:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-13 13:36:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 13:37:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-13 13:37:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 13:37:56 - tracking.views - INFO - Sending email to chandailrc@gmail.com. Process ID: 44254, Thread ID: 128316134651456
+2024-07-13 13:37:56 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrc@gmail.com at 2024-07-13 08:07:56.531421+00:00
+2024-07-13 13:38:01 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrc@gmail.com
+2024-07-13 13:38:01 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-13 13:38:08 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 8923
+2024-07-13 14:24:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-13 14:24:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:35:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-13 14:35:01 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:35:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-13 14:35:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:35:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-13 14:35:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:38:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:38:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:39:11 - django.server - INFO - "GET /send-mailgun-mail HTTP/1.1" 301 0
+2024-07-13 14:39:12 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 38
+2024-07-13 14:41:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-13 14:42:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:42:32 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-13 14:44:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-13 14:44:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 14:44:50 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-13 14:44:50 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-13 16:09:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-13 16:09:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 16:16:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-13 16:16:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-13 16:17:24 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-13 16:19:22 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:22 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-13 10:49:22.722248+00:00
+2024-07-13 16:19:27 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 1chandailrc1@gmail.com
+2024-07-13 16:19:27 - tracking.views - INFO - Sending email to chandailrc@gmail.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:27 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrc@gmail.com at 2024-07-13 10:49:27.105876+00:00
+2024-07-13 16:19:30 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrc@gmail.com
+2024-07-13 16:19:30 - tracking.views - INFO - Sending email to chandailrc@hotmail.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:30 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrc@hotmail.com at 2024-07-13 10:49:30.770870+00:00
+2024-07-13 16:19:34 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrc@hotmail.com
+2024-07-13 16:19:34 - tracking.views - INFO - Sending email to singhal1959a@gmail.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:34 - tracking.email_utils - INFO - email_utils.py: Email db entry created for singhal1959a@gmail.com at 2024-07-13 10:49:34.946154+00:00
+2024-07-13 16:19:39 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to singhal1959a@gmail.com
+2024-07-13 16:19:39 - tracking.views - INFO - Sending email to singhal24a@gmail.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:39 - tracking.email_utils - INFO - email_utils.py: Email db entry created for singhal24a@gmail.com at 2024-07-13 10:49:39.563468+00:00
+2024-07-13 16:19:44 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to singhal24a@gmail.com
+2024-07-13 16:19:44 - tracking.views - INFO - Sending email to chandailrcsai@gmail.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:44 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrcsai@gmail.com at 2024-07-13 10:49:44.051304+00:00
+2024-07-13 16:19:47 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrcsai@gmail.com
+2024-07-13 16:19:47 - tracking.views - INFO - Sending email to chandailrcsai@outlook.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:47 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrcsai@outlook.com at 2024-07-13 10:49:47.594182+00:00
+2024-07-13 16:19:50 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrcsai@outlook.com
+2024-07-13 16:19:50 - tracking.views - INFO - Sending email to spamtestsai@outlook.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:50 - tracking.email_utils - INFO - email_utils.py: Email db entry created for spamtestsai@outlook.com at 2024-07-13 10:49:50.646704+00:00
+2024-07-13 16:19:54 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to spamtestsai@outlook.com
+2024-07-13 16:19:54 - tracking.views - INFO - Sending email to bucofomopudi@gotgel.org. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:54 - tracking.email_utils - INFO - email_utils.py: Email db entry created for bucofomopudi@gotgel.org at 2024-07-13 10:49:54.305742+00:00
+2024-07-13 16:19:58 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to bucofomopudi@gotgel.org
+2024-07-13 16:19:58 - tracking.views - INFO - Sending email to lamoruze@pelagius.net. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:19:58 - tracking.email_utils - INFO - email_utils.py: Email db entry created for lamoruze@pelagius.net at 2024-07-13 10:49:58.073831+00:00
+2024-07-13 16:20:01 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to lamoruze@pelagius.net
+2024-07-13 16:20:01 - tracking.views - INFO - Sending email to exodus4@imbetain.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:20:01 - tracking.email_utils - INFO - email_utils.py: Email db entry created for exodus4@imbetain.com at 2024-07-13 10:50:01.872160+00:00
+2024-07-13 16:20:06 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to exodus4@imbetain.com
+2024-07-13 16:20:06 - tracking.views - INFO - Sending email to jd5gb0s7@flymail.tk. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:20:06 - tracking.email_utils - INFO - email_utils.py: Email db entry created for jd5gb0s7@flymail.tk at 2024-07-13 10:50:06.225074+00:00
+2024-07-13 16:20:10 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to jd5gb0s7@flymail.tk
+2024-07-13 16:20:10 - tracking.views - INFO - Sending email to jixamo8511@carspure.com. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:20:10 - tracking.email_utils - INFO - email_utils.py: Email db entry created for jixamo8511@carspure.com at 2024-07-13 10:50:10.267100+00:00
+2024-07-13 16:20:14 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to jixamo8511@carspure.com
+2024-07-13 16:20:14 - tracking.views - INFO - Sending email to spamtestersai@maildrop.cc. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:20:14 - tracking.email_utils - INFO - email_utils.py: Email db entry created for spamtestersai@maildrop.cc at 2024-07-13 10:50:14.576345+00:00
+2024-07-13 16:20:18 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to spamtestersai@maildrop.cc
+2024-07-13 16:20:18 - tracking.views - INFO - Sending email to mtkzvf@vobau.net. Process ID: 73184, Thread ID: 127551099893312
+2024-07-13 16:20:18 - tracking.email_utils - INFO - email_utils.py: Email db entry created for mtkzvf@vobau.net at 2024-07-13 10:50:18.666325+00:00
+2024-07-13 16:20:22 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to mtkzvf@vobau.net
+2024-07-13 16:20:22 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2253
+2024-07-13 17:00:56 - django.request - ERROR - Internal Server Error: /track-link/1/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:00:56 - django.server - ERROR - "GET /track-link/1/ HTTP/1.1" 500 145
+2024-07-13 17:02:06 - django.request - ERROR - Internal Server Error: /track-link/1/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:02:06 - django.server - ERROR - "GET /track-link/1/ HTTP/1.1" 500 145
+2024-07-13 17:02:54 - django.request - ERROR - Internal Server Error: /track-link/2/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:02:54 - django.server - ERROR - "GET /track-link/2/ HTTP/1.1" 500 145
+2024-07-13 17:03:03 - django.request - ERROR - Internal Server Error: /track-link/2/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:03:03 - django.server - ERROR - "GET /track-link/2/ HTTP/1.1" 500 145
+2024-07-13 17:03:05 - django.request - ERROR - Internal Server Error: /track-link/2/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:03:05 - django.server - ERROR - "GET /track-link/2/ HTTP/1.1" 500 145
+2024-07-13 17:04:07 - django.request - ERROR - Internal Server Error: /track-link/3/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:07 - django.server - ERROR - "GET /track-link/3/ HTTP/1.1" 500 145
+2024-07-13 17:04:07 - django.request - ERROR - Internal Server Error: /track-link/3/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:07 - django.server - ERROR - "GET /track-link/3/ HTTP/1.1" 500 145
+2024-07-13 17:04:07 - django.request - ERROR - Internal Server Error: /track-link/3/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:07 - django.server - ERROR - "GET /track-link/3/ HTTP/1.1" 500 145
+2024-07-13 17:04:07 - django.request - ERROR - Internal Server Error: /track-link/3/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:07 - django.server - ERROR - "GET /track-link/3/ HTTP/1.1" 500 145
+2024-07-13 17:04:07 - django.request - ERROR - Internal Server Error: /track-link/3/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:07 - django.server - ERROR - "GET /track-link/3/ HTTP/1.1" 500 145
+2024-07-13 17:04:42 - django.request - ERROR - Internal Server Error: /track-link/8/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:42 - django.server - ERROR - "GET /track-link/8/ HTTP/1.1" 500 145
+2024-07-13 17:04:42 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-13 17:04:42 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 179
+2024-07-13 17:04:44 - django.request - ERROR - Internal Server Error: /track-link/8/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:44 - django.server - ERROR - "GET /track-link/8/ HTTP/1.1" 500 145
+2024-07-13 17:04:46 - django.request - ERROR - Internal Server Error: /track-link/8/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:46 - django.server - ERROR - "GET /track-link/8/ HTTP/1.1" 500 145
+2024-07-13 17:04:47 - django.request - ERROR - Internal Server Error: /track-link/8/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:47 - django.server - ERROR - "GET /track-link/8/ HTTP/1.1" 500 145
+2024-07-13 17:04:49 - django.request - ERROR - Internal Server Error: /track-link/8/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:04:49 - django.server - ERROR - "GET /track-link/8/ HTTP/1.1" 500 145
+2024-07-13 17:06:11 - django.request - ERROR - Internal Server Error: /track-link/6/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:11 - django.server - ERROR - "GET /track-link/6/ HTTP/1.1" 500 145
+2024-07-13 17:06:11 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-13 17:06:11 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 179
+2024-07-13 17:06:12 - django.request - ERROR - Internal Server Error: /track-link/6/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:12 - django.server - ERROR - "GET /track-link/6/ HTTP/1.1" 500 145
+2024-07-13 17:06:14 - django.request - ERROR - Internal Server Error: /track-link/6/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:14 - django.server - ERROR - "GET /track-link/6/ HTTP/1.1" 500 145
+2024-07-13 17:06:15 - django.request - ERROR - Internal Server Error: /track-link/6/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:15 - django.server - ERROR - "GET /track-link/6/ HTTP/1.1" 500 145
+2024-07-13 17:06:16 - django.request - ERROR - Internal Server Error: /track-link/6/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:16 - django.server - ERROR - "GET /track-link/6/ HTTP/1.1" 500 145
+2024-07-13 17:06:31 - django.request - ERROR - Internal Server Error: /track-link/7/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:31 - django.server - ERROR - "GET /track-link/7/ HTTP/1.1" 500 145
+2024-07-13 17:06:33 - django.request - ERROR - Internal Server Error: /track-link/7/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:33 - django.server - ERROR - "GET /track-link/7/ HTTP/1.1" 500 145
+2024-07-13 17:06:35 - django.request - ERROR - Internal Server Error: /track-link/7/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:35 - django.server - ERROR - "GET /track-link/7/ HTTP/1.1" 500 145
+2024-07-13 17:06:36 - django.request - ERROR - Internal Server Error: /track-link/7/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:36 - django.server - ERROR - "GET /track-link/7/ HTTP/1.1" 500 145
+2024-07-13 17:06:38 - django.request - ERROR - Internal Server Error: /track-link/7/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:06:38 - django.server - ERROR - "GET /track-link/7/ HTTP/1.1" 500 145
+2024-07-13 17:07:40 - django.request - ERROR - Internal Server Error: /track-link/6/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:07:40 - django.server - ERROR - "GET /track-link/6/ HTTP/1.1" 500 145
+2024-07-13 17:08:25 - django.request - ERROR - Internal Server Error: /track-link/9/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:25 - django.server - ERROR - "GET /track-link/9/ HTTP/1.1" 500 145
+2024-07-13 17:08:28 - django.request - ERROR - Internal Server Error: /track-link/9/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:28 - django.server - ERROR - "GET /track-link/9/ HTTP/1.1" 500 145
+2024-07-13 17:08:29 - django.request - ERROR - Internal Server Error: /track-link/9/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:29 - django.server - ERROR - "GET /track-link/9/ HTTP/1.1" 500 145
+2024-07-13 17:08:29 - django.request - ERROR - Internal Server Error: /track-link/9/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:29 - django.server - ERROR - "GET /track-link/9/ HTTP/1.1" 500 145
+2024-07-13 17:08:30 - django.request - ERROR - Internal Server Error: /track-link/9/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:30 - django.server - ERROR - "GET /track-link/9/ HTTP/1.1" 500 145
+2024-07-13 17:08:43 - django.request - ERROR - Internal Server Error: /track-link/11/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:43 - django.server - ERROR - "GET /track-link/11/ HTTP/1.1" 500 145
+2024-07-13 17:08:44 - django.request - ERROR - Internal Server Error: /track-link/11/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:44 - django.server - ERROR - "GET /track-link/11/ HTTP/1.1" 500 145
+2024-07-13 17:08:45 - django.request - ERROR - Internal Server Error: /track-link/11/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:45 - django.server - ERROR - "GET /track-link/11/ HTTP/1.1" 500 145
+2024-07-13 17:08:46 - django.request - ERROR - Internal Server Error: /track-link/11/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:46 - django.server - ERROR - "GET /track-link/11/ HTTP/1.1" 500 145
+2024-07-13 17:08:47 - django.request - ERROR - Internal Server Error: /track-link/11/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:08:47 - django.server - ERROR - "GET /track-link/11/ HTTP/1.1" 500 145
+2024-07-13 17:09:47 - django.request - ERROR - Internal Server Error: /track-link/12/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:09:47 - django.server - ERROR - "GET /track-link/12/ HTTP/1.1" 500 145
+2024-07-13 17:09:47 - django.request - ERROR - Internal Server Error: /track-link/12/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:09:47 - django.server - ERROR - "GET /track-link/12/ HTTP/1.1" 500 145
+2024-07-13 17:09:48 - django.request - ERROR - Internal Server Error: /track-link/12/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:09:48 - django.server - ERROR - "GET /track-link/12/ HTTP/1.1" 500 145
+2024-07-13 17:09:48 - django.request - ERROR - Internal Server Error: /track-link/12/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:09:48 - django.server - ERROR - "GET /track-link/12/ HTTP/1.1" 500 145
+2024-07-13 17:09:49 - django.request - ERROR - Internal Server Error: /track-link/12/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:09:49 - django.server - ERROR - "GET /track-link/12/ HTTP/1.1" 500 145
+2024-07-13 17:10:02 - django.request - ERROR - Internal Server Error: /track-link/13/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:02 - django.server - ERROR - "GET /track-link/13/ HTTP/1.1" 500 145
+2024-07-13 17:10:02 - django.request - ERROR - Internal Server Error: /track-link/13/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:02 - django.server - ERROR - "GET /track-link/13/ HTTP/1.1" 500 145
+2024-07-13 17:10:03 - django.request - ERROR - Internal Server Error: /track-link/13/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:03 - django.server - ERROR - "GET /track-link/13/ HTTP/1.1" 500 145
+2024-07-13 17:10:03 - django.request - ERROR - Internal Server Error: /track-link/13/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:03 - django.server - ERROR - "GET /track-link/13/ HTTP/1.1" 500 145
+2024-07-13 17:10:04 - django.request - ERROR - Internal Server Error: /track-link/13/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:04 - django.server - ERROR - "GET /track-link/13/ HTTP/1.1" 500 145
+2024-07-13 17:10:43 - django.request - ERROR - Internal Server Error: /track-link/14/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:43 - django.server - ERROR - "GET /track-link/14/ HTTP/1.1" 500 145
+2024-07-13 17:10:43 - django.request - ERROR - Internal Server Error: /track-link/14/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:43 - django.server - ERROR - "GET /track-link/14/ HTTP/1.1" 500 145
+2024-07-13 17:10:44 - django.request - ERROR - Internal Server Error: /track-link/14/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:44 - django.server - ERROR - "GET /track-link/14/ HTTP/1.1" 500 145
+2024-07-13 17:10:45 - django.request - ERROR - Internal Server Error: /track-link/14/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:45 - django.server - ERROR - "GET /track-link/14/ HTTP/1.1" 500 145
+2024-07-13 17:10:45 - django.request - ERROR - Internal Server Error: /track-link/14/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:10:45 - django.server - ERROR - "GET /track-link/14/ HTTP/1.1" 500 145
+2024-07-13 17:11:19 - django.request - ERROR - Internal Server Error: /track-link/15/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:11:19 - django.server - ERROR - "GET /track-link/15/ HTTP/1.1" 500 145
+2024-07-13 17:11:23 - django.request - ERROR - Internal Server Error: /track-link/15/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:11:23 - django.server - ERROR - "GET /track-link/15/ HTTP/1.1" 500 145
+2024-07-13 17:11:26 - django.request - ERROR - Internal Server Error: /track-link/15/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:11:26 - django.server - ERROR - "GET /track-link/15/ HTTP/1.1" 500 145
+2024-07-13 17:11:29 - django.request - ERROR - Internal Server Error: /track-link/15/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:11:29 - django.server - ERROR - "GET /track-link/15/ HTTP/1.1" 500 145
+2024-07-13 17:11:32 - django.request - ERROR - Internal Server Error: /track-link/15/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-13 17:11:32 - django.server - ERROR - "GET /track-link/15/ HTTP/1.1" 500 145
+2024-07-14 10:29:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:34:44 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 19597
+2024-07-14 10:39:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 10:39:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:40:01 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 38
+2024-07-14 10:40:25 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 38
+2024-07-14 10:44:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 10:44:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:44:14 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 38
+2024-07-14 10:44:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 10:44:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:44:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 10:44:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:44:57 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-14 10:45:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 10:45:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:45:44 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 38
+2024-07-14 10:51:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 10:51:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:51:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 10:51:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:51:34 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 38
+2024-07-14 10:54:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 10:54:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 10:54:48 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-14 11:50:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 11:50:47 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:50:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:50:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:52:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:52:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:52:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:52:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:52:23 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:52:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:52:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:52:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:52:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:52:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:53:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:53:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:53:35 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 38
+2024-07-14 11:53:36 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-14 11:54:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 11:54:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:54:21 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-14 11:54:21 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-14 11:57:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-14 11:57:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:57:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:57:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:57:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:57:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:58:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 11:58:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 11:58:44 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-14 14:51:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 14:51:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 14:51:36 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-14 15:02:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-14 15:02:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
