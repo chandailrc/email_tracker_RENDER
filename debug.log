@@ -1487,3 +1487,112 @@ TypeError: log_request_link.<locals>.wrapper() missing 1 required positional arg
 2024-07-14 14:51:36 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
 2024-07-14 15:02:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
 2024-07-14 15:02:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:27:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:28:21 - tracking.views - INFO - Sending email to testing. Process ID: 68094, Thread ID: 137578913199680
+2024-07-14 15:28:22 - tracking.email_utils - INFO - email_utils.py: Email db entry created for testing at 2024-07-14 09:58:22.242337+00:00
+2024-07-14 15:28:22 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to testing
+2024-07-14 15:28:22 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:28:22 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-14 15:28:25 - django.server - INFO - "GET /serve-image/logo.png HTTP/1.1" 301 0
+2024-07-14 15:28:25 - tracking.urls - INFO - urls.py: PIXEL Request received for email testing from ip: 127.0.0.1
+2024-07-14 15:28:25 - tracking.views - INFO - View2 called. Process ID: 68094, Thread ID: 137578913199680
+2024-07-14 15:28:25 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 09:58:25.066663+00:00 | Mail sent: 2024-07-14 09:58:21.937761+00:00 | Difference: 0:00:03.128902
+2024-07-14 15:28:25 - tracking.views - WARNING - views.py/handle_tracking: First request received for testing with email_id 29 within 5 secs. Potential prefetching. Abandoning request!
+2024-07-14 15:28:25 - django.request - WARNING - Not Found: /track/7e8d1d0f69ac421ea76259f31c8dbed0/pixel.png
+2024-07-14 15:28:25 - django.server - WARNING - "GET /track/7e8d1d0f69ac421ea76259f31c8dbed0/pixel.png HTTP/1.1" 404 9
+2024-07-14 15:28:25 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 17485
+2024-07-14 15:31:35 - tracking.views - INFO - Sending email to testing@testing.com. Process ID: 68094, Thread ID: 137578913199680
+2024-07-14 15:31:35 - tracking.email_utils - INFO - email_utils.py: Email db entry created for testing@testing.com at 2024-07-14 10:01:35.193530+00:00
+2024-07-14 15:31:35 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to testing@testing.com
+2024-07-14 15:31:35 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:31:35 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-14 15:31:48 - tracking.urls - INFO - urls.py: PIXEL Request received for email testing@testing.com from ip: 127.0.0.1
+2024-07-14 15:31:48 - tracking.views - INFO - View2 called. Process ID: 68094, Thread ID: 137578913199680
+2024-07-14 15:31:48 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:01:48.608072+00:00 | Mail sent: 2024-07-14 10:01:35.153478+00:00 | Difference: 0:00:13.454594
+2024-07-14 15:31:48 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 17485
+2024-07-14 15:31:48 - django.server - INFO - "GET /track/2049a1862db3455c895d4ae78e4afbaf/pixel.png HTTP/1.1" 200 114
+2024-07-14 15:34:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:34:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:35:42 - tracking.views - INFO - Sending email to test@logo.com. Process ID: 69849, Thread ID: 127593565124160
+2024-07-14 15:35:42 - tracking.email_utils - INFO - email_utils.py: Email db entry created for test@logo.com at 2024-07-14 10:05:42.706109+00:00
+2024-07-14 15:35:42 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to test@logo.com
+2024-07-14 15:35:42 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:36:03 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 15:36:03 - tracking.views - INFO - View2 called. Process ID: 69849, Thread ID: 127593556731456
+2024-07-14 15:36:03 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:06:03.007620+00:00 | Mail sent: 2024-07-14 10:05:42.674000+00:00 | Difference: 0:00:20.333620
+2024-07-14 15:36:03 - django.server - INFO - "GET /track/842bd45bcbad4674b6fc6c37665e0a95/pixel.png HTTP/1.1" 200 114
+2024-07-14 15:36:03 - django.server - ERROR - "GET /serve-image/logo.png/ HTTP/1.1" 500 59
+2024-07-14 15:36:08 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 15:36:08 - tracking.views - INFO - View2 called. Process ID: 69849, Thread ID: 127593344923200
+2024-07-14 15:36:08 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:06:08.874928+00:00 | Mail sent: 2024-07-14 10:05:42.674000+00:00 | Difference: 0:00:26.200928
+2024-07-14 15:36:08 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-14 10:06:08.874928+00:00 | last_log time: 2024-07-14 10:06:03.009034+00:00 | Difference: 0:00:05.865894
+2024-07-14 15:36:08 - django.server - INFO - "GET /track/842bd45bcbad4674b6fc6c37665e0a95/pixel.png HTTP/1.1" 200 114
+2024-07-14 15:36:08 - django.server - ERROR - "GET /serve-image/logo.png/ HTTP/1.1" 500 59
+2024-07-14 15:36:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:36:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:36:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:36:47 - tracking.views - INFO - Sending email to test@logo.com. Process ID: 70218, Thread ID: 138771234289216
+2024-07-14 15:36:47 - tracking.email_utils - INFO - email_utils.py: Email db entry created for test@logo.com at 2024-07-14 10:06:47.216902+00:00
+2024-07-14 15:36:47 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to test@logo.com
+2024-07-14 15:36:47 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:36:54 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 15:36:54 - tracking.views - INFO - View2 called. Process ID: 70218, Thread ID: 138771225896512
+2024-07-14 15:36:54 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:06:54.218416+00:00 | Mail sent: 2024-07-14 10:06:47.175448+00:00 | Difference: 0:00:07.042968
+2024-07-14 15:36:54 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 15:36:54 - django.server - INFO - "GET /track/d1b5165aa47b476283f481d342c52c3d/pixel.png HTTP/1.1" 200 114
+2024-07-14 15:37:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:37:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:37:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:37:32 - tracking.views - INFO - Sending email to test@logo.com. Process ID: 70325, Thread ID: 135718869399104
+2024-07-14 15:37:32 - tracking.email_utils - INFO - email_utils.py: Email db entry created for test@logo.com at 2024-07-14 10:07:32.896222+00:00
+2024-07-14 15:37:32 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to test@logo.com
+2024-07-14 15:37:32 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:37:37 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 15:37:37 - tracking.views - INFO - View2 called. Process ID: 70325, Thread ID: 135718861006400
+2024-07-14 15:37:37 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:07:37.201761+00:00 | Mail sent: 2024-07-14 10:07:32.862731+00:00 | Difference: 0:00:04.339030
+2024-07-14 15:37:37 - tracking.views - WARNING - views.py/handle_tracking: First request received for test@logo.com with email_id 33 within 5 secs. Potential prefetching. Abandoning request!
+2024-07-14 15:37:37 - django.request - WARNING - Not Found: /track/f3e19c651d2a45bbbc669da952568a98/pixel.png
+2024-07-14 15:37:37 - django.server - WARNING - "GET /track/f3e19c651d2a45bbbc669da952568a98/pixel.png HTTP/1.1" 404 9
+2024-07-14 15:37:37 - django.server - ERROR - "GET /serve-image/logo.png/ HTTP/1.1" 500 59
+2024-07-14 15:37:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:37:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:38:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:38:13 - tracking.views - INFO - Sending email to test@logo.com. Process ID: 70467, Thread ID: 132469206545984
+2024-07-14 15:38:13 - tracking.email_utils - INFO - email_utils.py: Email db entry created for test@logo.com at 2024-07-14 10:08:13.179213+00:00
+2024-07-14 15:38:13 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to test@logo.com
+2024-07-14 15:38:13 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:38:17 - django.server - ERROR - "GET /serve-image/logo.png/ HTTP/1.1" 500 59
+2024-07-14 15:38:17 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 15:38:17 - tracking.views - INFO - View2 called. Process ID: 70467, Thread ID: 132469198153280
+2024-07-14 15:38:17 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:08:17.223645+00:00 | Mail sent: 2024-07-14 10:08:13.139174+00:00 | Difference: 0:00:04.084471
+2024-07-14 15:38:17 - tracking.views - WARNING - views.py/handle_tracking: First request received for test@logo.com with email_id 34 within 5 secs. Potential prefetching. Abandoning request!
+2024-07-14 15:38:17 - django.request - WARNING - Not Found: /track/242bb6cce36946a8895cfca7abafa4a1/pixel.png
+2024-07-14 15:38:17 - django.server - WARNING - "GET /track/242bb6cce36946a8895cfca7abafa4a1/pixel.png HTTP/1.1" 404 9
+2024-07-14 15:39:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:39:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:40:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:40:15 - tracking.views - INFO - Sending email to test@logo.com. Process ID: 70831, Thread ID: 135914531583552
+2024-07-14 15:40:15 - tracking.email_utils - INFO - email_utils.py: Email db entry created for test@logo.com at 2024-07-14 10:10:15.081534+00:00
+2024-07-14 15:40:15 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to test@logo.com
+2024-07-14 15:40:15 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:40:19 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 15:40:19 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 15:40:19 - tracking.views - INFO - View2 called. Process ID: 70831, Thread ID: 135914523190848
+2024-07-14 15:40:19 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:10:19.366127+00:00 | Mail sent: 2024-07-14 10:10:15.048497+00:00 | Difference: 0:00:04.317630
+2024-07-14 15:40:19 - tracking.views - WARNING - views.py/handle_tracking: First request received for test@logo.com with email_id 35 within 5 secs. Potential prefetching. Abandoning request!
+2024-07-14 15:40:19 - django.request - WARNING - Not Found: /track/93687a44eec648de809393a855c90c4a/pixel.png
+2024-07-14 15:40:19 - django.server - WARNING - "GET /track/93687a44eec648de809393a855c90c4a/pixel.png HTTP/1.1" 404 9
+2024-07-14 15:40:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:40:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:40:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:40:43 - tracking.views - INFO - Sending email to test@logo.com. Process ID: 70927, Thread ID: 126425759741504
+2024-07-14 15:40:43 - tracking.email_utils - INFO - email_utils.py: Email db entry created for test@logo.com at 2024-07-14 10:10:43.928173+00:00
+2024-07-14 15:40:43 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to test@logo.com
+2024-07-14 15:40:43 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 15:40:51 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 15:40:51 - tracking.views - INFO - View2 called. Process ID: 70927, Thread ID: 126425751348800
+2024-07-14 15:40:51 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 10:10:51.872427+00:00 | Mail sent: 2024-07-14 10:10:43.893430+00:00 | Difference: 0:00:07.978997
+2024-07-14 15:40:51 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 15:40:51 - django.server - INFO - "GET /track/8e1a0bba6c4440f59b60738fe03f833a/pixel.png HTTP/1.1" 200 114
+2024-07-14 15:41:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:41:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
