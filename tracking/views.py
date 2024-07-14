@@ -125,12 +125,12 @@ def handle_tracking(request, token, is_pixel):
             if is_pixel:
                 # Serve a 1x1 transparent PNG
                 # As file:
-                # png_path = os.path.join(settings.BASE_DIR, 'static', 'transparent.png')
+                png_path = os.path.join(settings.BASE_DIR, 'static/images', 'transparent.png')
                 # with open(png_path, 'rb') as png_file:
                 #     png_data = png_file.read()
 
                 # As hardcoded data
-                png_data = b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\x0aIDATx\x9c\x63\x60\x00\x00\x00\x02\x00\x01\xe2!\xbc\x33\x00\x00\x00\x00IEND\xaeB`\x82'
+                # png_data = b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\x0aIDATx\x9c\x63\x60\x00\x00\x00\x02\x00\x01\xe2!\xbc\x33\x00\x00\x00\x00IEND\xaeB`\x82'
 
                 # Encode the PNG data to base64
                 # base64_png = base64.b64encode(png_data).decode('utf-8')
@@ -142,7 +142,8 @@ def handle_tracking(request, token, is_pixel):
                 # response['Expires'] = '0'
                 # response.write(png_data)
                 
-                response = FileResponse(png_data, content_type='image/png')
+                # response = FileResponse(png_data, content_type='image/png')
+                response = FileResponse(open(png_path, 'rb'), content_type="image/png")
                 response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
                 response['Pragma'] = 'no-cache'
                 response['Expires'] = '0'

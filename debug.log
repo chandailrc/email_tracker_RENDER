@@ -1677,3 +1677,22 @@ NameError: name 'token' is not defined
 2024-07-14 18:11:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-14 18:11:12 - tracking.urls - INFO - urls.py: LINK Request received for email anot@anot.com from ip: 127.0.0.1
 2024-07-14 18:11:12 - django.server - INFO - "GET /track-link/16/ HTTP/1.1" 302 0
+2024-07-14 18:50:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 18:50:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:51:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 18:51:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:51:51 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 18:51:51 - tracking.views - INFO - View2 called. Process ID: 105946, Thread ID: 124618513839680
+2024-07-14 18:51:51 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 13:21:51.182943+00:00 | Mail sent: 2024-07-14 10:10:43.893430+00:00 | Difference: 3:11:07.289513
+2024-07-14 18:51:51 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-14 13:21:51.182943+00:00 | last_log time: 2024-07-14 12:19:21.619948+00:00 | Difference: 1:02:29.562995
+2024-07-14 18:51:51 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 18:51:51 - django.server - INFO - "GET /track/8e1a0bba6c4440f59b60738fe03f833a/pixel.png HTTP/1.1" 200 95
+2024-07-14 18:52:03 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 30338
+2024-07-14 18:52:03 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-14 18:52:10 - tracking.urls - INFO - urls.py: PIXEL Request received for email anot@anot.com from ip: 127.0.0.1
+2024-07-14 18:52:10 - tracking.views - INFO - View2 called. Process ID: 105946, Thread ID: 124618505446976
+2024-07-14 18:52:10 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 13:22:10.895523+00:00 | Mail sent: 2024-07-14 12:19:40.811315+00:00 | Difference: 1:02:30.084208
+2024-07-14 18:52:10 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-14 13:22:10.895523+00:00 | last_log time: 2024-07-14 12:25:19.433367+00:00 | Difference: 0:56:51.462156
+2024-07-14 18:52:10 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 18:52:10 - django.server - INFO - "GET /track/5bf7b9fd3aa34b5780f8d2c64d99b953/pixel.png HTTP/1.1" 200 95
+2024-07-14 18:52:17 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 30932
