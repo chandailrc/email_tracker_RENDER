@@ -85,7 +85,7 @@ def handle_tracking(request, token, is_pixel):
         time_difference = curr_time - mail.sent_at
 
         # Compare the difference
-        if time_difference <= timedelta(seconds=5):
+        if time_difference <= timedelta(seconds=4):
             
             logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
             logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within 5 secs. Potential prefetching. Abandoning request!")
@@ -99,7 +99,7 @@ def handle_tracking(request, token, is_pixel):
             if last_log:
                 time_diff = curr_time - last_log.opened_at
 
-                if time_diff <= timedelta(seconds=4):
+                if time_diff <= timedelta(seconds=3):
                     logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
                     logger.warning(f"views.py/handle_tracking: Request received for for {recipient} with email_id {email_id} within 4 secs. Random fetching. Abandoning request!")
                     return HttpResponse("Not found", status=404)

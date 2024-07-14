@@ -1596,3 +1596,9 @@ TypeError: log_request_link.<locals>.wrapper() missing 1 required positional arg
 2024-07-14 15:40:51 - django.server - INFO - "GET /track/8e1a0bba6c4440f59b60738fe03f833a/pixel.png HTTP/1.1" 200 114
 2024-07-14 15:41:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
 2024-07-14 15:41:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:45:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:45:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:45:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 15:45:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 15:52:12 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-14 15:52:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
