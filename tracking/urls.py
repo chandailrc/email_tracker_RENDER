@@ -3,7 +3,7 @@
 from django.urls import path
 from .views import *
 import logging
-from .models import TrackingPixelToken
+from .models import TrackingPixelToken, Link
 
 logger = logging.getLogger(__name__)
 
@@ -28,13 +28,13 @@ def log_request_css(view_func):
     return wrapper
 
 def log_request_link(view_func):
-    def wrapper(request, token, *args, **kwargs):
+    def wrapper(request, link_id, *args, **kwargs):
         try:
-            recipient = TrackingPixelToken.objects.get(token=token).email.recipient
+            recipient = Link.objects.get(id=link_id).email.recipient
             logger.info(f"urls.py: LINK Request received for email {recipient} from ip: {get_client_ip(request)}")
         except TrackingPixelToken.DoesNotExist:
-            logger.error(f"urls.py: LINK Request received with invalid token {token} from ip: {get_client_ip(request)}")
-        return view_func(request, token, *args, **kwargs)
+            logger.error(f"urls.py: LINK Request received with invalid link_id {link_id} from ip: {get_client_ip(request)}")
+        return view_func(request, link_id, *args, **kwargs)
     return wrapper
 
 urlpatterns = [

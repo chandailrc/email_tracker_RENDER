@@ -1602,3 +1602,78 @@ TypeError: log_request_link.<locals>.wrapper() missing 1 required positional arg
 2024-07-14 15:45:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-14 15:52:12 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
 2024-07-14 15:52:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 17:46:10 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 26899
+2024-07-14 17:46:10 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-14 17:49:21 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@logo.com from ip: 127.0.0.1
+2024-07-14 17:49:21 - tracking.views - INFO - View2 called. Process ID: 73029, Thread ID: 140395887457856
+2024-07-14 17:49:21 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 12:19:21.618350+00:00 | Mail sent: 2024-07-14 10:10:43.893430+00:00 | Difference: 2:08:37.724920
+2024-07-14 17:49:21 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-14 12:19:21.618350+00:00 | last_log time: 2024-07-14 10:10:51.874143+00:00 | Difference: 2:08:29.744207
+2024-07-14 17:49:21 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 17:49:21 - django.server - INFO - "GET /track/8e1a0bba6c4440f59b60738fe03f833a/pixel.png HTTP/1.1" 200 114
+2024-07-14 17:49:40 - tracking.views - INFO - Sending email to anot@anot.com. Process ID: 73029, Thread ID: 140395887457856
+2024-07-14 17:49:40 - tracking.email_utils - INFO - email_utils.py: Email db entry created for anot@anot.com at 2024-07-14 12:19:40.838651+00:00
+2024-07-14 17:49:40 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to anot@anot.com
+2024-07-14 17:49:40 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-14 17:49:47 - tracking.urls - INFO - urls.py: PIXEL Request received for email anot@anot.com from ip: 127.0.0.1
+2024-07-14 17:49:47 - tracking.views - INFO - View2 called. Process ID: 73029, Thread ID: 140395879065152
+2024-07-14 17:49:47 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 12:19:47.339670+00:00 | Mail sent: 2024-07-14 12:19:40.811315+00:00 | Difference: 0:00:06.528355
+2024-07-14 17:49:47 - django.server - INFO - "GET /track/5bf7b9fd3aa34b5780f8d2c64d99b953/pixel.png HTTP/1.1" 200 114
+2024-07-14 17:49:47 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 17:49:51 - django.request - ERROR - Internal Server Error: /track-link/16/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-14 17:49:51 - django.server - ERROR - "GET /track-link/16/ HTTP/1.1" 500 145
+2024-07-14 17:55:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 17:55:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 17:55:19 - tracking.urls - INFO - urls.py: PIXEL Request received for email anot@anot.com from ip: 127.0.0.1
+2024-07-14 17:55:19 - tracking.views - INFO - View2 called. Process ID: 93016, Thread ID: 124657529255488
+2024-07-14 17:55:19 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-14 12:25:19.431953+00:00 | Mail sent: 2024-07-14 12:19:40.811315+00:00 | Difference: 0:05:38.620638
+2024-07-14 17:55:19 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-14 12:25:19.431953+00:00 | last_log time: 2024-07-14 12:19:47.340650+00:00 | Difference: 0:05:32.091303
+2024-07-14 17:55:19 - django.server - INFO - "GET /track/5bf7b9fd3aa34b5780f8d2c64d99b953/pixel.png HTTP/1.1" 200 114
+2024-07-14 17:55:19 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-14 17:55:20 - django.request - ERROR - Internal Server Error: /track-link/16/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-14 17:55:20 - django.server - ERROR - "GET /track-link/16/ HTTP/1.1" 500 145
+2024-07-14 17:56:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 17:56:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 17:56:44 - django.request - ERROR - Internal Server Error: /track-link/16/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: log_request_link.<locals>.wrapper() missing 1 required positional argument: 'token'
+2024-07-14 17:56:44 - django.server - ERROR - "GET /track-link/16/ HTTP/1.1" 500 145
+2024-07-14 17:59:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-14 17:59:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:05:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-14 18:05:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:05:19 - django.request - ERROR - Internal Server Error: /track-link/16/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py", line 33, in wrapper
+    recipient = TrackingPixelToken.objects.get(token=token).email.recipient
+NameError: name 'token' is not defined
+2024-07-14 18:05:19 - django.server - ERROR - "GET /track-link/16/ HTTP/1.1" 500 145
+2024-07-14 18:07:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-14 18:07:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:10:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-14 18:10:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:10:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-14 18:10:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:11:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-14 18:11:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-14 18:11:12 - tracking.urls - INFO - urls.py: LINK Request received for email anot@anot.com from ip: 127.0.0.1
+2024-07-14 18:11:12 - django.server - INFO - "GET /track-link/16/ HTTP/1.1" 302 0

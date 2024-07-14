@@ -37,7 +37,7 @@
                                         <span class="pixel-tag">PNG</span>
                                     {% endif %}
                                     <br>
-                                    <strong>Opened At:</strong> {{ log.opened_at }}<br>
+                                    <strong>Opened At:</strong> {{ log.opened_at|date:"H:i:s" }}<br>
                                     <strong>IP Address:</strong> {{ log.ip_address }}<br>
                                     <strong>User Agent:</strong> {{ log.user_agent }}
                                 </li>
