@@ -1858,3 +1858,5 @@ UnboundLocalError: local variable 'response' referenced before assignment
 2024-07-15 20:59:10 - django.server - INFO - "GET /track/5b832ada9257433ca73a74eeb5e31d11/pixel.png HTTP/1.1" 200 95
 2024-07-15 21:11:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
 2024-07-15 21:11:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 22:12:24 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-15 22:12:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
