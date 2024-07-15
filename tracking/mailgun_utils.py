@@ -10,7 +10,7 @@ Created on Sat Jul 13 14:23:48 2024
 import requests
 from django.conf import settings
 
-def send_email(subject, message, from_email, recipient_list):
+def send_email(subject, message, from_email, recipient_list, html_text):
     # Join the recipient_list into a single string separated by commas
     # recipient_list = ', '.join(recipient_list)
     return requests.post(
@@ -20,7 +20,9 @@ def send_email(subject, message, from_email, recipient_list):
             "from": from_email,
             "to": recipient_list,
             "subject": subject,
-            "text": message
+            "text": message,
+            "html": html_text,
+            "o:tracking-opens": "yes"
         }
     )
 

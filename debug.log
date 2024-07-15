@@ -1696,3 +1696,92 @@ NameError: name 'token' is not defined
 2024-07-14 18:52:10 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
 2024-07-14 18:52:10 - django.server - INFO - "GET /track/5bf7b9fd3aa34b5780f8d2c64d99b953/pixel.png HTTP/1.1" 200 95
 2024-07-14 18:52:17 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 30932
+2024-07-15 10:54:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 10:54:47 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 10:54:47 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 179
+2024-07-15 10:54:48 - django.request - ERROR - Internal Server Error: /send-mailgun-mail/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 48, in send_mailgun_mail_view
+    for recip in [recipient_list[-3]]:
+IndexError: list index out of range
+2024-07-15 10:54:52 - django.request - ERROR - Internal Server Error: /send-mailgun-mail/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 48, in send_mailgun_mail_view
+    for recip in [recipient_list[-3]]:
+IndexError: list index out of range
+2024-07-15 10:54:52 - django.server - ERROR - "GET /send-mailgun-mail/ HTTP/1.1" 500 145
+2024-07-15 10:54:52 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 10:55:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-15 10:55:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 10:55:10 - django.request - ERROR - Internal Server Error: /send-mailgun-mail/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 50, in send_mailgun_mail_view
+    response = send_simple_message(subject, message, from_email, recip)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py", line 30, in send_simple_message
+    auth=("api", settings.MAILGUN_API_KEY),
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/conf/__init__.py", line 91, in __getattr__
+    val = getattr(_wrapped, name)
+AttributeError: 'Settings' object has no attribute 'MAILGUN_API_KEY'
+2024-07-15 10:55:10 - django.server - ERROR - "GET /send-mailgun-mail/ HTTP/1.1" 500 145
+2024-07-15 10:56:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 10:56:23 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-15 11:10:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-15 11:10:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 11:10:28 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-15 11:10:28 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 11:59:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-15 11:59:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:00:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-15 12:00:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:01:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-15 12:01:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:01:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-15 12:01:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:01:43 - django.request - ERROR - Internal Server Error: /send-mailgun-mail/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 52, in send_mailgun_mail_view
+    if response.status_code == 200:
+UnboundLocalError: local variable 'response' referenced before assignment
+2024-07-15 12:01:43 - django.server - ERROR - "GET /send-mailgun-mail/ HTTP/1.1" 500 145
+2024-07-15 12:01:43 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 12:01:58 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-15 12:01:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:02:01 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-15 12:11:11 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/mailgun_utils.py changed, reloading.
+2024-07-15 12:11:12 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:11:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-15 12:11:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:12:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-15 12:12:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 12:12:18 - django.server - INFO - "GET /send-mailgun-mail/ HTTP/1.1" 200 24
+2024-07-15 12:12:18 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 18:10:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:10:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:11:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:11:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:16:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:17:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:17:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:17:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:17:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:17:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:17:32 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:17:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:17:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:17:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

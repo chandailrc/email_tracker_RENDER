@@ -22,10 +22,13 @@ import base64
 from .mailgun_utils import send_email, send_simple_message
 
 def send_mailgun_mail_view(request):
-    subject = "Hello from Mailgun"
+    subject = "Hello from Mailgun 2"
     message = "This is a test email sent via Mailgun. Link --> https://www.google.com"
+    html_text = "<html><body><p>This is the HTML version</p></body></html>"
     from_email = settings.DEFAULT_FROM_EMAIL
     recipient_list = [
+                    "mukulchandail@gmail.com",
+                    "mukulchandail@yahoo.com",
                     "1chandailrc1@gmail.com",
                     "chandailrc@gmail.com",
                     "chandailrc@hotmail.com",
@@ -43,9 +46,9 @@ def send_mailgun_mail_view(request):
                     "spamtestersai@maildrop.cc",
                     "mtkzvf@vobau.net"
                     ]
-    for recip in [recipient_list[-3]]:
-        # response = send_email(subject, message, from_email, recip)
-        response = send_simple_message(subject, message, from_email, recip)
+    for recip in recipient_list[2:3]:
+        response = send_email(subject, message, from_email, recip, html_text)
+        # response = send_simple_message(subject, message, from_email, recip)
     
     if response.status_code == 200:
         return HttpResponse("Email sent successfully!")
