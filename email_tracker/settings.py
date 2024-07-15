@@ -185,6 +185,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 mail_case = env('MAIL_SERVICE')
 
+if mail_case:
+    print(f'MAILING SERVICE SELECTED: {mail_case}')
+
 if mail_case == 'GMAIL':
     
     #Email settings
@@ -202,6 +205,7 @@ if mail_case == 'IONOS':
     EMAIL_HOST = 'smtp.ionos.com'
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
+    EMAIL_USE_SSL = False
     EMAIL_HOST_USER = env('IONOS_EMAIL_USER') # Use your personal gmail here
     EMAIL_HOST_PASSWORD = env('IONOS_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
     DEFAULT_FROM_EMAIL = env('IONOS_DEFAULT_EMAIL')  # Replace with your default email address

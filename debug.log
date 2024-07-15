@@ -1785,3 +1785,76 @@ UnboundLocalError: local variable 'response' referenced before assignment
 2024-07-15 18:17:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-15 18:17:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
 2024-07-15 18:17:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:26:47 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:27:20 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 81559, Thread ID: 135860309718592
+2024-07-15 18:27:20 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-15 12:57:20.561499+00:00
+2024-07-15 18:27:27 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 1chandailrc1@gmail.com
+2024-07-15 18:27:27 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 18:27:27 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 18:40:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:40:22 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 31467
+2024-07-15 18:40:39 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 84676, Thread ID: 138414814918208
+2024-07-15 18:40:39 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-15 13:10:39.524555+00:00
+2024-07-15 18:40:44 - tracking.email_utils - ERROR - email_utils.py: Error sending email to 1chandailrc1@gmail.com: (535, b'Authentication credentials invalid')
+2024-07-15 18:40:44 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 18:40:59 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 84676, Thread ID: 138414814918208
+2024-07-15 18:40:59 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-15 13:10:59.105473+00:00
+2024-07-15 18:41:03 - tracking.email_utils - ERROR - email_utils.py: Error sending email to 1chandailrc1@gmail.com: (535, b'Authentication credentials invalid')
+2024-07-15 18:41:03 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 18:41:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:41:12 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 84872, Thread ID: 129595739207232
+2024-07-15 18:41:12 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-15 13:11:12.401228+00:00
+2024-07-15 18:41:18 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to 1chandailrc1@gmail.com
+2024-07-15 18:41:18 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 18:44:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:44:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:44:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:44:34 - tracking.views - INFO - Sending email to 1chandailrc1@gmail.com. Process ID: 85513, Thread ID: 134444029572672
+2024-07-15 18:44:34 - tracking.email_utils - INFO - email_utils.py: Email db entry created for 1chandailrc1@gmail.com at 2024-07-15 13:14:34.548201+00:00
+2024-07-15 18:44:45 - tracking.email_utils - ERROR - email_utils.py: Error sending email to 1chandailrc1@gmail.com: Connection unexpectedly closed
+2024-07-15 18:44:45 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 18:46:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:46:44 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:46:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:46:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:48:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:48:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:48:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:48:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:48:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 18:48:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:48:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:49:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 18:49:19 - django.server - INFO - "GET /send-tracked-email/ HTTP/1.1" 200 2174
+2024-07-15 18:49:19 - django.server - INFO - "GET /send-tracked-email/ HTTP/1.1" 200 2174
+2024-07-15 18:49:20 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-15 18:49:34 - tracking.views - INFO - Sending email to chandailrc@gmail.com. Process ID: 86673, Thread ID: 130752423392832
+2024-07-15 18:49:34 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrc@gmail.com at 2024-07-15 13:19:34.487849+00:00
+2024-07-15 18:49:38 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrc@gmail.com
+2024-07-15 18:49:38 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 18:49:38 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 19:54:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-15 19:54:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 20:06:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 20:07:21 - tracking.views - INFO - Sending email to chandailrc@gmail.com. Process ID: 99947, Thread ID: 123888813995584
+2024-07-15 20:07:22 - tracking.email_utils - INFO - email_utils.py: Email db entry created for chandailrc@gmail.com at 2024-07-15 14:37:22.039261+00:00
+2024-07-15 20:07:27 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to chandailrc@gmail.com
+2024-07-15 20:07:27 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 20:07:27 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-15 20:58:38 - tracking.views - INFO - Sending email to testing@test.com. Process ID: 99947, Thread ID: 123888813995584
+2024-07-15 20:58:38 - tracking.email_utils - INFO - email_utils.py: Email db entry created for testing@test.com at 2024-07-15 15:28:38.356940+00:00
+2024-07-15 20:58:44 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to testing@test.com
+2024-07-15 20:58:44 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 20:59:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-15 20:59:04 - tracking.views - INFO - Sending email to testing@test.com. Process ID: 109560, Thread ID: 134842545075776
+2024-07-15 20:59:04 - tracking.email_utils - INFO - email_utils.py: Email db entry created for testing@test.com at 2024-07-15 15:29:04.211711+00:00
+2024-07-15 20:59:04 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to testing@test.com
+2024-07-15 20:59:04 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-15 20:59:09 - django.server - INFO - "GET /serve-image/logo.png HTTP/1.1" 301 0
+2024-07-15 20:59:09 - tracking.urls - INFO - urls.py: PIXEL Request received for email testing@test.com from ip: 127.0.0.1
+2024-07-15 20:59:09 - tracking.views - INFO - View2 called. Process ID: 109560, Thread ID: 134842536683072
+2024-07-15 20:59:09 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-15 15:29:09.969020+00:00 | Mail sent: 2024-07-15 15:29:04.173136+00:00 | Difference: 0:00:05.795884
+2024-07-15 20:59:10 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-15 20:59:10 - django.server - INFO - "GET /track/5b832ada9257433ca73a74eeb5e31d11/pixel.png HTTP/1.1" 200 95
+2024-07-15 21:11:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-15 21:11:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
