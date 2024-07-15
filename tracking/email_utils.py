@@ -89,7 +89,7 @@ def send_tracked_email(recipient, subject, body):
             </style>
         </head>
         <body>
-            <img width="1px" height="1px" alt="" src="{pixel_url}">
+            <img width="1px" height="1px" alt="" style="display:none;" src="{pixel_url}">
             <img src="{visible_image_url}" alt="Company Logo" width="44" height="55" class="logo" style="padding: 0; margin: 0; border: 0;">
             <div>{html_body}</div>
             <div class="footer">
