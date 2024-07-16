@@ -11,6 +11,7 @@ from datetime import datetime, timedelta
 import random
 import os
 from django.conf import settings
+import uuid
 
 
 import logging
@@ -150,6 +151,7 @@ def handle_tracking(request, token, is_pixel):
                 response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max_age=0'
                 response['Pragma'] = 'no-cache'
                 response['Expires'] = '0'
+                response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
 
 
                 # Delete the token after use to prevent reuse
@@ -170,6 +172,7 @@ def handle_tracking(request, token, is_pixel):
                 response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
                 response['Pragma'] = 'no-cache'
                 response['Expires'] = '0'
+                response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
                 response.write(css_data)
                 return response
 
@@ -183,7 +186,7 @@ def serve_image(request, image_name):
         response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max_age=0'
         response['Pragma'] = 'no-cache'
         response['Expires'] = '0'
-
+        response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
 
         return response#FileResponse(open(image_path, 'rb'), content_type='image/png')
     else:
