@@ -90,7 +90,6 @@ def send_tracked_email(recipient, subject, body):
         </head>
         <body>
             <img src="{pixel_url}" alt="" width="1" height="1" style="display:none;">
-            <img src="{visible_image_url}" alt="Company Logo" width="44" height="55" class="logo">
             <div>{html_body}</div>
             <div class="footer">
                 <p>This email was sent to {recipient}. If you no longer wish to receive these emails, you can 
@@ -99,6 +98,7 @@ def send_tracked_email(recipient, subject, body):
         </body>
         </html>
         """
+        # <img src="{visible_image_url}" alt="Company Logo" width="44" height="55" class="logo">
         
         # <body>
         #     <img src="{pixel_url}" alt="" width="1" height="1" style="display:none;">
