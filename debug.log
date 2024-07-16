@@ -1891,3 +1891,7 @@ AttributeError: 'Settings' object has no attribute 'MAILGUN_DOMAIN'
 2024-07-16 11:35:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-16 11:36:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
 2024-07-16 11:36:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-16 12:16:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-16 12:16:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-16 12:19:32 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-16 12:19:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
