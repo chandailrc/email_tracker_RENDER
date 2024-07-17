@@ -9,7 +9,7 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Recipient</th>
+            <th>Sender / Recipient</th>
             <th>Subject</th>
             <th>Sent At</th>
             <th>Opens</th>
@@ -22,7 +22,7 @@
         {% for email in emails %}
             <tr>
                 <td>{{ email.id }}</td>
-                <td>{{ email.recipient }}</td>
+                <td>{{ email.sender }} / {{ email.recipient }}</td>
                 <td>{{ email.subject }}</td>
                 <td>{{ email.sent_at }}</td>
                 <td>{{ email.trackinglog_set.count }}</td>
@@ -65,6 +65,7 @@
                         No
                     {% endif %}
                 </td>
+                <td><a href="{% url 'email_detail' email.id %}">View Details</a></td>
             </tr>
         {% endfor %}
     </tbody>

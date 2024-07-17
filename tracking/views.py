@@ -22,6 +22,32 @@ import base64
 
 from .mailgun_utils import send_email, send_simple_message
 
+import geoip2.database
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
+def get_geo_location(ip_address):
+    try:
+        reader = geoip2.database.Reader('/path/to/GeoLite2-City.mmdb')
+        response = reader.city(ip_address)
+        return f"{response.city.name}, {response.subdivisions.most_specific.name}, {response.country.name}"
+    except Exception as e:
+        return "Unknown"
+
+def get_device_type(user_agent):
+    if 'Mobi' in user_agent:
+        return 'Mobile'
+    elif 'Tablet' in user_agent:
+        return 'Tablet'
+    else:
+        return 'Desktop'
+
 def send_mailgun_mail_view(request):
     subject = "Hello from Mailgun 2"
     message = "This is a test email sent via Mailgun. Link --> https://www.google.com"
@@ -76,9 +102,10 @@ def tracking_css(request, token):
     # logger.info(f"views.py/CSS: Request received for {recipient} from {get_client_ip(request)}")
     return handle_tracking(request, token, is_pixel=False)
 
+
 def handle_tracking(request, token, is_pixel):
     try:
-        logger.info(f"View2 called. Process ID: {os.getpid()}, Thread ID: {threading.get_ident()}")
+        logger.info(f"'handle_tracking' called! Process ID: {os.getpid()}, Thread ID: {threading.get_ident()}")
         pixel_token = TrackingPixelToken.objects.get(token=token)
         recipient = pixel_token.email.recipient
         email_id = pixel_token.email.id
@@ -90,10 +117,8 @@ def handle_tracking(request, token, is_pixel):
 
         # Compare the difference
         if time_difference <= timedelta(seconds=4):
-            
             logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
             logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within 5 secs. Potential prefetching. Abandoning request!")
-            
             return HttpResponse("Not found", status=404)
         else:
             logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
@@ -110,60 +135,51 @@ def handle_tracking(request, token, is_pixel):
                 else:
                     logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
                     print("Greater than 4 seconds since the last log")
-                    
             else:
-                # If there is no previous log, you might want to treat it as case A or B
-                # depending on your application logic
                 print("No previous logs found")
-                # Add your logic here
+
+            ip_address = get_client_ip(request)
+            user_agent = request.META.get('HTTP_USER_AGENT')
+            geo_location = get_geo_location(ip_address)
+            device_type = get_device_type(user_agent)
+            referer = request.META.get('HTTP_REFERER', '')
+            screen_resolution = request.META.get('HTTP_UA_PIXELS', '')
+            language = request.META.get('HTTP_ACCEPT_LANGUAGE', '')
+            protocol = request.scheme
+            method = request.method
+            host = request.get_host()
+            connection = request.META.get('HTTP_CONNECTION', '')
 
             TrackingLog.objects.create(
                 email=pixel_token.email,
-                ip_address=get_client_ip(request),
-                user_agent=request.META.get('HTTP_USER_AGENT'),
+                ip_address=ip_address,
+                user_agent=user_agent,
                 opened_at=timezone.now(),
-                # is_expired_open=pixel_token.is_expired(),
-                tracking_type='pixel' if is_pixel else 'css'
+                tracking_type='pixel' if is_pixel else 'css',
+                geo_location=geo_location,
+                referer=referer,
+                device_type=device_type,
+                screen_resolution=screen_resolution,
+                language=language,
+                protocol=protocol,
+                method=method,
+                host=host,
+                connection=connection
             )
 
             if is_pixel:
                 # Serve a 1x1 transparent PNG
                 # As file:
                 png_path = os.path.join(settings.BASE_DIR, 'static/images', 'transparent.png')
-                # with open(png_path, 'rb') as png_file:
-                #     png_data = png_file.read()
 
-                # As hardcoded data
-                # png_data = b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\x0aIDATx\x9c\x63\x60\x00\x00\x00\x02\x00\x01\xe2!\xbc\x33\x00\x00\x00\x00IEND\xaeB`\x82'
-
-                # Encode the PNG data to base64
-                # base64_png = base64.b64encode(png_data).decode('utf-8')
-
-                # Return a 1x1 transparent pixel
-                # response = HttpResponse(content_type="image/png")
-                # response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-                # response['Pragma'] = 'no-cache'
-                # response['Expires'] = '0'
-                # response.write(png_data)
-                
-                # response = FileResponse(png_data, content_type='image/png')
                 response = FileResponse(open(png_path, 'rb'), content_type="image/png")
                 response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max_age=0'
                 response['Pragma'] = 'no-cache'
                 response['Expires'] = '0'
                 response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
 
-
-                # Delete the token after use to prevent reuse
-                # pixel_token.delete()
-
                 return response
             else:
-                # As file:
-                # css_path = os.path.join(settings.BASE_DIR, 'static', 'empty.css')
-                # with open(css_path, 'r') as css_file:
-                #     css_data = css_file.read()
-
                 # As hardcoded data
                 css_data = ""
 
@@ -209,38 +225,38 @@ def delete_unsubscribed_users(request):
         UnsubscribedUser.objects.all().delete()
         return redirect('unsubscribed_users_list')
 
-def track_email(request, email_id):
-    try:
-        email = Email.objects.get(id=email_id)
-        TrackingLog.objects.create(
-            email=email,
-            ip_address=request.META.get('REMOTE_ADDR'),
-            user_agent=request.META.get('HTTP_USER_AGENT'),
-            opened_at=timezone.now()
-        )
-        # 1x1 transparent GIF data
-        pixel = (
-            b'\x47\x49\x46\x38\x39\x61\x01\x00\x01\x00\x80\x00\x00\x00\x00\x00\xff\xff\xff'
-            b'\x21\xf9\x04\x01\x00\x00\x00\x00\x2c\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02'
-            b'\x02\x44\x01\x00\x3b'
-        )
-        return HttpResponse(pixel, content_type='image/gif')
-    except Email.DoesNotExist:
-        return HttpResponse(status=404)
-
-
-
 def track_link(request, link_id):
     link = get_object_or_404(Link, pk=link_id)
+    
+    ip_address = get_client_ip(request)
+    user_agent = request.META.get('HTTP_USER_AGENT')
+    geo_location = get_geo_location(ip_address)
+    device_type = get_device_type(user_agent)
+    referer = request.META.get('HTTP_REFERER', '')
+    screen_resolution = request.META.get('HTTP_UA_PIXELS', '')
+    language = request.META.get('HTTP_ACCEPT_LANGUAGE', '')
+    protocol = request.scheme
+    method = request.method
+    host = request.get_host()
+    connection = request.META.get('HTTP_CONNECTION', '')
+
     LinkClick.objects.create(
         link=link,
         clicked_at=datetime.now(),
-        ip_address=request.META.get('REMOTE_ADDR'),
-        user_agent=request.META.get('HTTP_USER_AGENT')
+        ip_address=ip_address,
+        user_agent=user_agent,
+        geo_location=geo_location,
+        referer=referer,
+        device_type=device_type,
+        screen_resolution=screen_resolution,
+        language=language,
+        protocol=protocol,
+        method=method,
+        host=host,
+        connection=connection
     )
+    
     return redirect(link.url)
-
-
 
 def dashboard(request):
     emails = Email.objects.all()
@@ -297,3 +313,19 @@ def send_tracked_email_view(request):
         return render(request, 'compose_email.html', {'confirmation_message': confirmation_message})
 
     return render(request, 'compose_email.html')
+
+from django.shortcuts import render, get_object_or_404
+from .models import Email, TrackingLog, LinkClick
+
+def email_detail(request, email_id):
+    email = get_object_or_404(Email, pk=email_id)
+    tracking_logs = TrackingLog.objects.filter(email=email).order_by('-opened_at')
+    link_clicks = LinkClick.objects.filter(link__email=email).order_by('-clicked_at')
+
+    context = {
+        'email': email,
+        'tracking_logs': tracking_logs,
+        'link_clicks': link_clicks,
+    }
+
+    return render(request, 'email_detail.html', context)

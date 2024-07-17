@@ -1897,3 +1897,401 @@ AttributeError: 'Settings' object has no attribute 'MAILGUN_DOMAIN'
 2024-07-16 12:19:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-16 12:26:54 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 34766
 2024-07-16 12:26:54 - django.server - INFO - "GET /send-tracked-email/ HTTP/1.1" 200 2174
+2024-07-17 12:51:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 13:05:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-17 13:05:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 14:55:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-17 14:55:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 14:55:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-17 14:55:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 14:56:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-17 14:56:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 14:56:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-17 14:56:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 14:58:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-17 14:58:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:00:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-17 15:00:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:01:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-17 15:01:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:09:58 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-17 15:09:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:15:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:15:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-17 15:15:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:16:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:17:11 - django.server - INFO - "GET /compose HTTP/1.1" 301 0
+2024-07-17 15:17:11 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-17 15:17:11 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-17 15:17:11 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 179
+2024-07-17 15:17:27 - django.server - INFO - "GET /dashboard HTTP/1.1" 301 0
+2024-07-17 15:17:27 - django.request - ERROR - Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column tracking_email.sender does not exist
+LINE 1: ...acking_email"."body", "tracking_email"."sent_at", "tracking_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 264, in dashboard
+    return render(request, 'dashboard.html', {'emails': emails, 'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 198, in render
+    len_values = len(values)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column tracking_email.sender does not exist
+LINE 1: ...acking_email"."body", "tracking_email"."sent_at", "tracking_...
+                                                             ^
+
+2024-07-17 15:17:27 - django.server - ERROR - "GET /dashboard/ HTTP/1.1" 500 145
+2024-07-17 15:35:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:35:51 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 35741
+2024-07-17 15:36:30 - django.server - INFO - "GET /email/37/ HTTP/1.1" 200 5033
+2024-07-17 15:36:36 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 35741
+2024-07-17 15:36:37 - django.server - INFO - "GET /email/8/ HTTP/1.1" 200 3193
+2024-07-17 15:36:48 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 35741
+2024-07-17 15:37:02 - django.server - INFO - "GET /email/46/ HTTP/1.1" 200 3192
+2024-07-17 15:37:05 - django.server - INFO - "GET /email/37/ HTTP/1.1" 200 5033
+2024-07-17 15:37:35 - django.server - INFO - "GET /unsubscribed_users/ HTTP/1.1" 200 1495
+2024-07-17 15:37:37 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 35741
+2024-07-17 15:37:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-17 15:38:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:39:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-17 15:39:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:39:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:41:11 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 34087
+2024-07-17 15:47:15 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 34087
+2024-07-17 15:47:34 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 35741
+2024-07-17 15:49:04 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 35741
+2024-07-17 15:50:05 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 36601
+2024-07-17 15:50:16 - django.server - INFO - "GET /email/46/ HTTP/1.1" 200 3248
+2024-07-17 15:50:24 - django.server - INFO - "GET /email/37/ HTTP/1.1" 200 5089
+2024-07-17 15:51:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-17 15:51:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:53:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-17 15:53:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:53:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:54:01 - tracking.views - INFO - Sending email to Testing@testing.com. Process ID: 97026, Thread ID: 127925414262336
+2024-07-17 15:54:01 - tracking.email_utils - INFO - email_utils.py: Email db entry created for Testing@testing.com at 2024-07-17 10:24:01.796151+00:00
+2024-07-17 15:54:01 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to Testing@testing.com
+2024-07-17 15:54:01 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-17 15:54:08 - django.server - INFO - "GET /serve-image/logo.png HTTP/1.1" 301 0
+2024-07-17 15:54:08 - tracking.urls - INFO - urls.py: PIXEL Request received for email Testing@testing.com from ip: 127.0.0.1
+2024-07-17 15:54:08 - tracking.views - INFO - 'handle_tracking' called! Process ID: 97026, Thread ID: 127925332473408
+2024-07-17 15:54:08 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-17 10:24:08.368599+00:00 | Mail sent: 2024-07-17 10:24:01.718673+00:00 | Difference: 0:00:06.649926
+2024-07-17 15:54:08 - django.request - ERROR - Internal Server Error: /track/ce68515504614cbabe9730768e876098/pixel.png
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(10)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py", line 17, in wrapper
+    return view_func(request, token, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 98, in tracking_pixel
+    return handle_tracking(request, token, is_pixel=True)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 153, in handle_tracking
+    TrackingLog.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(10)
+
+2024-07-17 15:54:08 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-17 15:54:08 - django.server - ERROR - "GET /track/ce68515504614cbabe9730768e876098/pixel.png HTTP/1.1" 500 145
+2024-07-17 15:54:15 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 37228
+2024-07-17 15:54:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/email_utils.py changed, reloading.
+2024-07-17 15:54:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:54:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-17 15:54:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:55:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 15:55:11 - tracking.views - INFO - Sending email to Testing@testing.com. Process ID: 97318, Thread ID: 125187735418432
+2024-07-17 15:55:11 - tracking.email_utils - INFO - email_utils.py: Email db entry created for Testing@testing.com at 2024-07-17 10:25:11.596548+00:00
+2024-07-17 15:55:11 - tracking.email_utils - INFO - email_utils.py: Email sent successfully to Testing@testing.com
+2024-07-17 15:55:11 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-17 15:55:13 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 37856
+2024-07-17 15:55:15 - django.server - INFO - "GET /email/48/ HTTP/1.1" 200 2673
+2024-07-17 15:55:29 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-17 15:55:29 - tracking.urls - INFO - urls.py: PIXEL Request received for email Testing@testing.com from ip: 127.0.0.1
+2024-07-17 15:55:29 - tracking.views - INFO - 'handle_tracking' called! Process ID: 97318, Thread ID: 125187727025728
+2024-07-17 15:55:29 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-17 10:25:29.653078+00:00 | Mail sent: 2024-07-17 10:25:11.556686+00:00 | Difference: 0:00:18.096392
+2024-07-17 15:55:29 - django.request - ERROR - Internal Server Error: /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(10)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py", line 17, in wrapper
+    return view_func(request, token, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 98, in tracking_pixel
+    return handle_tracking(request, token, is_pixel=True)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 153, in handle_tracking
+    TrackingLog.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(10)
+
+2024-07-17 15:55:29 - django.server - ERROR - "GET /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png HTTP/1.1" 500 145
+2024-07-17 15:55:41 - django.server - INFO - "GET /email/48/ HTTP/1.1" 200 2673
+2024-07-17 15:55:43 - django.server - INFO - "GET /email/48/ HTTP/1.1" 200 2673
+2024-07-17 15:55:46 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 37856
+2024-07-17 15:55:54 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-17 15:55:54 - tracking.urls - INFO - urls.py: PIXEL Request received for email Testing@testing.com from ip: 127.0.0.1
+2024-07-17 15:55:54 - tracking.views - INFO - 'handle_tracking' called! Process ID: 97318, Thread ID: 125187718633024
+2024-07-17 15:55:54 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-17 10:25:54.197802+00:00 | Mail sent: 2024-07-17 10:25:11.556686+00:00 | Difference: 0:00:42.641116
+2024-07-17 15:55:54 - django.request - ERROR - Internal Server Error: /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(10)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py", line 17, in wrapper
+    return view_func(request, token, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 98, in tracking_pixel
+    return handle_tracking(request, token, is_pixel=True)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 153, in handle_tracking
+    TrackingLog.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(10)
+
+2024-07-17 15:55:54 - django.server - ERROR - "GET /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png HTTP/1.1" 500 145
+2024-07-17 16:01:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 16:01:42 - django.server - INFO - "GET /email/48/ HTTP/1.1" 200 2673
+2024-07-17 16:01:45 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 37856
+2024-07-17 16:01:49 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-17 16:01:49 - tracking.urls - INFO - urls.py: PIXEL Request received for email Testing@testing.com from ip: 127.0.0.1
+2024-07-17 16:01:49 - tracking.views - INFO - 'handle_tracking' called! Process ID: 98776, Thread ID: 137246015485504
+2024-07-17 16:01:49 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-17 10:31:49.149490+00:00 | Mail sent: 2024-07-17 10:25:11.556686+00:00 | Difference: 0:06:37.592804
+2024-07-17 16:01:49 - django.request - ERROR - Internal Server Error: /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(10)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py", line 17, in wrapper
+    return view_func(request, token, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 98, in tracking_pixel
+    return handle_tracking(request, token, is_pixel=True)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 153, in handle_tracking
+    TrackingLog.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(10)
+
+2024-07-17 16:01:49 - django.server - ERROR - "GET /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png HTTP/1.1" 500 145
+2024-07-17 16:02:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-17 16:02:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 16:03:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-17 16:03:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 16:03:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 16:03:27 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-17 16:03:27 - tracking.urls - INFO - urls.py: PIXEL Request received for email Testing@testing.com from ip: 127.0.0.1
+2024-07-17 16:03:27 - tracking.views - INFO - 'handle_tracking' called! Process ID: 99298, Thread ID: 124723077838400
+2024-07-17 16:03:27 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-17 10:33:27.819363+00:00 | Mail sent: 2024-07-17 10:25:11.556686+00:00 | Difference: 0:08:16.262677
+2024-07-17 16:03:27 - django.server - INFO - "GET /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png HTTP/1.1" 200 95
+2024-07-17 16:03:32 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 38497
+2024-07-17 16:03:34 - django.server - INFO - "GET /email/48/ HTTP/1.1" 200 3294
+2024-07-17 16:04:01 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-17 16:04:01 - tracking.urls - INFO - urls.py: PIXEL Request received for email Testing@testing.com from ip: 127.0.0.1
+2024-07-17 16:04:01 - tracking.views - INFO - 'handle_tracking' called! Process ID: 99298, Thread ID: 124723069445696
+2024-07-17 16:04:01 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-17 10:34:01.651321+00:00 | Mail sent: 2024-07-17 10:25:11.556686+00:00 | Difference: 0:08:50.094635
+2024-07-17 16:04:01 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-17 10:34:01.651321+00:00 | last_log time: 2024-07-17 10:33:27.821181+00:00 | Difference: 0:00:33.830140
+2024-07-17 16:04:01 - django.server - INFO - "GET /track/03ca30e0c49a40809aa4d161c06d7e23/pixel.png HTTP/1.1" 200 95
+2024-07-17 16:04:04 - django.server - INFO - "GET /email/48/ HTTP/1.1" 200 3915
+2024-07-17 16:04:05 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 39091
+2024-07-17 16:04:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-17 16:04:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-17 16:06:37 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 39091

@@ -197,6 +197,7 @@ if mail_case == 'GMAIL':
     EMAIL_USE_TLS = True
     EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
     EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
+    DEFAULT_FROM_EMAIL = env('GMAIL_DEFAULT_EMAIL')  # Replace with your default email address
     
 if mail_case == 'IONOS':
     
@@ -246,6 +247,7 @@ elif mail_case == 'MAILHOG':
     EMAIL_HOST_PASSWORD = ''
     EMAIL_USE_TLS = False
     EMAIL_USE_SSL = False
+    DEFAULT_FROM_EMAIL='tester@mailhog.com'
 
 # Site URL for tracking pixel
 BASE_URL = env('BASE_URL')#'http://127.0.0.1:8000'

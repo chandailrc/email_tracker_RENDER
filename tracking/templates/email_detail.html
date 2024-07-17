@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}Email Details{% endblock %}
+
+{% block header %}Email Details{% endblock %}
+
+{% block content %}
+    <h2>Email Information</h2>
+    <p><strong>Sender:</strong> {{ email.sender }}</p>
+    <p><strong>Recipient:</strong> {{ email.recipient }}</p>
+    <p><strong>Subject:</strong> {{ email.subject }}</p>
+    <p><strong>Body:</strong> {{ email.body }}</p>
+    <p><strong>Sent At:</strong> {{ email.sent_at }}</p>
+
+    <h2>Tracking Logs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Opened At</th>
+                <th>IP Address</th>
+                <th>User Agent</th>
+                <th>Geo Location</th>
+                <th>Referer</th>
+                <th>Device Type</th>
+                <th>Screen Resolution</th>
+                <th>Language</th>
+                <th>Protocol</th>
+                <th>Method</th>
+                <th>Host</th>
+                <th>Connection</th>
+                <th>Tracking Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in tracking_logs %}
+                <tr>
+                    <td>{{ log.opened_at }}</td>
+                    <td>{{ log.ip_address }}</td>
+                    <td>{{ log.user_agent }}</td>
+                    <td>{{ log.geo_location }}</td>
+                    <td>{{ log.referer }}</td>
+                    <td>{{ log.device_type }}</td>
+                    <td>{{ log.screen_resolution }}</td>
+                    <td>{{ log.language }}</td>
+                    <td>{{ log.protocol }}</td>
+                    <td>{{ log.method }}</td>
+                    <td>{{ log.host }}</td>
+                    <td>{{ log.connection }}</td>
+                    <td>{{ log.tracking_type }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Link Clicks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Clicked At</th>
+                <th>IP Address</th>
+                <th>User Agent</th>
+                <th>Geo Location</th>
+                <th>Referer</th>
+                <th>Device Type</th>
+                <th>Screen Resolution</th>
+                <th>Language</th>
+                <th>Protocol</th>
+                <th>Method</th>
+                <th>Host</th>
+                <th>Connection</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for click in link_clicks %}
+                <tr>
+                    <td>{{ click.clicked_at }}</td>
+                    <td>{{ click.ip_address }}</td>
+                    <td>{{ click.user_agent }}</td>
+                    <td>{{ click.geo_location }}</td>
+                    <td>{{ click.referer }}</td>
+                    <td>{{ click.device_type }}</td>
+                    <td>{{ click.screen_resolution }}</td>
+                    <td>{{ click.language }}</td>
+                    <td>{{ click.protocol }}</td>
+                    <td>{{ click.method }}</td>
+                    <td>{{ click.host }}</td>
+                    <td>{{ click.connection }}</td>
+                    <td>{{ click.link.url }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

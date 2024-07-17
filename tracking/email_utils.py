@@ -35,7 +35,7 @@ def send_tracked_email(recipient, subject, body):
     # time.sleep(10)
 
     try:
-        email = Email.objects.create(recipient=recipient, subject=subject, body=body, sent_at=timezone.now())
+        email = Email.objects.create(recipient=recipient, subject=subject, body=body, sent_at=timezone.now(), sender=settings.DEFAULT_FROM_EMAIL)
         #tracking_id = email.id
 
         logger.info(f"email_utils.py: Email db entry created for {recipient} at {timezone.now()}")
