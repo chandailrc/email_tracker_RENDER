@@ -14,9 +14,11 @@
 </head>
 <body>
     <h2>Compose Email</h2>
-    {% if confirmation_message %}
+    {% if messages %}
     <div class="alert">
-        {{ confirmation_message }}
+        {% for message in messages %}
+        <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+        {% endfor %}
     </div>
     {% endif %}
     <form method="post" action="{% url 'send_tracked_email_view' %}">

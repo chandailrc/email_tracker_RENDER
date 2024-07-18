@@ -1,28 +1,24 @@
+import os
+import uuid
+import threading
+import geoip2.database
+
+from .models import UnsubscribedUser, TrackingLog, LinkClick
+from datetime import datetime, timedelta
 from django.http import HttpResponse, FileResponse
 from django.utils import timezone
-from .models import TrackingLog, TrackingPixelToken
-from django.shortcuts import render
-from .email_utils import send_tracked_email
-from django.shortcuts import get_object_or_404, redirect
-from .models import Link, LinkClick
-import time
-from .models import Email, UnsubscribedUser
-from datetime import datetime, timedelta
-import random
-import os
+from django.shortcuts import get_object_or_404, redirect, render
 from django.conf import settings
-import uuid
+
+from sending.models import Email, Link, TrackingPixelToken
+
 
 
 import logging
 
 logger = logging.getLogger(__name__)
 
-import base64
 
-from .mailgun_utils import send_email, send_simple_message
-
-import geoip2.database
 
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
@@ -48,57 +44,14 @@ def get_device_type(user_agent):
     else:
         return 'Desktop'
 
-def send_mailgun_mail_view(request):
-    subject = "Hello from Mailgun 2"
-    message = "This is a test email sent via Mailgun. Link --> https://www.google.com"
-    html_text = "<html><body><p>This is the HTML version</p></body></html>"
-    from_email = settings.DEFAULT_FROM_EMAIL
-    recipient_list = [
-                    "mukulchandail@gmail.com",
-                    "mukulchandail@yahoo.com",
-                    "1chandailrc1@gmail.com",
-                    "chandailrc@gmail.com",
-                    "chandailrc@hotmail.com",
-                    "singhal1959a@gmail.com",
-                    "singhal24a@gmail.com",
-                    "chandailrcsai@gmail.com",
-                    "chandailrcsai@outlook.com",
-                    "spamtestsai@outlook.com",
-                    "dpo0qnhg@temporary-mail.net",
-                    "bucofomopudi@gotgel.org",
-                    "ines850@magicth.com",
-                    "lamoruze@pelagius.net",
-                    "afoweitbf@10mail.org",
-                    "jixamo8511@carspure.com",
-                    "spamtestersai@maildrop.cc",
-                    "mtkzvf@vobau.net"
-                    ]
-    for recip in recipient_list[2:3]:
-        response = send_email(subject, message, from_email, recip, html_text)
-        # response = send_simple_message(subject, message, from_email, recip)
-    
-    if response.status_code == 200:
-        return HttpResponse("Email sent successfully!")
-    else:
-        return HttpResponse(f"Failed to send email. Status code: {response.status_code}")
-
-
-def get_client_ip(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]  # Take the first IP in the list
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
-
 
 def tracking_pixel(request, token):
-    recipient = TrackingPixelToken.objects.get(token=token).email.recipient
+    # recipient = TrackingPixelToken.objects.get(token=token).email.recipient
     # logger.info(f"views.py/PIXEL: Request received for {recipient} from {get_client_ip(request)}.")
     return handle_tracking(request, token, is_pixel=True)
 
 def tracking_css(request, token):
-    recipient = TrackingPixelToken.objects.get(token=token).email.recipient
+    # recipient = TrackingPixelToken.objects.get(token=token).email.recipient
     # logger.info(f"views.py/CSS: Request received for {recipient} from {get_client_ip(request)}")
     return handle_tracking(request, token, is_pixel=False)
 
@@ -275,47 +228,6 @@ def unsubscribe(request):
 def unsubscribed_users_list(request):
     unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
     return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
-
-def compose_email_view(request):
-    return render(request, 'compose_email.html')
-
-import threading
-
-def send_tracked_email_view(request):
-    if request.method == 'POST':
-        recipients = request.POST.get('recipients').split()  # Split on whitespace
-        subject = request.POST.get('subject')
-        body = request.POST.get('body')
-        delay_type = request.POST.get('delay_type')
-        delay_value = int(request.POST.get('delay_value', 0))
-        min_delay = int(request.POST.get('min_delay', 0))
-        max_delay = int(request.POST.get('max_delay', 0))
-
-        sent_count = 0
-        for recipient in recipients:
-            recipient = recipient.strip()
-            if recipient:
-                logger.info(f"Sending email to {recipient}. Process ID: {os.getpid()}, Thread ID: {threading.get_ident()}")
-                success = send_tracked_email(recipient, subject, body)
-                if success:
-                    sent_count += 1
-                    print(f"views.py/send_tracked_email_view: Email sent successfully to {recipient}")
-                else:
-                    print(f"views.py/send_tracked_email_view: Failed to send email to {recipient}")
-
-                if delay_type == 'fixed':
-                    time.sleep(delay_value)
-                elif delay_type == 'random':
-                    time.sleep(random.uniform(min_delay, max_delay))
-
-        confirmation_message = f"{sent_count} email(s) sent successfully!"
-        print(confirmation_message)  # Add this line for debugging
-        return render(request, 'compose_email.html', {'confirmation_message': confirmation_message})
-
-    return render(request, 'compose_email.html')
-
-from django.shortcuts import render, get_object_or_404
-from .models import Email, TrackingLog, LinkClick
 
 def email_detail(request, email_id):
     email = get_object_or_404(Email, pk=email_id)

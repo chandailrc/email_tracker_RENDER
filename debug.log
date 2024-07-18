@@ -2295,3 +2295,600 @@ django.db.utils.DataError: value too long for type character varying(10)
 2024-07-17 16:04:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
 2024-07-17 16:04:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-17 16:06:37 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 39091
+2024-07-18 12:25:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:27:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:27:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:28:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 12:28:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:28:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 12:28:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:30:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 12:30:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:30:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:30:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:31:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:31:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:34:12 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:34:12 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:34:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:34:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:34:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:34:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:34:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:34:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:37:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/models.py changed, reloading.
+2024-07-18 12:37:11 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:43:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-18 12:43:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:45:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-18 12:45:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:46:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-18 12:46:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:46:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-18 12:46:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:47:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:47:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 12:48:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 12:48:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:26:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 13:26:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:26:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 13:26:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:27:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 13:27:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:28:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 13:28:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:28:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 13:28:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:28:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-18 13:28:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:29:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-18 13:29:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:32:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-18 13:32:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:33:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-18 13:33:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:35:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 13:35:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:37:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 13:37:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:37:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 13:37:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:38:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 13:38:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:40:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 13:40:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:40:54 - django.server - INFO - "GET /admin HTTP/1.1" 301 0
+2024-07-18 13:40:55 - django.server - INFO - "GET /admin/ HTTP/1.1" 302 0
+2024-07-18 13:40:55 - django.server - INFO - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4253
+2024-07-18 13:40:55 - django.server - INFO - "GET /static/admin/css/base.9f65b5cd54b3.css HTTP/1.1" 200 4182
+2024-07-18 13:40:55 - django.server - INFO - "GET /static/admin/css/dark_mode.e18e9a052429.css HTTP/1.1" 200 606
+2024-07-18 13:40:55 - django.server - INFO - "GET /static/admin/css/nav_sidebar.dd925738f4cc.css HTTP/1.1" 200 650
+2024-07-18 13:40:55 - django.server - INFO - "GET /static/admin/css/login.586129c60a93.css HTTP/1.1" 200 310
+2024-07-18 13:40:55 - django.server - INFO - "GET /static/admin/js/nav_sidebar.3b9190d420b1.js HTTP/1.1" 200 690
+2024-07-18 13:40:55 - django.server - INFO - "GET /static/admin/js/theme.ab270f56bb9c.js HTTP/1.1" 200 501
+2024-07-18 13:40:55 - django.server - INFO - "GET /static/admin/css/responsive.eafb93ff084c.css HTTP/1.1" 200 2897
+2024-07-18 13:40:59 - django.server - INFO - "GET /send-tracked-email/ HTTP/1.1" 200 2174
+2024-07-18 13:41:12 - django.server - INFO - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4414
+2024-07-18 13:43:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 13:43:35 - django.server - INFO - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2024-07-18 13:43:35 - django.server - INFO - "GET /admin/ HTTP/1.1" 200 5628
+2024-07-18 13:43:35 - django.server - INFO - "GET /static/admin/css/dashboard.e90f2068217b.css HTTP/1.1" 200 185
+2024-07-18 13:43:35 - django.server - INFO - "GET /static/admin/img/icon-changelink.18d2fd706348.svg HTTP/1.1" 200 252
+2024-07-18 13:43:35 - django.server - INFO - "GET /static/admin/img/icon-addlink.d519b3bab011.svg HTTP/1.1" 200 178
+2024-07-18 13:43:41 - django.server - INFO - "GET /admin/auth/user/ HTTP/1.1" 200 10999
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/css/changelists.47cb433b29d4.css HTTP/1.1" 200 1322
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/admin/RelatedObjectLookups.ef211845e458.js HTTP/1.1" 200 1965
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/core.7e257fdf56dc.js HTTP/1.1" 200 1328
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/jquery.init.b7781a0897fc.js HTTP/1.1" 200 194
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/prepopulate.bd2361dfd64d.js HTTP/1.1" 200 468
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/vendor/jquery/jquery.min.2c872dbe60f4.js HTTP/1.1" 200 27445
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/urlify.ae970a820212.js HTTP/1.1" 200 1969
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/actions.867b023a736d.js HTTP/1.1" 200 1663
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/filters.0e360b7a9f80.js HTTP/1.1" 200 392
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/js/vendor/xregexp/xregexp.min.f1ae4617847c.js HTTP/1.1" 200 35270
+2024-07-18 13:43:41 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/img/search.7cf54ff789c6.svg HTTP/1.1" 200 241
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/img/icon-yes.d2f9f035226a.svg HTTP/1.1" 200 242
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/img/sorting-icons.3a097b59f104.svg HTTP/1.1" 200 329
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/img/tooltag-add.e59d620a9742.svg HTTP/1.1" 200 182
+2024-07-18 13:43:41 - django.server - INFO - "GET /static/admin/img/icon-viewlink.41eb31f7826e.svg HTTP/1.1" 200 326
+2024-07-18 13:43:47 - django.server - INFO - "GET /admin/auth/group/ HTTP/1.1" 200 7475
+2024-07-18 13:43:47 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2024-07-18 13:43:51 - django.server - INFO - "GET /admin/auth/user/ HTTP/1.1" 200 10999
+2024-07-18 13:43:52 - django.server - INFO - "GET /admin/ HTTP/1.1" 200 5628
+2024-07-18 13:43:53 - django.server - INFO - "GET /admin/auth/group/ HTTP/1.1" 200 7475
+2024-07-18 13:43:53 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2024-07-18 13:43:54 - django.server - INFO - "GET /admin/auth/user/ HTTP/1.1" 200 10999
+2024-07-18 13:43:54 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2024-07-18 13:44:15 - django.server - INFO - "POST /admin/auth/user/ HTTP/1.1" 200 7171
+2024-07-18 13:44:15 - django.server - INFO - "GET /static/admin/js/cancel.ecc4c5ca7b32.js HTTP/1.1" 200 359
+2024-07-18 13:44:17 - django.server - INFO - "POST /admin/auth/user/ HTTP/1.1" 302 0
+2024-07-18 13:44:17 - django.server - INFO - "GET /admin/auth/user/ HTTP/1.1" 302 0
+2024-07-18 13:44:17 - django.server - INFO - "GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4407
+2024-07-18 13:45:35 - django.request - ERROR - Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "sending_email" does not exist
+LINE 1: ...ing_email"."body", "sending_email"."sent_at" FROM "sending_e...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 217, in dashboard
+    return render(request, 'dashboard.html', {'emails': emails, 'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 198, in render
+    len_values = len(values)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "sending_email" does not exist
+LINE 1: ...ing_email"."body", "sending_email"."sent_at" FROM "sending_e...
+                                                             ^
+
+2024-07-18 13:45:35 - django.server - ERROR - "GET /dashboard/ HTTP/1.1" 500 145
+2024-07-18 14:00:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 14:00:37 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 1718
+2024-07-18 14:01:42 - django.security.csrf - WARNING - Forbidden (CSRF token from POST incorrect.): /send-tracked-email/
+2024-07-18 14:01:42 - django.server - WARNING - "POST /send-tracked-email/ HTTP/1.1" 403 1018
+2024-07-18 14:01:42 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-18 14:02:56 - django.server - INFO - "GET /send-tracked-email/ HTTP/1.1" 200 2174
+2024-07-18 14:02:56 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-18 14:02:58 - django.server - INFO - "POST /send-tracked-email/ HTTP/1.1" 200 2252
+2024-07-18 14:02:58 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-18 14:03:41 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 2964
+2024-07-18 14:03:41 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-18 14:03:49 - django.server - INFO - "GET /serve-image/logo.png HTTP/1.1" 301 0
+2024-07-18 14:03:49 - tracking.urls - INFO - urls.py: PIXEL Request received for email chandailrc@gmail.com from ip: 127.0.0.1
+2024-07-18 14:03:49 - tracking.views - INFO - 'handle_tracking' called! Process ID: 41003, Thread ID: 126050495362624
+2024-07-18 14:03:49 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-18 08:33:49.971917+00:00 | Mail sent: 2024-07-18 08:32:58.005464+00:00 | Difference: 0:00:51.966453
+2024-07-18 14:03:49 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-18 14:03:50 - django.server - INFO - "GET /track/d6558714ba4d4500b002892ee7bbfe28/pixel.png HTTP/1.1" 200 95
+2024-07-18 14:03:52 - django.server - INFO - "GET /serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-18 14:03:52 - tracking.urls - INFO - urls.py: PIXEL Request received for email 1chandailrc1@gmail.com from ip: 127.0.0.1
+2024-07-18 14:03:52 - tracking.views - INFO - 'handle_tracking' called! Process ID: 41003, Thread ID: 126050486969920
+2024-07-18 14:03:52 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-18 08:33:52.119930+00:00 | Mail sent: 2024-07-18 08:32:57.870821+00:00 | Difference: 0:00:54.249109
+2024-07-18 14:03:52 - django.server - INFO - "GET /track/9b9735f63c1048e2a0a6105d69bb6672/pixel.png HTTP/1.1" 200 95
+2024-07-18 14:03:56 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 14:03:57 - django.server - INFO - "GET /email/1/ HTTP/1.1" 200 3291
+2024-07-18 14:04:02 - django.server - INFO - "GET /email/2/ HTTP/1.1" 200 3289
+2024-07-18 14:05:27 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 14:46:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:20:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:21:17 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:21:17 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:21:18 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:21:18 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:21:18 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:21:18 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:21:18 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:21:19 - django.server - INFO - "GET /dashboard/ HTTP/1.1" 200 4246
+2024-07-18 15:23:22 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 15:23:22 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-18 15:23:23 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 15:23:23 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 15:23:24 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 15:23:24 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 15:23:24 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 15:23:24 - django.server - INFO - "GET /compose/ HTTP/1.1" 200 2174
+2024-07-18 15:23:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-07-18 15:23:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:24:05 - django.request - WARNING - Not Found: /api/sendingcompose/
+2024-07-18 15:24:05 - django.server - WARNING - "GET /api/sendingcompose/ HTTP/1.1" 404 2366
+2024-07-18 15:24:11 - django.server - INFO - "GET /api/sending/compose/ HTTP/1.1" 200 2186
+2024-07-18 15:24:19 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 4311
+2024-07-18 15:24:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-07-18 15:25:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:47:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 15:47:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:48:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 15:48:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:57:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/urls.py changed, reloading.
+2024-07-18 15:57:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:58:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/urls.py changed, reloading.
+2024-07-18 15:58:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:58:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 15:58:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:58:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 15:58:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 15:59:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 15:59:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:00:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 16:00:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:01:05 - django.request - WARNING - Not Found: /api/sending/compose/
+2024-07-18 16:01:05 - django.server - WARNING - "GET /api/sending/compose/ HTTP/1.1" 404 2575
+2024-07-18 16:01:13 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:01:13 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87417
+2024-07-18 16:04:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:04:22 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:22 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:23 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:23 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:23 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:23 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:23 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:23 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:23 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:23 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:23 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:23 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:24 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:24 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:24 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:04:24 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:04:46 - django.request - WARNING - Not Found: /api/sending/compose/
+2024-07-18 16:04:46 - django.server - WARNING - "GET /api/sending/compose/ HTTP/1.1" 404 2575
+2024-07-18 16:06:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:06:16 - django.request - ERROR - Internal Server Error: /api/frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:06:16 - django.server - ERROR - "GET /api/frontend/compose/ HTTP/1.1" 500 87268
+2024-07-18 16:09:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-07-18 16:09:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:10:04 - django.request - ERROR - Internal Server Error: /frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 6, in compose_email_view
+    return render(request, 'compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: compose_email.html
+2024-07-18 16:10:04 - django.server - ERROR - "GET /frontend/compose/ HTTP/1.1" 500 87220
+2024-07-18 16:11:11 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-18 16:11:11 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:11:16 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:13:09 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/sending/send-tracked-email/
+2024-07-18 16:13:09 - django.server - WARNING - "POST /api/sending/send-tracked-email/ HTTP/1.1" 403 2869
+2024-07-18 16:13:09 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 16:13:09 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:13:13 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 4311
+2024-07-18 16:13:14 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 4311
+2024-07-18 16:13:14 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 4311
+2024-07-18 16:13:14 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 4311
+2024-07-18 16:13:15 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 4311
+2024-07-18 16:13:21 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:14:46 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:17:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 16:17:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:17:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 16:17:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:18:11 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:18:11 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:18:11 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:18:11 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:18:19 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/sending/send-tracked-email/
+2024-07-18 16:18:19 - django.server - WARNING - "POST /api/sending/send-tracked-email/ HTTP/1.1" 403 2869
+2024-07-18 16:18:19 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 16:18:19 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:18:52 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/sending/send-tracked-email/
+2024-07-18 16:18:52 - django.server - WARNING - "POST /api/sending/send-tracked-email/ HTTP/1.1" 403 2869
+2024-07-18 16:18:52 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 16:18:52 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:19:11 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:19:24 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/sending/send-tracked-email/
+2024-07-18 16:19:24 - django.server - WARNING - "POST /api/sending/send-tracked-email/ HTTP/1.1" 403 2869
+2024-07-18 16:19:24 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 16:19:24 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:22:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-18 16:22:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:24:11 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 16:24:12 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:24:23 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-18 16:24:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:26:52 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:27:01 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 103
+2024-07-18 16:27:01 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 16:27:01 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:27:04 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 4923
+2024-07-18 16:35:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-18 16:35:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:38:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-18 16:38:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:38:47 - django.request - ERROR - Internal Server Error: /frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 9, in compose_email_view
+    return render(request, 'frontend/compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: frontend/compose_email.html
+2024-07-18 16:38:47 - django.server - ERROR - "GET /frontend/compose/ HTTP/1.1" 500 88501
+2024-07-18 16:39:21 - django.request - ERROR - Internal Server Error: /frontend/compose/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 9, in compose_email_view
+    return render(request, 'frontend/compose_email.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: frontend/compose_email.html
+2024-07-18 16:39:21 - django.server - ERROR - "GET /frontend/compose/ HTTP/1.1" 500 88501
+2024-07-18 16:40:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-18 16:40:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:40:36 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2546
+2024-07-18 16:41:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-18 16:41:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:41:12 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:41:13 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 16:41:21 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 103
+2024-07-18 16:41:21 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 16:41:21 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-18 16:41:26 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 5540
+2024-07-18 16:41:29 - django.request - WARNING - Not Found: /track/b3910652fee246a4a0b392f1571a6f36/pixel.png
+2024-07-18 16:41:29 - django.server - WARNING - "GET /track/b3910652fee246a4a0b392f1571a6f36/pixel.png HTTP/1.1" 404 2562
+2024-07-18 16:41:29 - django.request - WARNING - Not Found: /serve-image/logo.png/
+2024-07-18 16:41:29 - django.server - WARNING - "GET /serve-image/logo.png/ HTTP/1.1" 404 2481
+2024-07-18 16:41:34 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 5540
+2024-07-18 16:41:39 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 5540
+2024-07-18 16:41:40 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 5540
+2024-07-18 16:41:40 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 5540
+2024-07-18 16:41:40 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 5540
+2024-07-18 16:42:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 16:42:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:43:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-18 16:43:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 16:44:06 - django.request - WARNING - Not Found: /frontend/dashboard/
+2024-07-18 16:44:06 - django.server - WARNING - "GET /frontend/dashboard/ HTTP/1.1" 404 2759
+2024-07-18 17:53:37 - django.request - WARNING - Not Found: /compose/
+2024-07-18 17:53:37 - django.server - WARNING - "GET /compose/ HTTP/1.1" 404 2442
+2024-07-18 17:53:38 - django.request - WARNING - Not Found: /compose/
+2024-07-18 17:53:38 - django.server - WARNING - "GET /compose/ HTTP/1.1" 404 2442
+2024-07-18 17:53:49 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-18 17:57:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 17:57:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 17:58:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 17:58:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 17:58:18 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 5540
+2024-07-18 17:58:20 - django.request - WARNING - Not Found: /track/b3910652fee246a4a0b392f1571a6f36/pixel.png
+2024-07-18 17:58:20 - django.request - WARNING - Not Found: /serve-image/logo.png/
+2024-07-18 17:58:20 - django.server - WARNING - "GET /track/b3910652fee246a4a0b392f1571a6f36/pixel.png HTTP/1.1" 404 2562
+2024-07-18 17:58:20 - django.server - WARNING - "GET /serve-image/logo.png/ HTTP/1.1" 404 2481
+2024-07-18 17:58:48 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 103
+2024-07-18 17:58:48 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 17:58:48 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-18 17:58:56 - django.server - INFO - "GET /api/tracking/serve-image/logo.png HTTP/1.1" 301 0
+2024-07-18 17:58:56 - tracking.urls - INFO - urls.py: PIXEL Request received for email Checking@tracking.com from ip: 127.0.0.1
+2024-07-18 17:58:56 - tracking.views - INFO - 'handle_tracking' called! Process ID: 79604, Thread ID: 123811234047552
+2024-07-18 17:58:56 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-18 12:28:56.042494+00:00 | Mail sent: 2024-07-18 12:28:48.673622+00:00 | Difference: 0:00:07.368872
+2024-07-18 17:58:56 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-18 17:58:56 - django.server - INFO - "GET /api/tracking/track-pixel/a1ce989c50114110b4e79d98740e7824/pixel.png HTTP/1.1" 200 95
+2024-07-18 17:58:58 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 6808
+2024-07-18 18:03:57 - django.server - INFO - "GET /api/tracking/unsubscribed_users/ HTTP/1.1" 200 1534
+2024-07-18 18:03:58 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 6808
+2024-07-18 18:04:01 - django.request - WARNING - Not Found: /unsubscribe/
+2024-07-18 18:04:01 - django.server - WARNING - "GET /unsubscribe/?email=Checking@tracking.com HTTP/1.1" 404 2482
+2024-07-18 18:06:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/email_utils.py changed, reloading.
+2024-07-18 18:06:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-18 18:06:25 - django.request - WARNING - Not Found: /unsubscribe/
+2024-07-18 18:06:25 - django.server - WARNING - "GET /unsubscribe/?email=Checking@tracking.com HTTP/1.1" 404 2482
+2024-07-18 18:06:40 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 103
+2024-07-18 18:06:40 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-18 18:06:40 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-18 18:06:44 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-18 18:06:44 - tracking.urls - INFO - urls.py: PIXEL Request received for email usub@sub.com from ip: 127.0.0.1
+2024-07-18 18:06:44 - tracking.views - INFO - 'handle_tracking' called! Process ID: 80827, Thread ID: 136699302635072
+2024-07-18 18:06:44 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-18 12:36:44.405134+00:00 | Mail sent: 2024-07-18 12:36:40.018190+00:00 | Difference: 0:00:04.386944
+2024-07-18 18:06:44 - django.server - INFO - "GET /api/tracking/track-pixel/13a6912970544338a4633d04e6201cb7/pixel.png HTTP/1.1" 200 95
+2024-07-18 18:06:45 - django.server - INFO - "GET /api/tracking/unsubscribe/?email=usub@sub.com HTTP/1.1" 200 439
+2024-07-18 18:07:18 - django.server - INFO - "POST /api/tracking/unsubscribe/?email=usub@sub.com HTTP/1.1" 200 27
+2024-07-18 18:07:27 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 8063
+2024-07-18 18:07:32 - django.server - INFO - "GET /api/tracking/email/6/ HTTP/1.1" 200 3294
+2024-07-18 18:42:29 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 8063
+2024-07-18 18:42:30 - django.server - INFO - "GET /api/tracking/unsubscribed_users/ HTTP/1.1" 200 1616
+2024-07-18 18:42:31 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 8063
+2024-07-18 18:42:32 - django.server - INFO - "GET /api/tracking/unsubscribed_users/ HTTP/1.1" 200 1616
+2024-07-18 18:42:34 - django.server - INFO - "GET /api/tracking/dashboard/ HTTP/1.1" 200 8063
