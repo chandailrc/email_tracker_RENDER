@@ -46,3 +46,4 @@ def send_tracked_email(request):
         'sent_count': sent_count,
         'failed_recipients': failed_recipients
     })
+

@@ -6,4 +6,9 @@ from . import views
 urlpatterns = [
     path('compose/', views.compose_email_view, name='compose_email'),
     path('send-tracked-email/', views.send_tracked_email_view, name='send_tracked_email_view'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('email/<int:email_id>/', views.email_detail, name='email_detail'),
+    path('unsubscribe/', views.unsubscribe, name='unsubscribe'),
+    path('unsubscribed_users/', views.unsubscribed_users_list, name='unsubscribed_users_list'),
+
 ]

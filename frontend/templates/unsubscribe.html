@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unsubscribe</title>
+</head>
+<body>
+    <h1>Unsubscribe</h1>
+    <p>Are you sure you want to unsubscribe the following email?</p>
+    <p><strong>{{ email }}</strong></p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="email" value="{{ email }}">
+        <button type="submit">Confirm Unsubscribe</button>
+    </form>
+</body>
+</html>
+

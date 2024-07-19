@@ -92,7 +92,7 @@ def tracked_email_sender(recipient, subject, body):
             <div>{html_body}</div>
             <div class="footer">
                 <p>This email was sent to {recipient}. If you no longer wish to receive these emails, you can 
-                <a href="{settings.BASE_URL}/api/tracking/unsubscribe/?email={recipient}" class="unsubscribe">unsubscribe here</a>.</p>
+                <a href="{settings.BASE_URL}/frontend/unsubscribe/?email={recipient}" class="unsubscribe">unsubscribe here</a>.</p>
             </div>
         </body>
         </html>

@@ -3,15 +3,17 @@ import uuid
 import threading
 import geoip2.database
 
-from .models import UnsubscribedUser, TrackingLog, LinkClick
+
+from .models import UnsubscribedUser, TrackingLog, LinkClick, UnsubscribedUser
 from datetime import datetime, timedelta
-from django.http import HttpResponse, FileResponse
+from django.http import HttpResponse, FileResponse, JsonResponse
+from django.core import serializers
 from django.utils import timezone
-from django.shortcuts import get_object_or_404, redirect, render
+from django.shortcuts import get_object_or_404, redirect
 from django.conf import settings
+from django.views.decorators.http import require_POST
 
 from sending.models import Email, Link, TrackingPixelToken
-
 
 
 import logging
@@ -211,33 +213,58 @@ def track_link(request, link_id):
     
     return redirect(link.url)
 
-def dashboard(request):
+def dashboard_data(request):
     emails = Email.objects.all()
     unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
-    return render(request, 'dashboard.html', {'emails': emails, 'unsubscribed_emails': unsubscribed_users})
+    
+    # Serialize the email data
+    email_data = serializers.serialize('json', emails)
+    
+    return JsonResponse({
+        'emails': email_data,
+        'unsubscribed_emails': list(unsubscribed_users)
+    })
 
-def unsubscribe(request):
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        if email:
-            UnsubscribedUser.objects.get_or_create(email=email)
-            return HttpResponse('You have been unsubscribed.')
-    return render(request, 'unsubscribe.html')
+@require_POST
+def unsubscribe_action(request):
+    email = request.POST.get('email')
+    if email:
+        unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=email)
+        return JsonResponse({
+            'success': True,
+            'message': 'You have been unsubscribed.',
+            'already_unsubscribed': not created
+        })
+    else:
+        return JsonResponse({
+            'success': False,
+            'message': 'Email address is required.'
+        }, status=400)
 
-
-def unsubscribed_users_list(request):
+def unsubscribed_users_data(request):
     unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
-    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+    
+    return JsonResponse({
+        'unsubscribed_emails': list(unsubscribed_users)
+    })
 
-def email_detail(request, email_id):
+def email_detail_data(request):
+    
+    email_id = request.GET.get('email_id')
+    
     email = get_object_or_404(Email, pk=email_id)
+    
     tracking_logs = TrackingLog.objects.filter(email=email).order_by('-opened_at')
     link_clicks = LinkClick.objects.filter(link__email=email).order_by('-clicked_at')
-
-    context = {
-        'email': email,
-        'tracking_logs': tracking_logs,
-        'link_clicks': link_clicks,
-    }
-
-    return render(request, 'email_detail.html', context)
+    
+    email_data = serializers.serialize('json', [email])
+    tracking_logs_data = serializers.serialize('json', tracking_logs)
+    link_clicks_data = serializers.serialize('json', link_clicks)
+    
+    return JsonResponse({
+        'email': email_data,
+        'tracking_logs': tracking_logs_data,
+        'link_clicks': link_clicks_data
+    })
+         
+    

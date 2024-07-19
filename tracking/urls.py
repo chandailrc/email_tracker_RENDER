@@ -38,14 +38,14 @@ def log_request_link(view_func):
     return wrapper
 
 urlpatterns = [
-    path('email/<int:email_id>/', views.email_detail, name='email_detail'),
     path('serve-image/<str:image_name>/', views.serve_image, name='serve_image'),
     path('empty-database/', views.empty_database, name='empty_database'),
     path('track-pixel/<str:token>/pixel.png', log_request_pixel(views.tracking_pixel), name='tracking_pixel'),
     path('track-pixel/<str:token>/style.css', log_request_css(views.tracking_css), name='tracking_css'),
-    path('dashboard/', views.dashboard, name='dashboard'),
     path('track-link/<int:link_id>/', log_request_link(views.track_link), name='track_link'),
-    path('unsubscribe/', views.unsubscribe, name='unsubscribe'),
-    path('unsubscribed_users/', views.unsubscribed_users_list, name='unsubscribed_users_list'),
     path('delete-unsubscribed-users/', views.delete_unsubscribed_users, name='delete_unsubscribed_users'),
+    path('dashboard-data/', views.dashboard_data, name='dashboard_data'),
+    path('unsubscribe-action/', views.unsubscribe_action, name='unsubscribe_action'),
+    path('unsubscribed-users-data/', views.unsubscribed_users_data, name='unsubscribed_users_data'),
+    path('email-detail-data/', views.email_detail_data, name='email_detail_data'),
 ]

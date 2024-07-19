@@ -1,0 +1,4 @@
+To reset database:
+python manage.py reset_db
+Current location:
+sending/management/commands/reset_db.py
