@@ -4,6 +4,8 @@ from django.middleware.csrf import get_token
 from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
+from django.shortcuts import get_object_or_404
+
 
 import requests
 
@@ -66,8 +68,8 @@ def dashboard(request):
 
 
 def unsubscribe(request):
-    email = request.GET.get('email')
-    if email:
+    user_email = request.GET.get('email')
+    if user_email:
         if request.method == 'POST':
             
             # Get the CSRF token
@@ -78,7 +80,7 @@ def unsubscribe(request):
             
             response = requests.post(
                 f'{settings.BASE_URL}/api/tracking/unsubscribe-action/',
-                data={'email': email},
+                data={'user_email': user_email},
                 headers=headers, 
                 cookies=request.COOKIES 
             )
@@ -95,7 +97,7 @@ def unsubscribe(request):
                     return HttpResponse(data['message'], status=400)
             else:
                 return HttpResponse('Failed to process the unsubscribe request.', status=response.status_code)
-    return render(request, 'unsubscribe.html', {'email': email})
+    return render(request, 'unsubscribe.html', {'email': user_email})
 
 
 def unsubscribed_users_list(request):
@@ -143,3 +145,29 @@ def email_detail(request, email_id):
             'error': 'Failed to fetch email detail data'
         })
     
+def delete_unsubscribed_user(request, user_email):
+    
+    if request.method == 'POST':
+        
+        # Get the CSRF token
+        csrf_token = get_token(request)
+        
+        # Include the CSRF token in the headers
+        headers = {'X-CSRFToken': csrf_token}
+        
+        response = requests.post(f'{settings.BASE_URL}/api/tracking/delete-unsub-user/', 
+                                 data={'user_email': user_email},
+                                 headers=headers,
+                                 cookies=request.COOKIES 
+                                 )
+        
+        if response.status_code == 200:
+            data = response.json()
+            if data['success']:
+                return redirect('unsubscribed_users_list')
+            else:
+                return HttpResponse(data['message'], status=400)
+        else:
+            return HttpResponse('Failed to process the deletion request.', status=response.status_code)
+
+    return redirect('unsubscribed_users_list')

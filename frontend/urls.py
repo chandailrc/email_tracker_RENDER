@@ -9,6 +9,6 @@ urlpatterns = [
     path('dashboard/', views.dashboard, name='dashboard'),
     path('email/<int:email_id>/', views.email_detail, name='email_detail'),
     path('unsubscribe/', views.unsubscribe, name='unsubscribe'),
-    path('unsubscribed_users/', views.unsubscribed_users_list, name='unsubscribed_users_list'),
-
+    path('unsubscribed-users/', views.unsubscribed_users_list, name='unsubscribed_users_list'),
+    path('delete-unsubscribed-user/<str:user_email>/', views.delete_unsubscribed_user, name='delete_unsubscribed_user'),
 ]

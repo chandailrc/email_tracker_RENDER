@@ -3458,3 +3458,695 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2024-07-19 15:04:55 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
 2024-07-19 19:05:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
 2024-07-19 19:05:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 19:11:43 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-19 19:11:43 - django.server - INFO - "GET /frontend/unsubscribed_users/ HTTP/1.1" 200 1779
+2024-07-19 19:24:32 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 19:24:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 19:26:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 19:26:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 19:32:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 19:32:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 19:36:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 19:36:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 19:38:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 19:38:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 19:38:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 19:38:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 20:19:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 20:19:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:26:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:30:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 23:30:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:30:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 23:30:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:32:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 23:32:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:34:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 23:34:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:36:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 23:36:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:36:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 23:36:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:38:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 23:38:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:40:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 23:40:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:41:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 23:41:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:42:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-19 23:42:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:45:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 23:45:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:46:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-19 23:46:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:46:32 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-19 23:46:32 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-19 23:46:32 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed_users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' not found. 'delete_unsubscribed_user' is not a valid view function or pattern name.
+2024-07-19 23:46:36 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-19 23:46:36 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-19 23:46:42 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-19 23:46:42 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed_users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' not found. 'delete_unsubscribed_user' is not a valid view function or pattern name.
+2024-07-19 23:46:42 - django.server - ERROR - "GET /frontend/unsubscribed_users/ HTTP/1.1" 500 180768
+2024-07-19 23:47:14 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-19 23:47:14 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-19 23:48:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-19 23:48:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:51:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-19 23:51:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-19 23:52:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-19 23:52:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:01:36 - django.request - WARNING - Not Found: /frontend/unsubscribed_users/
+2024-07-20 00:01:36 - django.server - WARNING - "GET /frontend/unsubscribed_users/ HTTP/1.1" 404 3783
+2024-07-20 00:02:05 - django.request - WARNING - Not Found: /frontend/unsubscribed_users/
+2024-07-20 00:02:05 - django.server - WARNING - "GET /frontend/unsubscribed_users/ HTTP/1.1" 404 3783
+2024-07-20 00:02:17 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-20 00:02:17 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-20 00:03:52 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:03:52 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed-users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' with arguments '('',)' not found. 1 pattern(s) tried: ['frontend/delete\\-unsubscribed\\-user/\\Z']
+2024-07-20 00:03:52 - django.server - ERROR - "GET /frontend/unsubscribed-users/ HTTP/1.1" 500 182339
+2024-07-20 00:04:02 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-20 00:04:12 - django.request - WARNING - Not Found: /dashboard/
+2024-07-20 00:04:12 - django.server - WARNING - "GET /dashboard/ HTTP/1.1" 404 2448
+2024-07-20 00:04:12 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-20 00:04:12 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 2451
+2024-07-20 00:04:20 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-20 00:04:20 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-20 00:04:20 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-20 00:04:23 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:04:23 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed-users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' with arguments '('',)' not found. 1 pattern(s) tried: ['frontend/delete\\-unsubscribed\\-user/\\Z']
+2024-07-20 00:04:23 - django.server - ERROR - "GET /frontend/unsubscribed-users/ HTTP/1.1" 500 182509
+2024-07-20 00:04:23 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-20 00:11:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-20 00:11:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:12:19 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:12:19 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed-users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' with arguments '('',)' not found. 1 pattern(s) tried: ['frontend/delete\\-unsubscribed\\-user/(?P<user_email>[^/]+)\\Z']
+2024-07-20 00:12:19 - django.server - ERROR - "GET /frontend/unsubscribed-users/ HTTP/1.1" 500 184207
+2024-07-20 00:12:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-20 00:12:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:12:59 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:12:59 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed-users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' with arguments '('',)' not found. 1 pattern(s) tried: ['frontend/delete\\-unsubscribed\\-user/(?P<user_email>[^/]+)/\\Z']
+2024-07-20 00:12:59 - django.server - ERROR - "GET /frontend/unsubscribed-users/ HTTP/1.1" 500 184221
+2024-07-20 00:16:24 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:16:24 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed-users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' with arguments '('',)' not found. 1 pattern(s) tried: ['frontend/delete\\-unsubscribed\\-user/(?P<user_email>[^/]+)/\\Z']
+2024-07-20 00:16:24 - django.server - ERROR - "GET /frontend/unsubscribed-users/ HTTP/1.1" 500 184221
+2024-07-20 00:16:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:16:39 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-20 00:16:39 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-20 00:16:39 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-20 00:16:42 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-20 00:16:42 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-20 00:16:43 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:16:43 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed-users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 111, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' with arguments '('',)' not found. 1 pattern(s) tried: ['frontend/delete\\-unsubscribed\\-user/(?P<user_email>[^/]+)/\\Z']
+2024-07-20 00:16:43 - django.server - ERROR - "GET /frontend/unsubscribed-users/ HTTP/1.1" 500 184221
+2024-07-20 00:20:24 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-20 00:20:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:21:11 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-20 00:21:11 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-20 00:21:13 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:21:13 - django.request - ERROR - Internal Server Error: /frontend/unsubscribed-users/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 113, in unsubscribed_users_list
+    return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' with arguments '('',)' not found. 1 pattern(s) tried: ['frontend/delete\\-unsubscribed\\-user/(?P<user_email>[^/]+)/\\Z']
+2024-07-20 00:21:13 - django.server - ERROR - "GET /frontend/unsubscribed-users/ HTTP/1.1" 500 184159
+2024-07-20 00:21:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-20 00:21:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:23:41 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1882
+2024-07-20 00:23:42 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15908
+2024-07-20 00:23:42 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:23:42 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 3292
+2024-07-20 00:23:52 - django.request - WARNING - Not Found: /api/tracking/delete-unsubscribed-user/
+2024-07-20 00:23:52 - django.server - WARNING - "POST /api/tracking/delete-unsubscribed-user/ HTTP/1.1" 404 4529
+2024-07-20 00:23:52 - django.request - WARNING - Not Found: /frontend/delete-unsubscribed-user/usub@sub.com/
+2024-07-20 00:23:52 - django.server - WARNING - "POST /frontend/delete-unsubscribed-user/usub@sub.com/ HTTP/1.1" 404 39
+2024-07-20 00:25:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-20 00:25:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:26:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-20 00:26:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:26:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-20 00:26:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:27:16 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 80
+2024-07-20 00:27:16 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 3292
+2024-07-20 00:27:18 - django.server - INFO - "POST /api/tracking/delete-unsub-user/ HTTP/1.1" 200 87
+2024-07-20 00:27:18 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/usub@sub.com/ HTTP/1.1" 200 55
+2024-07-20 00:30:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-20 00:30:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:30:16 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 64
+2024-07-20 00:30:16 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2792
+2024-07-20 00:30:21 - django.server - INFO - "POST /api/tracking/delete-unsub-user/ HTTP/1.1" 200 92
+2024-07-20 00:30:21 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/testing@setup.com/ HTTP/1.1" 302 0
+2024-07-20 00:30:21 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 43
+2024-07-20 00:30:21 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2282
+2024-07-20 00:30:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-20 00:30:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 00:30:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1845
+2024-07-20 00:30:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15906
+2024-07-20 00:30:53 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 43
+2024-07-20 00:30:53 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2282
+2024-07-20 00:30:53 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-20 00:30:54 - django.server - INFO - "POST /api/tracking/delete-unsub-user/ HTTP/1.1" 200 89
+2024-07-20 00:30:54 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/unsub@test.com/ HTTP/1.1" 302 0
+2024-07-20 00:30:54 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-20 00:30:54 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
+2024-07-20 00:30:54 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-20 00:30:58 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1829
+2024-07-20 00:30:58 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15905
+2024-07-20 00:30:59 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-20 00:30:59 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
+2024-07-20 00:31:00 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1829
+2024-07-20 00:31:00 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15905
+2024-07-20 00:31:03 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-20 00:31:03 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
+2024-07-20 00:33:48 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1829
+2024-07-20 00:33:48 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15905
+2024-07-20 00:33:48 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-20 00:34:09 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 103
+2024-07-20 00:34:09 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-20 00:34:09 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-20 00:34:14 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:34:14 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 16694
+2024-07-20 00:34:17 - django.server - INFO - "GET /api/tracking/serve-image/logo.png HTTP/1.1" 301 0
+2024-07-20 00:34:17 - tracking.urls - INFO - urls.py: PIXEL Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:17 - tracking.views - INFO - 'handle_tracking' called! Process ID: 17678, Thread ID: 140396267038272
+2024-07-20 00:34:17 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-19 19:04:17.860604+00:00 | Mail sent: 2024-07-19 19:04:09.208065+00:00 | Difference: 0:00:08.652539
+2024-07-20 00:34:17 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-20 00:34:17 - django.server - INFO - "GET /api/tracking/track-pixel/3dd77fc9a001476bbc133d525aec39be/pixel.png HTTP/1.1" 200 95
+2024-07-20 00:34:21 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:34:21 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17335
+2024-07-20 00:34:27 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-20 00:34:27 - tracking.urls - INFO - urls.py: PIXEL Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:27 - tracking.views - INFO - 'handle_tracking' called! Process ID: 17678, Thread ID: 140396250252864
+2024-07-20 00:34:27 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-19 19:04:27.422811+00:00 | Mail sent: 2024-07-19 19:04:09.208065+00:00 | Difference: 0:00:18.214746
+2024-07-20 00:34:27 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-19 19:04:27.422811+00:00 | last_log time: 2024-07-19 19:04:17.862485+00:00 | Difference: 0:00:09.560326
+2024-07-20 00:34:27 - django.server - INFO - "GET /api/tracking/track-pixel/3dd77fc9a001476bbc133d525aec39be/pixel.png HTTP/1.1" 200 95
+2024-07-20 00:34:29 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:34:29 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17929
+2024-07-20 00:34:36 - tracking.urls - INFO - urls.py: PIXEL Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:36 - tracking.views - INFO - 'handle_tracking' called! Process ID: 17678, Thread ID: 140396267038272
+2024-07-20 00:34:36 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-19 19:04:36.091014+00:00 | Mail sent: 2024-07-19 19:04:09.208065+00:00 | Difference: 0:00:26.882949
+2024-07-20 00:34:36 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-20 00:34:36 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-19 19:04:36.091014+00:00 | last_log time: 2024-07-19 19:04:27.424121+00:00 | Difference: 0:00:08.666893
+2024-07-20 00:34:36 - django.server - INFO - "GET /api/tracking/track-pixel/3dd77fc9a001476bbc133d525aec39be/pixel.png HTTP/1.1" 200 95
+2024-07-20 00:34:37 - tracking.urls - INFO - urls.py: LINK Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:37 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-20 00:34:37 - tracking.urls - INFO - urls.py: LINK Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:37 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-20 00:34:38 - tracking.urls - INFO - urls.py: LINK Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:38 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-20 00:34:38 - tracking.urls - INFO - urls.py: LINK Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:38 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-20 00:34:39 - tracking.urls - INFO - urls.py: LINK Request received for email testing@subunsub.com from ip: 127.0.0.1
+2024-07-20 00:34:39 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-20 00:34:44 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:34:44 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20158
+2024-07-20 00:34:49 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=9 HTTP/1.1" 200 4503
+2024-07-20 00:34:49 - django.server - INFO - "GET /frontend/email/9/ HTTP/1.1" 200 7752
+2024-07-20 00:34:59 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:34:59 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20158
+2024-07-20 00:35:00 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-20 00:35:00 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
+2024-07-20 00:35:01 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:35:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20158
+2024-07-20 00:35:02 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=8 HTTP/1.1" 200 2517
+2024-07-20 00:35:02 - django.server - INFO - "GET /frontend/email/8/ HTTP/1.1" 200 5148
+2024-07-20 00:35:03 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-20 00:35:03 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
+2024-07-20 00:35:04 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:35:05 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20158
+2024-07-20 00:35:08 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=9 HTTP/1.1" 200 4503
+2024-07-20 00:35:08 - django.server - INFO - "GET /frontend/email/9/ HTTP/1.1" 200 7752
+2024-07-20 00:35:12 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2079
+2024-07-20 00:35:12 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20158
+2024-07-20 00:35:20 - django.server - INFO - "GET /frontend/unsubscribe/?email=testing@subunsub.com HTTP/1.1" 200 534
+2024-07-20 00:35:22 - django.server - INFO - "POST /api/tracking/unsubscribe-action/ HTTP/1.1" 200 90
+2024-07-20 00:35:22 - django.server - INFO - "POST /frontend/unsubscribe/?email=testing@subunsub.com HTTP/1.1" 200 40
+2024-07-20 00:35:30 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=9 HTTP/1.1" 200 4503
+2024-07-20 00:35:30 - django.server - INFO - "GET /frontend/email/9/ HTTP/1.1" 200 7752
+2024-07-20 00:35:39 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2101
+2024-07-20 00:35:39 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20159
+2024-07-20 00:35:48 - django.server - INFO - "GET /api/tracking/unsubscribed-users-data/ HTTP/1.1" 200 49
+2024-07-20 00:35:48 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2294

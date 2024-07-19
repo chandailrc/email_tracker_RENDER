@@ -12,6 +12,8 @@ from django.utils import timezone
 from django.shortcuts import get_object_or_404, redirect
 from django.conf import settings
 from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_protect
+
 
 from sending.models import Email, Link, TrackingPixelToken
 
@@ -226,10 +228,11 @@ def dashboard_data(request):
     })
 
 @require_POST
+@csrf_protect
 def unsubscribe_action(request):
-    email = request.POST.get('email')
-    if email:
-        unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=email)
+    user_email = request.POST.get('user_email')
+    if user_email:
+        unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=user_email)
         return JsonResponse({
             'success': True,
             'message': 'You have been unsubscribed.',
@@ -266,5 +269,20 @@ def email_detail_data(request):
         'tracking_logs': tracking_logs_data,
         'link_clicks': link_clicks_data
     })
-         
-    
+
+@require_POST
+@csrf_protect
+def delete_unsub_user(request):
+    user_email = request.POST.get('user_email')
+    if user_email:
+        user = get_object_or_404(UnsubscribedUser, email=user_email)
+        user.delete()
+        return JsonResponse({
+            'success': True,
+            'message': f'User email {user_email} removed from unsubscribed list.'
+            })
+    else:
+        return JsonResponse({
+            'success': False,
+            'message': 'Email address is required.'
+        }, status=400)

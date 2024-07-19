@@ -5,22 +5,40 @@
 {% block header %}Unsubscribed Users{% endblock %}
 
 {% block content %}
-<table>
-    <thead>
-        <tr>
-            <th>Email</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for user in unsubscribed_emails %}
+<!-- unsubscribed_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unsubscribed Users</title>
+</head>
+<body>
+    <h1>Unsubscribed Users</h1>
+    <table>
+        <thead>
             <tr>
-                <td>{{ user }}</td>
+                <th>Email</th>
+                <th>Action</th>
             </tr>
-        {% endfor %}
-    </tbody>
-</table>
-<form method="post" action="{% url 'delete_unsubscribed_users' %}">
-    {% csrf_token %}
-    <button type="submit">Flush list</button>
-</form>
+        </thead>
+        <tbody>
+            {% for user_email in unsubscribed_emails %}
+                <tr>
+                    <td>{{ user_email }}</td>
+                    <td>
+                        <form method="post" action="{% url 'delete_unsubscribed_user' user_email %}">
+                            {% csrf_token %}
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form method="post" action="{% url 'delete_unsubscribed_users' %}">
+        {% csrf_token %}
+        <button type="submit">Flush list</button>
+    </form>
+</body>
+</html>
+
 {% endblock %}
