@@ -35,9 +35,3 @@ class LinkClick(models.Model):
     host = models.CharField(max_length=255, null=True, blank=True)
     connection = models.CharField(max_length=255, null=True, blank=True)
 
-class UnsubscribedUser(models.Model):
-    email = models.EmailField(unique=True)
-
-    def __str__(self):
-        return self.email
-

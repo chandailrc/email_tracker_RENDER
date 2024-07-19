@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'tracking',
     'sending',
     'frontend',
+    'unsubscribers',
 ]
 
 MIDDLEWARE = [

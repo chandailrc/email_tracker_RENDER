@@ -5,7 +5,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 import re
 from .models import Email, Link, TrackingPixelToken
-from tracking.models import UnsubscribedUser
+from unsubscribers.models import UnsubscribedUser
 
 import logging
 

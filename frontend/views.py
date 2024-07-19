@@ -4,8 +4,6 @@ from django.middleware.csrf import get_token
 from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
-from django.shortcuts import get_object_or_404
-
 
 import requests
 
@@ -65,53 +63,7 @@ def dashboard(request):
         return render(request, 'dashboard.html', {
             'error': 'Failed to fetch dashboard data'
         })
-
-
-def unsubscribe(request):
-    user_email = request.GET.get('email')
-    if user_email:
-        if request.method == 'POST':
-            
-            # Get the CSRF token
-            csrf_token = get_token(request)
-            
-            # Include the CSRF token in the headers
-            headers = {'X-CSRFToken': csrf_token}
-            
-            response = requests.post(
-                f'{settings.BASE_URL}/api/tracking/unsubscribe-action/',
-                data={'user_email': user_email},
-                headers=headers, 
-                cookies=request.COOKIES 
-            )
-            
-            if response.status_code == 200:
-                data = response.json()
-                if data['success']:
-                    if data['already_unsubscribed']:
-                        message = "You were already unsubscribed."
-                    else:
-                        message = "You have been unsubscribed successfully."
-                    return HttpResponse(message)
-                else:
-                    return HttpResponse(data['message'], status=400)
-            else:
-                return HttpResponse('Failed to process the unsubscribe request.', status=response.status_code)
-    return render(request, 'unsubscribe.html', {'email': user_email})
-
-
-def unsubscribed_users_list(request):
     
-    response = requests.get(f'{settings.BASE_URL}/api/tracking/unsubscribed-users-data/')
-    
-    if response.status_code == 200:
-        data = response.json()
-        unsubscribed_users = data['unsubscribed_emails']
-        
-        return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
-    else:
-        return render(request, 'unsubscribed_users_list.html', {'error': 'Failed to fetch unsubscribe data'})
-
 def email_detail(request, email_id):
     
     response = requests.get(f'{settings.BASE_URL}/api/tracking/email-detail-data/?email_id={email_id}')
@@ -144,6 +96,53 @@ def email_detail(request, email_id):
         return render(request, 'email_detail.html', {
             'error': 'Failed to fetch email detail data'
         })
+
+
+def unsubscribe(request):
+    user_email = request.GET.get('email')
+    if user_email:
+        if request.method == 'POST':
+            
+            # Get the CSRF token
+            csrf_token = get_token(request)
+            
+            # Include the CSRF token in the headers
+            headers = {'X-CSRFToken': csrf_token}
+            
+            response = requests.post(
+                f'{settings.BASE_URL}/api/unsubscribers/unsubscribe-action/',
+                data={'user_email': user_email},
+                headers=headers, 
+                cookies=request.COOKIES 
+            )
+            
+            if response.status_code == 200:
+                data = response.json()
+                if data['success']:
+                    if data['already_unsubscribed']:
+                        message = "You were already unsubscribed."
+                    else:
+                        message = "You have been unsubscribed successfully."
+                    return HttpResponse(message)
+                else:
+                    return HttpResponse(data['message'], status=400)
+            else:
+                return HttpResponse('Failed to process the unsubscribe request.', status=response.status_code)
+    return render(request, 'unsubscribe.html', {'email': user_email})
+
+
+def unsubscribed_users_list(request):
+    
+    response = requests.get(f'{settings.BASE_URL}/api/unsubscribers/unsubscribed-users-data/')
+    
+    if response.status_code == 200:
+        data = response.json()
+        unsubscribed_users = data['unsubscribed_emails']
+        
+        return render(request, 'unsubscribed_users_list.html', {'unsubscribed_emails': unsubscribed_users})
+    else:
+        return render(request, 'unsubscribed_users_list.html', {'error': 'Failed to fetch unsubscribe data'})
+
     
 def delete_unsubscribed_user(request, user_email):
     
@@ -155,7 +154,7 @@ def delete_unsubscribed_user(request, user_email):
         # Include the CSRF token in the headers
         headers = {'X-CSRFToken': csrf_token}
         
-        response = requests.post(f'{settings.BASE_URL}/api/tracking/delete-unsub-user/', 
+        response = requests.post(f'{settings.BASE_URL}/api/unsubscribers/delete-unsub-user/', 
                                  data={'user_email': user_email},
                                  headers=headers,
                                  cookies=request.COOKIES 
