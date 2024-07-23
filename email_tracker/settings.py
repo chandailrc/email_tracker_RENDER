@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'frontend',
     'unsubscribers',
     'receiving',
+    'emails',
 ]
 
 MIDDLEWARE = [
