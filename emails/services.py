@@ -23,7 +23,7 @@ def fetch_emails():
         # Decode subject
         subject, encoding = decode_header(email_message["Subject"])[0]
         if isinstance(subject, bytes):
-            subject = subject.decode(encoding or "utf-8")
+            subject = subject.decode(encoding or "utf-8", errors="replace")
 
         # Get sender
         sender = email.utils.parseaddr(email_message["From"])[1]
@@ -32,13 +32,21 @@ def fetch_emails():
         if email_message.is_multipart():
             for part in email_message.walk():
                 if part.get_content_type() == "text/plain":
-                    body = part.get_payload(decode=True).decode()
+                    body = part.get_payload(decode=True)
                     break
         else:
-            body = email_message.get_payload(decode=True).decode()
+            body = email_message.get_payload(decode=True)
+
+        # Decode body
+        if isinstance(body, bytes):
+            try:
+                body = body.decode('utf-8')
+            except UnicodeDecodeError:
+                body = body.decode('utf-8', errors='replace')
 
         # Save to database
         Email.objects.create(sender=sender, subject=subject, body=body)
 
     imap_server.close()
+    imap_server.logout()
     imap_server.logout()
