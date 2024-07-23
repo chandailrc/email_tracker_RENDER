@@ -17,11 +17,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from emails import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/tracking/', include('tracking.urls')),
     path('api/sending/', include('sending.urls')),
     path('api/unsubscribers/', include('unsubscribers.urls')),
+    path('api/receiving/', include('receiving.urls')),
     path('frontend/', include('frontend.urls')),
+    path('', views.email_list, name='email_list'),
 ]

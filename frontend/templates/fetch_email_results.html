@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Fetch Emails Result{% endblock %}
+
+{% block header %}Fetch Emails Result{% endblock %}
+
+{% block content %}
+    <p>{{ message }}</p>
+    <a href="{% url 'received_emails' %}">View Received Emails</a>
+{% endblock %}

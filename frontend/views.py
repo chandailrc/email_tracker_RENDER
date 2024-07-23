@@ -170,3 +170,25 @@ def delete_unsubscribed_user(request, user_email):
             return HttpResponse('Failed to process the deletion request.', status=response.status_code)
 
     return redirect('unsubscribed_users_list')
+
+
+# frontend/views.py
+
+from django.urls import reverse
+
+def received_emails(request):
+    response = requests.get(request.build_absolute_uri(reverse('received_emails')))
+    emails = response.json() if response.status_code == 200 else []
+    return render(request, 'received_emails.html', {'received_emails': emails})
+
+def view_email(request, email_id):
+    response = requests.get(request.build_absolute_uri(reverse('email_detail', args=[email_id])))
+    email = response.json() if response.status_code == 200 else None
+    return render(request, 'view_email.html', {'email': email})
+
+def fetch_emails(request):
+    if request.method == 'POST':
+        response = requests.post(request.build_absolute_uri(reverse('fetch_emails')))
+        message = response.json()['message'] if response.status_code == 200 else "Failed to fetch emails"
+        return render(request, 'fetch_email_results.html', {'message': message})
+    return render(request, 'fetch_emails.html')

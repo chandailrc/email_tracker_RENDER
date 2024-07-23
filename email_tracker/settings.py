@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'sending',
     'frontend',
     'unsubscribers',
+    'receiving',
 ]
 
 MIDDLEWARE = [
@@ -204,7 +205,7 @@ if mail_case == 'GMAIL':
     
 if mail_case == 'IONOS':
     
-    #Email settings
+    #Email SMTP settings
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = 'smtp.ionos.com'
     EMAIL_PORT = 587
@@ -213,6 +214,13 @@ if mail_case == 'IONOS':
     EMAIL_HOST_USER = env('IONOS_EMAIL_USER') # Use your personal gmail here
     EMAIL_HOST_PASSWORD = env('IONOS_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
     DEFAULT_FROM_EMAIL = env('IONOS_DEFAULT_EMAIL')  # Replace with your default email address
+    
+    # IMAP settings
+    EMAIL_IMAP_SERVER = 'imap.ionos.com'
+    EMAIL_IMAP_PORT = 993
+    EMAIL_IMAP_USE_SSL = True
+    EMAIL_HOST_USER = env('IONOS_EMAIL_USER')
+    EMAIL_HOST_PASSWORD = env('IONOS_EMAIL_PASS')
     
 elif mail_case == 'MAILGUN':
     

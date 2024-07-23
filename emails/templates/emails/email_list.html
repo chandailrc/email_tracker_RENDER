@@ -1,0 +1,27 @@
+<!-- emails/templates/emails/email_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email List</title>
+</head>
+<body>
+    <h1>Emails</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Fetch New Emails</button>
+    </form>
+    <ul>
+    {% for email in emails %}
+        <li>
+            <strong>From:</strong> {{ email.sender }}<br>
+            <strong>Subject:</strong> {{ email.subject }}<br>
+            <strong>Received:</strong> {{ email.received_at }}<br>
+            <p>{{ email.body|truncatewords:50 }}</p>
+        </li>
+    {% empty %}
+        <li>No emails found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

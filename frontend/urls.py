@@ -11,4 +11,7 @@ urlpatterns = [
     path('unsubscribe/', views.unsubscribe, name='unsubscribe'),
     path('unsubscribed-users/', views.unsubscribed_users_list, name='unsubscribed_users_list'),
     path('delete-unsubscribed-user/<str:user_email>/', views.delete_unsubscribed_user, name='delete_unsubscribed_user'),
+    path('received-emails/', views.received_emails, name='frontend_received_emails'),
+    path('view-email/<int:email_id>/', views.view_email, name='frontend_view_email'),
+    path('fetch-emails/', views.fetch_emails, name='frontend_fetch_emails'),
 ]

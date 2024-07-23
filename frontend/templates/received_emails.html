@@ -1,0 +1,33 @@
+<!-- frontend/templates/received_emails.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Received Emails{% endblock %}
+
+{% block header %}Received Emails{% endblock %}
+
+{% block content %}
+    <a href="{% url 'frontend_fetch_emails' %}">Fetch New Emails</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>Subject</th>
+                <th>Received At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for email in received_emails %}
+                <tr>
+                    <td>{{ email.sender }}</td>
+                    <td>{{ email.subject }}</td>
+                    <td>{{ email.received_at }}</td>
+                    <td>
+                        <a href="{% url 'view_email' email.id %}">View</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!-- frontend/templates/view_email.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}View Email{% endblock %}
+
+{% block header %}View Email{% endblock %}
+
+{% block content %}
+    {% if email %}
+        <h2>{{ email.subject }}</h2>
+        <p><strong>From:</strong> {{ email.sender }}</p>
+        <p><strong>To:</strong> {{ email.recipients|join:', ' }}</p>
+        {% if email.cc %}
+            <p><strong>CC:</strong> {{ email.cc|join:', ' }}</p>
+        {% endif %}
+        <p><strong>Received:</strong> {{ email.received_at }}</p>
+        <hr>
+        <div>
+            {% if email.html_body %}
+                {{ email.html_body|safe }}
+            {% else %}
+                {{ email.body|linebreaks }}
+            {% endif %}
+        </div>
+        {% if email.attachments %}
+            <h3>Attachments</h3>
+            <ul>
+                {% for attachment in email.attachments %}
+                    <li><a href="{{ attachment.file }}">{{ attachment.filename }}</a> ({{ attachment.size }} bytes)</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% else %}
+        <p>Email not found.</p>
+    {% endif %}
+{% endblock %}

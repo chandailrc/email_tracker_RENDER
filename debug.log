@@ -4226,3 +4226,242 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' wi
 2024-07-20 00:56:55 - django.server - INFO - "GET /frontend/email/10/ HTTP/1.1" 200 4870
 2024-07-20 00:56:57 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2362
 2024-07-20 00:56:57 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 22251
+2024-07-23 12:06:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:07:06 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 3717
+2024-07-23 12:07:06 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29793
+2024-07-23 12:07:06 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-23 12:07:09 - django.request - WARNING - Not Found: /receiving/list/
+2024-07-23 12:07:09 - django.server - WARNING - "GET /receiving/list/ HTTP/1.1" 404 2695
+2024-07-23 12:07:09 - django.request - ERROR - Internal Server Error: /frontend/received-emails/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 177, in received_email_list
+    emails = response.json()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-23 12:07:09 - django.server - ERROR - "GET /frontend/received-emails/ HTTP/1.1" 500 107825
+2024-07-23 12:07:09 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-23 12:07:44 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:07:48 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 3717
+2024-07-23 12:07:48 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29793
+2024-07-23 12:07:49 - django.request - WARNING - Not Found: /receiving/list/
+2024-07-23 12:07:49 - django.server - WARNING - "GET /receiving/list/ HTTP/1.1" 404 2695
+2024-07-23 12:07:49 - django.request - ERROR - Internal Server Error: /frontend/received-emails/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 177, in received_email_list
+    emails = response.json()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-23 12:07:49 - django.server - ERROR - "GET /frontend/received-emails/ HTTP/1.1" 500 107825
+2024-07-23 12:15:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-23 12:15:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:16:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/models.py changed, reloading.
+2024-07-23 12:16:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:19:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py changed, reloading.
+2024-07-23 12:19:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:21:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/services/email_processor.py changed, reloading.
+2024-07-23 12:21:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:38:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/models.py changed, reloading.
+2024-07-23 12:38:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:40:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-23 12:40:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 12:50:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py changed, reloading.
+2024-07-23 12:50:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 13:01:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/services/email_fetcher.py changed, reloading.
+2024-07-23 13:01:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 13:01:55 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 3717
+2024-07-23 13:01:56 - django.request - ERROR - Internal Server Error: /frontend/dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 57, in dashboard
+    return render(request, 'dashboard.html', {
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'frontend_received_emails' not found. 'frontend_received_emails' is not a valid view function or pattern name.
+2024-07-23 13:01:56 - django.server - ERROR - "GET /frontend/dashboard/ HTTP/1.1" 500 176268
+2024-07-23 13:03:09 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-23 13:03:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 13:04:15 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 3717
+2024-07-23 13:04:15 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29852
+2024-07-23 13:04:23 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:04:25 - django.request - ERROR - Internal Server Error: /api/receiving/received-emails/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column receiving_receivedemail.html_body does not exist
+LINE 1: ...message_id", "receiving_receivedemail"."headers", "receiving...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py", line 17, in get_received_emails
+    emails_data = [{
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 400, in __iter__
+    self._fetch_all()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column receiving_receivedemail.html_body does not exist
+LINE 1: ...message_id", "receiving_receivedemail"."headers", "receiving...
+                                                             ^
+
+2024-07-23 13:04:25 - django.server - ERROR - "GET /api/receiving/received-emails/ HTTP/1.1" 500 129899
+2024-07-23 13:04:25 - django.server - INFO - "GET /frontend/received-emails/ HTTP/1.1" 200 1646
+2024-07-23 13:04:28 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-23 13:04:28 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1902
+2024-07-23 13:04:29 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 3717
+2024-07-23 13:04:29 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29852
+2024-07-23 13:04:30 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:16:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 13:16:39 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:16:40 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-23 13:16:40 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1902
+2024-07-23 13:16:41 - django.server - INFO - "GET /api/receiving/received-emails/ HTTP/1.1" 200 2
+2024-07-23 13:16:41 - django.server - INFO - "GET /frontend/received-emails/ HTTP/1.1" 200 1646
+2024-07-23 13:16:42 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:16:43 - django.server - INFO - "GET /api/receiving/received-emails/ HTTP/1.1" 200 2
+2024-07-23 13:16:43 - django.server - INFO - "GET /frontend/received-emails/ HTTP/1.1" 200 1646
+2024-07-23 13:16:44 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:16:46 - django.server - INFO - "GET /api/receiving/received-emails/ HTTP/1.1" 200 2
+2024-07-23 13:16:46 - django.server - INFO - "GET /frontend/received-emails/ HTTP/1.1" 200 1646
+2024-07-23 13:16:47 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:16:49 - django.server - INFO - "GET /api/receiving/received-emails/ HTTP/1.1" 200 2
+2024-07-23 13:16:49 - django.server - INFO - "GET /frontend/received-emails/ HTTP/1.1" 200 1646
+2024-07-23 13:16:51 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:16:51 - django.server - INFO - "GET /api/receiving/received-emails/ HTTP/1.1" 200 2
+2024-07-23 13:16:51 - django.server - INFO - "GET /frontend/received-emails/ HTTP/1.1" 200 1646
+2024-07-23 13:16:56 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:16:57 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/receiving/fetch-emails/
+2024-07-23 13:16:57 - django.server - WARNING - "POST /api/receiving/fetch-emails/ HTTP/1.1" 403 2869
+2024-07-23 13:16:57 - django.request - ERROR - Internal Server Error: /frontend/fetch-emails/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 193, in fetch_emails
+    return render(request, 'fetch_emails_result.html', {'message': message})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: fetch_emails_result.html
+2024-07-23 13:16:57 - django.server - ERROR - "POST /frontend/fetch-emails/ HTTP/1.1" 500 89100
+2024-07-23 13:19:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-23 13:19:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 13:19:31 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:19:32 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/receiving/fetch-emails/
+2024-07-23 13:19:32 - django.server - WARNING - "POST /api/receiving/fetch-emails/ HTTP/1.1" 403 2869
+2024-07-23 13:19:32 - django.request - ERROR - Internal Server Error: /frontend/fetch-emails/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 193, in fetch_emails
+    return render(request, 'fetch_email_result.html', {'message': message})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: fetch_email_result.html
+2024-07-23 13:19:32 - django.server - ERROR - "POST /frontend/fetch-emails/ HTTP/1.1" 500 89080
+2024-07-23 13:19:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-23 13:19:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 13:19:50 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-23 13:19:51 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/receiving/fetch-emails/
+2024-07-23 13:19:51 - django.server - WARNING - "POST /api/receiving/fetch-emails/ HTTP/1.1" 403 2869
+2024-07-23 13:19:51 - django.server - INFO - "POST /frontend/fetch-emails/ HTTP/1.1" 200 1376

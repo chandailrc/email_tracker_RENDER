@@ -1,0 +1,15 @@
+<!-- frontend/templates/fetch_emails.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Fetch Emails{% endblock %}
+
+{% block header %}Fetch Emails{% endblock %}
+
+{% block content %}
+    <h2>Fetch New Emails</h2>
+    <form method="post" action="{% url 'frontend_fetch_emails' %}">
+        {% csrf_token %}
+        <button type="submit">Fetch Emails</button>
+    </form>
+{% endblock %}
