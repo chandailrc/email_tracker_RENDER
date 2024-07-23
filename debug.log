@@ -4487,3 +4487,12 @@ django.template.exceptions.TemplateDoesNotExist: emails/email_list.html
 2024-07-23 21:23:19 - django.server - ERROR - "GET /api/emails/email_list/ HTTP/1.1" 500 88301
 2024-07-23 21:23:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py changed, reloading.
 2024-07-23 21:23:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 21:27:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 21:27:21 - django.server - INFO - "GET /api/emails/email_list/ HTTP/1.1" 200 451
+2024-07-23 21:27:23 - django.server - INFO - "POST /api/emails/email_list/ HTTP/1.1" 200 639
+2024-07-23 21:28:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/services.py changed, reloading.
+2024-07-23 21:28:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 21:29:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py changed, reloading.
+2024-07-23 21:29:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 21:29:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py changed, reloading.
+2024-07-23 21:29:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
