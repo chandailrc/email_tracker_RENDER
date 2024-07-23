@@ -4468,3 +4468,22 @@ django.template.exceptions.TemplateDoesNotExist: fetch_email_result.html
 2024-07-23 21:07:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-23 21:07:31 - django.server - INFO - "GET /api/emails/email_list HTTP/1.1" 301 0
 2024-07-23 21:07:31 - django.server - INFO - "GET /api/emails/email_list/ HTTP/1.1" 200 446
+2024-07-23 21:23:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 21:23:19 - django.request - ERROR - Internal Server Error: /api/emails/email_list/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py", line 14, in email_list
+    return render(request, 'emails/email_list.html', {'emails': emails})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: emails/email_list.html
+2024-07-23 21:23:19 - django.server - ERROR - "GET /api/emails/email_list/ HTTP/1.1" 500 88301
+2024-07-23 21:23:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py changed, reloading.
+2024-07-23 21:23:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

@@ -11,4 +11,4 @@ def email_list(request):
         except Exception as e:
             messages.error(request, f"Error fetching emails: {str(e)}")
     emails = Email.objects.all().order_by('-received_at')
-    return render(request, 'emails/email_list.html', {'emails': emails})
+    return render(request, 'email_list.html', {'emails': emails})
