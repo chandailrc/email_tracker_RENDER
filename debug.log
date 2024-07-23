@@ -4465,3 +4465,6 @@ django.template.exceptions.TemplateDoesNotExist: fetch_email_result.html
 2024-07-23 13:19:51 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/receiving/fetch-emails/
 2024-07-23 13:19:51 - django.server - WARNING - "POST /api/receiving/fetch-emails/ HTTP/1.1" 403 2869
 2024-07-23 13:19:51 - django.server - INFO - "POST /frontend/fetch-emails/ HTTP/1.1" 200 1376
+2024-07-23 21:07:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 21:07:31 - django.server - INFO - "GET /api/emails/email_list HTTP/1.1" 301 0
+2024-07-23 21:07:31 - django.server - INFO - "GET /api/emails/email_list/ HTTP/1.1" 200 446
