@@ -25,11 +25,11 @@
                 <td>{{ email.sender }} / {{ email.recipient }}</td>
                 <td>{{ email.subject }}</td>
                 <td>{{ email.sent_at }}</td>
-                <td>{{ email.trackinglog_set.count }}</td>
+                <td>{{ email.trackinglog_set|length }}</td>
                 <td>
-                    {% if email.trackinglog_set.all %}
+                    {% if email.trackinglog_set %}
                         <ul>
-                            {% for log in email.trackinglog_set.all %}
+                            {% for log in email.trackinglog_set %}
                                 <li>
                                     {% if log.tracking_type == 'css' %}
                                         <span class="css-tag">CSS</span>
@@ -37,7 +37,7 @@
                                         <span class="pixel-tag">PNG</span>
                                     {% endif %}
                                     <br>
-                                    <strong>Opened At:</strong> {{ log.opened_at|date:"H:i:s" }}<br>
+                                    <strong>Opened At:</strong> {{ log.opened_at }}<br>
                                     <strong>IP Address:</strong> {{ log.ip_address }}<br>
                                     <strong>User Agent:</strong> {{ log.user_agent }}
                                 </li>
@@ -48,10 +48,10 @@
                     {% endif %}
                 </td>
                 <td>
-                    {% for link in email.link_set.all %}
+                    {% for link in email.link_set %}
                         <a href="{{ link.url }}">{{ link.url }}</a><br>
-                        Clicks: {{ link.linkclick_set.count }}<br>
-                        {% for click in link.linkclick_set.all %}
+                        Clicks: {{ link.linkclick_set|length }}<br>
+                        {% for click in link.linkclick_set %}
                             <strong>Clicked At:</strong> {{ click.clicked_at }}<br>
                             <strong>IP Address:</strong> {{ click.ip_address }}<br>
                             <strong>User Agent:</strong> {{ click.user_agent }}<br><br>

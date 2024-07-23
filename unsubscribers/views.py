@@ -4,44 +4,71 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_protect
 
-@require_POST
-@csrf_protect
-def unsubscribe_action(request):
-    user_email = request.POST.get('user_email')
-    if user_email:
-        unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=user_email)
-        return JsonResponse({
-            'success': True,
-            'message': 'You have been unsubscribed.',
-            'already_unsubscribed': not created
-        })
-    else:
-        return JsonResponse({
-            'success': False,
-            'message': 'Email address is required.'
-        }, status=400)
+# unsubscribers/views.py
 
-def unsubscribed_users_data(request):
-    unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
-    
-    return JsonResponse({
-        'unsubscribed_emails': list(unsubscribed_users)
-    })
+from rest_framework import viewsets, status
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from .models import UnsubscribedUser
+from .serializers import UnsubscribedUserSerializer
 
+from rest_framework.parsers import JSONParser
 
-@require_POST
-@csrf_protect
-def delete_unsub_user(request):
-    user_email = request.POST.get('user_email')
-    if user_email:
-        user = get_object_or_404(UnsubscribedUser, email=user_email)
-        user.delete()
-        return JsonResponse({
-            'success': True,
-            'message': f'User email {user_email} removed from unsubscribed list.'
+class UnsubscribedUserViewSet(viewsets.ModelViewSet):
+    queryset = UnsubscribedUser.objects.all()
+    serializer_class = UnsubscribedUserSerializer
+    parser_classes = [JSONParser]
+
+    @action(detail=False, methods=['post'])
+    def unsubscribe(self, request):
+        user_email = request.data.get('user_email')
+        if user_email:
+            unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=user_email)
+            return Response({
+                'success': True,
+                'message': 'You have been unsubscribed.',
+                'already_unsubscribed': not created
             })
-    else:
-        return JsonResponse({
-            'success': False,
-            'message': 'Email address is required.'
-        }, status=400)
+        else:
+            return Response({
+                'success': False,
+                'message': 'Email address is required.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+    @action(detail=False, methods=['get'])
+    def unsubscribed_users(self, request):
+        unsubscribed_users = self.get_queryset().values_list('email', flat=True)
+        return Response({
+            'unsubscribed_emails': list(unsubscribed_users)
+        })
+
+    @action(detail=False, methods=['post'])
+    def delete_unsub_user(self, request):
+        user_email = request.data.get('user_email')
+        if user_email:
+            try:
+                user = UnsubscribedUser.objects.get(email=user_email)
+                user.delete()
+                return Response({
+                    'success': True,
+                    'message': f'User email {user_email} removed from unsubscribed list.'
+                })
+            except UnsubscribedUser.DoesNotExist:
+                return Response({
+                    'success': False,
+                    'message': f'User email {user_email} not found in unsubscribed list.'
+                }, status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response({
+                'success': False,
+                'message': 'Email address is required.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+    # You can keep the destroy method if you want both options
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response({
+            'success': True,
+            'message': f'User email {instance.email} removed from unsubscribed list.'
+        })

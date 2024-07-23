@@ -22,8 +22,6 @@ env = environ.Env()
 env_file = os.path.join(BASE_DIR, '.env')
 if os.path.exists(env_file):
     environ.Env.read_env(env_file)
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
@@ -40,9 +38,11 @@ RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'b28d-2405-201-5009-6022-8fef-7e89-a12e-b610.ngrok-free.app']
+# Add this with your other settings
+DEV_MODE = env('DEV_MODE').lower() == 'true'
 
-# CSRF_TRUSTED_ORIGINS = ['https://b28d-2405-201-5009-6022-8fef-7e89-a12e-b610.ngrok-free.app']
+
+
 
 
 
@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'utils',
+    'rest_framework',
     'tracking',
     'sending',
     'frontend',
@@ -323,6 +325,20 @@ LOGGING = {
     },
 }
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'utils.permissions.IsAuthenticatedOrDevMode', # 'IsAuthenticatedOrDevMode' is custom. Check utils directory
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication'
+    ],
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ]
+}
 
 

@@ -1,248 +1,210 @@
+# tracking/views.py
+
+from rest_framework import viewsets, status
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from django.shortcuts import get_object_or_404, redirect
+from django.http import FileResponse, HttpResponse
+from django.conf import settings
+from .models import TrackingLog, LinkClick
+from sending.models import Email, Link, TrackingPixelToken
+from .serializers import TrackingLogSerializer, LinkClickSerializer, EmailSerializer
+from django.utils import timezone
+from datetime import timedelta
 import os
 import uuid
-import threading
 import geoip2.database
-
-
-from .models import TrackingLog, LinkClick
-from datetime import datetime, timedelta
-from django.http import HttpResponse, FileResponse, JsonResponse
-from django.core import serializers
-from django.utils import timezone
-from django.shortcuts import get_object_or_404, redirect
-from django.conf import settings
-
-
-from sending.models import Email, Link, TrackingPixelToken
-from unsubscribers.models import UnsubscribedUser
-
-
+import threading
 import logging
 
 logger = logging.getLogger(__name__)
 
+class TrackingViewSet(viewsets.ModelViewSet):
+    queryset = TrackingLog.objects.all()
+    serializer_class = TrackingLogSerializer
 
-
-def get_client_ip(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
-
-def get_geo_location(ip_address):
-    try:
-        reader = geoip2.database.Reader('/path/to/GeoLite2-City.mmdb')
-        response = reader.city(ip_address)
-        return f"{response.city.name}, {response.subdivisions.most_specific.name}, {response.country.name}"
-    except Exception as e:
-        return f"Unknown exception {e}"
-
-def get_device_type(user_agent):
-    if 'Mobi' in user_agent:
-        return 'Mobile'
-    elif 'Tablet' in user_agent:
-        return 'Tablet'
-    else:
-        return 'Desktop'
-
-
-def tracking_pixel(request, token):
-    # recipient = TrackingPixelToken.objects.get(token=token).email.recipient
-    # logger.info(f"views.py/PIXEL: Request received for {recipient} from {get_client_ip(request)}.")
-    return handle_tracking(request, token, is_pixel=True)
-
-def tracking_css(request, token):
-    # recipient = TrackingPixelToken.objects.get(token=token).email.recipient
-    # logger.info(f"views.py/CSS: Request received for {recipient} from {get_client_ip(request)}")
-    return handle_tracking(request, token, is_pixel=False)
-
-
-def handle_tracking(request, token, is_pixel):
-    try:
-        logger.info(f"'handle_tracking' called! Process ID: {os.getpid()}, Thread ID: {threading.get_ident()}")
-        pixel_token = TrackingPixelToken.objects.get(token=token)
-        recipient = pixel_token.email.recipient
-        email_id = pixel_token.email.id
-        mail = pixel_token.email
-        curr_time = timezone.now()
-
-        # Calculate the time difference
-        time_difference = curr_time - mail.sent_at
-
-        # Compare the difference
-        if time_difference <= timedelta(seconds=4):
-            logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
-            logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within 5 secs. Potential prefetching. Abandoning request!")
-            return HttpResponse("Not found", status=404)
+    @action(detail=False, methods=['get'])
+    def serve_image(self, request, image_name):
+        image_path = os.path.join(settings.BASE_DIR, 'static/images', image_name)
+        if os.path.exists(image_path):
+            response = FileResponse(open(image_path, 'rb'), content_type="image/png")
+            response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0'
+            response['Pragma'] = 'no-cache'
+            response['Expires'] = '0'
+            response['Cache-Buster'] = uuid.uuid4().hex
+            return response
         else:
-            logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
-            # Retrieve the most recent TrackingLog for this email
+            return Response({'error': 'Image not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    @action(detail=False, methods=['get'])
+    def tracking_pixel(self, request, token):
+        return self.handle_tracking(request, token, is_pixel=True)
+
+    @action(detail=False, methods=['get'])
+    def tracking_css(self, request, token):
+        return self.handle_tracking(request, token, is_pixel=False)
+
+    def handle_tracking(self, request, token, is_pixel):
+        try:
+            logger.info(f"'handle_tracking' called! Process ID: {os.getpid()}, Thread ID: {threading.get_ident()}")
+            pixel_token = TrackingPixelToken.objects.get(token=token)
+            recipient = pixel_token.email.recipient
+            email_id = pixel_token.email.id
+            mail = pixel_token.email
+            curr_time = timezone.now()
+
+            time_difference = curr_time - mail.sent_at
+
+            if time_difference <= timedelta(seconds=4):
+                logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within 5 secs. Potential prefetching. Abandoning request!")
+                return Response("Not found", status=status.HTTP_404_NOT_FOUND)
+
             last_log = TrackingLog.objects.filter(email=mail).order_by('-opened_at').first()
 
             if last_log:
                 time_diff = curr_time - last_log.opened_at
-
                 if time_diff <= timedelta(seconds=3):
-                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
-                    logger.warning(f"views.py/handle_tracking: Request received for for {recipient} with email_id {email_id} within 4 secs. Random fetching. Abandoning request!")
-                    return HttpResponse("Not found", status=404)
-                else:
-                    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
-                    print("Greater than 4 seconds since the last log")
-            else:
-                print("No previous logs found")
+                    logger.warning(f"views.py/handle_tracking: Request received for {recipient} with email_id {email_id} within 4 secs. Random fetching. Abandoning request!")
+                    return Response("Not found", status=status.HTTP_404_NOT_FOUND)
 
-            ip_address = get_client_ip(request)
-            user_agent = request.META.get('HTTP_USER_AGENT')
-            geo_location = get_geo_location(ip_address)
-            device_type = get_device_type(user_agent)
-            referer = request.META.get('HTTP_REFERER', '')
-            screen_resolution = request.META.get('HTTP_UA_PIXELS', '')
-            language = request.META.get('HTTP_ACCEPT_LANGUAGE', '')
-            protocol = request.scheme
-            method = request.method
-            host = request.get_host()
-            connection = request.META.get('HTTP_CONNECTION', '')
+            tracking_data = {
+                'email': pixel_token.email.id,
+                'ip_address': self.get_client_ip(request),
+                'user_agent': request.META.get('HTTP_USER_AGENT'),
+                'opened_at': timezone.now(),
+                'tracking_type': 'pixel' if is_pixel else 'css',
+                'geo_location': self.get_geo_location(self.get_client_ip(request)),
+                'referer': request.META.get('HTTP_REFERER', ''),
+                'device_type': self.get_device_type(request.META.get('HTTP_USER_AGENT')),
+                'screen_resolution': request.META.get('HTTP_UA_PIXELS', ''),
+                'language': request.META.get('HTTP_ACCEPT_LANGUAGE', ''),
+                'protocol': request.scheme,
+                'method': request.method,
+                'host': request.get_host(),
+                'connection': request.META.get('HTTP_CONNECTION', '')
+            }
 
-            TrackingLog.objects.create(
-                email=pixel_token.email,
-                ip_address=ip_address,
-                user_agent=user_agent,
-                opened_at=timezone.now(),
-                tracking_type='pixel' if is_pixel else 'css',
-                geo_location=geo_location,
-                referer=referer,
-                device_type=device_type,
-                screen_resolution=screen_resolution,
-                language=language,
-                protocol=protocol,
-                method=method,
-                host=host,
-                connection=connection
-            )
+            serializer = self.get_serializer(data=tracking_data)
+            serializer.is_valid(raise_exception=True)
+            self.perform_create(serializer)
 
             if is_pixel:
-                # Serve a 1x1 transparent PNG
-                # As file:
                 png_path = os.path.join(settings.BASE_DIR, 'static/images', 'transparent.png')
-
                 response = FileResponse(open(png_path, 'rb'), content_type="image/png")
-                response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max_age=0'
-                response['Pragma'] = 'no-cache'
-                response['Expires'] = '0'
-                response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
-
-                return response
             else:
-                # As hardcoded data
-                css_data = ""
-
-                # Serve an empty CSS file
                 response = HttpResponse(content_type="text/css")
-                response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-                response['Pragma'] = 'no-cache'
-                response['Expires'] = '0'
-                response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
-                response.write(css_data)
-                return response
+                response.write("")
 
-    except TrackingPixelToken.DoesNotExist:
-        return HttpResponse("Not found", status=404)
+            response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0'
+            response['Pragma'] = 'no-cache'
+            response['Expires'] = '0'
+            response['Cache-Buster'] = uuid.uuid4().hex
 
-def serve_image(request, image_name):
-    image_path = os.path.join(settings.BASE_DIR, 'static/images', image_name)
-    if os.path.exists(image_path):
-        response = FileResponse(open(image_path, 'rb'), content_type="image/png")
-        response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max_age=0'
-        response['Pragma'] = 'no-cache'
-        response['Expires'] = '0'
-        response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
+            return response
 
-        return response#FileResponse(open(image_path, 'rb'), content_type='image/png')
-    else:
-        return HttpResponse('Image not found.', status=404)
+        except TrackingPixelToken.DoesNotExist:
+            return Response("Not found", status=status.HTTP_404_NOT_FOUND)
 
-from django.urls import reverse
-def empty_database(request):
-    # Ensure that only POST requests can trigger this action (for safety)
-    if request.method == 'POST':
-        # Delete all records from all relevant models
+    @staticmethod
+    def get_client_ip(request):
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+        return ip
+
+    @staticmethod
+    def get_geo_location(ip_address):
+        try:
+            reader = geoip2.database.Reader('/path/to/GeoLite2-City.mmdb')
+            response = reader.city(ip_address)
+            return f"{response.city.name}, {response.subdivisions.most_specific.name}, {response.country.name}"
+        except Exception as e:
+            return f"Unknown exception {e}"
+
+    @staticmethod
+    def get_device_type(user_agent):
+        if 'Mobi' in user_agent:
+            return 'Mobile'
+        elif 'Tablet' in user_agent:
+            return 'Tablet'
+        else:
+            return 'Desktop'
+
+class LinkClickViewSet(viewsets.ModelViewSet):
+    queryset = LinkClick.objects.all()
+    serializer_class = LinkClickSerializer
+
+    @action(detail=False, methods=['get'])
+    def track_link(self, request, link_id):
+        link = get_object_or_404(Link, pk=link_id)
+        
+        click_data = {
+            'link': link.id,
+            'clicked_at': timezone.now(),
+            'ip_address': TrackingViewSet.get_client_ip(request),
+            'user_agent': request.META.get('HTTP_USER_AGENT'),
+            'geo_location': TrackingViewSet.get_geo_location(TrackingViewSet.get_client_ip(request)),
+            'referer': request.META.get('HTTP_REFERER', ''),
+            'device_type': TrackingViewSet.get_device_type(request.META.get('HTTP_USER_AGENT')),
+            'screen_resolution': request.META.get('HTTP_UA_PIXELS', ''),
+            'language': request.META.get('HTTP_ACCEPT_LANGUAGE', ''),
+            'protocol': request.scheme,
+            'method': request.method,
+            'host': request.get_host(),
+            'connection': request.META.get('HTTP_CONNECTION', '')
+        }
+        
+        serializer = self.get_serializer(data=click_data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        
+        return redirect(link.url)
+
+class DashboardViewSet(viewsets.ViewSet):
+    @action(detail=False, methods=['get'])
+    def dashboard_data(self, request):
+        emails = Email.objects.all()
+        email_serializer = EmailSerializer(emails, many=True)
+        
+        # Fetch unsubscribed emails
+        from unsubscribers.models import UnsubscribedUser
+        unsubscribed_emails = UnsubscribedUser.objects.values_list('email', flat=True)
+        
+        return Response({
+            'emails': email_serializer.data,
+            'unsubscribed_emails': list(unsubscribed_emails)
+        })
+
+    @action(detail=False, methods=['get'])
+    def email_detail_data(self, request):
+        email_id = request.query_params.get('email_id')
+        email = get_object_or_404(Email, pk=email_id)
+        
+        tracking_logs = TrackingLog.objects.filter(email=email).order_by('-opened_at')
+        link_clicks = LinkClick.objects.filter(link__email=email).order_by('-clicked_at')
+        
+        email_serializer = EmailSerializer(email)
+        tracking_logs_serializer = TrackingLogSerializer(tracking_logs, many=True)
+        link_clicks_serializer = LinkClickSerializer(link_clicks, many=True)
+        
+        return Response({
+            'email': email_serializer.data,
+            'tracking_logs': tracking_logs_serializer.data,
+            'link_clicks': link_clicks_serializer.data
+        })
+
+    @action(detail=False, methods=['post'])
+    def delete_unsubscribed_users(self, request):
+        from unsubscribers.models import UnsubscribedUser
+        UnsubscribedUser.objects.all().delete()
+        return Response({"message": "All unsubscribed users have been deleted."})
+
+    @action(detail=False, methods=['post'])
+    def empty_database(self, request):
         Email.objects.all().delete()
         TrackingLog.objects.all().delete()
         Link.objects.all().delete()
-        LinkClick.objects.all().delete()        
-        # Redirect to a success page or back to the dashboard
-        return redirect(reverse('dashboard'))  # Adjust 'dashboard' to your actual dashboard URL name
-
-def delete_unsubscribed_users(request):
-    if request.method == 'POST':
-        UnsubscribedUser.objects.all().delete()
-        return redirect('unsubscribed_users_list')
-
-def track_link(request, link_id):
-    link = get_object_or_404(Link, pk=link_id)
-    
-    ip_address = get_client_ip(request)
-    user_agent = request.META.get('HTTP_USER_AGENT')
-    geo_location = get_geo_location(ip_address)
-    device_type = get_device_type(user_agent)
-    referer = request.META.get('HTTP_REFERER', '')
-    screen_resolution = request.META.get('HTTP_UA_PIXELS', '')
-    language = request.META.get('HTTP_ACCEPT_LANGUAGE', '')
-    protocol = request.scheme
-    method = request.method
-    host = request.get_host()
-    connection = request.META.get('HTTP_CONNECTION', '')
-
-    LinkClick.objects.create(
-        link=link,
-        clicked_at=datetime.now(),
-        ip_address=ip_address,
-        user_agent=user_agent,
-        geo_location=geo_location,
-        referer=referer,
-        device_type=device_type,
-        screen_resolution=screen_resolution,
-        language=language,
-        protocol=protocol,
-        method=method,
-        host=host,
-        connection=connection
-    )
-    
-    return redirect(link.url)
-
-def dashboard_data(request):
-    emails = Email.objects.all()
-    unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
-    
-    # Serialize the email data
-    email_data = serializers.serialize('json', emails)
-    
-    return JsonResponse({
-        'emails': email_data,
-        'unsubscribed_emails': list(unsubscribed_users)
-    })
-
-
-def email_detail_data(request):
-    
-    email_id = request.GET.get('email_id')
-    
-    email = get_object_or_404(Email, pk=email_id)
-    
-    tracking_logs = TrackingLog.objects.filter(email=email).order_by('-opened_at')
-    link_clicks = LinkClick.objects.filter(link__email=email).order_by('-clicked_at')
-    
-    email_data = serializers.serialize('json', [email])
-    tracking_logs_data = serializers.serialize('json', tracking_logs)
-    link_clicks_data = serializers.serialize('json', link_clicks)
-    
-    return JsonResponse({
-        'email': email_data,
-        'tracking_logs': tracking_logs_data,
-        'link_clicks': link_clicks_data
-    })
-
+        LinkClick.objects.all().delete()
+        return Response({"message": "Database has been emptied."})

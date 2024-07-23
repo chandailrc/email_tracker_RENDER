@@ -4226,3 +4226,346 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' wi
 2024-07-20 00:56:55 - django.server - INFO - "GET /frontend/email/10/ HTTP/1.1" 200 4870
 2024-07-20 00:56:57 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2362
 2024-07-20 00:56:57 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 22251
+2024-07-20 15:22:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 15:46:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-20 15:46:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 15:50:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-20 15:50:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-20 15:51:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-07-20 15:51:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-21 18:34:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-21 19:24:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-21 19:24:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-21 19:24:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-21 19:24:37 - django.request - WARNING - Forbidden: /
+2024-07-21 19:24:37 - django.server - WARNING - "GET / HTTP/1.1" 403 58
+2024-07-21 19:24:37 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 16:17:01 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:17:49 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 16:17:49 - django.request - WARNING - Not Found: /
+2024-07-22 16:17:53 - django.request - WARNING - Not Found: /
+2024-07-22 16:17:53 - django.server - WARNING - "GET / HTTP/1.1" 404 2627
+2024-07-22 16:17:53 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 16:18:03 - django.request - WARNING - Not Found: /compose/
+2024-07-22 16:18:03 - django.server - WARNING - "GET /compose/ HTTP/1.1" 404 2669
+2024-07-22 16:18:17 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-22 16:18:32 - django.request - WARNING - Forbidden: /api/sending/send-tracked-email/
+2024-07-22 16:18:32 - django.server - WARNING - "POST /api/sending/send-tracked-email/ HTTP/1.1" 403 58
+2024-07-22 16:18:32 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-22 16:18:32 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2297
+2024-07-22 16:22:11 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-22 16:22:11 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:22:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-22 16:22:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:23:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 16:23:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:24:07 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-22 16:24:21 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 96
+2024-07-22 16:24:21 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-22 16:24:21 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-22 16:24:30 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2582
+2024-07-22 16:24:31 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 22867
+2024-07-22 16:24:45 - django.server - INFO - "GET /api/tracking/serve-image/logo.png HTTP/1.1" 301 0
+2024-07-22 16:24:45 - tracking.urls - INFO - urls.py: PIXEL Request received for email test1@test.com from ip: 127.0.0.1
+2024-07-22 16:24:45 - tracking.views - INFO - 'handle_tracking' called! Process ID: 24169, Thread ID: 130174128477760
+2024-07-22 16:24:45 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-22 10:54:45.893901+00:00 | Mail sent: 2024-07-22 10:54:21.268485+00:00 | Difference: 0:00:24.625416
+2024-07-22 16:24:45 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-22 16:24:45 - django.server - INFO - "GET /api/tracking/track-pixel/7d60079be8fb4ff6bd378fe096bb65a1/pixel.png HTTP/1.1" 200 95
+2024-07-22 16:24:49 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2582
+2024-07-22 16:24:49 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 23508
+2024-07-22 16:30:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 16:30:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:30:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:31:26 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 96
+2024-07-22 16:31:26 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-22 16:31:26 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-22 16:38:01 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 16:38:01 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:38:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 16:38:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:41:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 16:41:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:43:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 16:43:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:46:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 16:46:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 16:46:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 19:22:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:31:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 19:31:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:31:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:32:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-22 19:32:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:33:39 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-22 19:34:17 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 96
+2024-07-22 19:34:17 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-22 19:34:17 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-22 19:34:22 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:34:22 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:34:22 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:34:25 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:34:25 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:34:25 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:34:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:34:59 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:34:59 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:34:59 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:01 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:01 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:02 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 49
+2024-07-22 19:35:02 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2294
+2024-07-22 19:35:03 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:03 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:03 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:10 - django.request - WARNING - Not Found: /compose/
+2024-07-22 19:35:19 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 96
+2024-07-22 19:35:19 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-22 19:35:19 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-22 19:35:31 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:31 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:31 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:31 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:31 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:31 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:32 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:32 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:32 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:32 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:32 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:32 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:32 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:32 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:35:32 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:35:32 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:35:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:36:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 19:36:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:36:45 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:36:45 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:36:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:37:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 19:37:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:37:24 - django.request - WARNING - Not Found: /api/tracking/dashboard/dashboard-data/
+2024-07-22 19:37:24 - django.server - WARNING - "GET /api/tracking/dashboard/dashboard-data/ HTTP/1.1" 404 11515
+2024-07-22 19:37:24 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:37:25 - django.request - WARNING - Not Found: /api/tracking/dashboard/dashboard-data/
+2024-07-22 19:37:25 - django.server - WARNING - "GET /api/tracking/dashboard/dashboard-data/ HTTP/1.1" 404 11515
+2024-07-22 19:37:25 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:37:25 - django.request - WARNING - Not Found: /api/tracking/dashboard/dashboard-data/
+2024-07-22 19:37:25 - django.server - WARNING - "GET /api/tracking/dashboard/dashboard-data/ HTTP/1.1" 404 11515
+2024-07-22 19:37:25 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:37:25 - django.request - WARNING - Not Found: /api/tracking/dashboard/dashboard-data/
+2024-07-22 19:37:25 - django.server - WARNING - "GET /api/tracking/dashboard/dashboard-data/ HTTP/1.1" 404 11515
+2024-07-22 19:37:25 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 19:38:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-22 19:38:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:38:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 19:38:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:38:41 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2393
+2024-07-22 19:38:41 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11139
+2024-07-22 19:39:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 19:39:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:39:06 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2393
+2024-07-22 19:39:06 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11139
+2024-07-22 19:39:07 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2393
+2024-07-22 19:39:07 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11139
+2024-07-22 19:39:07 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2393
+2024-07-22 19:39:07 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11139
+2024-07-22 19:39:08 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2393
+2024-07-22 19:39:08 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11139
+2024-07-22 19:39:09 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=1 HTTP/1.1" 200 638
+2024-07-22 19:39:09 - django.server - INFO - "GET /frontend/email/1/ HTTP/1.1" 200 3325
+2024-07-22 19:39:43 - tracking.views - INFO - 'handle_tracking' called! Process ID: 53361, Thread ID: 137570379884096
+2024-07-22 19:39:43 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-22 19:39:43 - django.server - INFO - "GET /api/tracking/track-pixel/1a15e944f149461597043f8ec79faa8e/pixel.png HTTP/1.1" 200 95
+2024-07-22 19:39:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2393
+2024-07-22 19:39:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11139
+2024-07-22 19:39:45 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 19:39:47 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2393
+2024-07-22 19:39:47 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11139
+2024-07-22 19:47:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/serializers.py changed, reloading.
+2024-07-22 19:47:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:47:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-22 19:47:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:48:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 19:48:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:49:32 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:49:32 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:49:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1773
+2024-07-22 19:49:33 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:49:33 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:49:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1773
+2024-07-22 19:49:33 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:49:33 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:49:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1773
+2024-07-22 19:49:33 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:49:33 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:49:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1773
+2024-07-22 19:49:33 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:49:33 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:49:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1773
+2024-07-22 19:49:33 - django.request - WARNING - Not Found: /api/dashboard/dashboard-data/
+2024-07-22 19:49:33 - django.server - WARNING - "GET /api/dashboard/dashboard-data/ HTTP/1.1" 404 2732
+2024-07-22 19:49:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1773
+2024-07-22 19:50:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 19:50:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 19:50:34 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 15855
+2024-07-22 19:50:34 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 25175
+2024-07-22 19:50:56 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=1 HTTP/1.1" 200 1101
+2024-07-22 19:50:56 - django.server - INFO - "GET /frontend/email/1/ HTTP/1.1" 200 3325
+2024-07-22 19:50:58 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 15855
+2024-07-22 19:50:58 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 25175
+2024-07-22 19:52:34 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=7 HTTP/1.1" 200 7563
+2024-07-22 19:52:34 - django.server - INFO - "GET /frontend/email/7/ HTTP/1.1" 200 8340
+2024-07-22 19:52:34 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 19:56:40 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 15855
+2024-07-22 19:56:40 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 25175
+2024-07-22 19:56:52 - tracking.views - INFO - 'handle_tracking' called! Process ID: 55415, Thread ID: 130555723114048
+2024-07-22 19:56:52 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-22 19:56:52 - django.server - INFO - "GET /api/tracking/track-pixel/7d60079be8fb4ff6bd378fe096bb65a1/pixel.png HTTP/1.1" 200 95
+2024-07-22 19:56:53 - django.server - INFO - "GET /frontend/unsubscribe/?email=test1@test.com HTTP/1.1" 200 522
+2024-07-22 19:56:55 - django.server - INFO - "POST /api/unsubscribers/unsubscribe-action/ HTTP/1.1" 200 90
+2024-07-22 19:56:55 - django.server - INFO - "POST /frontend/unsubscribe/?email=test1@test.com HTTP/1.1" 200 40
+2024-07-22 19:56:59 - django.server - INFO - "GET /frontend/unsubscribe/?email=test1@test.com HTTP/1.1" 200 522
+2024-07-22 19:57:00 - django.server - INFO - "POST /api/unsubscribers/unsubscribe-action/ HTTP/1.1" 200 89
+2024-07-22 19:57:00 - django.server - INFO - "POST /frontend/unsubscribe/?email=test1@test.com HTTP/1.1" 200 30
+2024-07-22 19:57:07 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 16381
+2024-07-22 19:57:07 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 25754
+2024-07-22 19:57:23 - tracking.views - INFO - 'handle_tracking' called! Process ID: 55415, Thread ID: 130555706328640
+2024-07-22 19:57:23 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-22 19:57:23 - django.server - INFO - "GET /api/tracking/track-pixel/6c5f0eb6a82a4a8d9ddbae38563305de/pixel.png HTTP/1.1" 200 95
+2024-07-22 19:57:25 - django.server - INFO - "GET /frontend/unsubscribe/?email=test2@test.com HTTP/1.1" 200 522
+2024-07-22 19:57:26 - django.server - INFO - "POST /api/unsubscribers/unsubscribe-action/ HTTP/1.1" 200 90
+2024-07-22 19:57:26 - django.server - INFO - "POST /frontend/unsubscribe/?email=test2@test.com HTTP/1.1" 200 40
+2024-07-22 19:57:28 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 16906
+2024-07-22 19:57:28 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 26372
+2024-07-22 19:57:34 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 85
+2024-07-22 19:57:34 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 3302
+2024-07-22 19:57:39 - django.server - INFO - "POST /api/unsubscribers/delete-unsub-user/ HTTP/1.1" 200 89
+2024-07-22 19:57:39 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/test1@test.com/ HTTP/1.1" 302 0
+2024-07-22 19:57:39 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 67
+2024-07-22 19:57:39 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2798
+2024-07-22 19:57:39 - django.server - INFO - "POST /api/unsubscribers/delete-unsub-user/ HTTP/1.1" 200 89
+2024-07-22 19:57:39 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/test2@test.com/ HTTP/1.1" 302 0
+2024-07-22 19:57:39 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 49
+2024-07-22 19:57:39 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2294
+2024-07-22 19:57:42 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 16872
+2024-07-22 19:57:42 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 26370
+2024-07-22 19:57:46 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 16872
+2024-07-22 19:57:46 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 26370
+2024-07-22 19:57:48 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 49
+2024-07-22 19:57:48 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2294
+2024-07-22 19:57:50 - django.server - INFO - "POST /api/unsubscribers/delete-unsub-user/ HTTP/1.1" 200 95
+2024-07-22 19:57:50 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/Testing@unsubapp.com/ HTTP/1.1" 302 0
+2024-07-22 19:57:50 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-22 19:57:50 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
+2024-07-22 19:57:50 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 16850
+2024-07-22 19:57:50 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 26369
+2024-07-22 19:58:07 - tracking.views - INFO - 'handle_tracking' called! Process ID: 55415, Thread ID: 130555723114048
+2024-07-22 19:58:07 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-22 19:58:07 - django.server - INFO - "GET /api/tracking/track-pixel/1a15e944f149461597043f8ec79faa8e/pixel.png HTTP/1.1" 200 95
+2024-07-22 19:58:08 - django.server - INFO - "GET /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 520
+2024-07-22 19:58:10 - django.server - INFO - "POST /api/unsubscribers/unsubscribe-action/ HTTP/1.1" 200 90
+2024-07-22 19:58:10 - django.server - INFO - "POST /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 40
+2024-07-22 19:58:15 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 17374
+2024-07-22 19:58:15 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 26948
+2024-07-22 19:58:31 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 111
+2024-07-22 19:58:31 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-22 19:58:31 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2383
+2024-07-22 19:59:15 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 17374
+2024-07-22 19:59:15 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 26948
+2024-07-22 20:02:43 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2183
+2024-07-22 20:54:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-22 20:54:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 23:02:56 - django.server - INFO - "GET /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 520
+2024-07-22 23:02:56 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 23:03:04 - django.server - INFO - "GET /api/tracking/ HTTP/1.1" 200 2
+2024-07-22 23:03:04 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 23:04:02 - django.request - WARNING - Not Found: /api/link-clicks/
+2024-07-22 23:04:02 - django.server - WARNING - "GET /api/link-clicks/ HTTP/1.1" 404 2693
+2024-07-22 23:04:02 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-22 23:09:12 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/urls.py changed, reloading.
+2024-07-22 23:09:12 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 23:09:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 23:09:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 23:09:41 - django.request - WARNING - Not Found: /dashboard/dashboard-data/
+2024-07-22 23:09:41 - django.server - WARNING - "GET /dashboard/dashboard-data/ HTTP/1.1" 404 2720
+2024-07-22 23:09:41 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1749
+2024-07-22 23:10:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-22 23:10:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 23:10:32 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 17374
+2024-07-22 23:10:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29172
+2024-07-22 23:14:13 - django.server - INFO - "GET /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 520
+2024-07-22 23:14:31 - django.server - INFO - "GET /api/tracking/link-clicks/ HTTP/1.1" 200 4732
+2024-07-22 23:15:52 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 17374
+2024-07-22 23:18:26 - django.server - INFO - "GET /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 520
+2024-07-22 23:18:41 - django.request - WARNING - Not Found: /api/tracking/dashboard/dashboard-data/
+2024-07-22 23:18:41 - django.server - WARNING - "GET /api/tracking/dashboard/dashboard-data/ HTTP/1.1" 404 11515
+2024-07-22 23:58:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/views.py changed, reloading.
+2024-07-22 23:58:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-22 23:59:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/urls.py changed, reloading.
+2024-07-22 23:59:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 00:01:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-23 00:01:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 00:02:17 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 96
+2024-07-23 00:02:17 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-23 00:02:17 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 2306
+2024-07-23 00:02:22 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 17568
+2024-07-23 00:02:22 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29806
+2024-07-23 00:02:30 - tracking.views - INFO - 'handle_tracking' called! Process ID: 97222, Thread ID: 128541509281344
+2024-07-23 00:02:30 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-23 00:02:30 - django.server - INFO - "GET /api/tracking/track-pixel/25f575ecc4b8411d9ad2d9b729d79de5/pixel.png HTTP/1.1" 200 95
+2024-07-23 00:02:31 - django.server - INFO - "GET /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 200 526
+2024-07-23 00:02:32 - django.request - WARNING - Unsupported Media Type: /api/unsubscribers/users/unsubscribe/
+2024-07-23 00:02:32 - django.server - WARNING - "POST /api/unsubscribers/users/unsubscribe/ HTTP/1.1" 415 85
+2024-07-23 00:02:32 - django.request - WARNING - Unsupported Media Type: /frontend/unsubscribe/
+2024-07-23 00:02:32 - django.server - WARNING - "POST /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 415 42
+2024-07-23 00:05:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-23 00:05:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 00:05:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/views.py changed, reloading.
+2024-07-23 00:05:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 00:06:23 - django.server - INFO - "GET /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 200 526
+2024-07-23 00:06:24 - django.server - INFO - "POST /api/unsubscribers/users/unsubscribe/ HTTP/1.1" 200 85
+2024-07-23 00:06:24 - django.server - INFO - "POST /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 200 40
+2024-07-23 00:06:30 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 18095
+2024-07-23 00:06:30 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 30472
+2024-07-23 00:06:35 - django.server - INFO - "GET /api/unsubscribers/users/unsubscribed_users/ HTTP/1.1" 200 60
+2024-07-23 00:06:35 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2788
+2024-07-23 00:06:38 - django.request - WARNING - Unsupported Media Type: /api/unsubscribers/users/delete_unsub_user/
+2024-07-23 00:06:38 - django.server - WARNING - "POST /api/unsubscribers/users/delete_unsub_user/ HTTP/1.1" 415 85
+2024-07-23 00:06:38 - django.request - WARNING - Unsupported Media Type: /frontend/delete-unsubscribed-user/newtest@test.com/
+2024-07-23 00:06:38 - django.server - WARNING - "POST /frontend/delete-unsubscribed-user/newtest@test.com/ HTTP/1.1" 415 39
+2024-07-23 00:07:15 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 18095
+2024-07-23 00:07:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-23 00:07:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 00:07:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/views.py changed, reloading.
+2024-07-23 00:07:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-23 00:09:12 - django.server - INFO - "GET /api/unsubscribers/users/unsubscribed_users/ HTTP/1.1" 200 60
+2024-07-23 00:09:12 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2788
+2024-07-23 00:09:14 - django.server - INFO - "POST /api/unsubscribers/users/delete_unsub_user/ HTTP/1.1" 200 88
+2024-07-23 00:09:14 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/newtest@test.com/ HTTP/1.1" 302 0
+2024-07-23 00:09:14 - django.server - INFO - "GET /api/unsubscribers/users/unsubscribed_users/ HTTP/1.1" 200 41
+2024-07-23 00:09:14 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2280
+2024-07-23 00:09:17 - django.server - INFO - "POST /api/unsubscribers/users/delete_unsub_user/ HTTP/1.1" 200 85
+2024-07-23 00:09:17 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/test@test.com/ HTTP/1.1" 302 0
+2024-07-23 00:09:17 - django.server - INFO - "GET /api/unsubscribers/users/unsubscribed_users/ HTTP/1.1" 200 26
+2024-07-23 00:09:17 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
+2024-07-23 00:09:18 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 18061
+2024-07-23 00:09:18 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 30470
+2024-07-23 00:09:24 - django.server - INFO - "GET /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 200 526
+2024-07-23 00:09:25 - django.server - INFO - "POST /api/unsubscribers/users/unsubscribe/ HTTP/1.1" 200 85
+2024-07-23 00:09:25 - django.server - INFO - "POST /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 200 40
+2024-07-23 00:09:29 - django.server - INFO - "GET /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 200 526
+2024-07-23 00:09:30 - django.server - INFO - "POST /api/unsubscribers/users/unsubscribe/ HTTP/1.1" 200 84
+2024-07-23 00:09:30 - django.server - INFO - "POST /frontend/unsubscribe/?email=newtest@test.com HTTP/1.1" 200 30
+2024-07-23 00:09:39 - django.server - INFO - "GET /api/unsubscribers/users/unsubscribed_users/ HTTP/1.1" 200 44
+2024-07-23 00:09:39 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2286
+2024-07-23 00:09:41 - django.server - INFO - "POST /api/unsubscribers/users/delete_unsub_user/ HTTP/1.1" 200 88
+2024-07-23 00:09:41 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/newtest@test.com/ HTTP/1.1" 302 0
+2024-07-23 00:09:41 - django.server - INFO - "GET /api/unsubscribers/users/unsubscribed_users/ HTTP/1.1" 200 26
+2024-07-23 00:09:41 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1778
