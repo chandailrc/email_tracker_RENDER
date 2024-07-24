@@ -189,6 +189,10 @@ def view_email(request, email_id):
 def fetch_emails(request):
     if request.method == 'POST':
         response = requests.post(request.build_absolute_uri(reverse('fetch_emails')))
-        message = response.json()['message'] if response.status_code == 200 else "Failed to fetch emails"
-        return render(request, 'fetch_email_results.html', {'message': message})
+        data = response.json()
+        if response.status_code == 200 and data.get('success'):
+            message = "Emails fetched successfully"
+        else:
+            message = data.get('error', "Failed to fetch emails")
+        return render(request, 'fetch_emails_result.html', {'message': message})
     return render(request, 'fetch_emails.html')

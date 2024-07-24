@@ -4649,3 +4649,8 @@ django.template.exceptions.TemplateDoesNotExist: emails/email_list.html
 2024-07-24 23:33:58 - django.server - INFO - "GET /api/emails/email_list/ HTTP/1.1" 200 4601
 2024-07-24 23:34:03 - django.request - WARNING - Not Found: /api/fetch-emails/
 2024-07-24 23:34:03 - django.server - WARNING - "POST /api/fetch-emails/ HTTP/1.1" 404 2923
+2024-07-24 23:41:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 23:46:09 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-24 23:46:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 23:47:25 - django.server - INFO - "GET /frontend/fetch-emails/ HTTP/1.1" 200 1586
+2024-07-24 23:47:25 - django.request - WARNING - Not Found: /favicon.ico

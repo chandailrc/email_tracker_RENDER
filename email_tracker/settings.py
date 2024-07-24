@@ -60,8 +60,6 @@ INSTALLED_APPS = [
     'frontend',
     'unsubscribers',
     'receiving',
-    'emails', # TEMP only for testing
-    'inbox',  # TEMP only for testing
 ]
 
 MIDDLEWARE = [
