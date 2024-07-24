@@ -4545,3 +4545,4 @@ imaplib.IMAP4.error: LOGIN command error: BAD [b'expected 1*ASTRING-CHAR / strin
 2024-07-24 22:45:22 - django.request - WARNING - Not Found: /favicon.ico
 2024-07-24 22:48:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/email_utils.py changed, reloading.
 2024-07-24 22:48:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:49:19 - django.server - INFO - "GET /api/inbox/inbox_display HTTP/1.1" 200 416
