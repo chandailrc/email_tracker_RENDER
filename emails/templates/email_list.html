@@ -1,60 +1,170 @@
 {% extends 'base.html' %}
 
+{% block extra_head %}
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+    }
+    .email-container {
+        display: flex;
+        height: calc(100vh - 60px);
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .email-list {
+        width: 30%;
+        border-right: 1px solid #e0e0e0;
+        overflow-y: auto;
+    }
+    .email-content {
+        width: 70%;
+        overflow-y: auto;
+        padding: 20px;
+    }
+    .email-item {
+        padding: 15px;
+        border-bottom: 1px solid #e0e0e0;
+        cursor: pointer;
+    }
+    .email-item:hover {
+        background-color: #f0f0f0;
+    }
+    .email-item.active {
+        background-color: #e8f0fe;
+    }
+    .email-item h3 {
+        margin: 0 0 5px 0;
+        font-size: 16px;
+        color: #333;
+    }
+    .email-item p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+    .email-header {
+        margin-bottom: 20px;
+    }
+    .email-header h2 {
+        margin: 0 0 10px 0;
+    }
+    .email-header p {
+        margin: 5px 0;
+        color: #666;
+    }
+    .email-body {
+        line-height: 1.6;
+    }
+    .reply-form {
+        margin-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 20px;
+    }
+    .reply-form textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    #fetchEmails {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="row">
-    <div class="col-md-4">
-        <h2>Emails</h2>
-        <form method="post" class="mb-3">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-primary">Fetch New Emails</button>
-        </form>
-        <div class="list-group email-list">
-            {% for email in page_obj %}
-                <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#emailModal{{ email.id }}">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{ email.subject|default:"(No subject)"|truncatechars:30 }}</h5>
-                        <small>{{ email.received_at|default:"(No date)"|date:"M d, Y" }}</small>
-                    </div>
-                    <p class="mb-1">{{ email.sender|default:"(No sender)" }}</p>
-                </a>
-            {% empty %}
-                <p>No emails found.</p>
-            {% endfor %}
+<button id="fetchEmails" class="btn btn-primary">Fetch New Emails</button>
+
+<div class="email-container">
+    <div class="email-list" id="emailList">
+        {% for email in emails %}
+        <div class="email-item" data-email-id="{{ email.id }}">
+            <h3>{{ email.subject|default:"(No subject)"|truncatechars:30 }}</h3>
+            <p>{{ email.sender|default:"(No sender)" }} - {{ email.received_at|default:"(No date)"|date:"M d, Y" }}</p>
         </div>
-        <!-- Pagination code remains the same -->
+        {% endfor %}
     </div>
-    <div class="col-md-8">
-        <h2>Email Content</h2>
-        <div id="emailContent" class="email-content">
-            <p>Select an email to view its content.</p>
-        </div>
+    <div class="email-content" id="emailContent">
+        <p>Select an email to view its content.</p>
     </div>
 </div>
 
-{% for email in page_obj %}
-<div class="modal fade" id="emailModal{{ email.id }}" tabindex="-1" aria-labelledby="emailModalLabel{{ email.id }}" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="emailModalLabel{{ email.id }}">{{ email.subject|default:"(No subject)" }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>From:</strong> {{ email.sender|default:"(No sender)" }}</p>
-                <p><strong>Date:</strong> {{ email.received_at|default:"(No date)" }}</p>
-                <hr>
-                {% if email.body_html %}
-                    <div class="email-html-content">
-                        {{ email.body_html|safe }}
-                    </div>
-                {% elif email.body_text %}
-                    <pre>{{ email.body_text }}</pre>
-                {% else %}
-                    <p>This email has no content.</p>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
-{% endfor %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const emailList = document.getElementById('emailList');
+    const emailContent = document.getElementById('emailContent');
+    const fetchEmailsBtn = document.getElementById('fetchEmails');
+
+    emailList.addEventListener('click', function(e) {
+        const emailItem = e.target.closest('.email-item');
+        if (emailItem) {
+            const emailId = emailItem.dataset.emailId;
+            fetch(`/api/emails/${emailId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    emailContent.innerHTML = `
+                        <div class="email-header">
+                            <h2>${data.subject}</h2>
+                            <p><strong>From:</strong> ${data.sender}</p>
+                            <p><strong>Date:</strong> ${new Date(data.received_at).toLocaleString()}</p>
+                        </div>
+                        <div class="email-body">
+                            ${data.body_html || data.body_text || 'No content'}
+                        </div>
+                        <div class="reply-form">
+                            <textarea placeholder="Type your reply here..."></textarea>
+                            <button class="btn btn-primary" onclick="sendReply(${data.id})">Send Reply</button>
+                        </div>
+                    `;
+                    
+                    // Remove active class from all items
+                    emailList.querySelectorAll('.email-item').forEach(item => item.classList.remove('active'));
+                    // Add active class to clicked item
+                    emailItem.classList.add('active');
+                });
+        }
+    });
+
+    fetchEmailsBtn.addEventListener('click', function() {
+        fetch('/api/fetch-emails/', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();  // Reload the page to show new emails
+                } else {
+                    alert('Failed to fetch emails. Please try again.');
+                }
+            });
+    });
+});
+
+function sendReply(emailId) {
+    const replyText = document.querySelector('.reply-form textarea').value;
+    fetch(`/api/emails/${emailId}/reply/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')  // You'll need to implement getCookie function
+        },
+        body: JSON.stringify({ reply: replyText })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Reply sent successfully!');
+            document.querySelector('.reply-form textarea').value = '';
+        } else {
+            alert('Failed to send reply. Please try again.');
+        }
+    });
+}
+
+// Implement this function to get CSRF token from cookies
+function getCookie(name) {
+    // ... (implement CSRF token retrieval)
+}
+</script>
 {% endblock %}
