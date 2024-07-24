@@ -4226,3 +4226,4 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' wi
 2024-07-20 00:56:55 - django.server - INFO - "GET /frontend/email/10/ HTTP/1.1" 200 4870
 2024-07-20 00:56:57 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2362
 2024-07-20 00:56:57 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 22251
+2024-07-24 23:53:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
