@@ -4502,3 +4502,46 @@ django.template.exceptions.TemplateDoesNotExist: emails/email_list.html
 2024-07-24 22:25:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-24 22:27:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/views.py changed, reloading.
 2024-07-24 22:27:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:44:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:44:12 - django.request - ERROR - Internal Server Error: /api/inbox/inbox
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/views.py", line 5, in inbox_view
+    emails = fetch_emails()
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/email_utils.py", line 10, in fetch_emails
+    mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/imaplib.py", line 610, in login
+    typ, dat = self._simple_command('LOGIN', user, self._quote(password))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/imaplib.py", line 1230, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/imaplib.py", line 1055, in _command_complete
+    raise self.error('%s command error: %s %s' % (name, typ, data))
+imaplib.IMAP4.error: LOGIN command error: BAD [b'expected 1*ASTRING-CHAR / string instead of " "']
+2024-07-24 22:44:12 - django.server - ERROR - "GET /api/inbox/inbox HTTP/1.1" 500 87574
+2024-07-24 22:44:12 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-24 22:45:09 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/urls.py changed, reloading.
+2024-07-24 22:45:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:45:22 - django.request - ERROR - Internal Server Error: /api/inbox/inbox_display
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/views.py", line 5, in inbox_view
+    emails = fetch_emails()
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/email_utils.py", line 10, in fetch_emails
+    mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/imaplib.py", line 610, in login
+    typ, dat = self._simple_command('LOGIN', user, self._quote(password))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/imaplib.py", line 1230, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/imaplib.py", line 1055, in _command_complete
+    raise self.error('%s command error: %s %s' % (name, typ, data))
+imaplib.IMAP4.error: LOGIN command error: BAD [b'expected 1*ASTRING-CHAR / string instead of " "']
+2024-07-24 22:45:22 - django.server - ERROR - "GET /api/inbox/inbox_display HTTP/1.1" 500 87654
+2024-07-24 22:45:22 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-24 22:48:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/email_utils.py changed, reloading.
+2024-07-24 22:48:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
