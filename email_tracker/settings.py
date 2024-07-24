@@ -60,7 +60,8 @@ INSTALLED_APPS = [
     'frontend',
     'unsubscribers',
     'receiving',
-    'emails',
+    'emails', # TEMP only for testing
+    'inbox',  # TEMP only for testing
 ]
 
 MIDDLEWARE = [
@@ -220,8 +221,6 @@ if mail_case == 'IONOS':
     EMAIL_IMAP_SERVER = 'imap.ionos.com'
     EMAIL_IMAP_PORT = 993
     EMAIL_IMAP_USE_SSL = True
-    EMAIL_HOST_USER = env('IONOS_EMAIL_USER')
-    EMAIL_HOST_PASSWORD = env('IONOS_EMAIL_PASS')
     
 elif mail_case == 'MAILGUN':
     

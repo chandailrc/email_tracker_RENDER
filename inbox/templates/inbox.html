@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Inbox</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .email { border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .subject { font-weight: bold; }
+        .from { color: #555; }
+        .date { color: #888; }
+    </style>
+</head>
+<body>
+    <h1>Email Inbox</h1>
+    {% for email in emails %}
+        <div class="email">
+            <div class="subject">{{ email.subject }}</div>
+            <div class="from">From: {{ email.from }}</div>
+            <div class="date">Date: {{ email.date }}</div>
+            <div class="body">{{ email.body }}</div>
+        </div>
+    {% endfor %}
+</body>
+</html>

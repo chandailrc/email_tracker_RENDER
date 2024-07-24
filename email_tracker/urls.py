@@ -26,4 +26,5 @@ urlpatterns = [
     path('api/receiving/', include('receiving.urls')),
     path('frontend/', include('frontend.urls')),
     path('api/emails/', include('emails.urls')),
+    path('api/inbox/', include('inbox.urls')),
 ]

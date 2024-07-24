@@ -4496,3 +4496,9 @@ django.template.exceptions.TemplateDoesNotExist: emails/email_list.html
 2024-07-23 21:29:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-23 21:29:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py changed, reloading.
 2024-07-23 21:29:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:20:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:25:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/views.py changed, reloading.
+2024-07-24 22:25:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:25:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 22:27:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/views.py changed, reloading.
+2024-07-24 22:27:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
