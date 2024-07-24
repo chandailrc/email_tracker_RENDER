@@ -4546,3 +4546,75 @@ imaplib.IMAP4.error: LOGIN command error: BAD [b'expected 1*ASTRING-CHAR / strin
 2024-07-24 22:48:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/inbox/email_utils.py changed, reloading.
 2024-07-24 22:48:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-24 22:49:19 - django.server - INFO - "GET /api/inbox/inbox_display HTTP/1.1" 200 416
+2024-07-24 23:03:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/services.py changed, reloading.
+2024-07-24 23:03:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 23:04:09 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/models.py changed, reloading.
+2024-07-24 23:04:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 23:04:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py changed, reloading.
+2024-07-24 23:04:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 23:14:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 23:16:24 - django.request - ERROR - Internal Server Error: /api/emails/email_list/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py", line 19, in email_list
+    return render(request, 'emails/email_list.html', {'page_obj': page_obj})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: emails/email_list.html
+2024-07-24 23:16:24 - django.server - ERROR - "GET /api/emails/email_list/ HTTP/1.1" 500 89327
+2024-07-24 23:16:24 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-24 23:17:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py changed, reloading.
+2024-07-24 23:17:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-24 23:17:37 - django.request - ERROR - Internal Server Error: /api/emails/email_list/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: emails/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/emails/views.py", line 19, in email_list
+    return render(request, 'email_list.html', {'page_obj': page_obj})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: emails/base.html
+2024-07-24 23:17:37 - django.server - ERROR - "GET /api/emails/email_list/ HTTP/1.1" 500 140100
+2024-07-24 23:17:37 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-24 23:18:21 - django.server - INFO - "GET /api/emails/email_list/ HTTP/1.1" 200 1995
+2024-07-24 23:18:21 - django.request - WARNING - Not Found: /favicon.ico

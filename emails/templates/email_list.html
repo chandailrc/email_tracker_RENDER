@@ -1,34 +1,60 @@
-<!-- emails/templates/emails/email_list.html -->
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Email List</title>
-</head>
-<body>
-    <h1>Emails</h1>
-    {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Fetch New Emails</button>
-    </form>
-    <ul>
-    {% for email in emails %}
-        <li>
-            <strong>From:</strong> {{ email.sender }}<br>
-            <strong>Subject:</strong> {{ email.subject }}<br>
-            <strong>Received:</strong> {{ email.received_at }}<br>
-            <p>{{ email.body|truncatewords:50 }}</p>
-        </li>
-    {% empty %}
-        <li>No emails found.</li>
-    {% endfor %}
-    </ul>
-</body>
-</html>
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <h2>Emails</h2>
+        <form method="post" class="mb-3">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Fetch New Emails</button>
+        </form>
+        <div class="list-group email-list">
+            {% for email in page_obj %}
+                <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#emailModal{{ email.id }}">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ email.subject|default:"(No subject)"|truncatechars:30 }}</h5>
+                        <small>{{ email.received_at|default:"(No date)"|date:"M d, Y" }}</small>
+                    </div>
+                    <p class="mb-1">{{ email.sender|default:"(No sender)" }}</p>
+                </a>
+            {% empty %}
+                <p>No emails found.</p>
+            {% endfor %}
+        </div>
+        <!-- Pagination code remains the same -->
+    </div>
+    <div class="col-md-8">
+        <h2>Email Content</h2>
+        <div id="emailContent" class="email-content">
+            <p>Select an email to view its content.</p>
+        </div>
+    </div>
+</div>
+
+{% for email in page_obj %}
+<div class="modal fade" id="emailModal{{ email.id }}" tabindex="-1" aria-labelledby="emailModalLabel{{ email.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emailModalLabel{{ email.id }}">{{ email.subject|default:"(No subject)" }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>From:</strong> {{ email.sender|default:"(No sender)" }}</p>
+                <p><strong>Date:</strong> {{ email.received_at|default:"(No date)" }}</p>
+                <hr>
+                {% if email.body_html %}
+                    <div class="email-html-content">
+                        {{ email.body_html|safe }}
+                    </div>
+                {% elif email.body_text %}
+                    <pre>{{ email.body_text }}</pre>
+                {% else %}
+                    <p>This email has no content.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
