@@ -1,6 +1,6 @@
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST, require_GET
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from .utils import fetch_and_process_emails, process_incoming_email
 from .models import ReceivedEmail
 
@@ -13,7 +13,7 @@ def receive_email(request):
     process_incoming_email(raw_email)
     return HttpResponse('Email received and processed', status=200)
 
-@csrf_protect
+@csrf_exempt
 @require_POST
 def fetch_emails(request):
     new_emails_count = fetch_and_process_emails()

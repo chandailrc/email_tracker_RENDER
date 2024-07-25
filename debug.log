@@ -4436,3 +4436,5 @@ UnboundLocalError: local variable 'email' referenced before assignment
 2024-07-25 23:26:49 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3117
 2024-07-25 23:27:01 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
 2024-07-25 23:27:01 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1848
+2024-07-25 23:45:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py changed, reloading.
+2024-07-25 23:45:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
