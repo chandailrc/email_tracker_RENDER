@@ -170,3 +170,6 @@ def delete_unsubscribed_user(request, user_email):
             return HttpResponse('Failed to process the deletion request.', status=response.status_code)
 
     return redirect('unsubscribed_users_list')
+
+def email_management(request):
+    return render(request, 'email_management.html')

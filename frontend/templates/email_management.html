@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Email Management{% endblock %}
+
+{% block header %}Email Management{% endblock %}
+
+{% block content %}
+<div>
+    <button id="fetchEmails">Fetch New Emails</button>
+    <div id="fetchResult"></div>
+</div>
+
+<h2>Received Emails</h2>
+<table id="emailTable">
+    <thead>
+        <tr>
+            <th>From</th>
+            <th>Subject</th>
+            <th>Received At</th>
+        </tr>
+    </thead>
+    <tbody id="emailList">
+    </tbody>
+</table>
+
+<script>
+document.getElementById('fetchEmails').addEventListener('click', function() {
+    fetch('/api/receiving/fetch/')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('fetchResult').textContent = `Fetched ${data.new_emails} new emails`;
+            loadEmails();
+        });
+});
+
+function loadEmails() {
+    fetch('/api/receiving/list/')
+        .then(response => response.json())
+        .then(data => {
+            const emailList = document.getElementById('emailList');
+            emailList.innerHTML = '';
+            data.emails.forEach(email => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${email.sender}</td>
+                    <td>${email.subject}</td>
+                    <td>${new Date(email.received_at).toLocaleString()}</td>
+                `;
+                emailList.appendChild(row);
+            });
+        });
+}
+
+loadEmails();
+</script>
+{% endblock %}

@@ -23,5 +23,6 @@ urlpatterns = [
     path('api/tracking/', include('tracking.urls')),
     path('api/sending/', include('sending.urls')),
     path('api/unsubscribers/', include('unsubscribers.urls')),
+    path('api/receiving/', include('receiving.urls')),
     path('frontend/', include('frontend.urls')),
 ]

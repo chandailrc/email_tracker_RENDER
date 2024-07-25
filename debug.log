@@ -4227,3 +4227,75 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_unsubscribed_user' wi
 2024-07-20 00:56:57 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2362
 2024-07-20 00:56:57 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 22251
 2024-07-24 23:53:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-25 11:49:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-25 11:50:31 - django.server - INFO - "GET /frontend/email-management HTTP/1.1" 301 0
+2024-07-25 11:50:31 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2464
+2024-07-25 11:50:31 - django.request - WARNING - Not Found: /receiving/list/
+2024-07-25 11:50:31 - django.server - WARNING - "GET /receiving/list/ HTTP/1.1" 404 2695
+2024-07-25 11:51:46 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 3717
+2024-07-25 11:51:46 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29792
+2024-07-25 11:51:48 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2528
+2024-07-25 11:51:48 - django.request - WARNING - Not Found: /receiving/list/
+2024-07-25 11:51:48 - django.server - WARNING - "GET /receiving/list/ HTTP/1.1" 404 2695
+2024-07-25 11:52:57 - django.request - WARNING - Not Found: /receiving/fetch/
+2024-07-25 11:52:57 - django.server - WARNING - "GET /receiving/fetch/ HTTP/1.1" 404 2698
+2024-07-25 11:54:15 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2536
+2024-07-25 11:54:15 - django.request - ERROR - Internal Server Error: /api/receiving/list/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column receiving_receivedemail.recipient does not exist
+LINE 1: ...demail"."id", "receiving_receivedemail"."sender", "receiving...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "receiving_receivedemail.recipients".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py", line 22, in list_received_emails
+    email_list = [
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 400, in __iter__
+    self._fetch_all()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column receiving_receivedemail.recipient does not exist
+LINE 1: ...demail"."id", "receiving_receivedemail"."sender", "receiving...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "receiving_receivedemail.recipients".
+
+2024-07-25 11:54:15 - django.server - ERROR - "GET /api/receiving/list/ HTTP/1.1" 500 130875
+2024-07-25 11:54:17 - django.request - ERROR - Internal Server Error: /api/receiving/fetch/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py", line 16, in fetch_emails
+    new_emails_count = fetch_and_process_emails()
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/utils.py", line 11, in fetch_and_process_emails
+    with imaplib.IMAP4_SSL(settings.IMAP_SERVER, settings.IMAP_PORT) as mail:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/conf/__init__.py", line 91, in __getattr__
+    val = getattr(_wrapped, name)
+AttributeError: 'Settings' object has no attribute 'IMAP_SERVER'
+2024-07-25 11:54:17 - django.server - ERROR - "GET /api/receiving/fetch/ HTTP/1.1" 500 80620
