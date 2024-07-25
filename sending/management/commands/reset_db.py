@@ -1,31 +1,30 @@
-# myapp/management/commands/reset_db.py
 from django.core.management.base import BaseCommand
-from django.apps import apps
 from django.db import connection
+from django.db import transaction
+from django.apps import apps
 
 class Command(BaseCommand):
-    help = 'Delete all entries and reset primary key sequences'
+    help = 'Drop all tables and reset the database'
 
     def handle(self, *args, **kwargs):
-        self.delete_all_entries()
-        self.reset_primary_key_sequence()
-        self.stdout.write(self.style.SUCCESS('Successfully deleted all entries and reset primary key sequences'))
+        with transaction.atomic():
+            self.drop_all_tables()
+        self.stdout.write(self.style.SUCCESS('Successfully dropped all tables.'))
+        
+        self.run_migrations()
+        self.stdout.write(self.style.SUCCESS('Successfully ran all migrations.'))
 
-    def delete_all_entries(self):
-        for model in apps.get_models():
-            model.objects.all().delete()
-
-    def reset_primary_key_sequence(self):
+    def drop_all_tables(self):
         with connection.cursor() as cursor:
-            for model in apps.get_models():
-                table_name = model._meta.db_table
-                primary_key_field = model._meta.pk.name
-                sequence_name = f"{table_name}_{primary_key_field}_seq"
-                try:
-                    cursor.execute(f"SELECT 1 FROM pg_class WHERE relname='{sequence_name}';")
-                    if cursor.fetchone():
-                        cursor.execute(f"SELECT setval('{sequence_name}', 1, false);")
-                    else:
-                        self.stdout.write(self.style.WARNING(f"Sequence '{sequence_name}' does not exist."))
-                except Exception as e:
-                    self.stdout.write(self.style.WARNING(f"Could not reset sequence for table {table_name}: {e}"))
+            cursor.execute("""
+                SELECT table_name FROM information_schema.tables
+                WHERE table_schema='public'
+            """)
+            tables = cursor.fetchall()
+            for table in tables:
+                cursor.execute(f'DROP TABLE IF EXISTS "{table[0]}" CASCADE')
+
+    def run_migrations(self):
+        from django.core.management import call_command
+        call_command('migrate')
+
