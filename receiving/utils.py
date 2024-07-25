@@ -8,7 +8,7 @@ from email.utils import parseaddr
 
 def fetch_and_process_emails():
     new_emails_count = 0
-    with imaplib.IMAP4_SSL(settings.IMAP_SERVER, settings.IMAP_PORT) as mail:
+    with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
         mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         mail.select('inbox')
 
