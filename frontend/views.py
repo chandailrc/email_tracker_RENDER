@@ -173,7 +173,7 @@ def delete_unsubscribed_user(request, user_email):
 
 def email_management(request):
     # Make API call to get emails
-    response = requests.get(f'{settings.BASE_URL}/receiving/list/')
+    response = requests.get(f'{settings.BASE_URL}/api/receiving/list/')
     if response.status_code == 200:
         emails = response.json().get('emails', [])
     else:
@@ -188,7 +188,7 @@ def email_management(request):
 def fetch_emails(request):
     if request.method == 'POST':
         # Make API call to fetch emails
-        response = requests.post(f'{settings.BASE_URL}/receiving/fetch/')
+        response = requests.post(f'{settings.BASE_URL}/api/receiving/fetch/')
         if response.status_code == 200:
             new_emails_count = response.json().get('new_emails', 0)
             messages.success(request, f'Fetched {new_emails_count} new emails')

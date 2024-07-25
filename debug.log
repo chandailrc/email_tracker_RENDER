@@ -4323,3 +4323,12 @@ AttributeError: 'Settings' object has no attribute 'API_BASE_URL'
 2024-07-25 14:31:19 - django.request - WARNING - Not Found: /receiving/list/
 2024-07-25 14:31:19 - django.server - WARNING - "GET /receiving/list/ HTTP/1.1" 404 2695
 2024-07-25 14:31:19 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1928
+2024-07-25 14:38:24 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-25 14:38:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-25 14:38:39 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-25 14:38:39 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1798
+2024-07-25 14:38:43 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/receiving/fetch/
+2024-07-25 14:38:43 - django.server - WARNING - "POST /api/receiving/fetch/ HTTP/1.1" 403 2869
+2024-07-25 14:38:43 - django.server - INFO - "POST /frontend/fetch-emails/ HTTP/1.1" 302 0
+2024-07-25 14:38:43 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-25 14:38:43 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1916
