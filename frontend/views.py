@@ -204,3 +204,9 @@ def fetch_emails(request):
         else:
             messages.error(request, "Failed to fetch new emails.")
     return redirect('email_management')
+
+def conversation_list(request):
+    return render(request, 'conversation_list.html')
+
+def conversation_detail(request, conversation_id):
+    return render(request, 'conversation_detail.html', {'conversation_id': conversation_id})

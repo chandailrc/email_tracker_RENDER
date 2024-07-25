@@ -4438,3 +4438,16 @@ UnboundLocalError: local variable 'email' referenced before assignment
 2024-07-25 23:27:01 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1848
 2024-07-25 23:45:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py changed, reloading.
 2024-07-25 23:45:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-26 00:53:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-26 00:54:06 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 3440
+2024-07-26 00:54:10 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 453
+2024-07-26 00:54:10 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3117
+2024-07-26 00:54:11 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 42
+2024-07-26 00:54:11 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2394
+2024-07-26 00:54:13 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-26 00:54:13 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1848
+2024-07-26 00:54:15 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 3440
+2024-07-26 00:54:17 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 453
+2024-07-26 00:54:17 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3117
+2024-07-26 00:54:45 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 1823
+2024-07-26 00:54:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 21

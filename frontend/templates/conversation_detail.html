@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Email Management{% endblock %}
+
+{% block header %}Email Management{% endblock %}
+
+{% block content %}
+<h1 id="conversation-subject"></h1>
+<div id="conversation-participants"></div>
+<ul id="message-list">
+    <!-- Messages will be populated here -->
+</ul>
+
+<script>
+const conversationId = {{ conversation_id }};
+fetch(`/api/conversations/${conversationId}/`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('conversation-subject').textContent = data.subject;
+        document.getElementById('conversation-participants').textContent = `Participants: ${data.participants.join(', ')}`;
+        const list = document.getElementById('message-list');
+        data.messages.forEach(msg => {
+            const li = document.createElement('li');
+            li.textContent = `${msg.sender}: ${msg.content} (${new Date(msg.timestamp).toLocaleString()})`;
+            list.appendChild(li);
+        });
+    });
+</script>
+{% endblock %}

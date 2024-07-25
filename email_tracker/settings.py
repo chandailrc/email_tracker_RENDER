@@ -59,7 +59,8 @@ INSTALLED_APPS = [
     'sending',
     'frontend',
     'unsubscribers',
-    'receiving'
+    'receiving',
+    'conversations',
 ]
 
 MIDDLEWARE = [

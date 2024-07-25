@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Email Management{% endblock %}
+
+{% block header %}Email Management{% endblock %}
+
+{% block content %}
+<h1>Conversations</h1>
+<ul id="conversation-list">
+    <!-- Conversations will be populated here -->
+</ul>
+
+<script>
+fetch('/api/conversations/list/')
+    .then(response => response.json())
+    .then(data => {
+        const list = document.getElementById('conversation-list');
+        data.conversations.forEach(conv => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="/frontend/conversation/${conv.id}/">${conv.subject}</a> (${conv.participants.join(', ')})`;
+            list.appendChild(li);
+        });
+    });
+</script>
+{% endblock %}
