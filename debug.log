@@ -4332,3 +4332,7 @@ AttributeError: 'Settings' object has no attribute 'API_BASE_URL'
 2024-07-25 14:38:43 - django.server - INFO - "POST /frontend/fetch-emails/ HTTP/1.1" 302 0
 2024-07-25 14:38:43 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
 2024-07-25 14:38:43 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1916
+2024-07-25 14:49:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py changed, reloading.
+2024-07-25 14:49:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-25 14:49:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py changed, reloading.
+2024-07-25 14:49:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
