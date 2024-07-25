@@ -172,4 +172,26 @@ def delete_unsubscribed_user(request, user_email):
     return redirect('unsubscribed_users_list')
 
 def email_management(request):
-    return render(request, 'email_management.html')
+    # Make API call to get emails
+    response = requests.get(f'{settings.BASE_URL}/receiving/list/')
+    if response.status_code == 200:
+        emails = response.json().get('emails', [])
+    else:
+        emails = []
+        messages.error(request, "Failed to fetch emails from the server.")
+
+    context = {
+        'emails': emails,
+    }
+    return render(request, 'email_management.html', context)
+
+def fetch_emails(request):
+    if request.method == 'POST':
+        # Make API call to fetch emails
+        response = requests.post(f'{settings.BASE_URL}/receiving/fetch/')
+        if response.status_code == 200:
+            new_emails_count = response.json().get('new_emails', 0)
+            messages.success(request, f'Fetched {new_emails_count} new emails')
+        else:
+            messages.error(request, "Failed to fetch new emails.")
+    return redirect('email_management')

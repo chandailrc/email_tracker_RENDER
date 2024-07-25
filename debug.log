@@ -4299,3 +4299,27 @@ Traceback (most recent call last):
     val = getattr(_wrapped, name)
 AttributeError: 'Settings' object has no attribute 'IMAP_SERVER'
 2024-07-25 11:54:17 - django.server - ERROR - "GET /api/receiving/fetch/ HTTP/1.1" 500 80620
+2024-07-25 14:29:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-25 14:30:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-25 14:30:27 - django.request - ERROR - Internal Server Error: /frontend/email-management/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 176, in email_management
+    response = requests.get(f'{settings.API_BASE_URL}/receiving/list/')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/conf/__init__.py", line 91, in __getattr__
+    val = getattr(_wrapped, name)
+AttributeError: 'Settings' object has no attribute 'API_BASE_URL'
+2024-07-25 14:30:27 - django.server - ERROR - "GET /frontend/email-management/ HTTP/1.1" 500 77174
+2024-07-25 14:30:27 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-25 14:31:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-25 14:31:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-25 14:31:08 - django.request - WARNING - Not Found: /receiving/list/
+2024-07-25 14:31:08 - django.server - WARNING - "GET /receiving/list/ HTTP/1.1" 404 2695
+2024-07-25 14:31:08 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1928
+2024-07-25 14:31:08 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-25 14:31:19 - django.request - WARNING - Not Found: /receiving/list/
+2024-07-25 14:31:19 - django.server - WARNING - "GET /receiving/list/ HTTP/1.1" 404 2695
+2024-07-25 14:31:19 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1928

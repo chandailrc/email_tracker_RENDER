@@ -6,8 +6,17 @@
 
 {% block content %}
 <div>
-    <button id="fetchEmails">Fetch New Emails</button>
-    <div id="fetchResult"></div>
+    <form method="post" action="{% url 'fetch_emails' %}">
+        {% csrf_token %}
+        <button type="submit">Fetch New Emails</button>
+    </form>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 </div>
 
 <h2>Received Emails</h2>
@@ -19,38 +28,18 @@
             <th>Received At</th>
         </tr>
     </thead>
-    <tbody id="emailList">
+    <tbody>
+        {% for email in emails %}
+        <tr>
+            <td>{{ email.sender }}</td>
+            <td>{{ email.subject }}</td>
+            <td>{{ email.received_at }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">No emails found.</td>
+        </tr>
+        {% endfor %}
     </tbody>
 </table>
-
-<script>
-document.getElementById('fetchEmails').addEventListener('click', function() {
-    fetch('/api/receiving/fetch/')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('fetchResult').textContent = `Fetched ${data.new_emails} new emails`;
-            loadEmails();
-        });
-});
-
-function loadEmails() {
-    fetch('/api/receiving/list/')
-        .then(response => response.json())
-        .then(data => {
-            const emailList = document.getElementById('emailList');
-            emailList.innerHTML = '';
-            data.emails.forEach(email => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${email.sender}</td>
-                    <td>${email.subject}</td>
-                    <td>${new Date(email.received_at).toLocaleString()}</td>
-                `;
-                emailList.appendChild(row);
-            });
-        });
-}
-
-loadEmails();
-</script>
 {% endblock %}
