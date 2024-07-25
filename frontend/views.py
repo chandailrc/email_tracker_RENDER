@@ -187,8 +187,17 @@ def email_management(request):
 
 def fetch_emails(request):
     if request.method == 'POST':
+        
+        # Get the CSRF token
+        csrf_token = get_token(request)
+        
+        # Include the CSRF token in the headers
+        headers = {'X-CSRFToken': csrf_token}
         # Make API call to fetch emails
-        response = requests.post(f'{settings.BASE_URL}/api/receiving/fetch/')
+        response = requests.post(f'{settings.BASE_URL}/api/receiving/fetch/',
+                                 headers=headers,
+                                 cookies=request.COOKIES 
+                                 )
         if response.status_code == 200:
             new_emails_count = response.json().get('new_emails', 0)
             messages.success(request, f'Fetched {new_emails_count} new emails')

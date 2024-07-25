@@ -6,6 +6,7 @@ from django.conf import settings
 import re
 from .models import Email, Link, TrackingPixelToken
 from unsubscribers.models import UnsubscribedUser
+from django.core.mail import make_msgid
 
 import logging
 
@@ -27,16 +28,34 @@ def generate_tracking_urls(email):
 
     return pixel_url, css_url
 
-def tracked_email_sender(recipient, subject, body):
+
+def tracked_email_sender(recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
     if UnsubscribedUser.objects.filter(email=recipient).exists():
         logger.info(f"email_utils.py: Email not sent to {recipient} as they have unsubscribed.")
         return False
-    # time.sleep(10)
 
     try:
-        email = Email.objects.create(recipient=recipient, subject=subject, body=body, sent_at=timezone.now(), sender=settings.DEFAULT_FROM_EMAIL)
-        #tracking_id = email.id
+        message_id = make_msgid(domain=settings.EMAIL_DOMAIN)
+        
+        if in_reply_to:
+            thread_id = in_reply_to.thread_id or str(uuid.uuid4())
+            if not subject.lower().startswith('re:'):
+                subject = f"Re: {in_reply_to.subject}"
+        else:
+            thread_id = str(uuid.uuid4())
 
+        email = Email.objects.create(
+            recipient=recipient,
+            cc=','.join(cc) if cc else '',
+            bcc=','.join(bcc) if bcc else '',
+            subject=subject,
+            body=body,
+            sent_at=timezone.now(),
+            sender=settings.DEFAULT_FROM_EMAIL,
+            message_id=message_id,
+            thread_id=thread_id,
+            in_reply_to=in_reply_to
+        )
         logger.info(f"email_utils.py: Email db entry created for {recipient} at {timezone.now()}")
         
         def replace_link(match):
@@ -101,15 +120,30 @@ def tracked_email_sender(recipient, subject, body):
             subject=subject,
             body=tracked_body,
             from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[recipient]
+            to=[recipient],
+            cc=cc,
+            bcc=bcc,
+            headers={'Message-ID': message_id}
         )
         msg.attach_alternative(email_body, "text/html")
         msg.send()
-
         logger.info(f"email_utils.py: Email sent successfully to {recipient}")
         return True
-
     except Exception as e:
         logger.error(f"email_utils.py: Error sending email to {recipient}: {e}")
         email.delete()  # Remove the database entry if email sending fails
         return False
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

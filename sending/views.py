@@ -7,6 +7,8 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_protect
 
+from receiving.models import ReceivedEmail
+
 @csrf_protect
 @require_POST
 def send_tracked_email(request):
@@ -40,6 +42,32 @@ def send_tracked_email(request):
     confirmation_message = f"{sent_count} email(s) sent successfully!"
     print(confirmation_message)  # For debugging
 
+    return JsonResponse({
+        'success': True,
+        'message': confirmation_message,
+        'sent_count': sent_count,
+        'failed_recipients': failed_recipients
+    })
+
+@csrf_protect
+@require_POST
+def reply_send_tracked_email(request, received_email_id):
+    
+    received_email = ReceivedEmail.objects.get(id=received_email_id)
+    subject = request.POST.get('subject')
+    body = request.POST.get('body')
+    
+    success = email_utils.tracked_email_sender(received_email.sender, subject, body, in_reply_to=received_email)
+    
+    if success:
+        confirmation_message = 'Reply sent successfully to {received_email.sender}'
+        sent_count = 1
+        failed_recipients = 0
+    else:
+        confirmation_message = 'Reply failed to {received_email.sender}'
+        sent_count = 0
+        failed_recipients = 1
+    
     return JsonResponse({
         'success': True,
         'message': confirmation_message,

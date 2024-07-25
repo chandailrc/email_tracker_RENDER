@@ -1,5 +1,6 @@
 import imaplib
 import email
+import re
 from django.conf import settings
 from .models import ReceivedEmail, Attachment
 from sending.models import Email as SentEmail
@@ -61,7 +62,17 @@ def process_incoming_email(raw_email):
             received_email.thread_id = original_email.thread_id
             received_email.save()
         except SentEmail.DoesNotExist:
-            pass
+            try:
+                original_email = SentEmail.objects.filter(
+                    subject__startswith=re.sub(r'^Re:\s*', '', subject, flags=re.IGNORECASE),
+                    recipient=sender
+                ).latest('sent_at')
+                received_email.in_reply_to = original_email
+                received_email.thread_id = original_email.thread_id
+                received_email.save()
+            except SentEmail.DoesNotExist:
+                # If we still can't find the original email, just continue without linking
+                pass
 
     # Process attachments
     for part in email_message.walk():
