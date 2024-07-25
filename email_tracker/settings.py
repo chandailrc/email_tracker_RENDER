@@ -215,6 +215,11 @@ if mail_case == 'IONOS':
     EMAIL_HOST_PASSWORD = env('IONOS_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
     DEFAULT_FROM_EMAIL = env('IONOS_DEFAULT_EMAIL')  # Replace with your default email address
     
+    # IMAP
+    EMAIL_IMAP_SERVER = 'imap.ionos.com'
+    EMAIL_IMAP_PORT = 993
+    EMAIL_IMAP_USE_SSL = True
+    
 elif mail_case == 'MAILGUN':
     
     # MAILGUN
