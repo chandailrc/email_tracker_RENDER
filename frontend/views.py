@@ -207,11 +207,11 @@ def fetch_emails(request):
 
 
 def conversation_list(request):
-    response = requests.get(f'{settings.BASE_URL}/conversations/list/')
+    response = requests.get(f'{settings.BASE_URL}/api/conversations/list/')
     conversations = response.json()['conversations']
-    return render(request, 'frontend/conversation_list.html', {'conversations': conversations})
+    return render(request, 'conversation_list.html', {'conversations': conversations})
 
 def conversation_detail(request, conversation_id):
-    response = requests.get(f'{settings.BASE_URL}/conversations/{conversation_id}/')
+    response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/')
     conversation = response.json()
-    return render(request, 'frontend/conversation_detail.html', {'conversation': conversation})
+    return render(request, 'conversation_detail.html', {'conversation': conversation})
