@@ -205,8 +205,13 @@ def fetch_emails(request):
             messages.error(request, "Failed to fetch new emails.")
     return redirect('email_management')
 
+
 def conversation_list(request):
-    return render(request, 'conversation_list.html')
+    response = requests.get('http://localhost:8000/conversations/list/')
+    conversations = response.json()['conversations']
+    return render(request, 'frontend/conversation_list.html', {'conversations': conversations})
 
 def conversation_detail(request, conversation_id):
-    return render(request, 'conversation_detail.html', {'conversation_id': conversation_id})
+    response = requests.get(f'http://localhost:8000/conversations/{conversation_id}/')
+    conversation = response.json()
+    return render(request, 'frontend/conversation_detail.html', {'conversation': conversation})

@@ -14,5 +14,5 @@ urlpatterns = [
     path('email-management/', views.email_management, name='email_management'),
     path('fetch-emails/', views.fetch_emails, name='fetch_emails'),
     path('conversations/', views.conversation_list, name='conversation_list'),
-    path('conversation/<int:conversation_id>/', views.conversation_detail, name='conversation_detail'),
+    path('conversations/<int:conversation_id>/', views.conversation_detail, name='conversation_detail'),
 ]

@@ -1,7 +1,7 @@
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST, require_GET
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from .utils import fetch_and_process_emails, process_incoming_email
+from .receiving_utils import fetch_and_process_emails, process_incoming_email
 from .models import ReceivedEmail
 
 # @csrf_protect

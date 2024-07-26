@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class Email(models.Model):
+class SentEmail(models.Model):
     recipient = models.EmailField()
     cc = models.TextField(blank=True, help_text="Comma-separated list of CC email addresses")
     bcc = models.TextField(blank=True, help_text="Comma-separated list of BCC email addresses")
@@ -24,7 +24,7 @@ class Email(models.Model):
         return [email.strip() for email in self.bcc.split(',') if email.strip()]
     
 class TrackingPixelToken(models.Model):
-    email = models.ForeignKey(Email, on_delete=models.CASCADE)
+    email = models.ForeignKey(SentEmail, on_delete=models.CASCADE)
     token = models.CharField(max_length=32, unique=True)
     expires_at = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -33,5 +33,5 @@ class TrackingPixelToken(models.Model):
         return self.expires_at <= timezone.now()
 
 class Link(models.Model):
-    email = models.ForeignKey(Email, on_delete=models.CASCADE)
+    email = models.ForeignKey(SentEmail, on_delete=models.CASCADE)
     url = models.URLField()

@@ -3,9 +3,11 @@ import email
 import re
 from django.conf import settings
 from .models import ReceivedEmail, Attachment
-from sending.models import Email as SentEmail
+from sending.models import SentEmail
 from django.core.files.base import ContentFile
 from email.utils import parseaddr
+from conversations.email_processor import process_email
+
 
 def fetch_and_process_emails():
     new_emails_count = 0
@@ -73,6 +75,8 @@ def process_incoming_email(raw_email):
             except SentEmail.DoesNotExist:
                 # If we still can't find the original email, just continue without linking
                 pass
+
+    process_email(received_email, 'received')
 
     # Process attachments
     for part in email_message.walk():

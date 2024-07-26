@@ -1,7 +1,7 @@
 import time
 import random
 
-from . import email_utils
+from . import sending_utils
 
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
@@ -26,7 +26,7 @@ def send_tracked_email(request):
     for recipient in recipients:
         recipient = recipient.strip()
         if recipient:
-            success = email_utils.tracked_email_sender(recipient, subject, body)
+            success = sending_utils.tracked_email_sender(recipient, subject, body)
             if success:
                 sent_count += 1
                 print(f"views.py/send_tracked_email_view: Email sent successfully to {recipient}")
@@ -57,7 +57,7 @@ def reply_send_tracked_email(request, received_email_id):
     subject = request.POST.get('subject')
     body = request.POST.get('body')
     
-    success = email_utils.tracked_email_sender(received_email.sender, subject, body, in_reply_to=received_email)
+    success = sending_utils.tracked_email_sender(received_email.sender, subject, body, in_reply_to=received_email)
     
     if success:
         confirmation_message = 'Reply sent successfully to {received_email.sender}'

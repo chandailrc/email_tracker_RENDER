@@ -9,7 +9,7 @@ class ReceivedEmail(models.Model):
     subject = models.CharField(max_length=255)
     body = models.TextField()
     received_at = models.DateTimeField(default=timezone.now)
-    in_reply_to = models.ForeignKey('sending.Email', null=True, blank=True, on_delete=models.SET_NULL, related_name='replies')
+    in_reply_to = models.ForeignKey('sending.SentEmail', null=True, blank=True, on_delete=models.SET_NULL, related_name='replies')
     message_id = models.CharField(max_length=255, unique=True, null=True, blank=True)
     thread_id = models.CharField(max_length=255, null=True, blank=True)
 

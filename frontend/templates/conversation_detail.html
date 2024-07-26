@@ -5,25 +5,46 @@
 {% block header %}Email Management{% endblock %}
 
 {% block content %}
-<h1 id="conversation-subject"></h1>
-<div id="conversation-participants"></div>
-<ul id="message-list">
-    <!-- Messages will be populated here -->
-</ul>
+<!-- frontend/templates/frontend/conversation_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ conversation.subject }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+        .message { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+        .message-header { background-color: #f0f0f0; padding: 5px; margin-bottom: 5px; }
+        .message-content { white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>{{ conversation.subject }}</h1>
+    
+    <h2>Participants:</h2>
+    <ul>
+    {% for participant in conversation.participants %}
+        <li>{{ participant }}</li>
+    {% endfor %}
+    </ul>
 
-<script>
-const conversationId = {{ conversation_id }};
-fetch(`/api/conversations/${conversationId}/`)
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('conversation-subject').textContent = data.subject;
-        document.getElementById('conversation-participants').textContent = `Participants: ${data.participants.join(', ')}`;
-        const list = document.getElementById('message-list');
-        data.messages.forEach(msg => {
-            const li = document.createElement('li');
-            li.textContent = `${msg.sender}: ${msg.content} (${new Date(msg.timestamp).toLocaleString()})`;
-            list.appendChild(li);
-        });
-    });
-</script>
+    <h2>Messages:</h2>
+    {% for message in conversation.messages %}
+        <div class="message">
+            <div class="message-header">
+                <strong>{{ message.sender }}</strong>
+                <span>({{ message.timestamp }})</span>
+            </div>
+            <div class="message-content">
+                {{ message.content|safe }}
+            </div>
+        </div>
+    {% empty %}
+        <p>No messages in this conversation.</p>
+    {% endfor %}
+
+    <a href="{% url 'conversation_list' %}">Back to Conversations</a>
+</body>
+</html>
 {% endblock %}

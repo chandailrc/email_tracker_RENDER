@@ -13,7 +13,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.conf import settings
 
 
-from sending.models import Email, Link, TrackingPixelToken
+from sending.models import SentEmail, Link, TrackingPixelToken
 from unsubscribers.models import UnsubscribedUser
 
 
@@ -169,7 +169,7 @@ def empty_database(request):
     # Ensure that only POST requests can trigger this action (for safety)
     if request.method == 'POST':
         # Delete all records from all relevant models
-        Email.objects.all().delete()
+        SentEmail.objects.all().delete()
         TrackingLog.objects.all().delete()
         Link.objects.all().delete()
         LinkClick.objects.all().delete()        
@@ -215,7 +215,7 @@ def track_link(request, link_id):
     return redirect(link.url)
 
 def dashboard_data(request):
-    emails = Email.objects.all()
+    emails = SentEmail.objects.all()
     unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
     
     # Serialize the email data
@@ -231,7 +231,7 @@ def email_detail_data(request):
     
     email_id = request.GET.get('email_id')
     
-    email = get_object_or_404(Email, pk=email_id)
+    email = get_object_or_404(SentEmail, pk=email_id)
     
     tracking_logs = TrackingLog.objects.filter(email=email).order_by('-opened_at')
     link_clicks = LinkClick.objects.filter(link__email=email).order_by('-clicked_at')

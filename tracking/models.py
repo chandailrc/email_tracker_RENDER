@@ -1,10 +1,10 @@
 from django.db import models
 from django.utils import timezone
-from sending.models import Email, Link
+from sending.models import SentEmail, Link
 
 
 class TrackingLog(models.Model):
-    email = models.ForeignKey(Email, on_delete=models.CASCADE)
+    email = models.ForeignKey(SentEmail, on_delete=models.CASCADE)
     opened_at = models.DateTimeField(null=True, blank=True)
     ip_address = models.GenericIPAddressField(null=True, blank=True)
     user_agent = models.CharField(max_length=255, null=True, blank=True)

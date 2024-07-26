@@ -5,21 +5,36 @@
 {% block header %}Email Management{% endblock %}
 
 {% block content %}
-<h1>Conversations</h1>
-<ul id="conversation-list">
-    <!-- Conversations will be populated here -->
-</ul>
-
-<script>
-fetch('/api/conversations/list/')
-    .then(response => response.json())
-    .then(data => {
-        const list = document.getElementById('conversation-list');
-        data.conversations.forEach(conv => {
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="/frontend/conversation/${conv.id}/">${conv.subject}</a> (${conv.participants.join(', ')})`;
-            list.appendChild(li);
-        });
-    });
-</script>
+<!-- frontend/templates/frontend/conversation_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversations</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #333; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Conversations</h1>
+    <ul>
+    {% for conversation in conversations %}
+        <li>
+            <a href="{% url 'conversation_detail' conversation.id %}">
+                {{ conversation.subject }}
+            </a>
+            <br>
+            <small>Last updated: {{ conversation.last_updated }}</small>
+        </li>
+    {% empty %}
+        <li>No conversations found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
 {% endblock %}
