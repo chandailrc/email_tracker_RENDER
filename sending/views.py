@@ -5,11 +5,11 @@ from . import sending_utils
 
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
 
 from receiving.models import ReceivedEmail
 
-@csrf_protect
+@csrf_exempt
 @require_POST
 def send_tracked_email(request):
     recipients = request.POST.get('recipients', '').split()

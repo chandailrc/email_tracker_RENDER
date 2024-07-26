@@ -4482,3 +4482,20 @@ UnboundLocalError: local variable 'email' referenced before assignment
 2024-07-26 14:13:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-26 14:16:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-07-26 14:19:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-26 15:14:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-26 15:14:58 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 3501
+2024-07-26 15:14:58 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-26 15:15:21 - django.server - INFO - "GET /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 520
+2024-07-26 15:15:21 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-26 15:15:27 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 457
+2024-07-26 15:15:27 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3178
+2024-07-26 15:15:40 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 103
+2024-07-26 15:15:40 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-26 15:15:40 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 3624
+2024-07-26 15:15:40 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-26 15:15:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 860
+2024-07-26 15:15:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3790
+2024-07-26 15:28:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-26 15:28:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-26 15:28:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-26 15:28:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
