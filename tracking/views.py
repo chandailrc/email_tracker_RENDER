@@ -4,7 +4,8 @@ import threading
 import geoip2.database
 
 
-from .models import TrackingLog, LinkClick
+from .models import TrackingLog, LinkClick, EmailInteraction
+from .tracking_utils import aggregate_genuine_opens
 from datetime import datetime, timedelta
 from django.http import HttpResponse, FileResponse, JsonResponse
 from django.core import serializers
@@ -72,9 +73,11 @@ def handle_tracking(request, token, is_pixel):
         time_difference = curr_time - mail.sent_at
 
         # Compare the difference
-        if time_difference <= timedelta(seconds=4):
+        prefetch_timediff = 3 
+        multhit_timediff = 2
+        if time_difference <= timedelta(seconds=prefetch_timediff):
             logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
-            logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within 5 secs. Potential prefetching. Abandoning request!")
+            logger.warning(f"views.py/handle_tracking: First request received for {recipient} with email_id {email_id} within {prefetch_timediff} secs. Potential prefetching. Abandoning request!")
             return HttpResponse("Not found", status=404)
         else:
             logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
@@ -84,9 +87,9 @@ def handle_tracking(request, token, is_pixel):
             if last_log:
                 time_diff = curr_time - last_log.opened_at
 
-                if time_diff <= timedelta(seconds=3):
+                if time_diff <= timedelta(seconds=multhit_timediff):
                     logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
-                    logger.warning(f"views.py/handle_tracking: Request received for for {recipient} with email_id {email_id} within 4 secs. Random fetching. Abandoning request!")
+                    logger.warning(f"views.py/handle_tracking: Request received for for {recipient} with email_id {email_id} within {multhit_timediff} secs. Random fetching. Abandoning request!")
                     return HttpResponse("Not found", status=404)
                 else:
                     logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
@@ -121,6 +124,12 @@ def handle_tracking(request, token, is_pixel):
                 method=method,
                 host=host,
                 connection=connection
+            )
+            
+            EmailInteraction.objects.create(
+                email=pixel_token.email,
+                interaction_type='open',
+                timestamp=timezone.now()
             )
 
             if is_pixel:
@@ -212,11 +221,19 @@ def track_link(request, link_id):
         connection=connection
     )
     
+    EmailInteraction.objects.create(
+        email=link.email,
+        interaction_type='click',
+        timestamp=timezone.now()
+    )
+    
     return redirect(link.url)
 
 def dashboard_data(request):
     emails = SentEmail.objects.all()
     unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
+    
+    aggregate_genuine_opens(emails)
     
     # Serialize the email data
     email_data = serializers.serialize('json', emails)
