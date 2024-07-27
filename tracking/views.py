@@ -17,7 +17,6 @@ from django.conf import settings
 from sending.models import SentEmail, Link, TrackingPixelToken
 from unsubscribers.models import UnsubscribedUser
 
-
 import logging
 
 logger = logging.getLogger(__name__)

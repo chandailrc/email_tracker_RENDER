@@ -42,8 +42,12 @@ class EmailInteraction(models.Model):
     related_open = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+        return f"{self.email} - {self.interaction_type} at {self.timestamp}"
 
 class GenuineOpen(models.Model):
     email = models.ForeignKey(SentEmail, on_delete=models.CASCADE)
+    open_event = models.ForeignKey(EmailInteraction, on_delete=models.CASCADE, null=True, blank=True)
+    
+    class Meta:
+        unique_together = ('email', 'open_event')
     

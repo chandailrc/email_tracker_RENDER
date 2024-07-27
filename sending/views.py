@@ -19,20 +19,21 @@ def send_tracked_email(request):
     delay_value = int(request.POST.get('delay_value', 0))
     min_delay = int(request.POST.get('min_delay', 0))
     max_delay = int(request.POST.get('max_delay', 0))
-
     sent_count = 0
     failed_recipients = []
+    errors = {}
 
     for recipient in recipients:
         recipient = recipient.strip()
         if recipient:
-            success = sending_utils.tracked_email_sender(recipient, subject, body)
+            success, message = sending_utils.tracked_email_sender(recipient, subject, body)
             if success:
                 sent_count += 1
                 print(f"views.py/send_tracked_email_view: Email sent successfully to {recipient}")
             else:
                 failed_recipients.append(recipient)
-                print(f"views.py/send_tracked_email_view: Failed to send email to {recipient}")
+                errors[recipient] = message
+                print(f"views.py/send_tracked_email_view: Failed to send email to {recipient}: {message}")
             
             if delay_type == 'fixed':
                 time.sleep(delay_value)
@@ -40,13 +41,16 @@ def send_tracked_email(request):
                 time.sleep(random.uniform(min_delay, max_delay))
 
     confirmation_message = f"{sent_count} email(s) sent successfully!"
+    if failed_recipients:
+        confirmation_message += f" Failed to send to {len(failed_recipients)} recipient(s)."
+    
     print(confirmation_message)  # For debugging
-
     return JsonResponse({
-        'success': True,
+        'success': sent_count > 0,
         'message': confirmation_message,
         'sent_count': sent_count,
-        'failed_recipients': failed_recipients
+        'failed_recipients': failed_recipients,
+        'errors': errors
     })
 
 @csrf_protect

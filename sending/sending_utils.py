@@ -8,6 +8,7 @@ from .models import SentEmail, Link, TrackingPixelToken
 from unsubscribers.models import UnsubscribedUser
 from django.core.mail import make_msgid
 from conversations.email_processor import process_email
+from smtplib import SMTPRecipientsRefused, SMTPServerDisconnected
 
 import logging
 
@@ -28,12 +29,12 @@ def generate_tracking_urls(email):
     css_url = f"{base_url}/style.css"
 
     return pixel_url, css_url
-
+    
 
 def tracked_email_sender(recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
     if UnsubscribedUser.objects.filter(email=recipient).exists():
         logger.info(f"sending_utils.py: Email not sent to {recipient} as they have unsubscribed.")
-        return False
+        return False, "Recipient has unsubscribed"
 
     try:
         message_id = make_msgid(domain=settings.EMAIL_DOMAIN)
@@ -127,19 +128,25 @@ def tracked_email_sender(recipient, subject, body, cc=None, bcc=None, in_reply_t
             headers={'Message-ID': message_id}
         )
         msg.attach_alternative(email_body, "text/html")
+
         msg.send()
         logger.info(f"sending_utils.py: Email sent successfully to {recipient}")
         
         process_email(email, 'sent')
         
-        return True
+        return True, "Email sent successfully"
+    except SMTPRecipientsRefused:
+        logger.error(f"sending_utils.py: Recipient {recipient} refused")
+        email.delete()
+        return False, "Recipient email address refused"
+    except SMTPServerDisconnected:
+        logger.error(f"sending_utils.py: SMTP server disconnected while sending to {recipient}")
+        email.delete()
+        return False, "SMTP server disconnected"
     except Exception as e:
         logger.error(f"sending_utils.py: Error sending email to {recipient}: {e}")
-        email.delete()  # Remove the database entry if email sending fails
-        return False
-    
-    
-    
+        email.delete()
+        return False, f"Error sending email: {str(e)}"
     
     
     

@@ -4557,3 +4557,591 @@ UnboundLocalError: local variable 'email' referenced before assignment
 2024-07-27 01:28:38 - django.server - INFO - "GET /api/tracking/track-pixel/084f6f772fdc45b59801e282e2fbac27/pixel.png HTTP/1.1" 200 95
 2024-07-27 01:28:48 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1682
 2024-07-27 01:28:48 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 8343
+2024-07-27 18:36:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 18:36:46 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 18:36:46 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 18:37:27 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-07-27 18:37:27 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-27 18:37:27 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4535
+2024-07-27 18:37:27 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 18:37:29 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2085
+2024-07-27 18:37:33 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2085
+2024-07-27 18:37:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 8961
+2024-07-27 18:37:33 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 18:37:42 - django.server - INFO - "GET /api/tracking/serve-image/logo.png HTTP/1.1" 301 0
+2024-07-27 18:37:42 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 18:37:42 - tracking.views - INFO - 'handle_tracking' called! Process ID: 50963, Thread ID: 131389357815360
+2024-07-27 18:37:42 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 13:07:42.993636+00:00 | Mail sent: 2024-07-27 13:07:26.760926+00:00 | Difference: 0:00:16.232710
+2024-07-27 18:37:43 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 18:37:43 - django.server - INFO - "GET /api/tracking/track-pixel/745c850caa3548b5893883e44db9f6b3/pixel.png HTTP/1.1" 200 95
+2024-07-27 18:37:44 - django.server - INFO - "GET /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 520
+2024-07-27 18:37:44 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 18:37:45 - django.server - INFO - "POST /api/unsubscribers/unsubscribe-action/ HTTP/1.1" 200 90
+2024-07-27 18:37:45 - django.server - INFO - "POST /frontend/unsubscribe/?email=test@test.com HTTP/1.1" 200 40
+2024-07-27 18:37:45 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 18:37:50 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 18:37:50 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 9605
+2024-07-27 18:38:05 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 212
+2024-07-27 18:38:05 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-27 18:38:05 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4679
+2024-07-27 18:38:17 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 18:38:17 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 9605
+2024-07-27 18:38:20 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 18:38:34 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 18:38:34 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 9605
+2024-07-27 18:38:36 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 42
+2024-07-27 18:38:36 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2455
+2024-07-27 18:38:36 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 18:38:37 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-27 18:38:37 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1909
+2024-07-27 18:38:39 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 18:38:41 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-27 18:38:41 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1909
+2024-07-27 18:38:41 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 18:38:43 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-27 18:38:43 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1909
+2024-07-27 18:38:43 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 18:38:46 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 18:38:46 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 580
+2024-07-27 18:38:46 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2770
+2024-07-27 18:38:50 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 210
+2024-07-27 18:38:50 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 2458
+2024-07-27 18:38:52 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 580
+2024-07-27 18:38:52 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2770
+2024-07-27 19:22:18 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:22:18 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 9605
+2024-07-27 19:23:07 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 19:23:07 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 19:23:07 - tracking.views - INFO - 'handle_tracking' called! Process ID: 50963, Thread ID: 131389332637248
+2024-07-27 19:23:07 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 13:53:07.277283+00:00 | Mail sent: 2024-07-27 13:07:26.760926+00:00 | Difference: 0:45:40.516357
+2024-07-27 19:23:07 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 13:53:07.277283+00:00 | last_log time: 2024-07-27 13:07:42.995291+00:00 | Difference: 0:45:24.281992
+2024-07-27 19:23:07 - django.server - INFO - "GET /api/tracking/track-pixel/745c850caa3548b5893883e44db9f6b3/pixel.png HTTP/1.1" 200 95
+2024-07-27 19:23:10 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:23:10 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10199
+2024-07-27 19:23:10 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-27 19:23:17 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 19:23:17 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 19:23:17 - tracking.views - INFO - 'handle_tracking' called! Process ID: 50963, Thread ID: 131389349422656
+2024-07-27 19:23:17 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 13:53:17.030317+00:00 | Mail sent: 2024-07-27 13:07:26.760926+00:00 | Difference: 0:45:50.269391
+2024-07-27 19:23:17 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 13:53:17.030317+00:00 | last_log time: 2024-07-27 13:53:07.278488+00:00 | Difference: 0:00:09.751829
+2024-07-27 19:23:17 - django.server - INFO - "GET /api/tracking/track-pixel/745c850caa3548b5893883e44db9f6b3/pixel.png HTTP/1.1" 200 95
+2024-07-27 19:23:27 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:23:27 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10793
+2024-07-27 19:33:55 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:55 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:33:55 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:55 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:33:56 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:56 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:33:58 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:58 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:33:58 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:58 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:33:58 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:58 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:33:59 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:59 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:33:59 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:33:59 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:34:01 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2100
+2024-07-27 19:34:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10794
+2024-07-27 19:35:01 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-27 19:35:01 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 20:03:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-27 20:03:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 20:04:01 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 20:04:01 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 20:06:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 20:06:35 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 43
+2024-07-27 20:06:35 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 20:06:36 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-27 20:06:36 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 1953
+2024-07-27 20:06:37 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-27 20:06:37 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 1909
+2024-07-27 20:06:38 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 20:06:39 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 20:06:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 21
+2024-07-27 20:06:39 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 1970
+2024-07-27 20:06:41 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 43
+2024-07-27 20:06:41 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 20:42:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 20:42:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 21
+2024-07-27 20:42:25 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 1970
+2024-07-27 20:42:28 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4363
+2024-07-27 20:43:04 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-07-27 20:43:04 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-27 20:43:04 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4535
+2024-07-27 20:43:15 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 20:43:15 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:43:15 - tracking.views - INFO - 'handle_tracking' called! Process ID: 71989, Thread ID: 131734200903232
+2024-07-27 20:43:15 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:13:15.544138+00:00 | Mail sent: 2024-07-27 15:13:04.502279+00:00 | Difference: 0:00:11.041859
+2024-07-27 20:43:15 - django.server - INFO - "GET /api/tracking/track-pixel/a175d171638947c38c4c3a70aeb7bd2b/pixel.png HTTP/1.1" 200 95
+2024-07-27 20:43:23 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:43:23 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3362
+2024-07-27 20:43:28 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 20:43:28 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:43:28 - tracking.views - INFO - 'handle_tracking' called! Process ID: 71989, Thread ID: 131734192510528
+2024-07-27 20:43:28 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:13:28.386340+00:00 | Mail sent: 2024-07-27 15:13:04.502279+00:00 | Difference: 0:00:23.884061
+2024-07-27 20:43:28 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:13:28.386340+00:00 | last_log time: 2024-07-27 15:13:15.545645+00:00 | Difference: 0:00:12.840695
+2024-07-27 20:43:28 - django.server - INFO - "GET /api/tracking/track-pixel/a175d171638947c38c4c3a70aeb7bd2b/pixel.png HTTP/1.1" 200 95
+2024-07-27 20:43:31 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:43:32 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:43:32 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:43:32 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:43:32 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:43:32 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:43:39 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:43:39 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 4934
+2024-07-27 20:43:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:43:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 4934
+2024-07-27 20:43:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:43:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 4934
+2024-07-27 20:43:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:43:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 4934
+2024-07-27 20:43:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:43:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 4934
+2024-07-27 20:43:46 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:43:46 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 4934
+2024-07-27 20:44:05 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:05 - tracking.views - INFO - 'handle_tracking' called! Process ID: 71989, Thread ID: 131734200903232
+2024-07-27 20:44:05 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:14:05.472727+00:00 | Mail sent: 2024-07-27 15:13:04.502279+00:00 | Difference: 0:01:00.970448
+2024-07-27 20:44:05 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:14:05.472727+00:00 | last_log time: 2024-07-27 15:13:28.387409+00:00 | Difference: 0:00:37.085318
+2024-07-27 20:44:05 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 20:44:05 - django.server - INFO - "GET /api/tracking/track-pixel/a175d171638947c38c4c3a70aeb7bd2b/pixel.png HTTP/1.1" 200 95
+2024-07-27 20:44:09 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:09 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:44:15 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:44:15 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 5854
+2024-07-27 20:44:22 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:22 - tracking.views - INFO - 'handle_tracking' called! Process ID: 71989, Thread ID: 131734192510528
+2024-07-27 20:44:22 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:14:22.611061+00:00 | Mail sent: 2024-07-27 15:13:04.502279+00:00 | Difference: 0:01:18.108782
+2024-07-27 20:44:22 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:14:22.611061+00:00 | last_log time: 2024-07-27 15:14:05.473645+00:00 | Difference: 0:00:17.137416
+2024-07-27 20:44:22 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 20:44:22 - django.server - INFO - "GET /api/tracking/track-pixel/a175d171638947c38c4c3a70aeb7bd2b/pixel.png HTTP/1.1" 200 95
+2024-07-27 20:44:27 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:27 - tracking.views - INFO - 'handle_tracking' called! Process ID: 71989, Thread ID: 131734200903232
+2024-07-27 20:44:27 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:14:27.208354+00:00 | Mail sent: 2024-07-27 15:13:04.502279+00:00 | Difference: 0:01:22.706075
+2024-07-27 20:44:27 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:14:27.208354+00:00 | last_log time: 2024-07-27 15:14:22.612333+00:00 | Difference: 0:00:04.596021
+2024-07-27 20:44:27 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 20:44:27 - django.server - INFO - "GET /api/tracking/track-pixel/a175d171638947c38c4c3a70aeb7bd2b/pixel.png HTTP/1.1" 200 95
+2024-07-27 20:44:33 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:33 - tracking.views - INFO - 'handle_tracking' called! Process ID: 71989, Thread ID: 131734192510528
+2024-07-27 20:44:33 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:14:33.997852+00:00 | Mail sent: 2024-07-27 15:13:04.502279+00:00 | Difference: 0:01:29.495573
+2024-07-27 20:44:33 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:14:33.997852+00:00 | last_log time: 2024-07-27 15:14:27.209362+00:00 | Difference: 0:00:06.788490
+2024-07-27 20:44:33 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 20:44:34 - django.server - INFO - "GET /api/tracking/track-pixel/a175d171638947c38c4c3a70aeb7bd2b/pixel.png HTTP/1.1" 200 95
+2024-07-27 20:44:38 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:38 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:44:38 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:38 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:44:39 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:39 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:44:39 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:39 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:44:40 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:40 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:44:41 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 20:44:41 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 20:44:49 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 20:44:49 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 9593
+2024-07-27 21:15:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 21:15:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 21:15:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 21:15:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 21:16:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 21:16:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 21:17:02 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:17:02 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 21:17:02 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:17:02 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 21:17:02 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:17:02 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-07-27 21:18:32 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    aggregate_genuine_opens(emails)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py", line 39, in aggregate_genuine_opens
+    print(open_event)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py", line 45, in __str__
+    return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+AttributeError: 'EmailInteraction' object has no attribute 'user'
+2024-07-27 21:18:32 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 80930
+2024-07-27 21:18:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 21:18:33 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    aggregate_genuine_opens(emails)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py", line 39, in aggregate_genuine_opens
+    print(open_event)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py", line 45, in __str__
+    return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+AttributeError: 'EmailInteraction' object has no attribute 'user'
+2024-07-27 21:18:33 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 80930
+2024-07-27 21:18:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 21:18:33 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    aggregate_genuine_opens(emails)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py", line 39, in aggregate_genuine_opens
+    print(open_event)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py", line 45, in __str__
+    return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+AttributeError: 'EmailInteraction' object has no attribute 'user'
+2024-07-27 21:18:33 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 80930
+2024-07-27 21:18:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 21:18:33 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    aggregate_genuine_opens(emails)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py", line 39, in aggregate_genuine_opens
+    print(open_event)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py", line 45, in __str__
+    return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+AttributeError: 'EmailInteraction' object has no attribute 'user'
+2024-07-27 21:18:33 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 80930
+2024-07-27 21:18:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 21:18:34 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    aggregate_genuine_opens(emails)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py", line 39, in aggregate_genuine_opens
+    print(open_event)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py", line 45, in __str__
+    return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+AttributeError: 'EmailInteraction' object has no attribute 'user'
+2024-07-27 21:18:34 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 80930
+2024-07-27 21:18:34 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 21:18:34 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    aggregate_genuine_opens(emails)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py", line 39, in aggregate_genuine_opens
+    print(open_event)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py", line 45, in __str__
+    return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+AttributeError: 'EmailInteraction' object has no attribute 'user'
+2024-07-27 21:18:34 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 80930
+2024-07-27 21:18:34 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 21:18:34 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    aggregate_genuine_opens(emails)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py", line 39, in aggregate_genuine_opens
+    print(open_event)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py", line 45, in __str__
+    return f"{self.user} - {self.interaction_type} at {self.timestamp}"
+AttributeError: 'EmailInteraction' object has no attribute 'user'
+2024-07-27 21:18:34 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 80930
+2024-07-27 21:18:34 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 1934
+2024-07-27 21:19:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/models.py changed, reloading.
+2024-07-27 21:19:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 21:19:34 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 21:19:34 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10571
+2024-07-27 21:19:47 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 481
+2024-07-27 21:19:47 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10571
+2024-07-27 21:20:08 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-07-27 21:20:08 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-27 21:20:08 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4535
+2024-07-27 21:20:16 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:20:16 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:16 - tracking.views - INFO - 'handle_tracking' called! Process ID: 77607, Thread ID: 130516875474496
+2024-07-27 21:20:16 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:50:16.522401+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:00:07.680634
+2024-07-27 21:20:16 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:20:19 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:19 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:20:23 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:20:23 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 12327
+2024-07-27 21:20:31 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:20:31 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:31 - tracking.views - INFO - 'handle_tracking' called! Process ID: 77607, Thread ID: 130516867081792
+2024-07-27 21:20:31 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:50:31.392227+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:00:22.550460
+2024-07-27 21:20:31 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:50:31.392227+00:00 | last_log time: 2024-07-27 15:50:16.523785+00:00 | Difference: 0:00:14.868442
+2024-07-27 21:20:31 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:20:33 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:20:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 12921
+2024-07-27 21:20:37 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:37 - tracking.views - INFO - 'handle_tracking' called! Process ID: 77607, Thread ID: 130516875474496
+2024-07-27 21:20:37 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:50:37.825244+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:00:28.983477
+2024-07-27 21:20:37 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:50:37.825244+00:00 | last_log time: 2024-07-27 15:50:31.393320+00:00 | Difference: 0:00:06.431924
+2024-07-27 21:20:37 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:20:37 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:20:40 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:20:40 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 13515
+2024-07-27 21:20:47 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:47 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:20:48 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:48 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:20:48 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:48 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:20:49 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:49 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:20:49 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:20:49 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:20:55 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:20:55 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15145
+2024-07-27 21:21:18 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:21:18 - tracking.views - INFO - 'handle_tracking' called! Process ID: 77607, Thread ID: 130516867081792
+2024-07-27 21:21:18 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:51:18.824282+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:01:09.982515
+2024-07-27 21:21:18 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:51:18.824282+00:00 | last_log time: 2024-07-27 15:50:37.826324+00:00 | Difference: 0:00:40.997958
+2024-07-27 21:21:18 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:21:18 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:21:21 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:21:21 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15739
+2024-07-27 21:22:14 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:22:14 - tracking.views - INFO - 'handle_tracking' called! Process ID: 77607, Thread ID: 130516875474496
+2024-07-27 21:22:14 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:52:14.569058+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:02:05.727291
+2024-07-27 21:22:14 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:22:14 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:52:14.569058+00:00 | last_log time: 2024-07-27 15:51:18.825857+00:00 | Difference: 0:00:55.743201
+2024-07-27 21:22:14 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:22:19 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:22:19 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 16333
+2024-07-27 21:23:21 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:23:21 - tracking.views - INFO - 'handle_tracking' called! Process ID: 77607, Thread ID: 130516867081792
+2024-07-27 21:23:21 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 15:53:21.361288+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:03:12.519521
+2024-07-27 21:23:21 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 15:53:21.361288+00:00 | last_log time: 2024-07-27 15:52:14.570256+00:00 | Difference: 0:01:06.791032
+2024-07-27 21:23:21 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:23:21 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:23:22 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:23:22 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:23:26 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:23:26 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17253
+2024-07-27 21:26:32 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:26:32 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17253
+2024-07-27 21:32:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 21:32:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 21:32:34 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:32:34 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17253
+2024-07-27 21:32:35 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:32:35 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17253
+2024-07-27 21:32:35 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:32:35 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17253
+2024-07-27 21:32:35 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:32:35 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17253
+2024-07-27 21:32:39 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:32:39 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:32:39 - tracking.views - INFO - 'handle_tracking' called! Process ID: 79882, Thread ID: 139667357820480
+2024-07-27 21:32:39 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:02:39.938392+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:12:31.096625
+2024-07-27 21:32:39 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:02:39.938392+00:00 | last_log time: 2024-07-27 15:53:21.362615+00:00 | Difference: 0:09:18.575777
+2024-07-27 21:32:39 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:32:42 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:32:42 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:32:42 - tracking.views - INFO - 'handle_tracking' called! Process ID: 79882, Thread ID: 139667341035072
+2024-07-27 21:32:42 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:02:42.795701+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:12:33.953934
+2024-07-27 21:32:42 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:02:42.795701+00:00 | last_log time: 2024-07-27 16:02:39.940307+00:00 | Difference: 0:00:02.855394
+2024-07-27 21:32:42 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:32:45 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:32:45 - tracking.views - INFO - 'handle_tracking' called! Process ID: 79882, Thread ID: 139667357820480
+2024-07-27 21:32:45 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:02:45.952759+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:12:37.110992
+2024-07-27 21:32:45 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:32:45 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:02:45.952759+00:00 | last_log time: 2024-07-27 16:02:42.796815+00:00 | Difference: 0:00:03.155944
+2024-07-27 21:32:45 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:32:49 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:32:50 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:32:50 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:32:50 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:32:51 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:32:51 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:32:59 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:32:59 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20014
+2024-07-27 21:33:03 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:33:03 - tracking.views - INFO - 'handle_tracking' called! Process ID: 79882, Thread ID: 139667341035072
+2024-07-27 21:33:03 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:03:03.057304+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:12:54.215537
+2024-07-27 21:33:03 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:03:03.057304+00:00 | last_log time: 2024-07-27 16:02:45.953714+00:00 | Difference: 0:00:17.103590
+2024-07-27 21:33:03 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:33:03 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:33:07 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:33:07 - tracking.views - INFO - 'handle_tracking' called! Process ID: 79882, Thread ID: 139667357820480
+2024-07-27 21:33:07 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:03:07.055105+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:12:58.213338
+2024-07-27 21:33:07 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:03:07.055105+00:00 | last_log time: 2024-07-27 16:03:03.058499+00:00 | Difference: 0:00:03.996606
+2024-07-27 21:33:07 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:33:07 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:33:09 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:33:09 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 21203
+2024-07-27 21:33:13 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:33:13 - tracking.views - INFO - 'handle_tracking' called! Process ID: 79882, Thread ID: 139667341035072
+2024-07-27 21:33:13 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:03:13.618774+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:13:04.777007
+2024-07-27 21:33:13 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:33:13 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:03:13.618774+00:00 | last_log time: 2024-07-27 16:03:07.056174+00:00 | Difference: 0:00:06.562600
+2024-07-27 21:33:13 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:33:14 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:33:14 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:33:17 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:33:17 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 22124
+2024-07-27 21:37:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 21:37:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 21:39:13 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:39:13 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:39:13 - tracking.views - INFO - 'handle_tracking' called! Process ID: 80910, Thread ID: 136691260061248
+2024-07-27 21:39:13 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:09:13.824832+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:19:04.983065
+2024-07-27 21:39:13 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:09:13.824832+00:00 | last_log time: 2024-07-27 16:03:13.619931+00:00 | Difference: 0:06:00.204901
+2024-07-27 21:39:13 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:39:16 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:39:16 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:39:16 - tracking.views - INFO - 'handle_tracking' called! Process ID: 80910, Thread ID: 136691251668544
+2024-07-27 21:39:16 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:09:16.136383+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:19:07.294616
+2024-07-27 21:39:16 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:09:16.136383+00:00 | last_log time: 2024-07-27 16:09:13.826679+00:00 | Difference: 0:00:02.309704
+2024-07-27 21:39:16 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:39:20 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:39:20 - tracking.views - INFO - 'handle_tracking' called! Process ID: 80910, Thread ID: 136691260061248
+2024-07-27 21:39:20 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:09:20.053736+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:19:11.211969
+2024-07-27 21:39:20 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:09:20.053736+00:00 | last_log time: 2024-07-27 16:09:16.137479+00:00 | Difference: 0:00:03.916257
+2024-07-27 21:39:20 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:39:20 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:39:26 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:39:26 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 23906
+2024-07-27 21:39:36 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:39:36 - tracking.views - INFO - 'handle_tracking' called! Process ID: 80910, Thread ID: 136691251668544
+2024-07-27 21:39:36 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:09:36.532832+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:19:27.691065
+2024-07-27 21:39:36 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:09:36.532832+00:00 | last_log time: 2024-07-27 16:09:20.054731+00:00 | Difference: 0:00:16.478101
+2024-07-27 21:39:36 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:39:36 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:39:40 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:39:40 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-07-27 21:39:47 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:39:47 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 24826
+2024-07-27 21:54:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 21:54:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 21:54:49 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:54:49 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:54:49 - tracking.views - INFO - 'handle_tracking' called! Process ID: 83711, Thread ID: 139384976307776
+2024-07-27 21:54:49 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:24:49.046695+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:34:40.204928
+2024-07-27 21:54:49 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:24:49.046695+00:00 | last_log time: 2024-07-27 16:09:36.533921+00:00 | Difference: 0:15:12.512774
+2024-07-27 21:54:49 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:54:56 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:54:56 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:54:56 - tracking.views - INFO - 'handle_tracking' called! Process ID: 83711, Thread ID: 139384967915072
+2024-07-27 21:54:56 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:24:56.024774+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:34:47.183007
+2024-07-27 21:54:56 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:24:56.024774+00:00 | last_log time: 2024-07-27 16:24:49.048625+00:00 | Difference: 0:00:06.976149
+2024-07-27 21:54:56 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:55:01 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:55:01 - tracking.views - INFO - 'handle_tracking' called! Process ID: 83711, Thread ID: 139384976307776
+2024-07-27 21:55:01 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:25:01.466712+00:00 | Mail sent: 2024-07-27 15:50:08.841767+00:00 | Difference: 0:34:52.624945
+2024-07-27 21:55:01 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:55:01 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:25:01.466712+00:00 | last_log time: 2024-07-27 16:24:56.026026+00:00 | Difference: 0:00:05.440686
+2024-07-27 21:55:01 - django.server - INFO - "GET /api/tracking/track-pixel/6992706ba0c94734b0f6e1813d4fde73/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:55:04 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 922
+2024-07-27 21:55:04 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 26607
+2024-07-27 21:56:12 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-07-27 21:56:12 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-27 21:56:12 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4535
+2024-07-27 21:56:18 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:56:18 - tracking.views - INFO - 'handle_tracking' called! Process ID: 83711, Thread ID: 139384967915072
+2024-07-27 21:56:18 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:26:18.675207+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:00:06.647572
+2024-07-27 21:56:18 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:56:18 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:56:21 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 21:56:21 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 28038
+2024-07-27 21:56:25 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:56:25 - tracking.views - INFO - 'handle_tracking' called! Process ID: 83711, Thread ID: 139384976307776
+2024-07-27 21:56:25 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:26:25.003390+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:00:12.975755
+2024-07-27 21:56:25 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:26:25.003390+00:00 | last_log time: 2024-07-27 16:26:18.676099+00:00 | Difference: 0:00:06.327291
+2024-07-27 21:56:25 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:56:25 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:56:27 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 21:56:27 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 28632
+2024-07-27 21:56:31 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:56:31 - tracking.views - INFO - 'handle_tracking' called! Process ID: 83711, Thread ID: 139384967915072
+2024-07-27 21:56:31 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:26:31.606969+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:00:19.579334
+2024-07-27 21:56:31 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:26:31.606969+00:00 | last_log time: 2024-07-27 16:26:25.004287+00:00 | Difference: 0:00:06.602682
+2024-07-27 21:56:31 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:56:31 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:56:33 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 21:56:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29226
+2024-07-27 21:56:38 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:56:38 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 21:56:45 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 21:56:45 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 29552
+2024-07-27 21:56:53 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:56:53 - tracking.views - INFO - 'handle_tracking' called! Process ID: 83711, Thread ID: 139384976307776
+2024-07-27 21:56:53 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:26:53.388186+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:00:41.360551
+2024-07-27 21:56:53 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:26:53.388186+00:00 | last_log time: 2024-07-27 16:26:31.608523+00:00 | Difference: 0:00:21.779663
+2024-07-27 21:56:53 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 21:56:53 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 21:56:55 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 21:56:55 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 21:57:00 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 21:57:00 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 30472
+2024-07-27 22:06:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 22:06:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 22:06:11 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:06:11 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 30473
+2024-07-27 22:06:21 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:06:21 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 30473
+2024-07-27 22:22:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 22:22:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 22:23:02 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:23:02 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 30472
+2024-07-27 22:23:18 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 22:23:18 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:23:18 - tracking.views - INFO - 'handle_tracking' called! Process ID: 88075, Thread ID: 131272091362880
+2024-07-27 22:23:18 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:53:18.968107+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:27:06.940472
+2024-07-27 22:23:18 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:53:18.968107+00:00 | last_log time: 2024-07-27 16:26:53.389305+00:00 | Difference: 0:26:25.578802
+2024-07-27 22:23:19 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 22:23:22 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 22:23:22 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:23:22 - tracking.views - INFO - 'handle_tracking' called! Process ID: 88075, Thread ID: 131272082970176
+2024-07-27 22:23:22 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:53:22.605230+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:27:10.577595
+2024-07-27 22:23:22 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:53:22.605230+00:00 | last_log time: 2024-07-27 16:53:18.969602+00:00 | Difference: 0:00:03.635628
+2024-07-27 22:23:22 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 22:23:27 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:23:27 - tracking.views - INFO - 'handle_tracking' called! Process ID: 88075, Thread ID: 131272091362880
+2024-07-27 22:23:27 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:53:27.998315+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:27:15.970680
+2024-07-27 22:23:27 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:53:27.998315+00:00 | last_log time: 2024-07-27 16:53:22.606296+00:00 | Difference: 0:00:05.392019
+2024-07-27 22:23:27 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 22:23:28 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 22:23:35 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:23:35 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 32254
+2024-07-27 22:23:40 - tracking.urls - INFO - urls.py: PIXEL Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:23:40 - tracking.views - INFO - 'handle_tracking' called! Process ID: 88075, Thread ID: 131272082970176
+2024-07-27 22:23:40 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-27 16:53:40.017536+00:00 | Mail sent: 2024-07-27 16:26:12.027635+00:00 | Difference: 0:27:27.989901
+2024-07-27 22:23:40 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-27 16:53:40.017536+00:00 | last_log time: 2024-07-27 16:53:27.999291+00:00 | Difference: 0:00:12.018245
+2024-07-27 22:23:40 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-27 22:23:40 - django.server - INFO - "GET /api/tracking/track-pixel/afe6b39f5d00424d9dbd7fc58d4033e9/pixel.png HTTP/1.1" 200 95
+2024-07-27 22:23:43 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:23:43 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 22:23:48 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:23:48 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 33175
+2024-07-27 22:23:58 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:23:58 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 33175
+2024-07-27 22:23:59 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:23:59 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 33175
+2024-07-27 22:24:04 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:24:04 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 22:24:05 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:24:05 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 22:24:05 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:24:05 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 22:24:05 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:24:05 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 22:24:06 - tracking.urls - INFO - urls.py: LINK Request received for email test@test.com from ip: 127.0.0.1
+2024-07-27 22:24:06 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-27 22:24:12 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
+2024-07-27 22:24:12 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 34810
