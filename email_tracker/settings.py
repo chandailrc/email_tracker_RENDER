@@ -45,7 +45,9 @@ if RENDER_EXTERNAL_HOSTNAME:
 # CSRF_TRUSTED_ORIGINS = ['https://b28d-2405-201-5009-6022-8fef-7e89-a12e-b610.ngrok-free.app']
 CSRF_TRUSTED_ORIGINS = [env('CSRF_TRUSTED_ORIGINS')]
 
+AUTH_USER_MODEL = 'users.CustomUser'
 
+LOGIN_URL = '/frontend/login/'
 
 # Application definition
 
@@ -62,6 +64,9 @@ INSTALLED_APPS = [
     'unsubscribers',
     'receiving',
     'conversations',
+    'recommendations',
+    'users',
+    'contacts',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +78,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'tracking.middleware.TrackingPixelMiddleware',
 ]
 
 ROOT_URLCONF = 'email_tracker.urls'

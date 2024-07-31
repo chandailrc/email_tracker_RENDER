@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Your Contact Lists</h2>
+{% if error %}
+    <p>{{ error }}</p>
+{% else %}
+    <ul>
+    {% for list in contact_lists %}
+        <li><a href="{% url 'contacts_in_list_page' list.id %}">{{ list.name }}</a></li>
+    {% empty %}
+        <li>You have no contact lists.</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+<a href="{% url 'create_contact_list_page' %}">Create New Contact List</a>
+{% endblock %}

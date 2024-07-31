@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Register</h2>
+<form action="{% url 'handle_register' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password1" placeholder="Password" required>
+    <input type="password" name="password2" placeholder="Confirm Password" required>
+    <select name="user_type">
+        <option value="free">Free User</option>
+        <option value="paid">Paid User</option>
+    </select>
+    <input type="text" name="phone" placeholder="Phone (optional)">
+    <textarea name="address" placeholder="Address (optional)"></textarea>
+    <input type="text" name="company" placeholder="Company (optional)">
+    <button type="submit">Register</button>
+</form>
+
+{% endblock %}

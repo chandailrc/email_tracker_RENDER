@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Update Contact</h2>
+{% if error %}
+    <p>{{ error }}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" value="{{ contact.name }}" required>
+    <input type="email" name="email" value="{{ contact.email }}" required>
+    <input type="text" name="phone" value="{{ contact.phone }}">
+    <input type="text" name="address" value="{{ contact.address }}">
+    <input type="text" name="occupation" value="{{ contact.occupation }}">
+    <input type="text" name="company" value="{{ contact.company }}">
+    <input type="hidden" name="list_id" value="{{ contact.contact_list_id }}">
+    <button type="submit">Update</button>
+</form>
+<a href="{% url 'contacts_in_list_page' contact.contact_list_id %}">Back to Contacts</a>
+{% endblock %}

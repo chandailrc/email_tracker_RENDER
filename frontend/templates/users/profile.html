@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>User Profile</h2>
+<div id="user-info"></div>
+<a href="{% url 'update_profile_page' %}">Update Profile</a>
+<form action="{% url 'handle_logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+<script>
+    fetch('{% url "get_user_info" %}')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const userInfo = data.user_info;
+                document.getElementById('user-info').innerHTML = `
+                    <p>Username: ${userInfo.username}</p>
+                    <p>Email: ${userInfo.email}</p>
+                    <p>User Type: ${userInfo.user_type}</p>
+                    <p>Phone: ${userInfo.phone || 'N/A'}</p>
+                    <p>Address: ${userInfo.address || 'N/A'}</p>
+                    <p>Company: ${userInfo.company || 'N/A'}</p>
+                `;
+            }
+        });
+</script>
+{% endblock %}

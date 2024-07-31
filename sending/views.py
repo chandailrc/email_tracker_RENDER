@@ -12,6 +12,7 @@ from receiving.models import ReceivedEmail
 @csrf_exempt
 @require_POST
 def send_tracked_email(request):
+    user = request.user
     recipients = request.POST.get('recipients', '').split()
     subject = request.POST.get('subject')
     body = request.POST.get('body')
@@ -26,7 +27,7 @@ def send_tracked_email(request):
     for recipient in recipients:
         recipient = recipient.strip()
         if recipient:
-            success, message = sending_utils.tracked_email_sender(recipient, subject, body)
+            success, message = sending_utils.tracked_email_sender(user, recipient, subject, body)
             if success:
                 sent_count += 1
                 print(f"views.py/send_tracked_email_view: Email sent successfully to {recipient}")

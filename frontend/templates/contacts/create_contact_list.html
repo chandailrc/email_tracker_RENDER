@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Create New Contact List</h2>
+{% if error %}
+    <p>{{ error }}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" required>
+    <button type="submit">Create</button>
+</form>
+<a href="{% url 'contact_lists_page' %}">Back to Contact Lists</a>
+{% endblock %}

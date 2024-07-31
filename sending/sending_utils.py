@@ -31,7 +31,7 @@ def generate_tracking_urls(email):
     return pixel_url, css_url
     
 
-def tracked_email_sender(recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
+def tracked_email_sender(user, recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
     if UnsubscribedUser.objects.filter(email=recipient).exists():
         logger.info(f"sending_utils.py: Email not sent to {recipient} as they have unsubscribed.")
         return False, "Recipient has unsubscribed"
@@ -47,6 +47,7 @@ def tracked_email_sender(recipient, subject, body, cc=None, bcc=None, in_reply_t
             thread_id = str(uuid.uuid4())
 
         email = SentEmail.objects.create(
+            user=user,
             recipient=recipient,
             cc=','.join(cc) if cc else '',
             bcc=','.join(bcc) if bcc else '',

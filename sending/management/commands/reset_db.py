@@ -11,8 +11,8 @@ class Command(BaseCommand):
             self.drop_all_tables()
         self.stdout.write(self.style.SUCCESS('Successfully dropped all tables.'))
         
-        self.run_migrations()
-        self.stdout.write(self.style.SUCCESS('Successfully ran all migrations.'))
+        # self.run_migrations()
+        # self.stdout.write(self.style.SUCCESS('Successfully ran all migrations.'))
 
     def drop_all_tables(self):
         with connection.cursor() as cursor:
@@ -24,7 +24,7 @@ class Command(BaseCommand):
             for table in tables:
                 cursor.execute(f'DROP TABLE IF EXISTS "{table[0]}" CASCADE')
 
-    def run_migrations(self):
-        from django.core.management import call_command
-        call_command('migrate')
+    # def run_migrations(self):
+    #     from django.core.management import call_command
+    #     call_command('migrate')
 

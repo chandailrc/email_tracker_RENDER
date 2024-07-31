@@ -214,3 +214,226 @@ def conversation_detail(request, conversation_id):
     response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/')
     conversation = response.json()
     return render(request, 'conversation_detail.html', {'conversation': conversation})
+
+from django.contrib.auth.decorators import login_required
+
+def register_page(request):
+    return render(request, 'users/register.html')
+
+def login_page(request):
+    return render(request, 'users/login.html')
+
+@login_required
+def profile_page(request):
+    return render(request, 'users/profile.html')
+
+@login_required
+def update_profile_page(request):
+    return render(request, 'users/update_profile.html')
+
+from django.contrib.auth import login as auth_login
+from django.contrib.auth import get_user_model
+
+def handle_register(request):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/users/register/', data=request.POST)
+        print(f"Status Code: {response.status_code}")
+        print(f"Response Content: {response.content}")
+        print(f"Response Headers: {response.headers}")
+        
+        try:
+            json_response = response.json()
+            if json_response['success']:
+                # Log the user in
+                # ... (login logic here)
+                return redirect('profile_page')
+            else:
+                return render(request, 'users/register.html', {'errors': json_response.get('errors', 'Registration failed')})
+        except requests.exceptions.JSONDecodeError as e:
+            print(f"JSONDecodeError: {str(e)}")
+            return render(request, 'users/register.html', {'errors': 'An error occurred during registration'})
+        except Exception as e:
+            print(f"Unexpected error: {str(e)}")
+            return render(request, 'users/register.html', {'errors': 'An unexpected error occurred'})
+    
+    return render(request, 'users/register.html')
+
+import requests
+from django.shortcuts import render, redirect
+from django.conf import settings
+from django.contrib.auth import login as auth_login
+from django.contrib.auth import authenticate
+
+def handle_login(request):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/users/login/', data=request.POST)
+        print(f"Status Code: {response.status_code}")
+        print(f"Response Content: {response.content}")
+        print(f"Response Headers: {response.headers}")
+        
+        try:
+            json_response = response.json()
+            if json_response['success']:
+                # Log the user in
+                # You might need to adjust this part depending on how you're handling authentication
+                user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
+                if user is not None:
+                    auth_login(request, user)
+                    return redirect('profile_page')
+            return render(request, 'users/login.html', {'error': json_response.get('message', 'Login failed')})
+        except requests.exceptions.JSONDecodeError as e:
+            print(f"JSONDecodeError: {str(e)}")
+            return render(request, 'users/login.html', {'error': 'An error occurred during login'})
+        except Exception as e:
+            print(f"Unexpected error: {str(e)}")
+            return render(request, 'users/login.html', {'error': 'An unexpected error occurred'})
+    
+    return render(request, 'users/login.html')
+
+import requests
+from django.shortcuts import redirect
+from django.conf import settings
+
+import requests
+from django.shortcuts import redirect
+from django.conf import settings
+from django.contrib.auth import logout as auth_logout
+
+@login_required
+def handle_logout(request):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/users/logout/')
+        print(f"Status Code: {response.status_code}")
+        print(f"Response Content: {response.content}")
+        print(f"Response Headers: {response.headers}")
+        
+        try:
+            json_response = response.json()
+            if json_response['success']:
+                # Clear any session data on the frontend
+                auth_logout(request)
+            return redirect('login_page')
+        except requests.exceptions.JSONDecodeError as e:
+            print(f"JSONDecodeError: {str(e)}")
+            # Even if there's an error, we should still log the user out
+            auth_logout(request)
+            return redirect('login_page')
+        except Exception as e:
+            print(f"Unexpected error: {str(e)}")
+            # Even if there's an error, we should still log the user out
+            auth_logout(request)
+            return redirect('login_page')
+    
+    return redirect('profile_page')
+
+import requests
+from django.shortcuts import render, redirect
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def handle_update_profile(request):
+    if request.method == 'POST':
+        # Include the session cookie in the request
+        cookies = {'sessionid': request.COOKIES.get('sessionid')}
+        response = requests.post(f'{settings.BASE_URL}/api/users/update/', data=request.POST, cookies=cookies)
+        print(f"Status Code: {response.status_code}")
+        print(f"Response Content: {response.content}")
+        print(f"Response Headers: {response.headers}")
+        
+        try:
+            json_response = response.json()
+            if json_response['success']:
+                return redirect('profile_page')
+            else:
+                return render(request, 'users/update_profile.html', {'errors': json_response.get('errors', 'Update failed')})
+        except requests.exceptions.JSONDecodeError as e:
+            print(f"JSONDecodeError: {str(e)}")
+            return render(request, 'users/update_profile.html', {'errors': 'An error occurred during profile update'})
+        except Exception as e:
+            print(f"Unexpected error: {str(e)}")
+            return render(request, 'users/update_profile.html', {'errors': 'An unexpected error occurred'})
+    
+    return redirect('update_profile_page')
+
+
+import requests
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.conf import settings
+
+@login_required
+def contact_lists_page(request):
+    response = requests.get(f'{settings.BASE_URL}/api/contacts/lists/', cookies={'sessionid': request.COOKIES.get('sessionid')})
+    if response.status_code == 200:
+        contact_lists = response.json().get('contact_lists', [])
+        return render(request, 'contacts/contact_lists.html', {'contact_lists': contact_lists})
+    else:
+        return render(request, 'contacts/contact_lists.html', {'error': 'Failed to fetch contact lists'})
+
+@login_required
+def create_contact_list_page(request):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/contacts/lists/create/', 
+                                 data=request.POST, 
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+        if response.status_code == 200:
+            return redirect('contact_lists_page')
+        else:
+            error = response.json().get('errors', 'Failed to create contact list')
+            return render(request, 'contacts/create_contact_list.html', {'error': error})
+    return render(request, 'contacts/create_contact_list.html')
+
+@login_required
+def contacts_in_list_page(request, list_id):
+    response = requests.get(f'{settings.BASE_URL}/api/contacts/lists/{list_id}/contacts/', 
+                            cookies={'sessionid': request.COOKIES.get('sessionid')})
+    if response.status_code == 200:
+        contacts = response.json().get('contacts', [])
+        return render(request, 'contacts/contacts_in_list.html', {'contacts': contacts, 'list_id': list_id})
+    else:
+        return render(request, 'contacts/contacts_in_list.html', {'error': 'Failed to fetch contacts'})
+
+@login_required
+def create_contact_page(request, list_id):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/contacts/lists/{list_id}/contacts/create/', 
+                                 data=request.POST, 
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+        if response.status_code == 200:
+            return redirect('contacts_in_list_page', list_id=list_id)
+        else:
+            error = response.json().get('errors', 'Failed to create contact')
+            return render(request, 'contacts/create_contact.html', {'error': error, 'list_id': list_id})
+    return render(request, 'contacts/create_contact.html', {'list_id': list_id})
+
+@login_required
+def update_contact_page(request, contact_id):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/contacts/contacts/{contact_id}/update/', 
+                                 data=request.POST, 
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+        if response.status_code == 200:
+            return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))
+        else:
+            error = response.json().get('errors', 'Failed to update contact')
+            return render(request, 'contacts/update_contact.html', {'error': error, 'contact_id': contact_id})
+    
+    # Fetch current contact data
+    response = requests.get(f'{settings.BASE_URL}/api/contacts/contacts/{contact_id}/', 
+                            cookies={'sessionid': request.COOKIES.get('sessionid')})
+    if response.status_code == 200:
+        contact = response.json().get('contact', {})
+        return render(request, 'contacts/update_contact.html', {'contact': contact})
+    else:
+        return render(request, 'contacts/update_contact.html', {'error': 'Failed to fetch contact data'})
+
+@login_required
+def delete_contact(request, contact_id):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/contacts/contacts/{contact_id}/delete/', 
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+        if response.status_code == 200:
+            return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))
+        else:
+            return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))

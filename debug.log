@@ -5145,3 +5145,1165 @@ AttributeError: 'EmailInteraction' object has no attribute 'user'
 2024-07-27 22:24:06 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
 2024-07-27 22:24:12 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1359
 2024-07-27 22:24:12 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 34810
+2024-07-27 22:45:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-07-27 22:45:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-27 23:01:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-27 23:01:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 12:40:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 12:41:35 - django.request - ERROR - Internal Server Error: /frontend/login/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 232, in login_view
+    return render(request, 'users/login.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/login.html
+2024-07-30 12:41:35 - django.server - ERROR - "GET /frontend/login/ HTTP/1.1" 500 88914
+2024-07-30 12:41:35 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 12:44:11 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1713
+2024-07-30 12:44:11 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 12:44:37 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1534
+2024-07-30 12:44:37 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 12:44:39 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 12:44:39 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 12:44:39 - django.server - INFO - "POST /frontend/register/ HTTP/1.1" 200 1534
+2024-07-30 12:44:39 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 12:44:41 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 12:44:41 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 12:44:41 - django.server - INFO - "POST /frontend/register/ HTTP/1.1" 200 1534
+2024-07-30 12:44:41 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 12:44:41 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 12:44:41 - django.server - INFO - "POST /frontend/register/ HTTP/1.1" 200 1534
+2024-07-30 12:44:42 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 12:44:42 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 12:44:42 - django.server - INFO - "POST /frontend/register/ HTTP/1.1" 200 1534
+2024-07-30 12:44:42 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 12:44:42 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 12:44:42 - django.server - INFO - "POST /frontend/register/ HTTP/1.1" 200 1534
+2024-07-30 12:45:06 - django.server - INFO - "GET /frontend/logout/ HTTP/1.1" 302 0
+2024-07-30 12:45:06 - django.request - WARNING - Not Found: /accounts/login/
+2024-07-30 12:45:06 - django.server - WARNING - "GET /accounts/login/?next=/frontend/logout/ HTTP/1.1" 404 2946
+2024-07-30 12:46:02 - django.server - INFO - "GET /frontend/logout/ HTTP/1.1" 302 0
+2024-07-30 12:46:02 - django.request - WARNING - Not Found: /accounts/login/
+2024-07-30 12:46:02 - django.server - WARNING - "GET /accounts/login/?next=/frontend/logout/ HTTP/1.1" 404 2946
+2024-07-30 12:49:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/forms.py changed, reloading.
+2024-07-30 12:49:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 12:49:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 12:52:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 12:52:59 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1998
+2024-07-30 12:53:03 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 12:53:03 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 12:53:03 - django.server - INFO - "POST /frontend/register/ HTTP/1.1" 200 1998
+2024-07-30 13:25:13 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1543
+2024-07-30 13:25:14 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1543
+2024-07-30 13:25:16 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1543
+2024-07-30 13:25:24 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1543
+2024-07-30 13:25:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:25:36 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1543
+2024-07-30 13:25:38 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1543
+2024-07-30 13:26:20 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1713
+2024-07-30 13:26:25 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 1543
+2024-07-30 13:34:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/models.py changed, reloading.
+2024-07-30 13:34:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:34:58 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/forms.py changed, reloading.
+2024-07-30 13:34:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:35:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 13:35:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:35:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/urls.py changed, reloading.
+2024-07-30 13:35:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:35:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:35:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:36:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-07-30 13:36:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:39:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:39:36 - django.request - ERROR - Internal Server Error: /frontend/register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 224, in register_page
+    return render(request, 'frontend/register.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: frontend/register.html
+2024-07-30 13:39:36 - django.server - ERROR - "GET /frontend/register/ HTTP/1.1" 500 88919
+2024-07-30 13:39:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:39:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:40:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:40:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:40:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:40:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:40:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:40:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:40:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:40:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:40:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:40:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:40:54 - django.request - ERROR - Internal Server Error: /frontend/register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 221, in register_page
+    return render(request, 'users/register.html')
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 555, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 20: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+2024-07-30 13:40:54 - django.server - ERROR - "GET /frontend/register/ HTTP/1.1" 500 173580
+2024-07-30 13:42:11 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2221
+2024-07-30 13:43:52 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2351
+2024-07-30 13:43:57 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2351
+2024-07-30 13:44:44 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 13:44:50 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 13:45:37 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 13:45:37 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 13:45:37 - django.request - ERROR - Internal Server Error: /frontend/handle-register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 237, in handle_register
+    if response.json()['success']:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 13:45:37 - django.server - ERROR - "POST /frontend/handle-register/ HTTP/1.1" 500 109620
+2024-07-30 13:49:23 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 13:49:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:50:52 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/register/
+2024-07-30 13:50:52 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 403 2869
+2024-07-30 13:50:52 - django.request - ERROR - Internal Server Error: /frontend/handle-register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 237, in handle_register
+    if response.json()['success']:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 13:50:52 - django.server - ERROR - "POST /frontend/handle-register/ HTTP/1.1" 500 109620
+2024-07-30 13:52:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:52:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:52:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 13:52:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:52:44 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 13:52:44 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:53:56 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 13:53:57 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 13:53:57 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 13:54:08 - django.request - WARNING - Not Found: /users/register/
+2024-07-30 13:54:08 - django.server - WARNING - "POST /users/register/ HTTP/1.1" 404 2924
+2024-07-30 13:54:08 - django.request - ERROR - Internal Server Error: /frontend/handle-register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 240, in handle_register
+    json_response = response.json()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 247, in handle_register
+    return render(request, 'frontend/register.html', {'errors': 'An error occurred during registration'})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: frontend/register.html
+2024-07-30 13:54:08 - django.server - ERROR - "POST /frontend/handle-register/ HTTP/1.1" 500 132211
+2024-07-30 13:54:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 13:54:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 13:54:49 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 147
+2024-07-30 13:54:49 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 200 2436
+2024-07-30 13:54:58 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 13:55:03 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/login/
+2024-07-30 13:55:03 - django.server - WARNING - "POST /api/users/login/ HTTP/1.1" 403 2869
+2024-07-30 13:55:03 - django.request - ERROR - Internal Server Error: /frontend/handle-login/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 252, in handle_login
+    if response.json()['success']:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 13:55:03 - django.server - ERROR - "POST /frontend/handle-login/ HTTP/1.1" 500 108867
+2024-07-30 13:55:13 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 13:56:07 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 77
+2024-07-30 13:56:07 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 200 2436
+2024-07-30 13:56:43 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 60
+2024-07-30 13:56:43 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 302 0
+2024-07-30 13:56:43 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 302 0
+2024-07-30 13:56:43 - django.request - WARNING - Not Found: /accounts/login/
+2024-07-30 13:56:43 - django.server - WARNING - "GET /accounts/login/?next=/frontend/profile/ HTTP/1.1" 404 2947
+2024-07-30 13:58:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 13:58:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:00:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:00:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:03:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-07-30 14:03:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:03:25 - django.request - WARNING - Not Found: /users/register/
+2024-07-30 14:03:25 - django.server - WARNING - "POST /users/register/ HTTP/1.1" 404 2924
+2024-07-30 14:03:25 - django.request - ERROR - Internal Server Error: /frontend/handle-register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 240, in handle_register
+    json_response = response.json()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 14:03:25 - django.server - ERROR - "POST /frontend/handle-register/ HTTP/1.1" 500 111492
+2024-07-30 14:03:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:03:41 - django.request - WARNING - Not Found: /users/register/
+2024-07-30 14:03:41 - django.server - WARNING - "POST /users/register/ HTTP/1.1" 404 2924
+2024-07-30 14:03:41 - django.request - ERROR - Internal Server Error: /frontend/handle-register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 240, in handle_register
+    json_response = response.json()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 14:03:41 - django.server - ERROR - "POST /frontend/handle-register/ HTTP/1.1" 500 111476
+2024-07-30 14:04:15 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 14:04:54 - django.request - WARNING - Not Found: /users/register/
+2024-07-30 14:04:54 - django.server - WARNING - "POST /users/register/ HTTP/1.1" 404 2924
+2024-07-30 14:04:55 - django.request - ERROR - Internal Server Error: /frontend/handle-register/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 240, in handle_register
+    json_response = response.json()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 14:04:55 - django.server - ERROR - "POST /frontend/handle-register/ HTTP/1.1" 500 111478
+2024-07-30 14:05:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:05:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:06:11 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 14:06:11 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:06:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:06:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:07:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:07:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:07:26 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 14:08:06 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 60
+2024-07-30 14:08:06 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 302 0
+2024-07-30 14:08:06 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 302 0
+2024-07-30 14:08:06 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 1919
+2024-07-30 14:08:17 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/login/
+2024-07-30 14:08:17 - django.server - WARNING - "POST /api/users/login/ HTTP/1.1" 403 2869
+2024-07-30 14:08:17 - django.request - ERROR - Internal Server Error: /frontend/handle-login/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 264, in handle_login
+    if response.json()['success']:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 14:08:17 - django.server - ERROR - "POST /frontend/handle-login/ HTTP/1.1" 500 108859
+2024-07-30 14:09:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:09:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:09:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:09:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:09:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 14:09:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:10:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:10:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:10:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:10:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:10:57 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 1919
+2024-07-30 14:11:05 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-07-30 14:11:05 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-07-30 14:11:05 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2896
+2024-07-30 14:11:05 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 14:11:44 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/logout/
+2024-07-30 14:11:44 - django.server - WARNING - "POST /api/users/logout/ HTTP/1.1" 403 2869
+2024-07-30 14:11:44 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 14:11:44 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 2282
+2024-07-30 14:11:48 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2896
+2024-07-30 14:11:48 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 14:11:50 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/logout/
+2024-07-30 14:11:50 - django.server - WARNING - "POST /api/users/logout/ HTTP/1.1" 403 2869
+2024-07-30 14:11:50 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 14:11:50 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 2282
+2024-07-30 14:11:51 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/logout/
+2024-07-30 14:11:51 - django.server - WARNING - "POST /api/users/logout/ HTTP/1.1" 403 2869
+2024-07-30 14:11:51 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 14:11:51 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 2282
+2024-07-30 14:11:52 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/logout/
+2024-07-30 14:11:52 - django.server - WARNING - "POST /api/users/logout/ HTTP/1.1" 403 2869
+2024-07-30 14:11:52 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 14:11:52 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 2282
+2024-07-30 14:11:53 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2896
+2024-07-30 14:11:53 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 14:11:53 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2896
+2024-07-30 14:11:53 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 14:11:54 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2896
+2024-07-30 14:11:54 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 14:11:59 - django.server - INFO - "GET /frontend/update-profile/ HTTP/1.1" 200 2654
+2024-07-30 14:12:03 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/logout/
+2024-07-30 14:12:03 - django.server - WARNING - "POST /api/users/logout/ HTTP/1.1" 403 2869
+2024-07-30 14:12:03 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 14:12:03 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 2282
+2024-07-30 14:13:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 14:13:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:14:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:14:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:15:18 - django.request - WARNING - Not Found: /users/logout/
+2024-07-30 14:15:18 - django.server - WARNING - "POST /users/logout/ HTTP/1.1" 404 2918
+2024-07-30 14:15:18 - django.request - ERROR - Internal Server Error: /frontend/handle-logout/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 301, in handle_logout
+    if response.json()['success']:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 14:15:18 - django.server - ERROR - "POST /frontend/handle-logout/ HTTP/1.1" 500 115418
+2024-07-30 14:15:18 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 14:15:26 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 2282
+2024-07-30 14:15:28 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2896
+2024-07-30 14:15:28 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 14:15:29 - django.request - WARNING - Not Found: /users/logout/
+2024-07-30 14:15:29 - django.server - WARNING - "POST /users/logout/ HTTP/1.1" 404 2918
+2024-07-30 14:15:29 - django.request - ERROR - Internal Server Error: /frontend/handle-logout/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 301, in handle_logout
+    if response.json()['success']:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 14:15:29 - django.server - ERROR - "POST /frontend/handle-logout/ HTTP/1.1" 500 115420
+2024-07-30 14:17:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 14:17:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:17:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 14:17:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 14:18:49 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 14:18:49 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 14:18:51 - django.request - WARNING - Not Found: /users/logout/
+2024-07-30 14:18:51 - django.server - WARNING - "POST /users/logout/ HTTP/1.1" 404 2918
+2024-07-30 14:18:51 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 14:18:51 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 14:18:59 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 302 0
+2024-07-30 14:18:59 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 1919
+2024-07-30 14:19:05 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 1919
+2024-07-30 15:02:12 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 15:02:13 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 15:02:14 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 15:02:15 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2436
+2024-07-30 15:02:16 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 15:02:44 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 52
+2024-07-30 15:02:44 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 200 1919
+2024-07-30 15:02:48 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 15:03:27 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-07-30 15:03:28 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-07-30 15:03:28 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:03:28 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 15:03:32 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:03:32 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 15:03:36 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 43
+2024-07-30 15:03:36 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2389
+2024-07-30 15:03:39 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-30 15:03:39 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2408
+2024-07-30 15:03:39 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 15:03:40 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-30 15:03:40 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2364
+2024-07-30 15:03:42 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4818
+2024-07-30 15:03:42 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 15:03:51 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4818
+2024-07-30 15:03:56 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4818
+2024-07-30 15:03:57 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 21
+2024-07-30 15:03:57 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2425
+2024-07-30 15:03:59 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4818
+2024-07-30 15:04:01 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 43
+2024-07-30 15:04:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2389
+2024-07-30 15:04:03 - django.request - WARNING - Not Found: /users/logout/
+2024-07-30 15:04:03 - django.server - WARNING - "POST /users/logout/ HTTP/1.1" 404 2918
+2024-07-30 15:04:03 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 15:04:03 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 15:04:03 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 15:06:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 15:06:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:06:28 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 15:06:40 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-07-30 15:06:40 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-07-30 15:06:41 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:06:41 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 15:06:45 - django.server - INFO - "POST /api/users/logout/ HTTP/1.1" 200 60
+2024-07-30 15:06:45 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-30 15:06:45 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1919
+2024-07-30 15:06:54 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-07-30 15:06:54 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-07-30 15:06:54 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:06:54 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 15:06:56 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:06:56 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 15:06:58 - django.server - INFO - "GET /frontend/update-profile/ HTTP/1.1" 200 2531
+2024-07-30 15:07:25 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/users/update/
+2024-07-30 15:07:25 - django.server - WARNING - "POST /api/users/update/ HTTP/1.1" 403 2869
+2024-07-30 15:07:25 - django.request - ERROR - Internal Server Error: /frontend/handle-update-profile/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 333, in handle_update_profile
+    if response.json()['success']:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-07-30 15:07:25 - django.server - ERROR - "POST /frontend/handle-update-profile/ HTTP/1.1" 500 114162
+2024-07-30 15:08:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 15:08:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:08:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 15:08:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:09:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 15:09:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:10:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 15:10:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:10:35 - django.server - INFO - "GET /frontend/update-profile/ HTTP/1.1" 200 2531
+2024-07-30 15:10:38 - django.server - INFO - "POST /api/users/update/ HTTP/1.1" 302 0
+2024-07-30 15:10:38 - django.server - INFO - "GET /frontend/login/?next=/api/users/update/ HTTP/1.1" 200 1919
+2024-07-30 15:10:39 - django.server - INFO - "POST /frontend/handle-update-profile/ HTTP/1.1" 200 2531
+2024-07-30 15:10:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:10:55 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:10:55 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 15:10:58 - django.server - INFO - "GET /frontend/update-profile/ HTTP/1.1" 200 2531
+2024-07-30 15:11:17 - django.server - INFO - "POST /api/users/update/ HTTP/1.1" 302 0
+2024-07-30 15:11:17 - django.server - INFO - "GET /frontend/login/?next=/api/users/update/ HTTP/1.1" 200 1919
+2024-07-30 15:11:17 - django.server - INFO - "POST /frontend/handle-update-profile/ HTTP/1.1" 200 2531
+2024-07-30 15:12:24 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-30 15:12:24 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:12:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 15:12:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:45:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/forms.py changed, reloading.
+2024-07-30 15:45:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:45:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/forms.py changed, reloading.
+2024-07-30 15:45:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:46:54 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2676
+2024-07-30 15:46:54 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 15:46:56 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:46:56 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 148
+2024-07-30 15:46:56 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 15:46:56 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 2911
+2024-07-30 15:47:21 - django.request - WARNING - Not Found: /users/update/
+2024-07-30 15:47:21 - django.server - WARNING - "POST /users/update/ HTTP/1.1" 404 2918
+2024-07-30 15:47:21 - django.request - ERROR - Internal Server Error: /frontend/handle-update-profile/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 345, in handle_update_profile
+    json_response = response.json()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 352, in handle_update_profile
+    return render(request, 'frontend/update_profile.html', {'errors': 'An error occurred during profile update'})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: frontend/update_profile.html
+2024-07-30 15:47:21 - django.server - ERROR - "POST /frontend/handle-update-profile/ HTTP/1.1" 500 137929
+2024-07-30 15:47:21 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-30 15:47:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 15:47:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:48:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-07-30 15:48:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-30 15:48:10 - django.server - INFO - "POST /api/users/update/ HTTP/1.1" 200 57
+2024-07-30 15:48:10 - django.server - INFO - "POST /frontend/handle-update-profile/ HTTP/1.1" 302 0
+2024-07-30 15:48:10 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2773
+2024-07-30 15:48:10 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 156
+2024-07-31 12:29:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 12:30:39 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 43
+2024-07-31 12:30:39 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-07-31 12:30:43 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-07-31 12:30:43 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 156
+2024-07-31 12:30:47 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 43
+2024-07-31 12:30:47 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-07-31 12:30:53 - django.server - INFO - "POST /api/users/logout/ HTTP/1.1" 200 60
+2024-07-31 12:30:53 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-31 12:30:53 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1984
+2024-07-31 12:30:55 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 302 0
+2024-07-31 12:30:55 - django.server - INFO - "GET /frontend/login/?next=/frontend/contact-lists/ HTTP/1.1" 200 1984
+2024-07-31 12:31:37 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 302 0
+2024-07-31 12:31:37 - django.server - INFO - "GET /frontend/login/?next=/frontend/contact-lists/ HTTP/1.1" 200 1984
+2024-07-31 12:31:50 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2501
+2024-07-31 12:31:51 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 302 0
+2024-07-31 12:31:51 - django.server - INFO - "GET /frontend/login/?next=/frontend/contact-lists/ HTTP/1.1" 200 1984
+2024-07-31 12:32:03 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 52
+2024-07-31 12:32:03 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 200 1984
+2024-07-31 12:32:19 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-07-31 12:32:19 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-07-31 12:32:19 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-07-31 12:32:19 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 156
+2024-07-31 12:32:21 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:32:21 - django.request - ERROR - Internal Server Error: /frontend/contact-lists/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 370, in contact_lists_page
+    return render(request, 'contacts/contact_lists.html', {'contact_lists': contact_lists})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: contacts/contact_lists.html
+2024-07-31 12:32:21 - django.server - ERROR - "GET /frontend/contact-lists/ HTTP/1.1" 500 95250
+2024-07-31 12:38:36 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:38:36 - django.request - ERROR - Internal Server Error: /frontend/contact-lists/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 370, in contact_lists_page
+    return render(request, 'contacts/contact_lists.html', {'contact_lists': contact_lists})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+2024-07-31 12:38:36 - django.server - ERROR - "GET /frontend/contact-lists/ HTTP/1.1" 500 248778
+2024-07-31 12:40:57 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:40:57 - django.request - ERROR - Internal Server Error: /frontend/contact-lists/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 370, in contact_lists_page
+    return render(request, 'contacts/contact_lists.html', {'contact_lists': contact_lists})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+2024-07-31 12:40:57 - django.server - ERROR - "GET /frontend/contact-lists/ HTTP/1.1" 500 187783
+2024-07-31 12:40:58 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:40:58 - django.request - ERROR - Internal Server Error: /frontend/contact-lists/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 370, in contact_lists_page
+    return render(request, 'contacts/contact_lists.html', {'contact_lists': contact_lists})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+2024-07-31 12:40:58 - django.server - ERROR - "GET /frontend/contact-lists/ HTTP/1.1" 500 187783
+2024-07-31 12:41:01 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:41:01 - django.request - ERROR - Internal Server Error: /frontend/contact-lists/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 370, in contact_lists_page
+    return render(request, 'contacts/contact_lists.html', {'contact_lists': contact_lists})
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    raise self.error(token, e)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+2024-07-31 12:41:01 - django.server - ERROR - "GET /frontend/contact-lists/ HTTP/1.1" 500 187783
+2024-07-31 12:42:58 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:42:58 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2005
+2024-07-31 12:43:04 - django.server - INFO - "GET /frontend/contact-lists/create/ HTTP/1.1" 200 2169
+2024-07-31 12:43:16 - django.server - INFO - "POST /api/contacts/lists/create/ HTTP/1.1" 200 50
+2024-07-31 12:43:16 - django.server - INFO - "POST /frontend/contact-lists/create/ HTTP/1.1" 302 0
+2024-07-31 12:43:16 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 71
+2024-07-31 12:43:16 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2041
+2024-07-31 12:43:19 - django.server - INFO - "GET /api/contacts/lists/1/contacts/ HTTP/1.1" 200 33
+2024-07-31 12:43:19 - django.server - INFO - "GET /frontend/contact-lists/1/contacts/ HTTP/1.1" 200 2229
+2024-07-31 12:43:25 - django.server - INFO - "GET /frontend/contact-lists/1/contacts/create/ HTTP/1.1" 200 2502
+2024-07-31 12:43:40 - django.server - INFO - "POST /api/contacts/lists/1/contacts/create/ HTTP/1.1" 200 67
+2024-07-31 12:43:40 - django.server - INFO - "POST /frontend/contact-lists/1/contacts/create/ HTTP/1.1" 302 0
+2024-07-31 12:43:40 - django.server - INFO - "GET /api/contacts/lists/1/contacts/ HTTP/1.1" 200 160
+2024-07-31 12:43:40 - django.server - INFO - "GET /frontend/contact-lists/1/contacts/ HTTP/1.1" 200 2808
+2024-07-31 12:43:45 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 71
+2024-07-31 12:43:45 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2041
+2024-07-31 12:43:56 - django.server - INFO - "GET /api/contacts/lists/1/contacts/ HTTP/1.1" 200 160
+2024-07-31 12:43:56 - django.server - INFO - "GET /frontend/contact-lists/1/contacts/ HTTP/1.1" 200 2808
+2024-07-31 12:43:59 - django.server - INFO - "POST /api/contacts/contacts/1/delete/ HTTP/1.1" 200 60
+2024-07-31 12:43:59 - django.server - INFO - "POST /frontend/contacts/1/delete/ HTTP/1.1" 302 0
+2024-07-31 12:43:59 - django.server - INFO - "GET /api/contacts/lists/1/contacts/ HTTP/1.1" 200 33
+2024-07-31 12:43:59 - django.server - INFO - "GET /frontend/contact-lists/1/contacts/ HTTP/1.1" 200 2229
+2024-07-31 12:44:06 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 71
+2024-07-31 12:44:06 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2041
+2024-07-31 12:44:07 - django.server - INFO - "GET /frontend/contact-lists/create/ HTTP/1.1" 200 2169
+2024-07-31 12:44:12 - django.server - INFO - "POST /api/contacts/lists/create/ HTTP/1.1" 200 52
+2024-07-31 12:44:12 - django.server - INFO - "POST /frontend/contact-lists/create/ HTTP/1.1" 302 0
+2024-07-31 12:44:12 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 108
+2024-07-31 12:44:12 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2128
+2024-07-31 12:44:14 - django.server - INFO - "GET /api/contacts/lists/2/contacts/ HTTP/1.1" 200 33
+2024-07-31 12:44:14 - django.server - INFO - "GET /frontend/contact-lists/2/contacts/ HTTP/1.1" 200 2229
+2024-07-31 12:44:16 - django.server - INFO - "GET /frontend/contact-lists/2/contacts/create/ HTTP/1.1" 200 2502
+2024-07-31 12:44:37 - django.server - INFO - "POST /api/contacts/lists/2/contacts/create/ HTTP/1.1" 200 74
+2024-07-31 12:44:37 - django.server - INFO - "POST /frontend/contact-lists/2/contacts/create/ HTTP/1.1" 302 0
+2024-07-31 12:44:37 - django.server - INFO - "GET /api/contacts/lists/2/contacts/ HTTP/1.1" 200 173
+2024-07-31 12:44:37 - django.server - INFO - "GET /frontend/contact-lists/2/contacts/ HTTP/1.1" 200 2818
+2024-07-31 12:44:38 - django.server - INFO - "GET /frontend/contact-lists/2/contacts/create/ HTTP/1.1" 200 2502
+2024-07-31 12:44:48 - django.server - INFO - "POST /api/contacts/lists/2/contacts/create/ HTTP/1.1" 200 72
+2024-07-31 12:44:48 - django.server - INFO - "POST /frontend/contact-lists/2/contacts/create/ HTTP/1.1" 302 0
+2024-07-31 12:44:48 - django.server - INFO - "GET /api/contacts/lists/2/contacts/ HTTP/1.1" 200 317
+2024-07-31 12:44:48 - django.server - INFO - "GET /frontend/contact-lists/2/contacts/ HTTP/1.1" 200 3475
+2024-07-31 12:44:55 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 108
+2024-07-31 12:44:55 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2128
+2024-07-31 12:44:59 - django.server - INFO - "POST /api/users/logout/ HTTP/1.1" 200 60
+2024-07-31 12:44:59 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-31 12:44:59 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1984
+2024-07-31 12:45:01 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 302 0
+2024-07-31 12:45:01 - django.server - INFO - "GET /frontend/login/?next=/frontend/contact-lists/ HTTP/1.1" 200 1984
+2024-07-31 12:45:03 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2501
+2024-07-31 12:45:21 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 89
+2024-07-31 12:45:21 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 200 2501
+2024-07-31 12:46:03 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1984
+2024-07-31 12:46:28 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 52
+2024-07-31 12:46:28 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 200 1984
+2024-07-31 12:46:35 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 52
+2024-07-31 12:46:35 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 200 1984
+2024-07-31 12:46:46 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2501
+2024-07-31 12:47:08 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 60
+2024-07-31 12:47:08 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 302 0
+2024-07-31 12:47:08 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 302 0
+2024-07-31 12:47:09 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 1984
+2024-07-31 12:47:19 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-07-31 12:47:19 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-07-31 12:47:19 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-07-31 12:47:19 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 162
+2024-07-31 12:47:24 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:47:24 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2005
+2024-07-31 12:47:37 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 43
+2024-07-31 12:47:37 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-07-31 12:47:42 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-07-31 12:54:08 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-07-31 12:54:08 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 162
+2024-07-31 12:54:08 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 12:54:09 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-07-31 12:54:09 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2005
+2024-07-31 12:54:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 21
+2024-07-31 12:54:12 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2490
+2024-07-31 12:54:12 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 12:54:14 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-07-31 12:55:04 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-31 12:55:04 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2429
+2024-07-31 12:55:04 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 13:16:10 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 1835
+2024-07-31 13:16:12 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 1835
+2024-07-31 13:16:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 21
+2024-07-31 13:16:13 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2490
+2024-07-31 13:16:14 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 1835
+2024-07-31 13:16:22 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-07-31 13:17:54 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5026
+2024-07-31 13:21:03 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 3158
+2024-07-31 13:21:18 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-07-31 13:22:34 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 427
+2024-07-31 13:22:34 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-31 13:22:34 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5553
+2024-07-31 13:23:25 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-07-31 13:23:25 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-07-31 13:23:25 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5055
+2024-07-31 13:23:25 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 13:23:45 - tracking.middleware - INFO - Valid open - IP: 127.0.0.1, User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-31 13:23:45 - django.server - INFO - "GET /api/tracking/serve-image/logo.png HTTP/1.1" 301 0
+2024-07-31 13:23:45 - tracking.urls - INFO - urls.py: PIXEL Request received for email abc@abc.com from ip: 127.0.0.1
+2024-07-31 13:23:45 - tracking.views - INFO - 'handle_tracking' called! Process ID: 9332, Thread ID: 124723348371008
+2024-07-31 13:23:45 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-31 07:53:45.334596+00:00 | Mail sent: 2024-07-31 07:53:24.899600+00:00 | Difference: 0:00:20.434996
+2024-07-31 13:23:45 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-31 13:23:45 - django.server - INFO - "GET /api/tracking/track-pixel/9a57f0ccc61b4092a32547ec12e05ee2/pixel.png HTTP/1.1" 200 95
+2024-07-31 13:23:46 - tracking.middleware - INFO - Valid open - IP: 127.0.0.1, User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-31 13:23:46 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-31 13:23:46 - tracking.urls - INFO - urls.py: PIXEL Request received for email apple1@apple.com from ip: 127.0.0.1
+2024-07-31 13:23:46 - tracking.views - INFO - 'handle_tracking' called! Process ID: 9332, Thread ID: 124722964592192
+2024-07-31 13:23:46 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-31 07:53:46.966296+00:00 | Mail sent: 2024-07-31 07:52:34.731809+00:00 | Difference: 0:01:12.234487
+2024-07-31 13:23:46 - django.server - INFO - "GET /api/tracking/track-pixel/fbfc1cbab67148c383132716eafcc629/pixel.png HTTP/1.1" 200 95
+2024-07-31 13:23:49 - tracking.middleware - INFO - Valid open - IP: 127.0.0.1, User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-31 13:23:49 - tracking.urls - INFO - urls.py: PIXEL Request received for email apple1@apple.com from ip: 127.0.0.1
+2024-07-31 13:23:49 - tracking.views - INFO - 'handle_tracking' called! Process ID: 9332, Thread ID: 124723348371008
+2024-07-31 13:23:49 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-31 07:53:49.184688+00:00 | Mail sent: 2024-07-31 07:52:34.731809+00:00 | Difference: 0:01:14.452879
+2024-07-31 13:23:49 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-31 13:23:49 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-31 07:53:49.184688+00:00 | last_log time: 2024-07-31 07:53:46.967515+00:00 | Difference: 0:00:02.217173
+2024-07-31 13:23:49 - django.server - INFO - "GET /api/tracking/track-pixel/fbfc1cbab67148c383132716eafcc629/pixel.png HTTP/1.1" 200 95
+2024-07-31 13:23:50 - tracking.urls - INFO - urls.py: LINK Request received for email apple1@apple.com from ip: 127.0.0.1
+2024-07-31 13:23:50 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-31 13:23:51 - tracking.urls - INFO - urls.py: LINK Request received for email apple1@apple.com from ip: 127.0.0.1
+2024-07-31 13:23:51 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-31 13:23:51 - tracking.urls - INFO - urls.py: LINK Request received for email apple1@apple.com from ip: 127.0.0.1
+2024-07-31 13:23:51 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-31 13:23:52 - tracking.urls - INFO - urls.py: LINK Request received for email apple1@apple.com from ip: 127.0.0.1
+2024-07-31 13:23:52 - django.server - INFO - "GET /api/tracking/track-link/3/ HTTP/1.1" 302 0
+2024-07-31 13:23:56 - tracking.middleware - INFO - Valid open - IP: 127.0.0.1, User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-31 13:23:56 - tracking.urls - INFO - urls.py: PIXEL Request received for email apple1@apple.com from ip: 127.0.0.1
+2024-07-31 13:23:56 - tracking.views - INFO - 'handle_tracking' called! Process ID: 9332, Thread ID: 124722964592192
+2024-07-31 13:23:56 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-07-31 07:53:56.437223+00:00 | Mail sent: 2024-07-31 07:52:34.731809+00:00 | Difference: 0:01:21.705414
+2024-07-31 13:23:56 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-07-31 13:23:56 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-07-31 07:53:56.437223+00:00 | last_log time: 2024-07-31 07:53:49.185859+00:00 | Difference: 0:00:07.251364
+2024-07-31 13:23:56 - django.server - INFO - "GET /api/tracking/track-pixel/fbfc1cbab67148c383132716eafcc629/pixel.png HTTP/1.1" 200 95
+2024-07-31 13:23:59 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 887
+2024-07-31 13:24:00 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 7639
+2024-07-31 13:24:16 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-31 13:24:16 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2473
+2024-07-31 13:24:16 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 13:24:17 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 887
+2024-07-31 13:24:17 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 7639
+2024-07-31 13:24:17 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 13:25:00 - django.server - INFO - "POST /api/users/logout/ HTTP/1.1" 200 60
+2024-07-31 13:25:00 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-07-31 13:25:00 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1984
+2024-07-31 13:25:00 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 13:25:01 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 887
+2024-07-31 13:25:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 7399
+2024-07-31 13:25:16 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=3 HTTP/1.1" 200 4743
+2024-07-31 13:25:16 - django.server - INFO - "GET /frontend/email/3/ HTTP/1.1" 200 8191
+2024-07-31 13:25:18 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 887
+2024-07-31 13:25:18 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 7399
+2024-07-31 13:25:19 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-07-31 13:25:19 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2233
+2024-07-31 13:25:20 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-07-31 13:25:20 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2189
+2024-07-31 13:25:25 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4643
+2024-07-31 13:25:27 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 306
+2024-07-31 13:25:27 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2634
+2024-07-31 13:25:31 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 253
+2024-07-31 13:25:31 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 2788
+2024-07-31 13:25:35 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 302 0
+2024-07-31 13:25:35 - django.server - INFO - "GET /frontend/login/?next=/frontend/contact-lists/ HTTP/1.1" 200 1984
+2024-07-31 13:25:35 - django.request - WARNING - Not Found: /favicon.ico
+2024-07-31 13:25:37 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2501
+2024-07-31 13:25:38 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1984
+2024-07-31 13:52:01 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/users/views.py changed, reloading.
+2024-07-31 13:52:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:01:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:50:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/models.py changed, reloading.
+2024-07-31 16:50:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:52:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-07-31 16:52:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:54:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-07-31 16:54:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:55:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-07-31 16:55:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:55:58 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-07-31 16:55:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:58:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-31 16:58:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 16:58:36 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-31 16:58:36 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 17:04:15 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-31 17:04:15 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 17:49:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/models.py changed, reloading.
+2024-07-31 17:49:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 17:49:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/models.py changed, reloading.
+2024-07-31 17:49:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-07-31 17:50:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-07-31 17:50:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

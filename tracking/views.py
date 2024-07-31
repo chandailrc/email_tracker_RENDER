@@ -7,7 +7,7 @@ import geoip2.database
 from .models import TrackingLog, LinkClick, EmailInteraction
 from .tracking_utils import aggregate_genuine_opens
 from datetime import datetime, timedelta
-from django.http import HttpResponse, FileResponse, JsonResponse
+from django.http import HttpResponse, FileResponse, JsonResponse, Http404
 from django.core import serializers
 from django.utils import timezone
 from django.shortcuts import get_object_or_404, redirect
@@ -174,15 +174,12 @@ def serve_image(request, image_name):
 
 from django.urls import reverse
 def empty_database(request):
-    # Ensure that only POST requests can trigger this action (for safety)
     if request.method == 'POST':
-        # Delete all records from all relevant models
         SentEmail.objects.all().delete()
         TrackingLog.objects.all().delete()
         Link.objects.all().delete()
         LinkClick.objects.all().delete()        
-        # Redirect to a success page or back to the dashboard
-        return redirect(reverse('dashboard'))  # Adjust 'dashboard' to your actual dashboard URL name
+        return redirect(reverse('dashboard'))
 
 def delete_unsubscribed_users(request):
     if request.method == 'POST':
@@ -230,7 +227,9 @@ def track_link(request, link_id):
 
 def dashboard_data(request):
     emails = SentEmail.objects.all()
-    unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
+    unsubscribed_users = UnsubscribedUser.objects.filter(
+        email__in=emails.values_list('recipient', flat=True)
+    ).values_list('email', flat=True)
     
     aggregate_genuine_opens(emails)
     
@@ -247,7 +246,10 @@ def email_detail_data(request):
     
     email_id = request.GET.get('email_id')
     
-    email = get_object_or_404(SentEmail, pk=email_id)
+    try:
+        email = SentEmail.objects.get(pk=email_id, user=request.user)
+    except SentEmail.DoesNotExist:
+        raise Http404("Email not found or you don't have permission to view it.")
     
     tracking_logs = TrackingLog.objects.filter(email=email).order_by('-opened_at')
     link_clicks = LinkClick.objects.filter(link__email=email).order_by('-clicked_at')
