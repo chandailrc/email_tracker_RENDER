@@ -9,6 +9,7 @@ from unsubscribers.models import UnsubscribedUser
 from django.core.mail import make_msgid
 from conversations.email_processor import process_email
 from smtplib import SMTPRecipientsRefused, SMTPServerDisconnected
+from django.core import signing
 
 import logging
 
@@ -29,6 +30,10 @@ def generate_tracking_urls(email):
     css_url = f"{base_url}/style.css"
 
     return pixel_url, css_url
+
+def generate_unsubscribe_link(recipient_email, sender_username):
+    encoded_username = signing.dumps(sender_username, salt='email-unsubscribe')
+    return f"{settings.BASE_URL}/frontend/unsubscribe/?email={recipient_email}&sender={encoded_username}"
     
 
 def tracked_email_sender(user, recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
@@ -71,6 +76,7 @@ def tracked_email_sender(user, recipient, subject, body, cc=None, bcc=None, in_r
         html_body = tracked_body.replace('\n', '<br>')  # Convert newlines to <br> tags
         pixel_url, css_url = generate_tracking_urls(email)
         visible_image_url = f"{settings.BASE_URL}/api/tracking/serve-image/logo.png"  # Adjust this URL to point to your logo image
+        unsub_url = generate_unsubscribe_link(recipient, user)
         
         email_body = f"""
         <!DOCTYPE html>
@@ -114,7 +120,7 @@ def tracked_email_sender(user, recipient, subject, body, cc=None, bcc=None, in_r
             <div>{html_body}</div>
             <div class="footer">
                 <p>This email was sent to {recipient}. If you no longer wish to receive these emails, you can 
-                <a href="{settings.BASE_URL}/frontend/unsubscribe/?email={recipient}" class="unsubscribe">unsubscribe here</a>.</p>
+                <a href="{unsub_url}" class="unsubscribe">unsubscribe here</a>.</p>
             </div>
         </body>
         </html>

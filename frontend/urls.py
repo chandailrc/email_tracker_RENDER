@@ -4,6 +4,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('home/', views.home, name='home'),
     path('compose/', views.compose_email_view, name='compose_email'),
     path('send-tracked-email/', views.send_tracked_email_view, name='send_tracked_email_view'),
     path('dashboard/', views.dashboard, name='dashboard'),
@@ -29,4 +30,7 @@ urlpatterns = [
     path('contact-lists/<int:list_id>/contacts/create/', views.create_contact_page, name='create_contact_page'),
     path('contacts/<int:contact_id>/update/', views.update_contact_page, name='update_contact_page'),
     path('contacts/<int:contact_id>/delete/', views.delete_contact, name='delete_contact'),
+    path('admin/users/', views.admin_user_list, name='admin_user_list'),
+    path('admin/users/create/', views.admin_user_create, name='admin_user_create'),
+    path('admin/users/<int:user_id>/', views.admin_user_detail, name='admin_user_detail'),
 ]

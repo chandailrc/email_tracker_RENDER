@@ -27,5 +27,6 @@ urlpatterns = [
     path('api/conversations/', include('conversations.urls')),
     path('api/users/', include('users.urls')),
     path('api/contacts/', include('contacts.urls')),
+    path('api/adminUserManagement/', include('adminUserManagement.urls')),
     path('frontend/', include('frontend.urls')),
 ]

@@ -7,7 +7,7 @@ from receiving.models import ReceivedEmail
 
 @require_http_methods(["GET"])
 def list_conversations(request):
-    conversations = Conversation.objects.all().order_by('-last_updated')
+    conversations = Conversation.objects.filter(user=request.user).order_by('-last_updated')
     data = [{
         'id': conv.id,
         'subject': conv.subject,
@@ -19,8 +19,8 @@ def list_conversations(request):
 @require_http_methods(["GET"])
 def get_conversation(request, conversation_id):
     try:
-        conversation = Conversation.objects.get(id=conversation_id)
-        messages = conversation.messages.all().order_by('timestamp')
+        conversation = Conversation.objects.get(user=request.user, id=conversation_id)
+        messages = ConversationMessage.objects.filter(conversation=conversation).order_by('timestamp')
         data = {
             'id': conversation.id,
             'subject': conversation.subject,
@@ -46,7 +46,7 @@ def create_conversation(request):
         if not subject or not participants:
             return JsonResponse({'error': 'Subject and participants are required'}, status=400)
         
-        conversation = Conversation.objects.create(subject=subject)
+        conversation = Conversation.objects.create(user=request.user, subject=subject)
         for email in participants:
             ConversationParticipant.objects.create(conversation=conversation, email=email)
         
@@ -64,13 +64,13 @@ def add_message_to_conversation(request, conversation_id):
         if not email_id or not email_type:
             return JsonResponse({'error': 'Email ID and type are required'}, status=400)
         
-        conversation = Conversation.objects.get(id=conversation_id)
+        conversation = Conversation.objects.get(user=request.user, id=conversation_id)
         
         if email_type == 'sent':
-            email = SentEmail.objects.get(id=email_id)
+            email = SentEmail.objects.get(user=request.user, id=email_id)
             ConversationMessage.objects.create(conversation=conversation, sent_email=email)
         elif email_type == 'received':
-            email = ReceivedEmail.objects.get(id=email_id)
+            email = ReceivedEmail.objects.get(user=request.user, id=email_id)
             ConversationMessage.objects.create(conversation=conversation, received_email=email)
         else:
             return JsonResponse({'error': 'Invalid email type'}, status=400)

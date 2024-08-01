@@ -4,8 +4,14 @@ from django.middleware.csrf import get_token
 from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
+from django.core import signing
+from django.core.signing import BadSignature
+
 
 import requests
+
+def home(request):
+    return render(request, 'home.html')
 
 def compose_email_view(request):
     return render(request, 'compose_email.html')
@@ -99,7 +105,8 @@ def email_detail(request, email_id):
 
 def unsubscribe(request):
     user_email = request.GET.get('email')
-    if user_email:
+    encoded_senderUser = request.GET.get('sender')
+    if user_email and encoded_senderUser:
         if request.method == 'POST':
             
             # Get the CSRF token
@@ -108,9 +115,15 @@ def unsubscribe(request):
             # Include the CSRF token in the headers
             headers = {'X-CSRFToken': csrf_token}
             
+            try:
+                sender_username = signing.loads(encoded_senderUser, salt='email-unsubscribe')
+            except BadSignature:
+                return HttpResponse("Invalid unsubscribe link.", status=400)
+            
             response = requests.post(
                 f'{settings.BASE_URL}/api/unsubscribers/unsubscribe-action/',
-                data={'user_email': user_email},
+                data={'user_email': user_email,
+                      'sender_username': sender_username},
                 headers=headers, 
                 cookies=request.COOKIES 
             )
@@ -266,7 +279,17 @@ from django.contrib.auth import authenticate
 
 def handle_login(request):
     if request.method == 'POST':
-        response = requests.post(f'{settings.BASE_URL}/api/users/login/', data=request.POST)
+        # Get the CSRF token
+        csrf_token = get_token(request)
+        
+        # Include the CSRF token in the headers
+        headers = {'X-CSRFToken': csrf_token}
+        
+        response = requests.post(f'{settings.BASE_URL}/api/users/login/', 
+                                 data=request.POST,
+                                 headers=headers,
+                                 cookies=request.COOKIES 
+                                 )
         print(f"Status Code: {response.status_code}")
         print(f"Response Content: {response.content}")
         print(f"Response Headers: {response.headers}")
@@ -437,3 +460,54 @@ def delete_contact(request, contact_id):
             return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))
         else:
             return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))
+        
+        
+import requests
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import user_passes_test
+
+def is_admin(user):
+    return user.is_authenticated and user.is_staff
+
+@user_passes_test(is_admin)
+def admin_user_list(request):
+    response = requests.get(f'{settings.BASE_URL}/api/adminUserManagement/users/')
+    if response.status_code == 200:
+        data = response.json()
+        return render(request, 'adminUserManagement/admin_user_list.html', {'users': data['users'], 'pagination': data})
+    messages.error(request, 'Failed to fetch user list')
+    return redirect('home')
+
+@user_passes_test(is_admin)
+def admin_user_detail(request, user_id):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/', data=request.POST)
+    elif request.method == 'DELETE':
+        response = requests.delete(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/')
+    else:
+        response = requests.get(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/')
+    
+    if response.status_code == 200:
+        data = response.json()
+        if request.method == 'DELETE':
+            messages.success(request, 'User deleted successfully')
+            return redirect('admin_user_list')
+        return render(request, 'adminUserManagement/admin_user_detail.html', {'user': data['user']})
+    messages.error(request, 'Failed to fetch or update user information')
+    return redirect('admin_user_list')
+
+@user_passes_test(is_admin)
+def admin_user_create(request):
+    if request.method == 'POST':
+        response = requests.post(f'{settings.BASE_URL}/api/adminUserManagement/users/create/', data=request.POST)
+        if response.status_code == 200:
+            data = response.json()
+            if data['success']:
+                messages.success(request, 'User created successfully')
+                return redirect('admin_user_detail', user_id=data['user_id'])
+            else:
+                messages.error(request, 'Failed to create user')
+        else:
+            messages.error(request, 'Failed to create user')
+    return render(request, 'adminUserManagement/admin_user_create.html')

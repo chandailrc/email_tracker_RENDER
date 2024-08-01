@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'recommendations',
     'users',
     'contacts',
+    'adminUserManagement',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'tracking.middleware.TrackingPixelMiddleware',
+    # 'tracking.middleware.TrackingPixelMiddleware',
 ]
 
 ROOT_URLCONF = 'email_tracker.urls'

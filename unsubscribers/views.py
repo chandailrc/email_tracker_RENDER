@@ -8,8 +8,10 @@ from django.views.decorators.csrf import csrf_protect
 @csrf_protect
 def unsubscribe_action(request):
     user_email = request.POST.get('user_email')
-    if user_email:
-        unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=user_email)
+    sender_username = request.POST.get('sender_username')
+    if user_email and sender_username:
+        unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=user_email,
+                                                                       unsubscribed_from=sender_username)
         return JsonResponse({
             'success': True,
             'message': 'You have been unsubscribed.',
@@ -22,7 +24,7 @@ def unsubscribe_action(request):
         }, status=400)
 
 def unsubscribed_users_data(request):
-    unsubscribed_users = UnsubscribedUser.objects.values_list('email', flat=True)
+    unsubscribed_users = UnsubscribedUser.objects.filter(unsubscribed_from=request.user).values_list('email', flat=True)    
     
     return JsonResponse({
         'unsubscribed_emails': list(unsubscribed_users)
@@ -34,7 +36,7 @@ def unsubscribed_users_data(request):
 def delete_unsub_user(request):
     user_email = request.POST.get('user_email')
     if user_email:
-        user = get_object_or_404(UnsubscribedUser, email=user_email)
+        user = get_object_or_404(UnsubscribedUser, email=user_email, unsubscribed_from=request.user)
         user.delete()
         return JsonResponse({
             'success': True,

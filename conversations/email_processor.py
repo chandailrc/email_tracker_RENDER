@@ -3,7 +3,7 @@ from .models import Conversation, ConversationParticipant, ConversationMessage
 from sending.models import SentEmail
 from receiving.models import ReceivedEmail
 
-def process_email(email, email_type):
+def process_email(email, email_type, user):
     if email_type not in ['sent', 'received']:
         raise ValueError('Invalid email type')
     
@@ -17,16 +17,16 @@ def process_email(email, email_type):
     if email.in_reply_to:
         try:
             if email_type == 'sent':
-                existing_message = ConversationMessage.objects.get(received_email=email.in_reply_to)
+                existing_message = ConversationMessage.objects.get(conversation__user=user, received_email=email.in_reply_to)
             else:  # received
-                existing_message = ConversationMessage.objects.get(sent_email=email.in_reply_to)
+                existing_message = ConversationMessage.objects.get(conversation__user=user, sent_email=email.in_reply_to)
             conversation = existing_message.conversation
         except ConversationMessage.DoesNotExist:
             # If not found, create a new conversation
-            conversation = Conversation.objects.create(subject=email.subject)
+            conversation = Conversation.objects.create(user=user, subject=email.subject)
     else:
         # Create a new conversation
-        conversation = Conversation.objects.create(subject=email.subject)
+        conversation = Conversation.objects.create(user=user, subject=email.subject)
     
     # Add participants
     participants = [email.sender, email.recipient] + email.get_cc_list() + email.get_bcc_list()

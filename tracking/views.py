@@ -62,7 +62,9 @@ def tracking_css(request, token):
 def handle_tracking(request, token, is_pixel):
     try:
         logger.info(f"'handle_tracking' called! Process ID: {os.getpid()}, Thread ID: {threading.get_ident()}")
-        pixel_token = TrackingPixelToken.objects.get(token=token)
+        pixel_token = get_object_or_404(TrackingPixelToken, 
+                                token=token, 
+                                email__user=request.user)
         recipient = pixel_token.email.recipient
         email_id = pixel_token.email.id
         mail = pixel_token.email
@@ -81,8 +83,7 @@ def handle_tracking(request, token, is_pixel):
         else:
             logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
             # Retrieve the most recent TrackingLog for this email
-            last_log = TrackingLog.objects.filter(email=mail).order_by('-opened_at').first()
-
+            last_log = TrackingLog.objects.filter(email__user=request.user, email=mail).order_by('-opened_at').first()
             if last_log:
                 time_diff = curr_time - last_log.opened_at
 
@@ -172,6 +173,9 @@ def serve_image(request, image_name):
     else:
         return HttpResponse('Image not found.', status=404)
 
+
+
+#!!!!!!!!!! DELETE empty_database  and  delete_unsubscribed_users !!!!!!!!!!!
 from django.urls import reverse
 def empty_database(request):
     if request.method == 'POST':
@@ -226,21 +230,21 @@ def track_link(request, link_id):
     return redirect(link.url)
 
 def dashboard_data(request):
-    emails = SentEmail.objects.all()
+    # Fetch emails sent by the current user
+    emails = SentEmail.objects.filter(user=request.user)
+
+    # Fetch unsubscribed users, but only for emails sent by the current user
     unsubscribed_users = UnsubscribedUser.objects.filter(
         email__in=emails.values_list('recipient', flat=True)
     ).values_list('email', flat=True)
-    
-    aggregate_genuine_opens(emails)
-    
-    # Serialize the email data
-    email_data = serializers.serialize('json', emails)
-    
-    return JsonResponse({
-        'emails': email_data,
-        'unsubscribed_emails': list(unsubscribed_users)
-    })
 
+    # Serialize the email data
+    emails_data = serializers.serialize('json', emails)
+
+    return JsonResponse({
+        'emails': emails_data,
+        'unsubscribed_users': list(unsubscribed_users)
+    })
 
 def email_detail_data(request):
     

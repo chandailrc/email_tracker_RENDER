@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Detail</title>
+</head>
+<body>
+    <h1>User Detail</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ user.username }}" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ user.email }}" required><br><br>
+        
+        <label for="user_type">User Type:</label>
+        <select id="user_type" name="user_type">
+            <option value="free" {% if user.user_type == 'free' %}selected{% endif %}>Free</option>
+            <option value="paid" {% if user.user_type == 'paid' %}selected{% endif %}>Paid</option>
+        </select><br><br>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" value="{{ user.phone }}"><br><br>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address">{{ user.address }}</textarea><br><br>
+        
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" value="{{ user.company }}"><br><br>
+        
+        <label for="is_active">Active:</label>
+        <input type="checkbox" id="is_active" name="is_active" {% if user.is_active %}checked{% endif %}><br><br>
+        
+        <label for="is_staff">Staff:</label>
+        <input type="checkbox" id="is_staff" name="is_staff" {% if user.is_staff %}checked{% endif %}><br><br>
+        
+        <label for="is_superuser">Superuser:</label>
+        <input type="checkbox" id="is_superuser" name="is_superuser" {% if user.is_superuser %}checked{% endif %}><br><br>
+        
+        <input type="submit" value="Update User">
+    </form>
+    
+    <h2>Delete User</h2>
+    <form method="post" onsubmit="return confirm('Are you sure you want to delete this user?');">
+        {% csrf_token %}
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete User">
+    </form>
+    
+    <a href="{% url 'admin_user_list' %}">Back to User List</a>
+</body>
+</html>

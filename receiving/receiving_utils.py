@@ -9,7 +9,7 @@ from email.utils import parseaddr
 from conversations.email_processor import process_email
 
 
-def fetch_and_process_emails():
+def fetch_and_process_emails(user):
     new_emails_count = 0
     with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
         mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
@@ -19,12 +19,12 @@ def fetch_and_process_emails():
         for num in search_data[0].split():
             _, data = mail.fetch(num, '(RFC822)')
             raw_email = data[0][1]
-            if process_incoming_email(raw_email):
+            if process_incoming_email(raw_email, user):
                 new_emails_count += 1
 
     return new_emails_count
 
-def process_incoming_email(raw_email):
+def process_incoming_email(raw_email, user):
     email_message = email.message_from_bytes(raw_email)
     
     # Extract email details
@@ -35,7 +35,7 @@ def process_incoming_email(raw_email):
     in_reply_to = email_message.get('In-Reply-To')
     
     # Check if this email has already been processed
-    if ReceivedEmail.objects.filter(message_id=message_id).exists():
+    if ReceivedEmail.objects.filter(user=user, message_id=message_id).exists():
         return False
 
     # Get the email body
@@ -49,6 +49,7 @@ def process_incoming_email(raw_email):
 
     # Create ReceivedEmail instance
     received_email = ReceivedEmail.objects.create(
+        user = user,
         sender=sender,
         recipient=recipient,
         subject=subject,
@@ -59,13 +60,13 @@ def process_incoming_email(raw_email):
     # Link to the original email if it's a reply
     if in_reply_to:
         try:
-            original_email = SentEmail.objects.get(message_id=in_reply_to)
+            original_email = SentEmail.objects.get(user=user, message_id=in_reply_to)
             received_email.in_reply_to = original_email
             received_email.thread_id = original_email.thread_id
             received_email.save()
         except SentEmail.DoesNotExist:
             try:
-                original_email = SentEmail.objects.filter(
+                original_email = SentEmail.objects.filter(user=user,
                     subject__startswith=re.sub(r'^Re:\s*', '', subject, flags=re.IGNORECASE),
                     recipient=sender
                 ).latest('sent_at')
@@ -76,7 +77,7 @@ def process_incoming_email(raw_email):
                 # If we still can't find the original email, just continue without linking
                 pass
 
-    process_email(received_email, 'received')
+    process_email(received_email, 'received', user)
 
     # Process attachments
     for part in email_message.walk():

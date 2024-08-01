@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .forms import CustomUserCreationForm
+from .models import CustomUser
 
 @csrf_exempt
 def register_user(request):
