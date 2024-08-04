@@ -321,6 +321,18 @@ LOGGING = {
             'filename': os.path.join(BASE_DIR, 'debug.log'),
             'formatter': 'verbose',  # Use the verbose formatter
         },
+        'trackingMiddleware_file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'trackingMiddleware.log'),  # The file specifically for tracking logs
+            'formatter': 'verbose',
+        },
+        'papertrail': {
+            'level': 'INFO',
+            'class': 'logging.handlers.SocketHandler',
+            'host': 'logs2.papertrailapp.com',
+            'port': 12974,  # Replace with your Papertrail port
+        },
         'console': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
@@ -334,7 +346,7 @@ LOGGING = {
             'propagate': True,
         },
         'tracking': {  # Replace with your actual app name
-            'handlers': ['file', 'console'],
+            'handlers': ['trackingMiddleware_file', 'papertrail', 'console'],
             'level': 'DEBUG',
             'propagate': True,
         },

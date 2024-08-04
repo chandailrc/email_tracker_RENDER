@@ -1,8 +1,10 @@
-# tracking/middleware.py
 import logging
 import ipaddress
+from collections import defaultdict
+from time import time
+from user_agents import parse
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('tracking')  # Use the custom tracking logger
 
 KNOWN_PREFETCH_USER_AGENTS = [
     'Proofpoint', 'Barracuda', 'Mimecast', 'Symantec', 'GoogleImageProxy', 'Outlook', 'YMail'
@@ -25,29 +27,58 @@ KNOWN_PREFETCH_IP_RANGES = [
     '67.195.0.0/16', '72.30.0.0/16', '98.136.0.0/14'
 ]
 
+SUSPICIOUS_KEYWORDS = ['security', 'scanner', 'filter', 'proxy', 'agent']
+
+REQUEST_LOG = defaultdict(lambda: {'count': 0, 'timestamp': time()})
+
+TIME_WINDOW = 60  # seconds
+
 def is_prefetch_ip(ip_address):
     for ip_range in KNOWN_PREFETCH_IP_RANGES:
         if ipaddress.ip_address(ip_address) in ipaddress.ip_network(ip_range):
             return True
     return False
 
+def extract_device_fingerprint(user_agent):
+    ua = parse(user_agent)
+    browser_info = f"{ua.browser.family} {ua.browser.version_string}"
+    os_info = f"{ua.os.family} {ua.os.version_string}"
+    device_type = 'Mobile' if ua.is_mobile else 'Tablet' if ua.is_tablet else 'Desktop'
+    return browser_info, os_info, device_type
+
 class TrackingPixelMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
 
     def __call__(self, request):
-        if 'pixel' in request.path:  # Assuming your tracking pixel endpoint contains 'pixel'
+        if 'pixel' in request.path:
             user_agent = request.META.get('HTTP_USER_AGENT', '')
             ip_address = request.META.get('REMOTE_ADDR', '')
-            
-            if any(ua in user_agent for ua in KNOWN_PREFETCH_USER_AGENTS) or is_prefetch_ip(ip_address):
-                logger.info(f"Prefetch detected - IP: {ip_address}, User-Agent: {user_agent}")
-                # Do not log this as a valid open
+            headers = request.META
+
+            current_time = time()
+            ip_info = REQUEST_LOG[ip_address]
+            if current_time - ip_info['timestamp'] < TIME_WINDOW:
+                ip_info['count'] += 1
             else:
-                logger.info(f"Valid open - IP: {ip_address}, User-Agent: {user_agent}")
-                # Log this as a valid open
-                
+                ip_info['count'] = 1
+                ip_info['timestamp'] = current_time
+
+            if ip_info['count'] > 10:  # Example threshold
+                self.log_request(request, 'High request rate detected')
+                logger.info(f"High request rate - IP: {ip_address}, User-Agent: {user_agent}")
+
+            # Extract device fingerprint
+            browser_info, os_info, device_type = extract_device_fingerprint(user_agent)
+
+            if any(ua in user_agent for ua in KNOWN_PREFETCH_USER_AGENTS) or ip_address in KNOWN_PREFETCH_IP_RANGES:
+                logger.info(f"Prefetch detected - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+            elif any(keyword in user_agent.lower() for keyword in SUSPICIOUS_KEYWORDS):
+                logger.info(f"Suspicious user agent detected - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+            elif any(keyword in headers.get(key, '').lower() for key in headers for keyword in SUSPICIOUS_KEYWORDS):
+                logger.info(f"Suspicious header detected - IP: {ip_address}, User-Agent: {user_agent}, Headers: {headers}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+            else:
+                logger.info(f"Valid open - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+
         response = self.get_response(request)
         return response
-# -*- coding: utf-8 -*-
-

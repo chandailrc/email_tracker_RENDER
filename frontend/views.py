@@ -6,6 +6,8 @@ from django.http import HttpResponse
 from django.core import serializers
 from django.core import signing
 from django.core.signing import BadSignature
+from django.contrib.auth.decorators import login_required
+
 
 
 import requests
@@ -13,9 +15,11 @@ import requests
 def home(request):
     return render(request, 'home.html')
 
+@login_required
 def compose_email_view(request):
     return render(request, 'compose_email.html')
 
+@login_required
 def send_tracked_email_view(request):
     if request.method == 'POST':
         csrf_token = get_token(request)
@@ -44,6 +48,7 @@ def send_tracked_email_view(request):
     
     return render(request, 'compose_email.html')
 
+@login_required
 def dashboard(request):
     # Make a GET request to the backend API
     response = requests.get(f'{settings.BASE_URL}/api/tracking/dashboard-data/')
@@ -68,7 +73,8 @@ def dashboard(request):
         return render(request, 'dashboard.html', {
             'error': 'Failed to fetch dashboard data'
         })
-    
+
+@login_required
 def email_detail(request, email_id):
     
     response = requests.get(f'{settings.BASE_URL}/api/tracking/email-detail-data/?email_id={email_id}')
@@ -142,7 +148,7 @@ def unsubscribe(request):
                 return HttpResponse('Failed to process the unsubscribe request.', status=response.status_code)
     return render(request, 'unsubscribe.html', {'email': user_email})
 
-
+@login_required
 def unsubscribed_users_list(request):
     
     response = requests.get(f'{settings.BASE_URL}/api/unsubscribers/unsubscribed-users-data/')
@@ -155,7 +161,7 @@ def unsubscribed_users_list(request):
     else:
         return render(request, 'unsubscribed_users_list.html', {'error': 'Failed to fetch unsubscribe data'})
 
-    
+@login_required   
 def delete_unsubscribed_user(request, user_email):
     
     if request.method == 'POST':
@@ -183,6 +189,7 @@ def delete_unsubscribed_user(request, user_email):
 
     return redirect('unsubscribed_users_list')
 
+@login_required
 def email_management(request):
     # Make API call to get emails
     response = requests.get(f'{settings.BASE_URL}/api/receiving/list/')
@@ -197,6 +204,7 @@ def email_management(request):
     }
     return render(request, 'email_management.html', context)
 
+@login_required
 def fetch_emails(request):
     if request.method == 'POST':
         
@@ -217,18 +225,18 @@ def fetch_emails(request):
             messages.error(request, "Failed to fetch new emails.")
     return redirect('email_management')
 
-
+@login_required
 def conversation_list(request):
     response = requests.get(f'{settings.BASE_URL}/api/conversations/list/')
     conversations = response.json()['conversations']
     return render(request, 'conversation_list.html', {'conversations': conversations})
 
+@login_required
 def conversation_detail(request, conversation_id):
     response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/')
     conversation = response.json()
     return render(request, 'conversation_detail.html', {'conversation': conversation})
 
-from django.contrib.auth.decorators import login_required
 
 def register_page(request):
     return render(request, 'users/register.html')
@@ -245,7 +253,6 @@ def update_profile_page(request):
     return render(request, 'users/update_profile.html')
 
 from django.contrib.auth import login as auth_login
-from django.contrib.auth import get_user_model
 
 def handle_register(request):
     if request.method == 'POST':
@@ -271,10 +278,7 @@ def handle_register(request):
     
     return render(request, 'users/register.html')
 
-import requests
-from django.shortcuts import render, redirect
-from django.conf import settings
-from django.contrib.auth import login as auth_login
+
 from django.contrib.auth import authenticate
 
 def handle_login(request):
@@ -313,13 +317,6 @@ def handle_login(request):
     
     return render(request, 'users/login.html')
 
-import requests
-from django.shortcuts import redirect
-from django.conf import settings
-
-import requests
-from django.shortcuts import redirect
-from django.conf import settings
 from django.contrib.auth import logout as auth_logout
 
 @login_required
@@ -349,9 +346,6 @@ def handle_logout(request):
     
     return redirect('profile_page')
 
-import requests
-from django.shortcuts import render, redirect
-from django.conf import settings
 from django.contrib.auth.decorators import login_required
 
 @login_required
@@ -379,11 +373,7 @@ def handle_update_profile(request):
     
     return redirect('update_profile_page')
 
-
-import requests
-from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from django.conf import settings
 
 @login_required
 def contact_lists_page(request):
@@ -462,9 +452,6 @@ def delete_contact(request, contact_id):
             return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))
         
         
-import requests
-from django.shortcuts import render, redirect
-from django.contrib import messages
 from django.contrib.auth.decorators import user_passes_test
 
 def is_admin(user):
