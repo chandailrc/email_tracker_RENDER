@@ -10,13 +10,13 @@ from .models import ReceivedEmail
 # For example, we can configure the IMAP server (IONOS) to redirect any email as it receives to this end point
 def receive_email(request):
     raw_email = request.body
-    process_incoming_email(raw_email, request.user)
+    process_incoming_email(raw_email, (request.user).id)
     return HttpResponse('Email received and processed', status=200)
 
 @csrf_exempt
 @require_POST
 def fetch_emails(request):
-    new_emails_count = fetch_and_process_emails(request.user)
+    new_emails_count = fetch_and_process_emails((request.user).id)
     return JsonResponse({'new_emails': new_emails_count})
 
 @require_GET

@@ -2,6 +2,7 @@ from .models import EmailInteraction, GenuineOpen
 from django.utils import timezone
 
 def aggregate_genuine_opens(emails):
+    print(f'email list len: {len(emails)}')
     for email in emails:
         # Delete existing GenuineOpen objects for this email
         GenuineOpen.objects.filter(email=email).delete()

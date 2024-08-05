@@ -21,9 +21,12 @@ def compose_email_view(request):
 
 @login_required
 def send_tracked_email_view(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
-        csrf_token = get_token(request)
-        headers = {'X-CSRFToken': csrf_token}
         
         response = requests.post(f'{settings.BASE_URL}/api/sending/send-tracked-email/', 
                                  data=request.POST, 
@@ -50,13 +53,17 @@ def send_tracked_email_view(request):
 
 @login_required
 def dashboard(request):
-    # Make a GET request to the backend API
-    response = requests.get(f'{settings.BASE_URL}/api/tracking/dashboard-data/')
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/tracking/dashboard-data/', headers=headers)
     
     if response.status_code == 200:
         data = response.json()
         # emails = json.loads(data['emails'])
-        unsubscribed_emails = data['unsubscribed_emails']
+        unsubscribed_emails = data['unsubscribed_users']
         
         # Deserialize the email data
         email_objects = list(serializers.deserialize('json', data['emails']))
@@ -77,7 +84,12 @@ def dashboard(request):
 @login_required
 def email_detail(request, email_id):
     
-    response = requests.get(f'{settings.BASE_URL}/api/tracking/email-detail-data/?email_id={email_id}')
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/tracking/email-detail-data/?email_id={email_id}', headers=headers)
     
     if response.status_code == 200:
         data = response.json()
@@ -110,17 +122,16 @@ def email_detail(request, email_id):
 
 
 def unsubscribe(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     user_email = request.GET.get('email')
     encoded_senderUser = request.GET.get('sender')
     if user_email and encoded_senderUser:
         if request.method == 'POST':
-            
-            # Get the CSRF token
-            csrf_token = get_token(request)
-            
-            # Include the CSRF token in the headers
-            headers = {'X-CSRFToken': csrf_token}
-            
+                       
             try:
                 sender_username = signing.loads(encoded_senderUser, salt='email-unsubscribe')
             except BadSignature:
@@ -150,8 +161,12 @@ def unsubscribe(request):
 
 @login_required
 def unsubscribed_users_list(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
     
-    response = requests.get(f'{settings.BASE_URL}/api/unsubscribers/unsubscribed-users-data/')
+    response = requests.get(f'{settings.BASE_URL}/api/unsubscribers/unsubscribed-users-data/', headers=headers)
     
     if response.status_code == 200:
         data = response.json()
@@ -163,14 +178,12 @@ def unsubscribed_users_list(request):
 
 @login_required   
 def delete_unsubscribed_user(request, user_email):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
     
     if request.method == 'POST':
-        
-        # Get the CSRF token
-        csrf_token = get_token(request)
-        
-        # Include the CSRF token in the headers
-        headers = {'X-CSRFToken': csrf_token}
         
         response = requests.post(f'{settings.BASE_URL}/api/unsubscribers/delete-unsub-user/', 
                                  data={'user_email': user_email},
@@ -191,8 +204,12 @@ def delete_unsubscribed_user(request, user_email):
 
 @login_required
 def email_management(request):
-    # Make API call to get emails
-    response = requests.get(f'{settings.BASE_URL}/api/receiving/list/')
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/receiving/list/', headers=headers)
     if response.status_code == 200:
         emails = response.json().get('emails', [])
     else:
@@ -206,14 +223,13 @@ def email_management(request):
 
 @login_required
 def fetch_emails(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
-        
-        # Get the CSRF token
-        csrf_token = get_token(request)
-        
-        # Include the CSRF token in the headers
-        headers = {'X-CSRFToken': csrf_token}
-        # Make API call to fetch emails
+    
         response = requests.post(f'{settings.BASE_URL}/api/receiving/fetch/',
                                  headers=headers,
                                  cookies=request.COOKIES 
@@ -227,13 +243,23 @@ def fetch_emails(request):
 
 @login_required
 def conversation_list(request):
-    response = requests.get(f'{settings.BASE_URL}/api/conversations/list/')
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/conversations/list/', headers=headers)
     conversations = response.json()['conversations']
     return render(request, 'conversation_list.html', {'conversations': conversations})
 
 @login_required
 def conversation_detail(request, conversation_id):
-    response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/')
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/', headers=headers)
     conversation = response.json()
     return render(request, 'conversation_detail.html', {'conversation': conversation})
 
@@ -255,8 +281,13 @@ def update_profile_page(request):
 from django.contrib.auth import login as auth_login
 
 def handle_register(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
-        response = requests.post(f'{settings.BASE_URL}/api/users/register/', data=request.POST)
+        response = requests.post(f'{settings.BASE_URL}/api/users/register/', data=request.POST, headers=headers)
         print(f"Status Code: {response.status_code}")
         print(f"Response Content: {response.content}")
         print(f"Response Headers: {response.headers}")
@@ -282,13 +313,13 @@ def handle_register(request):
 from django.contrib.auth import authenticate
 
 def handle_login(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
-        # Get the CSRF token
-        csrf_token = get_token(request)
-        
-        # Include the CSRF token in the headers
-        headers = {'X-CSRFToken': csrf_token}
-        
+            
         response = requests.post(f'{settings.BASE_URL}/api/users/login/', 
                                  data=request.POST,
                                  headers=headers,
@@ -321,8 +352,13 @@ from django.contrib.auth import logout as auth_logout
 
 @login_required
 def handle_logout(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
-        response = requests.post(f'{settings.BASE_URL}/api/users/logout/')
+        response = requests.post(f'{settings.BASE_URL}/api/users/logout/', headers=headers)
         print(f"Status Code: {response.status_code}")
         print(f"Response Content: {response.content}")
         print(f"Response Headers: {response.headers}")
@@ -350,10 +386,15 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def handle_update_profile(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
         # Include the session cookie in the request
         cookies = {'sessionid': request.COOKIES.get('sessionid')}
-        response = requests.post(f'{settings.BASE_URL}/api/users/update/', data=request.POST, cookies=cookies)
+        response = requests.post(f'{settings.BASE_URL}/api/users/update/', data=request.POST, cookies=cookies, headers=headers)
         print(f"Status Code: {response.status_code}")
         print(f"Response Content: {response.content}")
         print(f"Response Headers: {response.headers}")
@@ -377,7 +418,12 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def contact_lists_page(request):
-    response = requests.get(f'{settings.BASE_URL}/api/contacts/lists/', cookies={'sessionid': request.COOKIES.get('sessionid')})
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/contacts/lists/', cookies={'sessionid': request.COOKIES.get('sessionid')}, headers=headers)
     if response.status_code == 200:
         contact_lists = response.json().get('contact_lists', [])
         return render(request, 'contacts/contact_lists.html', {'contact_lists': contact_lists})
@@ -386,10 +432,16 @@ def contact_lists_page(request):
 
 @login_required
 def create_contact_list_page(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
         response = requests.post(f'{settings.BASE_URL}/api/contacts/lists/create/', 
                                  data=request.POST, 
-                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')},
+                                 headers=headers)
         if response.status_code == 200:
             return redirect('contact_lists_page')
         else:
@@ -399,8 +451,14 @@ def create_contact_list_page(request):
 
 @login_required
 def contacts_in_list_page(request, list_id):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     response = requests.get(f'{settings.BASE_URL}/api/contacts/lists/{list_id}/contacts/', 
-                            cookies={'sessionid': request.COOKIES.get('sessionid')})
+                            cookies={'sessionid': request.COOKIES.get('sessionid')},
+                            headers=headers)
     if response.status_code == 200:
         contacts = response.json().get('contacts', [])
         return render(request, 'contacts/contacts_in_list.html', {'contacts': contacts, 'list_id': list_id})
@@ -409,10 +467,16 @@ def contacts_in_list_page(request, list_id):
 
 @login_required
 def create_contact_page(request, list_id):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
         response = requests.post(f'{settings.BASE_URL}/api/contacts/lists/{list_id}/contacts/create/', 
                                  data=request.POST, 
-                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')},
+                                 headers=headers)
         if response.status_code == 200:
             return redirect('contacts_in_list_page', list_id=list_id)
         else:
@@ -422,10 +486,16 @@ def create_contact_page(request, list_id):
 
 @login_required
 def update_contact_page(request, contact_id):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
         response = requests.post(f'{settings.BASE_URL}/api/contacts/contacts/{contact_id}/update/', 
                                  data=request.POST, 
-                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')},
+                                 headers=headers)
         if response.status_code == 200:
             return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))
         else:
@@ -434,7 +504,8 @@ def update_contact_page(request, contact_id):
     
     # Fetch current contact data
     response = requests.get(f'{settings.BASE_URL}/api/contacts/contacts/{contact_id}/', 
-                            cookies={'sessionid': request.COOKIES.get('sessionid')})
+                            cookies={'sessionid': request.COOKIES.get('sessionid')},
+                            headers=headers)
     if response.status_code == 200:
         contact = response.json().get('contact', {})
         return render(request, 'contacts/update_contact.html', {'contact': contact})
@@ -443,9 +514,15 @@ def update_contact_page(request, contact_id):
 
 @login_required
 def delete_contact(request, contact_id):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
         response = requests.post(f'{settings.BASE_URL}/api/contacts/contacts/{contact_id}/delete/', 
-                                 cookies={'sessionid': request.COOKIES.get('sessionid')})
+                                 cookies={'sessionid': request.COOKIES.get('sessionid')},
+                                 headers=headers)
         if response.status_code == 200:
             return redirect('contacts_in_list_page', list_id=request.POST.get('list_id'))
         else:
@@ -459,7 +536,12 @@ def is_admin(user):
 
 @user_passes_test(is_admin)
 def admin_user_list(request):
-    response = requests.get(f'{settings.BASE_URL}/api/adminUserManagement/users/')
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/adminUserManagement/users/', headers=headers)
     if response.status_code == 200:
         data = response.json()
         return render(request, 'adminUserManagement/admin_user_list.html', {'users': data['users'], 'pagination': data})
@@ -468,12 +550,17 @@ def admin_user_list(request):
 
 @user_passes_test(is_admin)
 def admin_user_detail(request, user_id):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
-        response = requests.post(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/', data=request.POST)
+        response = requests.post(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/', data=request.POST, headers=headers)
     elif request.method == 'DELETE':
-        response = requests.delete(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/')
+        response = requests.delete(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/', headers=headers)
     else:
-        response = requests.get(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/')
+        response = requests.get(f'{settings.BASE_URL}/api/adminUserManagement/users/{user_id}/', headers=headers)
     
     if response.status_code == 200:
         data = response.json()
@@ -486,8 +573,13 @@ def admin_user_detail(request, user_id):
 
 @user_passes_test(is_admin)
 def admin_user_create(request):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
     if request.method == 'POST':
-        response = requests.post(f'{settings.BASE_URL}/api/adminUserManagement/users/create/', data=request.POST)
+        response = requests.post(f'{settings.BASE_URL}/api/adminUserManagement/users/create/', data=request.POST, headers=headers)
         if response.status_code == 200:
             data = response.json()
             if data['success']:

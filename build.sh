@@ -9,7 +9,7 @@ pip install -r requirements.txt
 python manage.py collectstatic --no-input
 
 # Reset database. Uncomment only if needed
-python manage.py reset_db
+# python manage.py reset_db
 
 # Apply any outstanding database migrations
 python manage.py migrate

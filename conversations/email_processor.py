@@ -2,8 +2,14 @@ from django.core.exceptions import ValidationError
 from .models import Conversation, ConversationParticipant, ConversationMessage
 from sending.models import SentEmail
 from receiving.models import ReceivedEmail
+from django.contrib.auth import get_user_model
 
-def process_email(email, email_type, user):
+
+def process_email(email, email_type, user_id):
+    
+    User = get_user_model()
+    user = User.objects.get(id=user_id)
+    
     if email_type not in ['sent', 'received']:
         raise ValueError('Invalid email type')
     

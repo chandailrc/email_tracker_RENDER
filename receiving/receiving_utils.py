@@ -7,9 +7,10 @@ from sending.models import SentEmail
 from django.core.files.base import ContentFile
 from email.utils import parseaddr
 from conversations.email_processor import process_email
+from django.contrib.auth import get_user_model
 
 
-def fetch_and_process_emails(user):
+def fetch_and_process_emails(user_id):
     new_emails_count = 0
     with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
         mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
@@ -19,12 +20,16 @@ def fetch_and_process_emails(user):
         for num in search_data[0].split():
             _, data = mail.fetch(num, '(RFC822)')
             raw_email = data[0][1]
-            if process_incoming_email(raw_email, user):
+            if process_incoming_email(raw_email, user_id):
                 new_emails_count += 1
 
     return new_emails_count
 
-def process_incoming_email(raw_email, user):
+def process_incoming_email(raw_email, user_id):
+    
+    User = get_user_model()
+    user = User.objects.get(id=user_id)
+    
     email_message = email.message_from_bytes(raw_email)
     
     # Extract email details
@@ -35,6 +40,7 @@ def process_incoming_email(raw_email, user):
     in_reply_to = email_message.get('In-Reply-To')
     
     # Check if this email has already been processed
+    
     if ReceivedEmail.objects.filter(user=user, message_id=message_id).exists():
         return False
 
@@ -77,7 +83,7 @@ def process_incoming_email(raw_email, user):
                 # If we still can't find the original email, just continue without linking
                 pass
 
-    process_email(received_email, 'received', user)
+    process_email(received_email, 'received', user_id)
 
     # Process attachments
     for part in email_message.walk():

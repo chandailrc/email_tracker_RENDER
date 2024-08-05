@@ -6976,3 +6976,914 @@ TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contr
 2024-08-04 21:03:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-08-04 21:04:01 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
 2024-08-04 21:04:01 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:16:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:16:21 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 302 0
+2024-08-04 21:16:21 - django.server - INFO - "GET /frontend/login/?next=/frontend/compose/ HTTP/1.1" 200 1984
+2024-08-04 21:16:21 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-04 21:16:29 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-08-04 21:16:30 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-08-04 21:16:30 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-08-04 21:16:30 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 151
+2024-08-04 21:16:32 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-04 21:17:45 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 481
+2024-08-04 21:17:45 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-04 21:17:45 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5637
+2024-08-04 21:45:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/views.py changed, reloading.
+2024-08-04 21:45:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:46:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-04 21:46:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:47:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-04 21:47:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:47:41 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-04 21:47:53 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 235
+2024-08-04 21:47:53 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-04 21:47:53 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5231
+2024-08-04 21:49:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-04 21:49:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:50:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-04 21:50:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:52:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/models.py changed, reloading.
+2024-08-04 21:52:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:54:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/views.py changed, reloading.
+2024-08-04 21:54:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 21:55:46 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-04 21:55:58 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 271
+2024-08-04 21:55:58 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-04 21:55:58 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5267
+2024-08-04 21:59:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-04 21:59:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:02:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-04 22:02:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:02:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-04 22:02:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:03:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-04 22:03:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:03:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/conversations/email_processor.py changed, reloading.
+2024-08-04 22:03:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:06:09 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-04 22:06:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:08:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/receiving/views.py changed, reloading.
+2024-08-04 22:08:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:13:07 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-04 22:13:07 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-04 22:13:07 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5055
+2024-08-04 22:13:16 - django.server - INFO - "GET /api/tracking/serve-image/logo.png HTTP/1.1" 301 0
+2024-08-04 22:13:16 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 22:13:17 - django.server - INFO - "GET /api/tracking/track-pixel/8a2bceba3e0c444dbd4d21196c1ca983/pixel.png HTTP/1.1" 200 95
+2024-08-04 22:13:20 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8edef05f90>>.
+2024-08-04 22:13:20 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:13:20 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:13:21 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8edeb728c0>>.
+2024-08-04 22:13:21 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:13:21 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:13:22 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8eddf2bf40>>.
+2024-08-04 22:13:22 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:13:22 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:13:25 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8edc385960>>.
+2024-08-04 22:13:25 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:13:25 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:13:26 - django.request - ERROR - Internal Server Error: /api/unsubscribers/unsubscribed-users-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/views.py", line 31, in unsubscribed_users_data
+    unsubscribed_users = UnsubscribedUser.objects.filter(unsubscribed_from=request.user).values_list('email', flat=True)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8edef04eb0>>.
+2024-08-04 22:13:26 - django.server - ERROR - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 500 132800
+2024-08-04 22:13:26 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2473
+2024-08-04 22:13:30 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8edef2cf40>>.
+2024-08-04 22:13:30 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:13:30 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:13:41 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8edeb71300>>.
+2024-08-04 22:13:41 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:13:41 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:13:42 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8eddf0d3f0>>.
+2024-08-04 22:13:42 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:13:42 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:18:45 - django.server - INFO - "POST /api/users/logout/ HTTP/1.1" 200 60
+2024-08-04 22:18:45 - django.server - INFO - "POST /frontend/handle-logout/ HTTP/1.1" 302 0
+2024-08-04 22:18:45 - django.server - INFO - "GET /frontend/login/ HTTP/1.1" 200 1984
+2024-08-04 22:18:49 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 302 0
+2024-08-04 22:18:49 - django.server - INFO - "GET /frontend/login/?next=/frontend/dashboard/ HTTP/1.1" 200 1984
+2024-08-04 22:18:57 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-08-04 22:18:57 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-08-04 22:18:57 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-08-04 22:18:57 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 151
+2024-08-04 22:19:00 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-08-04 22:19:00 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 151
+2024-08-04 22:19:02 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 234, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e8eddf3b700>>.
+2024-08-04 22:19:02 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132369
+2024-08-04 22:19:02 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:19:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-04 22:19:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:19:57 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 235, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x717de03904f0>>.
+2024-08-04 22:19:57 - django.server - ERROR - "GET /api/tracking/dashboard-data/ HTTP/1.1" 500 132395
+2024-08-04 22:19:57 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:21:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:21:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:21:48 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/tracking/dashboard-data/
+2024-08-04 22:21:48 - django.server - WARNING - "POST /api/tracking/dashboard-data/ HTTP/1.1" 403 2869
+2024-08-04 22:21:48 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:21:49 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/tracking/dashboard-data/
+2024-08-04 22:21:49 - django.server - WARNING - "POST /api/tracking/dashboard-data/ HTTP/1.1" 403 2869
+2024-08-04 22:21:49 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:23:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-04 22:23:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:23:24 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 236, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x77a523175f60>>.
+2024-08-04 22:23:24 - django.server - ERROR - "POST /api/tracking/dashboard-data/ HTTP/1.1" 500 136234
+2024-08-04 22:23:25 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:24:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:24:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:25:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:25:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:25:44 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 236, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7db5a837ceb0>>.
+2024-08-04 22:25:44 - django.server - ERROR - "POST /api/tracking/dashboard-data/ HTTP/1.1" 500 136234
+2024-08-04 22:25:44 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:32:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:32:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:33:01 - django.request - ERROR - Internal Server Error: /api/tracking/dashboard-data/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py", line 236, in dashboard_data
+    emails = SentEmail.objects.filter(user=request.user)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x714604178e20>>.
+2024-08-04 22:33:01 - django.server - ERROR - "POST /api/tracking/dashboard-data/ HTTP/1.1" 500 136234
+2024-08-04 22:33:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2454
+2024-08-04 22:39:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:39:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:39:39 - django.server - INFO - "POST /api/tracking/dashboard-data/ HTTP/1.1" 200 457
+2024-08-04 22:39:39 - django.request - ERROR - Internal Server Error: /frontend/dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 64, in dashboard
+    unsubscribed_emails = data['unsubscribed_emails']
+KeyError: 'unsubscribed_emails'
+2024-08-04 22:39:39 - django.server - ERROR - "GET /frontend/dashboard/ HTTP/1.1" 500 81163
+2024-08-04 22:40:44 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:40:44 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:40:51 - django.server - INFO - "POST /api/tracking/dashboard-data/ HTTP/1.1" 200 457
+2024-08-04 22:40:51 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3711
+2024-08-04 22:43:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:43:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:44:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:44:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:44:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:44:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:45:39 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:45:39 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:46:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:46:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:46:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:46:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:47:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:47:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:47:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:47:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:48:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:48:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:52:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:52:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:57:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:57:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:57:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:57:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:57:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:57:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 22:58:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 22:58:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:00:03 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:00:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:01:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:01:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:02:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:02:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:02:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:02:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:02:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:02:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:02:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:02:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:03:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:03:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:04:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:04:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:04:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:04:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:05:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:05:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:05:21 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-04 23:05:23 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 457
+2024-08-04 23:05:23 - django.request - ERROR - Internal Server Error: /frontend/dashboard/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py", line 65, in dashboard
+    unsubscribed_emails = data['unsubscribed_emails']
+KeyError: 'unsubscribed_emails'
+2024-08-04 23:05:23 - django.server - ERROR - "GET /frontend/dashboard/ HTTP/1.1" 500 81644
+2024-08-04 23:05:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:05:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:05:49 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 457
+2024-08-04 23:05:49 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3711
+2024-08-04 23:05:49 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-04 23:06:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:06:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:06:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:06:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:07:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:07:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:08:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:08:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:09:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:09:11 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:11:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:11:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:12:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:12:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:13:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:13:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:14:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:14:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:14:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:14:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:15:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:15:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:15:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:15:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:16:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:16:06 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:16:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:16:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:16:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:16:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:16:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:16:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:17:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:17:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:17:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:17:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:18:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:18:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:18:23 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:18:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:18:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:18:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:19:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:19:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:19:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:19:27 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:19:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:19:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:19:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:19:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:20:24 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:20:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:20:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:20:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:20:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:20:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:21:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:21:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:21:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:21:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:21:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:21:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:22:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:22:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:22:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-04 23:22:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:23:36 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 457
+2024-08-04 23:23:36 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3711
+2024-08-04 23:23:38 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-08-04 23:23:38 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2473
+2024-08-04 23:23:39 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-08-04 23:23:39 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2429
+2024-08-04 23:23:40 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 457
+2024-08-04 23:23:40 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 3711
+2024-08-04 23:23:43 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-04 23:23:58 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-04 23:23:58 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-04 23:23:58 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5055
+2024-08-04 23:24:03 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:24:03 - django.server - INFO - "GET /api/tracking/track-pixel/42f17d0e1792441ea998850b387affba/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:24:05 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:07 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:07 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:07 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:25 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:24:25 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 6444
+2024-08-04 23:24:34 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:24:36 - django.server - INFO - "GET /api/tracking/track-pixel/42f17d0e1792441ea998850b387affba/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:24:36 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:37 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:37 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:37 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:24:42 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:24:42 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 8342
+2024-08-04 23:24:48 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=7 HTTP/1.1" 200 6428
+2024-08-04 23:24:48 - django.server - INFO - "GET /frontend/email/7/ HTTP/1.1" 200 10613
+2024-08-04 23:28:12 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-04 23:28:12 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-04 23:28:27 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:28:27 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 8342
+2024-08-04 23:28:34 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:28:34 - django.server - INFO - "GET /api/tracking/track-pixel/42f17d0e1792441ea998850b387affba/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:28:38 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:28:38 - django.server - INFO - "GET /api/tracking/track-pixel/42f17d0e1792441ea998850b387affba/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:28:41 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:28:41 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 9530
+2024-08-04 23:28:48 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:28:48 - django.server - INFO - "GET /api/tracking/track-pixel/42f17d0e1792441ea998850b387affba/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:28:49 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:29:02 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:29:02 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10450
+2024-08-04 23:29:21 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:29:21 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10450
+2024-08-04 23:29:22 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:29:22 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 10450
+2024-08-04 23:29:26 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:29:26 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:29:27 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:29:29 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:29:29 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 11429
+2024-08-04 23:29:33 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:29:35 - django.server - INFO - "GET /api/tracking/track-pixel/42f17d0e1792441ea998850b387affba/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:29:35 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:29:36 - django.server - INFO - "GET /api/tracking/track-link/1/ HTTP/1.1" 302 0
+2024-08-04 23:29:40 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 912
+2024-08-04 23:29:40 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 12675
+2024-08-04 23:30:03 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-04 23:31:06 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-04 23:31:06 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-04 23:31:06 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5055
+2024-08-04 23:31:11 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:31:11 - django.server - INFO - "GET /api/tracking/track-pixel/b4114b9a03d04c26803ca0c0e7b82e57/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:31:14 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-04 23:31:14 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 14104
+2024-08-04 23:31:21 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:31:21 - django.server - INFO - "GET /api/tracking/track-pixel/b4114b9a03d04c26803ca0c0e7b82e57/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:31:26 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-04 23:31:26 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 14698
+2024-08-04 23:31:26 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-04 23:31:29 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-04 23:31:33 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-04 23:31:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15024
+2024-08-04 23:31:38 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:31:38 - django.server - INFO - "GET /api/tracking/track-pixel/b4114b9a03d04c26803ca0c0e7b82e57/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:31:41 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-04 23:31:44 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-04 23:31:44 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15944
+2024-08-04 23:31:48 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-04 23:31:49 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-04 23:31:53 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-04 23:31:53 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 16596
+2024-08-04 23:31:56 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-04 23:31:56 - django.server - INFO - "GET /api/tracking/track-pixel/b4114b9a03d04c26803ca0c0e7b82e57/pixel.png HTTP/1.1" 200 95
+2024-08-04 23:31:58 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-04 23:31:59 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-04 23:31:59 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-04 23:32:03 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-04 23:32:03 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 18168
+2024-08-04 23:32:36 - django.server - INFO - "GET /api/tracking/email-detail-data/?email_id=8 HTTP/1.1" 200 7135
+2024-08-04 23:32:36 - django.server - INFO - "GET /frontend/email/8/ HTTP/1.1" 200 11307
+2024-08-05 09:44:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/tracking_utils.py changed, reloading.
+2024-08-05 09:44:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 09:44:31 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-05 09:44:31 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 18168
+2024-08-05 09:45:27 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 09:45:30 - django.server - INFO - "GET /api/tracking/track-pixel/b4114b9a03d04c26803ca0c0e7b82e57/pixel.png HTTP/1.1" 200 95
+2024-08-05 09:45:32 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-05 09:45:37 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-05 09:45:37 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19087
+2024-08-05 09:45:48 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 09:45:49 - django.server - INFO - "GET /api/tracking/track-pixel/b4114b9a03d04c26803ca0c0e7b82e57/pixel.png HTTP/1.1" 200 95
+2024-08-05 09:45:53 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-05 09:45:53 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19681
+2024-08-05 09:45:55 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 09:45:55 - django.server - INFO - "GET /api/tracking/track-pixel/b4114b9a03d04c26803ca0c0e7b82e57/pixel.png HTTP/1.1" 200 95
+2024-08-05 09:45:59 - django.server - INFO - "GET /api/tracking/track-link/2/ HTTP/1.1" 302 0
+2024-08-05 09:46:03 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-05 09:46:03 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20600
+2024-08-05 09:48:19 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-05 09:48:19 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20600
+2024-08-05 09:48:21 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-08-05 09:48:21 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2473
+2024-08-05 09:48:24 - django.server - INFO - "GET /frontend/unsubscribe/?email=test3@test.com&sender=InVzZXIxIg:1safXW:yawNlGm9wy1r9FrgMcwF04EuWOidpcJsRE9ejnymn3w HTTP/1.1" 200 522
+2024-08-05 09:48:25 - django.security.csrf - WARNING - Forbidden (CSRF cookie not set.): /api/unsubscribers/unsubscribe-action/
+2024-08-05 09:48:25 - django.server - WARNING - "POST /api/unsubscribers/unsubscribe-action/ HTTP/1.1" 403 2869
+2024-08-05 09:48:25 - django.request - WARNING - Forbidden: /frontend/unsubscribe/
+2024-08-05 09:48:25 - django.server - WARNING - "POST /frontend/unsubscribe/?email=test3@test.com&sender=InVzZXIxIg:1safXW:yawNlGm9wy1r9FrgMcwF04EuWOidpcJsRE9ejnymn3w HTTP/1.1" 403 42
+2024-08-05 09:49:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/views.py changed, reloading.
+2024-08-05 09:49:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 09:49:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/unsubscribers/views.py changed, reloading.
+2024-08-05 09:49:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 09:49:49 - django.server - INFO - "GET /frontend/unsubscribe/?email=test3@test.com&sender=InVzZXIxIg:1safXW:yawNlGm9wy1r9FrgMcwF04EuWOidpcJsRE9ejnymn3w HTTP/1.1" 200 522
+2024-08-05 09:49:51 - django.server - INFO - "POST /api/unsubscribers/unsubscribe-action/ HTTP/1.1" 200 90
+2024-08-05 09:49:51 - django.server - INFO - "POST /frontend/unsubscribe/?email=test3@test.com&sender=InVzZXIxIg:1safXW:yawNlGm9wy1r9FrgMcwF04EuWOidpcJsRE9ejnymn3w HTTP/1.1" 200 40
+2024-08-05 09:49:56 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 43
+2024-08-05 09:49:56 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2977
+2024-08-05 09:50:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 439
+2024-08-05 09:50:04 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 3077
+2024-08-05 09:50:06 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 242
+2024-08-05 09:50:06 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 3006
+2024-08-05 09:50:09 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 439
+2024-08-05 09:50:09 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 3077
+2024-08-05 09:50:11 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 242
+2024-08-05 09:50:11 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 3004
+2024-08-05 09:50:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 439
+2024-08-05 09:50:12 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 3077
+2024-08-05 09:50:14 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 242
+2024-08-05 09:50:14 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 3006
+2024-08-05 09:50:15 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 439
+2024-08-05 09:50:15 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 3077
+2024-08-05 09:50:23 - django.server - INFO - "GET /api/contacts/lists/ HTTP/1.1" 200 38
+2024-08-05 09:50:23 - django.server - INFO - "GET /frontend/contact-lists/ HTTP/1.1" 200 2005
+2024-08-05 09:50:26 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-08-05 09:50:26 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 151
+2024-08-05 09:50:28 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1381
+2024-08-05 09:50:28 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20601

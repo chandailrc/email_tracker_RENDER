@@ -12,7 +12,7 @@ from django.core import serializers
 from django.utils import timezone
 from django.shortcuts import get_object_or_404, redirect
 from django.conf import settings
-
+from django.views.decorators.csrf import csrf_exempt
 
 from sending.models import SentEmail, Link, TrackingPixelToken
 from unsubscribers.models import UnsubscribedUser
@@ -229,14 +229,18 @@ def track_link(request, link_id):
     
     return redirect(link.url)
 
+@csrf_exempt
 def dashboard_data(request):
     # Fetch emails sent by the current user
+    print(f'username : {request.user.username}')
     emails = SentEmail.objects.filter(user=request.user)
 
     # Fetch unsubscribed users, but only for emails sent by the current user
     unsubscribed_users = UnsubscribedUser.objects.filter(
         email__in=emails.values_list('recipient', flat=True)
     ).values_list('email', flat=True)
+    
+    aggregate_genuine_opens(emails)
 
     # Serialize the email data
     emails_data = serializers.serialize('json', emails)

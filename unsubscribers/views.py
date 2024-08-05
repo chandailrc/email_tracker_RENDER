@@ -2,16 +2,20 @@ from .models import UnsubscribedUser
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
+from django.contrib.auth import get_user_model
 
 @require_POST
-@csrf_protect
+@csrf_exempt
 def unsubscribe_action(request):
     user_email = request.POST.get('user_email')
     sender_username = request.POST.get('sender_username')
     if user_email and sender_username:
+        
+        User = get_user_model()
+        user = User.objects.get(username=sender_username)
         unsubscribed, created = UnsubscribedUser.objects.get_or_create(email=user_email,
-                                                                       unsubscribed_from=sender_username)
+                                                                       unsubscribed_from=user)
         return JsonResponse({
             'success': True,
             'message': 'You have been unsubscribed.',
@@ -32,7 +36,7 @@ def unsubscribed_users_data(request):
 
 
 @require_POST
-@csrf_protect
+@csrf_exempt
 def delete_unsub_user(request):
     user_email = request.POST.get('user_email')
     if user_email:

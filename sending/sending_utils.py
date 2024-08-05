@@ -10,6 +10,7 @@ from django.core.mail import make_msgid
 from conversations.email_processor import process_email
 from smtplib import SMTPRecipientsRefused, SMTPServerDisconnected
 from django.core import signing
+from django.contrib.auth import get_user_model
 
 import logging
 
@@ -36,7 +37,9 @@ def generate_unsubscribe_link(recipient_email, sender_username):
     return f"{settings.BASE_URL}/frontend/unsubscribe/?email={recipient_email}&sender={encoded_username}"
     
 
-def tracked_email_sender(user, recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
+def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
+    User = get_user_model()
+    user = User.objects.get(id=user_id)
     if UnsubscribedUser.objects.filter(email=recipient).exists():
         logger.info(f"sending_utils.py: Email not sent to {recipient} as they have unsubscribed.")
         return False, "Recipient has unsubscribed"
@@ -76,7 +79,7 @@ def tracked_email_sender(user, recipient, subject, body, cc=None, bcc=None, in_r
         html_body = tracked_body.replace('\n', '<br>')  # Convert newlines to <br> tags
         pixel_url, css_url = generate_tracking_urls(email)
         visible_image_url = f"{settings.BASE_URL}/api/tracking/serve-image/logo.png"  # Adjust this URL to point to your logo image
-        unsub_url = generate_unsubscribe_link(recipient, user)
+        unsub_url = generate_unsubscribe_link(recipient, user.username)
         
         email_body = f"""
         <!DOCTYPE html>
@@ -139,7 +142,7 @@ def tracked_email_sender(user, recipient, subject, body, cc=None, bcc=None, in_r
         msg.send()
         logger.info(f"sending_utils.py: Email sent successfully to {recipient}")
         
-        process_email(email, 'sent')
+        process_email(email, 'sent', user_id)
         
         return True, "Email sent successfully"
     except SMTPRecipientsRefused:
