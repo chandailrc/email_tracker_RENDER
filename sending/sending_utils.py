@@ -16,7 +16,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def generate_tracking_urls(email):
+def generate_tracking_urls(email, sender_username):
     unique_id = uuid.uuid4().hex
     expiration = timezone.now() + timedelta(hours=24)  # URL valid for 24 hours
 
@@ -26,15 +26,18 @@ def generate_tracking_urls(email):
         expires_at=expiration
     )
 
-    base_url = f"{settings.BASE_URL}/api/tracking/track-pixel/{unique_id}"
-    pixel_url = f"{base_url}/pixel.png"
-    css_url = f"{base_url}/style.css"
+    encoded_username = signing.dumps(sender_username, salt='email-pixel-link')
+    base_url = f"{settings.BASE_URL}/api/tracking/track-pixel/{unique_id}/?sender={encoded_username}"
+    pixel_url = f"{base_url}&resource=pixel.png"
+    css_url = f"{base_url}&resource=style.css"
 
     return pixel_url, css_url
 
 def generate_unsubscribe_link(recipient_email, sender_username):
-    encoded_username = signing.dumps(sender_username, salt='email-unsubscribe')
+    encoded_username = signing.dumps(sender_username, salt='email-unsubscribe-link')
     return f"{settings.BASE_URL}/frontend/unsubscribe/?email={recipient_email}&sender={encoded_username}"
+
+
     
 
 def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
@@ -69,15 +72,17 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         )
         logger.info(f"sending_utils.py: Email db entry created for {recipient} at {timezone.now()}")
         
-        def replace_link(match):
+        def replace_link(match, email, sender_username):
             original_url = match.group(0)
             link = Link.objects.create(email=email, url=original_url)
-            tracked_url = f"{settings.BASE_URL}/api/tracking/track-link/{link.id}/"
+            encoded_username = signing.dumps(sender_username, salt='email-link-link')
+            tracked_url = f"{settings.BASE_URL}/api/tracking/track-link/{link.id}/?sender={encoded_username}"
             return f'<a href="{tracked_url}" style="color: #007bff; text-decoration: none;">{original_url}</a>'
+
         
-        tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, body)
+        tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', lambda match: replace_link(match, email, user.username), body)
         html_body = tracked_body.replace('\n', '<br>')  # Convert newlines to <br> tags
-        pixel_url, css_url = generate_tracking_urls(email)
+        pixel_url, css_url = generate_tracking_urls(email, user.username)
         visible_image_url = f"{settings.BASE_URL}/api/tracking/serve-image/logo.png"  # Adjust this URL to point to your logo image
         unsub_url = generate_unsubscribe_link(recipient, user.username)
         

@@ -4,8 +4,6 @@ from django.middleware.csrf import get_token
 from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
-from django.core import signing
-from django.core.signing import BadSignature
 from django.contrib.auth.decorators import login_required
 
 
@@ -132,15 +130,11 @@ def unsubscribe(request):
     if user_email and encoded_senderUser:
         if request.method == 'POST':
                        
-            try:
-                sender_username = signing.loads(encoded_senderUser, salt='email-unsubscribe')
-            except BadSignature:
-                return HttpResponse("Invalid unsubscribe link.", status=400)
-            
+                      
             response = requests.post(
                 f'{settings.BASE_URL}/api/unsubscribers/unsubscribe-action/',
                 data={'user_email': user_email,
-                      'sender_username': sender_username},
+                      'encoded_senderUser': encoded_senderUser},
                 headers=headers, 
                 cookies=request.COOKIES 
             )

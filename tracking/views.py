@@ -17,6 +17,12 @@ from django.views.decorators.csrf import csrf_exempt
 from sending.models import SentEmail, Link, TrackingPixelToken
 from unsubscribers.models import UnsubscribedUser
 
+from django.core import signing
+from django.core.signing import BadSignature
+from django.contrib.auth import get_user_model
+
+
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -49,22 +55,33 @@ def get_device_type(user_agent):
 
 
 def tracking_pixel(request, token):
+    resource = request.GET.get('resource')
+    
+    if resource == 'pixel.png':
+        is_img=True
+    else:
+        is_img=False
     # recipient = TrackingPixelToken.objects.get(token=token).email.recipient
     # logger.info(f"views.py/PIXEL: Request received for {recipient} from {get_client_ip(request)}.")
-    return handle_tracking(request, token, is_pixel=True)
+    return handle_tracking(request, token, is_img)
 
-def tracking_css(request, token):
-    # recipient = TrackingPixelToken.objects.get(token=token).email.recipient
-    # logger.info(f"views.py/CSS: Request received for {recipient} from {get_client_ip(request)}")
-    return handle_tracking(request, token, is_pixel=False)
-
-
-def handle_tracking(request, token, is_pixel):
+def handle_tracking(request, token, is_img):
     try:
         logger.info(f"'handle_tracking' called! Process ID: {os.getpid()}, Thread ID: {threading.get_ident()}")
+        
+        encoded_senderUser = request.GET.get('sender')
+        
+        try:
+            sender_username = signing.loads(encoded_senderUser, salt='email-pixel-link')
+        except BadSignature:
+            return HttpResponse("Invalid tracking pixel link.", status=400)
+        
+        User = get_user_model()
+        user = User.objects.get(username=sender_username)
+        
         pixel_token = get_object_or_404(TrackingPixelToken, 
                                 token=token, 
-                                email__user=request.user)
+                                email__user=user)
         recipient = pixel_token.email.recipient
         email_id = pixel_token.email.id
         mail = pixel_token.email
@@ -83,7 +100,7 @@ def handle_tracking(request, token, is_pixel):
         else:
             logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {mail.sent_at} | Difference: {time_difference}")
             # Retrieve the most recent TrackingLog for this email
-            last_log = TrackingLog.objects.filter(email__user=request.user, email=mail).order_by('-opened_at').first()
+            last_log = TrackingLog.objects.filter(email__user=user, email=mail).order_by('-opened_at').first()
             if last_log:
                 time_diff = curr_time - last_log.opened_at
 
@@ -114,7 +131,7 @@ def handle_tracking(request, token, is_pixel):
                 ip_address=ip_address,
                 user_agent=user_agent,
                 opened_at=timezone.now(),
-                tracking_type='pixel' if is_pixel else 'css',
+                tracking_type='img' if is_img else 'css',
                 geo_location=geo_location,
                 referer=referer,
                 device_type=device_type,
@@ -132,7 +149,7 @@ def handle_tracking(request, token, is_pixel):
                 timestamp=timezone.now()
             )
 
-            if is_pixel:
+            if is_img:
                 # Serve a 1x1 transparent PNG
                 # As file:
                 png_path = os.path.join(settings.BASE_DIR, 'static/images', 'transparent.png')
@@ -191,7 +208,18 @@ def delete_unsubscribed_users(request):
         return redirect('unsubscribed_users_list')
 
 def track_link(request, link_id):
-    link = get_object_or_404(Link, pk=link_id)
+    
+    encoded_senderUser = request.GET.get('sender')
+    
+    try:
+        sender_username = signing.loads(encoded_senderUser, salt='email-link-link')
+    except BadSignature:
+        return HttpResponse("Invalid tracking pixel link.", status=400)
+    
+    User = get_user_model()
+    user = User.objects.get(username=sender_username)
+    
+    link = get_object_or_404(Link, email__user=user, pk=link_id)
     
     ip_address = get_client_ip(request)
     user_agent = request.META.get('HTTP_USER_AGENT')
@@ -207,7 +235,7 @@ def track_link(request, link_id):
 
     LinkClick.objects.create(
         link=link,
-        clicked_at=datetime.now(),
+        clicked_at=timezone.now(),
         ip_address=ip_address,
         user_agent=user_agent,
         geo_location=geo_location,

@@ -74,3 +74,137 @@
 2024-08-05 09:45:55 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 04:15:55.691126+00:00 | Mail sent: 2024-08-04 18:01:06.648508+00:00 | Difference: 10:14:49.042618
 2024-08-05 09:45:55 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 04:15:55.691126+00:00 | last_log time: 2024-08-05 04:15:49.345166+00:00 | Difference: 0:00:06.345960
 2024-08-05 09:45:59 - tracking.urls - INFO - urls.py: LINK Request received for email test3@test.com from ip: 127.0.0.1
+2024-08-05 11:50:21 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 11:55:47 - tracking.urls - INFO - urls.py: PIXEL Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 11:55:48 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1014325, Thread ID: 136572794029632
+2024-08-05 11:55:48 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 06:25:48.367564+00:00 | Mail sent: 2024-08-05 06:18:02.880186+00:00 | Difference: 0:07:45.487378
+2024-08-05 11:56:34 - tracking.urls - INFO - urls.py: PIXEL Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 11:56:34 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1014588, Thread ID: 138255399908928
+2024-08-05 11:56:34 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 06:26:34.547721+00:00 | Mail sent: 2024-08-05 06:18:02.880186+00:00 | Difference: 0:08:31.667535
+2024-08-05 12:21:26 - tracking.urls - INFO - urls.py: PIXEL Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:21:26 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1014588, Thread ID: 138255383123520
+2024-08-05 12:21:27 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 06:51:27.255433+00:00 | Mail sent: 2024-08-05 06:18:02.880186+00:00 | Difference: 0:33:24.375247
+2024-08-05 12:21:27 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 06:51:27.255433+00:00 | last_log time: 2024-08-05 06:26:34.549938+00:00 | Difference: 0:24:52.705495
+2024-08-05 12:21:28 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:21:30 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:21:30 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:21:44 - tracking.urls - INFO - urls.py: PIXEL Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:21:44 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1014588, Thread ID: 138255399908928
+2024-08-05 12:21:44 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 06:51:44.663527+00:00 | Mail sent: 2024-08-05 06:18:02.880186+00:00 | Difference: 0:33:41.783341
+2024-08-05 12:21:44 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 06:51:44.663527+00:00 | last_log time: 2024-08-05 06:51:27.256775+00:00 | Difference: 0:00:17.406752
+2024-08-05 12:21:46 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:21:54 - tracking.urls - INFO - urls.py: PIXEL Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:21:55 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1014588, Thread ID: 138255383123520
+2024-08-05 12:21:55 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 06:51:55.108540+00:00 | Mail sent: 2024-08-05 06:18:02.880186+00:00 | Difference: 0:33:52.228354
+2024-08-05 12:21:55 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 06:51:55.108540+00:00 | last_log time: 2024-08-05 06:51:44.665046+00:00 | Difference: 0:00:10.443494
+2024-08-05 12:22:02 - tracking.urls - INFO - urls.py: PIXEL Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:22:02 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1014588, Thread ID: 138255399908928
+2024-08-05 12:22:02 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 06:52:02.685202+00:00 | Mail sent: 2024-08-05 06:18:02.880186+00:00 | Difference: 0:33:59.805016
+2024-08-05 12:22:02 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 06:52:02.685202+00:00 | last_log time: 2024-08-05 06:51:55.109894+00:00 | Difference: 0:00:07.575308
+2024-08-05 12:22:08 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:22:09 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:22:50 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:24:54 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:27:59 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:28:30 - tracking.urls - INFO - urls.py: PIXEL Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:28:30 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1019319, Thread ID: 127544812627520
+2024-08-05 12:28:30 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 06:58:30.466688+00:00 | Mail sent: 2024-08-05 06:18:02.880186+00:00 | Difference: 0:40:27.586502
+2024-08-05 12:28:30 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 06:58:30.466688+00:00 | last_log time: 2024-08-05 06:52:02.686461+00:00 | Difference: 0:06:27.780227
+2024-08-05 12:28:37 - tracking.urls - INFO - urls.py: LINK Request received for email test4@test.com from ip: 127.0.0.1
+2024-08-05 12:30:55 - tracking.urls - INFO - urls.py: PIXEL Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:30:55 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1019752, Thread ID: 128343645087296
+2024-08-05 12:30:55 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:00:55.534594+00:00 | Mail sent: 2024-08-05 07:00:37.591944+00:00 | Difference: 0:00:17.942650
+2024-08-05 12:31:14 - tracking.urls - INFO - urls.py: PIXEL Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:31:14 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1019752, Thread ID: 128343636694592
+2024-08-05 12:31:15 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:01:15.335397+00:00 | Mail sent: 2024-08-05 07:00:37.591944+00:00 | Difference: 0:00:37.743453
+2024-08-05 12:31:15 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:01:15.335397+00:00 | last_log time: 2024-08-05 07:00:55.536526+00:00 | Difference: 0:00:19.798871
+2024-08-05 12:31:35 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:32:02 - tracking.urls - INFO - urls.py: PIXEL Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:32:03 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1019752, Thread ID: 128343645087296
+2024-08-05 12:32:03 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:02:03.155931+00:00 | Mail sent: 2024-08-05 07:00:37.591944+00:00 | Difference: 0:01:25.563987
+2024-08-05 12:32:03 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:02:03.155931+00:00 | last_log time: 2024-08-05 07:01:15.336992+00:00 | Difference: 0:00:47.818939
+2024-08-05 12:32:04 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:32:27 - tracking.urls - INFO - urls.py: PIXEL Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:32:28 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1019752, Thread ID: 128343636694592
+2024-08-05 12:32:28 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:02:28.339034+00:00 | Mail sent: 2024-08-05 07:00:37.591944+00:00 | Difference: 0:01:50.747090
+2024-08-05 12:32:28 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:02:28.339034+00:00 | last_log time: 2024-08-05 07:02:03.157194+00:00 | Difference: 0:00:25.181840
+2024-08-05 12:32:33 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:34:12 - tracking.urls - INFO - urls.py: PIXEL Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 12:34:13 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1019752, Thread ID: 128343645087296
+2024-08-05 12:34:13 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:04:13.617131+00:00 | Mail sent: 2024-08-05 07:00:37.591944+00:00 | Difference: 0:03:36.025187
+2024-08-05 12:34:13 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:04:13.617131+00:00 | last_log time: 2024-08-05 07:02:28.340092+00:00 | Difference: 0:01:45.277039
+2024-08-05 12:34:14 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:20 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:20 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:20 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:21 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:21 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:21 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:40 - tracking.urls - INFO - urls.py: PIXEL Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:10:40 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1023837, Thread ID: 125664875234880
+2024-08-05 13:10:40 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:40:40.188795+00:00 | Mail sent: 2024-08-05 07:00:37.591944+00:00 | Difference: 0:40:02.596851
+2024-08-05 13:10:40 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:40:40.188795+00:00 | last_log time: 2024-08-05 07:04:13.618396+00:00 | Difference: 0:36:26.570399
+2024-08-05 13:10:41 - tracking.urls - INFO - urls.py: LINK Request received for email test5@test.com from ip: 127.0.0.1
+2024-08-05 13:14:09 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:14:09 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539836958272
+2024-08-05 13:14:09 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:44:09.938135+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:00:09.150746
+2024-08-05 13:14:17 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:14:17 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539828565568
+2024-08-05 13:14:20 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:44:20.071011+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:00:19.283622
+2024-08-05 13:14:20 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:44:20.071011+00:00 | last_log time: 2024-08-05 07:44:09.940372+00:00 | Difference: 0:00:10.130639
+2024-08-05 13:14:23 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:14:23 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539836958272
+2024-08-05 13:14:23 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:44:23.851374+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:00:23.063985
+2024-08-05 13:14:23 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:44:23.851374+00:00 | last_log time: 2024-08-05 07:44:20.072640+00:00 | Difference: 0:00:03.778734
+2024-08-05 13:14:32 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:14:32 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539828565568
+2024-08-05 13:14:32 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:44:32.576355+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:00:31.788966
+2024-08-05 13:14:32 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:44:32.576355+00:00 | last_log time: 2024-08-05 07:44:23.852756+00:00 | Difference: 0:00:08.723599
+2024-08-05 13:14:33 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:14:45 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:14:46 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539836958272
+2024-08-05 13:14:46 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:44:46.079742+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:00:45.292353
+2024-08-05 13:14:46 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:44:46.079742+00:00 | last_log time: 2024-08-05 07:44:32.577605+00:00 | Difference: 0:00:13.502137
+2024-08-05 13:14:47 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:15:06 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:15:06 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539845350976
+2024-08-05 13:15:06 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:45:06.867246+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:01:06.079857
+2024-08-05 13:15:06 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:45:06.867246+00:00 | last_log time: 2024-08-05 07:44:46.081520+00:00 | Difference: 0:00:20.785726
+2024-08-05 13:15:14 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:15:14 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539828565568
+2024-08-05 13:15:15 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:45:15.161422+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:01:14.374033
+2024-08-05 13:15:15 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:45:15.161422+00:00 | last_log time: 2024-08-05 07:45:06.868916+00:00 | Difference: 0:00:08.292506
+2024-08-05 13:15:22 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:15:35 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:15:36 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1027316, Thread ID: 137539845350976
+2024-08-05 13:15:36 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 07:45:36.255074+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:01:35.467685
+2024-08-05 13:15:36 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 07:45:36.255074+00:00 | last_log time: 2024-08-05 07:45:15.163028+00:00 | Difference: 0:00:21.092046
+2024-08-05 13:15:37 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:08 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:09 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1030692, Thread ID: 137639317460544
+2024-08-05 13:33:09 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 08:03:09.056652+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:19:08.269263
+2024-08-05 13:33:09 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 08:03:09.056652+00:00 | last_log time: 2024-08-05 07:45:36.256544+00:00 | Difference: 0:17:32.800108
+2024-08-05 13:33:17 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:17 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1030692, Thread ID: 137639309067840
+2024-08-05 13:33:18 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 08:03:18.170482+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:19:17.383093
+2024-08-05 13:33:18 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 08:03:18.170482+00:00 | last_log time: 2024-08-05 08:03:09.058707+00:00 | Difference: 0:00:09.111775
+2024-08-05 13:33:28 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:30 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:30 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:52 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:52 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1030692, Thread ID: 137639317460544
+2024-08-05 13:33:52 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 08:03:52.374053+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:19:51.586664
+2024-08-05 13:33:52 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 08:03:52.374053+00:00 | last_log time: 2024-08-05 08:03:18.172441+00:00 | Difference: 0:00:34.201612
+2024-08-05 13:33:54 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:55 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:55 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:33:55 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:34:08 - tracking.urls - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:34:08 - tracking.views - INFO - 'handle_tracking' called! Process ID: 1030692, Thread ID: 137639309067840
+2024-08-05 13:34:08 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 08:04:08.656146+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 0:20:07.868757
+2024-08-05 13:34:08 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 08:04:08.656146+00:00 | last_log time: 2024-08-05 08:03:52.375669+00:00 | Difference: 0:00:16.280477
+2024-08-05 13:34:10 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:34:10 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:34:10 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:34:11 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 13:34:11 - tracking.urls - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1

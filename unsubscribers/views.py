@@ -4,13 +4,21 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.contrib.auth import get_user_model
+from django.core import signing
+from django.core.signing import BadSignature
+from django.http import HttpResponse
 
 @require_POST
 @csrf_exempt
 def unsubscribe_action(request):
     user_email = request.POST.get('user_email')
-    sender_username = request.POST.get('sender_username')
-    if user_email and sender_username:
+    encoded_senderUser = request.POST.get('encoded_senderUser')
+    if user_email and encoded_senderUser:
+        
+        try:
+            sender_username = signing.loads(encoded_senderUser, salt='email-unsubscribe-link')
+        except BadSignature:
+            return HttpResponse("Invalid unsubscribe link.", status=400)
         
         User = get_user_model()
         user = User.objects.get(username=sender_username)

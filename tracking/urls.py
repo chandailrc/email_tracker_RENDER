@@ -39,8 +39,8 @@ def log_request_link(view_func):
 
 urlpatterns = [
     path('serve-image/<str:image_name>/', views.serve_image, name='serve_image'),
-    path('track-pixel/<str:token>/pixel.png', log_request_pixel(views.tracking_pixel), name='tracking_pixel'),
-    path('track-pixel/<str:token>/style.css', log_request_css(views.tracking_css), name='tracking_css'),
+    path('track-pixel/<str:token>/', log_request_pixel(views.tracking_pixel), name='tracking_pixel'),
+    # path('track-pixel/<str:token>/ss', log_request_css(views.tracking_css), name='tracking_css'),
     path('track-link/<int:link_id>/', log_request_link(views.track_link), name='track_link'),
     path('dashboard-data/', views.dashboard_data, name='dashboard_data'),
     path('email-detail-data/', views.email_detail_data, name='email_detail_data'),
