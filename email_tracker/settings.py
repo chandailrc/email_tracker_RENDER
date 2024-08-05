@@ -311,8 +311,7 @@ LOGGING = {
             'datefmt': '%Y-%m-%d %H:%M:%S',
         },
         'simple': {
-           'format': '%(asctime)s SENDER_NAME PROGRAM_NAME: %(message)s',
-           'datefmt': '%Y-%m-%dT%H:%M:%S',
+            'format': '%(levelname)s %(message)s',
         },
     },
     'handlers': {
@@ -334,12 +333,6 @@ LOGGING = {
             'host': 'logs2.papertrailapp.com',
             'port': 12974,  # Replace with your Papertrail port
         },
-        'SysLog': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.SysLogHandler',
-            'formatter': 'simple',
-            'address': ('logsN.papertrailapp.com', 12974)
-        },
         'console': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
@@ -348,8 +341,8 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['file', 'SysLog'],
-            'level': 'INFO',
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
             'propagate': True,
         },
         'tracking': {  # Replace with your actual app name
