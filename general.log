@@ -1,0 +1,114 @@
+2024-08-05 15:19:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:19:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:19:54 - django - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:19:54 - django - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:19:54 - django.server - INFO - "GET /api/tracking/track-link/6/?sender=InVzZXIxIg:1sasNs:BHW6ka0QfehMc5BI7g4zoprDKlX5yng7w291HOTqvl0 HTTP/1.1" 302 0
+2024-08-05 15:19:54 - django.server - INFO - "GET /api/tracking/track-link/6/?sender=InVzZXIxIg:1sasNs:BHW6ka0QfehMc5BI7g4zoprDKlX5yng7w291HOTqvl0 HTTP/1.1" 302 0
+2024-08-05 15:20:18 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:20:18 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:20:18 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:20:18 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:20:18 - django - INFO - 'handle_tracking' called! Process ID: 1049155, Thread ID: 125107666150976
+2024-08-05 15:20:18 - django - INFO - 'handle_tracking' called! Process ID: 1049155, Thread ID: 125107666150976
+2024-08-05 15:20:18 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:50:18.634575+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:06:17.847186
+2024-08-05 15:20:18 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:50:18.634575+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:06:17.847186
+2024-08-05 15:20:18 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:50:18.634575+00:00 | last_log time: 2024-08-05 09:47:58.493312+00:00 | Difference: 0:02:20.141263
+2024-08-05 15:20:18 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:50:18.634575+00:00 | last_log time: 2024-08-05 09:47:58.493312+00:00 | Difference: 0:02:20.141263
+2024-08-05 15:20:18 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:20:18 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:22:25 - django - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:22:25 - django - INFO - urls.py: LINK Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:22:25 - django.server - INFO - "GET /api/tracking/track-link/6/?sender=InVzZXIxIg:1sasNs:BHW6ka0QfehMc5BI7g4zoprDKlX5yng7w291HOTqvl0 HTTP/1.1" 302 0
+2024-08-05 15:22:25 - django.server - INFO - "GET /api/tracking/track-link/6/?sender=InVzZXIxIg:1sasNs:BHW6ka0QfehMc5BI7g4zoprDKlX5yng7w291HOTqvl0 HTTP/1.1" 302 0
+2024-08-05 15:22:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:22:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:22:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:22:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:22:46 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:22:46 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:22:46 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:22:46 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:22:46 - django - INFO - 'handle_tracking' called! Process ID: 1049795, Thread ID: 124832939243072
+2024-08-05 15:22:46 - django - INFO - 'handle_tracking' called! Process ID: 1049795, Thread ID: 124832939243072
+2024-08-05 15:22:46 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:52:46.612619+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:08:45.825230
+2024-08-05 15:22:46 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:52:46.612619+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:08:45.825230
+2024-08-05 15:22:46 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:52:46.612619+00:00 | last_log time: 2024-08-05 09:50:18.637615+00:00 | Difference: 0:02:27.975004
+2024-08-05 15:22:46 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:52:46.612619+00:00 | last_log time: 2024-08-05 09:50:18.637615+00:00 | Difference: 0:02:27.975004
+2024-08-05 15:22:46 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:22:46 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:24:02 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:24:02 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:24:02 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:24:02 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:24:02 - django - INFO - 'handle_tracking' called! Process ID: 1049795, Thread ID: 124832930850368
+2024-08-05 15:24:02 - django - INFO - 'handle_tracking' called! Process ID: 1049795, Thread ID: 124832930850368
+2024-08-05 15:24:02 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:54:02.645590+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:10:01.858201
+2024-08-05 15:24:02 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:54:02.645590+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:10:01.858201
+2024-08-05 15:24:02 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:54:02.645590+00:00 | last_log time: 2024-08-05 09:52:46.614606+00:00 | Difference: 0:01:16.030984
+2024-08-05 15:24:02 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:54:02.645590+00:00 | last_log time: 2024-08-05 09:52:46.614606+00:00 | Difference: 0:01:16.030984
+2024-08-05 15:24:02 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:24:02 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:24:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/middleware.py changed, reloading.
+2024-08-05 15:24:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/tracking/middleware.py changed, reloading.
+2024-08-05 15:24:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:24:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:24:22 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:24:22 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:24:22 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:24:22 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:24:22 - django - INFO - 'handle_tracking' called! Process ID: 1050062, Thread ID: 133302117725760
+2024-08-05 15:24:22 - django - INFO - 'handle_tracking' called! Process ID: 1050062, Thread ID: 133302117725760
+2024-08-05 15:24:22 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:54:22.847293+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:10:22.059904
+2024-08-05 15:24:22 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:54:22.847293+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:10:22.059904
+2024-08-05 15:24:22 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:54:22.847293+00:00 | last_log time: 2024-08-05 09:54:02.647342+00:00 | Difference: 0:00:20.199951
+2024-08-05 15:24:22 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:54:22.847293+00:00 | last_log time: 2024-08-05 09:54:02.647342+00:00 | Difference: 0:00:20.199951
+2024-08-05 15:24:22 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:24:22 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:26:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:26:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:26:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:26:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:26:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:26:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:26:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:26:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:27:11 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:27:11 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:27:11 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:27:11 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:27:11 - django - INFO - 'handle_tracking' called! Process ID: 1050413, Thread ID: 128097995191872
+2024-08-05 15:27:11 - django - INFO - 'handle_tracking' called! Process ID: 1050413, Thread ID: 128097995191872
+2024-08-05 15:27:11 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:57:11.868242+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:13:11.080853
+2024-08-05 15:27:11 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:57:11.868242+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:13:11.080853
+2024-08-05 15:27:11 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:57:11.868242+00:00 | last_log time: 2024-08-05 09:54:22.849228+00:00 | Difference: 0:02:49.019014
+2024-08-05 15:27:11 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:57:11.868242+00:00 | last_log time: 2024-08-05 09:54:22.849228+00:00 | Difference: 0:02:49.019014
+2024-08-05 15:27:11 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:27:11 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:27:46 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:27:46 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:27:46 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:27:46 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:27:46 - django - INFO - 'handle_tracking' called! Process ID: 1050413, Thread ID: 128097986799168
+2024-08-05 15:27:46 - django - INFO - 'handle_tracking' called! Process ID: 1050413, Thread ID: 128097986799168
+2024-08-05 15:27:46 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:57:46.604315+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:13:45.816926
+2024-08-05 15:27:46 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:57:46.604315+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:13:45.816926
+2024-08-05 15:27:46 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:57:46.604315+00:00 | last_log time: 2024-08-05 09:57:11.870389+00:00 | Difference: 0:00:34.733926
+2024-08-05 15:27:46 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:57:46.604315+00:00 | last_log time: 2024-08-05 09:57:11.870389+00:00 | Difference: 0:00:34.733926
+2024-08-05 15:27:46 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:27:46 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:28:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:28:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-05 15:28:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:28:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-05 15:28:48 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:28:48 - django.server - INFO - "GET /api/tracking/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-05 15:28:48 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:28:48 - django - INFO - urls.py: PIXEL Request received for email test6@test.com from ip: 127.0.0.1
+2024-08-05 15:28:48 - django - INFO - 'handle_tracking' called! Process ID: 1050755, Thread ID: 124153256474176
+2024-08-05 15:28:48 - django - INFO - 'handle_tracking' called! Process ID: 1050755, Thread ID: 124153256474176
+2024-08-05 15:28:48 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:58:48.758215+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:14:47.970826
+2024-08-05 15:28:48 - django - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-05 09:58:48.758215+00:00 | Mail sent: 2024-08-05 07:44:00.787389+00:00 | Difference: 2:14:47.970826
+2024-08-05 15:28:48 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:58:48.758215+00:00 | last_log time: 2024-08-05 09:57:46.605681+00:00 | Difference: 0:01:02.152534
+2024-08-05 15:28:48 - django - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-05 09:58:48.758215+00:00 | last_log time: 2024-08-05 09:57:46.605681+00:00 | Difference: 0:01:02.152534
+2024-08-05 15:28:48 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95
+2024-08-05 15:28:48 - django.server - INFO - "GET /api/tracking/track-pixel/8b36ac288eac41d7baa83048baac7cf0/?sender=InVzZXIxIg:1sasNs:5ZfpxR4g6HOSUYFWlePJBEw1Zi-mrtxqu9n6yEmy4lc&resource=pixel.png HTTP/1.1" 200 95

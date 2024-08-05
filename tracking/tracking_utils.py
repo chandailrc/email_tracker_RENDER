@@ -1,12 +1,9 @@
 from .models import EmailInteraction, GenuineOpen
-from django.utils import timezone
-
-from django.db.models import Q
 
 def aggregate_genuine_opens(emails):
-    print(f'email list len: {len(emails)}')
+    # print(f'email list len: {len(emails)}')
     for email in emails:
-        print(f'\n\n\n>>>>>>>>>>Processing email: {email}')
+        # print(f'\n\n\n>>>>>>>>>>Processing email: {email}')
         
         # Delete existing GenuineOpen objects for this email
         GenuineOpen.objects.filter(email=email).delete()
@@ -26,8 +23,8 @@ def aggregate_genuine_opens(emails):
                 if last_open_event:
                     # We found a genuine open
                     genuine_opens += 1
-                    print(f'Genuine open found: Open event at {last_open_event.timestamp}, Action event at {event.timestamp}')
+                    # print(f'Genuine open found: Open event at {last_open_event.timestamp}, Action event at {event.timestamp}')
                     GenuineOpen.objects.create(email=email, open_event=last_open_event)
                     last_open_event = None  # Reset last_open_event
         
-        print(f'Finished processing email: {email}. Found {genuine_opens} genuine opens.')
+        # print(f'Finished processing email: {email}. Found {genuine_opens} genuine opens.')

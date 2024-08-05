@@ -51,6 +51,7 @@ class TrackingPixelMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
+        print('request.path : {request.path}')
         if 'pixel' in request.path:
             user_agent = request.META.get('HTTP_USER_AGENT', '')
             ip_address = request.META.get('REMOTE_ADDR', '')
@@ -60,7 +61,7 @@ class TrackingPixelMiddleware:
             ip_info = REQUEST_LOG[ip_address]
             if current_time - ip_info['timestamp'] < TIME_WINDOW:
                 ip_info['count'] += 1
-            else:
+            else: 
                 ip_info['count'] = 1
                 ip_info['timestamp'] = current_time
 

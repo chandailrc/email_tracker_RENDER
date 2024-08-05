@@ -5,7 +5,7 @@ from . import views
 import logging
 from sending.models import TrackingPixelToken, Link
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('django')
 
 def log_request_pixel(view_func):
     def wrapper(request, token, *args, **kwargs):

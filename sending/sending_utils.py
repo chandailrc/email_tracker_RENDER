@@ -14,7 +14,7 @@ from django.contrib.auth import get_user_model
 
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('django')
 
 def generate_tracking_urls(email, sender_username):
     unique_id = uuid.uuid4().hex

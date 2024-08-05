@@ -79,7 +79,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'tracking.middleware.TrackingPixelMiddleware',
+    'tracking.middleware.TrackingPixelMiddleware',
 ]
 
 ROOT_URLCONF = 'email_tracker.urls'
@@ -302,6 +302,57 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Kolkata'
 
 
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+#             'datefmt': '%Y-%m-%d %H:%M:%S',
+#         },
+#         'simple': {
+#             'format': '%(levelname)s %(message)s',
+#         },
+#     },
+#     'handlers': {
+#         'file': {
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'filename': os.path.join(BASE_DIR, 'debug.log'),
+#             'formatter': 'verbose',  # Use the verbose formatter
+#         },
+#         'trackingMiddleware_file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': os.path.join(BASE_DIR, 'trackingMiddleware.log'),  # The file specifically for tracking logs
+#             'formatter': 'verbose',
+#         },
+#         'papertrail': {
+#             'level': 'INFO',
+#             'class': 'logging.handlers.SocketHandler',
+#             'host': 'logs2.papertrailapp.com',
+#             'port': 12974,  # Replace with your Papertrail port
+#         },
+#         'console': {
+#             'level': 'INFO',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'verbose',  # Use the verbose formatter
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file', 'console'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#         'tracking': {  # Replace with your actual app name
+#             'handlers': ['trackingMiddleware_file'],
+#             'level': 'INFO',
+#             'propagate': True,
+#         },
+#     },
+# }
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -313,46 +364,47 @@ LOGGING = {
         'simple': {
             'format': '%(levelname)s %(message)s',
         },
+        'tracking': {
+            'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
     },
     'handlers': {
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'debug.log'),
-            'formatter': 'verbose',  # Use the verbose formatter
-        },
         'trackingMiddleware_file': {
-            'level': 'DEBUG',
+            'level': 'DEBUG',  # Capture all levels of logs
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'trackingMiddleware.log'),  # The file specifically for tracking logs
-            'formatter': 'verbose',
+            'filename': os.path.join(BASE_DIR, 'trackingMiddleware.log'),
+            'formatter': 'tracking',
         },
-        'papertrail': {
-            'level': 'INFO',
-            'class': 'logging.handlers.SocketHandler',
-            'host': 'logs2.papertrailapp.com',
-            'port': 12974,  # Replace with your Papertrail port
+        'general_file': {
+            'level': 'INFO',  # Adjust as needed
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'general.log'),
+            'formatter': 'verbose',
         },
         'console': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',  # Use the verbose formatter
+            'formatter': 'verbose',
         },
     },
     'loggers': {
-        'django': {
-            'handlers': ['file', 'console'],
-            'level': 'DEBUG',
-            'propagate': True,
+        'tracking': {  # For middleware and any other tracking-specific logs
+            'handlers': ['trackingMiddleware_file', 'console'],
+            'level': 'DEBUG',  # Or INFO if you want to exclude DEBUG messages
+            'propagate': False,  # Prevent logs from being propagated to the root logger
         },
-        'tracking': {  # Replace with your actual app name
-            'handlers': ['trackingMiddleware_file', 'papertrail', 'console'],
-            'level': 'DEBUG',
+        'django': {  # Default Django logger
+            'handlers': ['general_file', 'console'],
+            'level': 'INFO',
+            'propagate': True,  # Allows propagation to parent loggers if needed
+        },
+        '': {  # Root logger configuration for any other logs
+            'handlers': ['general_file', 'console'],
+            'level': 'INFO',
             'propagate': True,
         },
     },
 }
-
-
 
 
