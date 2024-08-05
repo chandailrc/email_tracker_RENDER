@@ -7887,3 +7887,13 @@ KeyError: 'unsubscribed_emails'
 2024-08-05 09:50:26 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 151
 2024-08-05 09:50:28 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1381
 2024-08-05 09:50:28 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20601
+2024-08-05 10:07:26 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 43
+2024-08-05 10:07:26 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2977
+2024-08-05 10:07:29 - django.server - INFO - "POST /api/unsubscribers/delete-unsub-user/ HTTP/1.1" 200 89
+2024-08-05 10:07:29 - django.server - INFO - "POST /frontend/delete-unsubscribed-user/test3@test.com/ HTTP/1.1" 302 0
+2024-08-05 10:07:30 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-08-05 10:07:30 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2473
+2024-08-05 10:07:33 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1365
+2024-08-05 10:07:33 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 20600
+2024-08-05 10:07:47 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-05 10:12:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
