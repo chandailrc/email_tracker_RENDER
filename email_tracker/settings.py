@@ -331,12 +331,6 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 #             'filename': os.path.join(BASE_DIR, 'trackingMiddleware.log'),  # The file specifically for tracking logs
 #             'formatter': 'verbose',
 #         },
-#         'papertrail': {
-#             'level': 'INFO',
-#             'class': 'logging.handlers.SocketHandler',
-#             'host': 'logs2.papertrailapp.com',
-#             'port': 12974,  # Replace with your Papertrail port
-#         },
 #         'console': {
 #             'level': 'INFO',
 #             'class': 'logging.StreamHandler',
@@ -399,16 +393,14 @@ LOGGING = {
             'propagate': False,  # Prevent logs from being propagated to the root logger
         },
         'django': {  # Default Django logger
-            'handlers': ['general_file', 'console'],
+            'handlers': ['general_file'],
             'level': 'INFO',
             'propagate': True,  # Allows propagation to parent loggers if needed
         },
-        # '': {  # Root logger configuration for any other logs
-        #     'handlers': ['general_file', 'console'],
-        #     'level': 'INFO',
-        #     'propagate': True,
-        # },
+        '': {  # Root logger configuration for any other logs
+            'handlers': ['general_file', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
     },
 }
-
-

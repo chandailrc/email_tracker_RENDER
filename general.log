@@ -2569,3 +2569,300 @@ ValueError: Need 2 values to unpack in for loop; got 1.
 2024-08-10 14:29:16 - django.server - INFO - "GET /frontend/email/1/ HTTP/1.1" 200 4027
 2024-08-10 14:29:19 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 1945
 2024-08-10 14:29:19 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 16128
+2024-08-10 17:28:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 17:29:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 17:29:47 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 302 0
+2024-08-10 17:29:47 - django.server - INFO - "GET /frontend/login/?next=/frontend/dashboard/ HTTP/1.1" 200 1984
+2024-08-10 17:29:48 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-10 17:29:50 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 302 0
+2024-08-10 17:29:50 - django.server - INFO - "GET /frontend/login/?next=/frontend/dashboard/ HTTP/1.1" 200 1984
+2024-08-10 17:29:54 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 2501
+2024-08-10 17:30:14 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 60
+2024-08-10 17:30:14 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 302 0
+2024-08-10 17:30:14 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 302 0
+2024-08-10 17:30:14 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 1984
+2024-08-10 17:30:21 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-08-10 17:30:21 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-08-10 17:30:21 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-08-10 17:30:21 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 145
+2024-08-10 17:39:15 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-10 17:39:47 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 239
+2024-08-10 17:39:47 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-10 17:39:47 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5225
+2024-08-10 17:40:16 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 72
+2024-08-10 17:40:16 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 2483
+2024-08-10 17:40:39 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-10 17:40:39 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-10 17:40:39 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5055
+2024-08-10 17:40:42 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 553
+2024-08-10 17:40:42 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 4553
+2024-08-10 17:40:51 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 17:40:51 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 17:40:53 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 17:40:54 - django.server - INFO - "GET /api/tracking/track/IjhkODUwMGRhLTRiNGUtNDkxMi1iNWFjLWEzOTZkZTdjMzY5MyI:1sckvf:Hsi9QBu_-9guKp2P588WHWmlfrGp-mIpRPwWJkqHZxg/ HTTP/1.1" 302 0
+2024-08-10 17:40:55 - django.request - WARNING - Not Found: /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/
+2024-08-10 17:40:55 - django.server - WARNING - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 404 9
+2024-08-10 17:40:56 - django.request - WARNING - Not Found: /api/tracking/track/IjhkODUwMGRhLTRiNGUtNDkxMi1iNWFjLWEzOTZkZTdjMzY5MyI:1sckvf:Hsi9QBu_-9guKp2P588WHWmlfrGp-mIpRPwWJkqHZxg/
+2024-08-10 17:40:56 - django.server - WARNING - "GET /api/tracking/track/IjhkODUwMGRhLTRiNGUtNDkxMi1iNWFjLWEzOTZkZTdjMzY5MyI:1sckvf:Hsi9QBu_-9guKp2P588WHWmlfrGp-mIpRPwWJkqHZxg/ HTTP/1.1" 404 9
+2024-08-10 17:41:04 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 553
+2024-08-10 17:41:04 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 5982
+2024-08-10 17:41:58 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 17:42:24 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 553
+2024-08-10 17:42:24 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 6458
+2024-08-10 17:42:27 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 17:42:27 - django.request - WARNING - Not Found: /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/
+2024-08-10 17:42:27 - django.server - WARNING - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 404 9
+2024-08-10 17:42:27 - django.request - WARNING - Not Found: /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/
+2024-08-10 17:42:27 - django.server - WARNING - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 404 9
+2024-08-10 17:42:28 - django.request - WARNING - Not Found: /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/
+2024-08-10 17:42:28 - django.server - WARNING - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 404 9
+2024-08-10 17:45:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 17:45:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 17:46:01 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 553
+2024-08-10 17:46:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 6934
+2024-08-10 17:46:04 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 17:46:05 - django.server - INFO - "GET /api/tracking/track/IjhkODUwMGRhLTRiNGUtNDkxMi1iNWFjLWEzOTZkZTdjMzY5MyI:1sckvf:Hsi9QBu_-9guKp2P588WHWmlfrGp-mIpRPwWJkqHZxg/ HTTP/1.1" 302 0
+2024-08-10 17:46:05 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 17:46:06 - django.server - INFO - "GET /api/tracking/track/IjhkODUwMGRhLTRiNGUtNDkxMi1iNWFjLWEzOTZkZTdjMzY5MyI:1sckvf:Hsi9QBu_-9guKp2P588WHWmlfrGp-mIpRPwWJkqHZxg/ HTTP/1.1" 302 0
+2024-08-10 17:46:12 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 553
+2024-08-10 17:46:12 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 8838
+2024-08-10 17:50:01 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 17:50:23 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 17:50:23 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 17:50:23 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 17:50:23 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 17:56:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 17:56:07 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 17:56:07 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 17:56:13 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 17:56:13 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 17:56:15 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 17:56:15 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 17:56:15 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 17:56:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 17:57:09 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 17:57:09 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 18:06:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:06:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:07:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:07:26 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:07:26 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:07:26 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:07:26 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:07:27 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:07:27 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:07:27 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:07:27 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:07:27 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:07:27 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:07:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:07:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:07:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:07:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:08:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:01 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:08:01 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:08:01 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:08:01 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:08:03 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:03 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:03 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:08:03 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 87, in track_item
+    logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.opened_at} | Difference: {time_diff}")
+AttributeError: 'TrackingEvent' object has no attribute 'opened_at'
+2024-08-10 18:08:03 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:08:03 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78315
+2024-08-10 18:08:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:08:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:08:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:08:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:08:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:08:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:08:25 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:25 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:25 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:08:25 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:08:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:08:26 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 84, in track_item
+    logger.warning(f"views.py/handle_tracking: Request received for for {tracking_item.email.receipient} with email_id {tracking_item.email.id} within {multhit_timediff} secs. Random fetching. Abandoning request!")
+AttributeError: 'SentEmail' object has no attribute 'receipient'
+2024-08-10 18:08:26 - django.request - ERROR - Internal Server Error: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py", line 84, in track_item
+    logger.warning(f"views.py/handle_tracking: Request received for for {tracking_item.email.receipient} with email_id {tracking_item.email.id} within {multhit_timediff} secs. Random fetching. Abandoning request!")
+AttributeError: 'SentEmail' object has no attribute 'receipient'
+2024-08-10 18:08:26 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78476
+2024-08-10 18:08:26 - django.server - ERROR - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 500 78476
+2024-08-10 18:09:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:09:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:09:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:09:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:09:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:09:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:09:27 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:09:27 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:09:27 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:09:27 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:09:28 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:09:28 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:09:28 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 18:09:28 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 18:09:28 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 18:09:28 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 18:11:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 18:11:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 18:11:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:11:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:11:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:11:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:11:26 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:11:26 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:11:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:11:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:11:26 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 18:11:26 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 18:11:26 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 18:11:26 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 18:12:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:12:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:12:13 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:12:13 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:12:13 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:12:13 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:12:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 18:12:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 18:12:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:12:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:12:35 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:12:35 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:12:35 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:12:35 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:12:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/middleware.py changed, reloading.
+2024-08-10 18:12:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/middleware.py changed, reloading.
+2024-08-10 18:12:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:12:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:13:10 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:13:10 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:13:11 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:13:11 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:13:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/middleware.py changed, reloading.
+2024-08-10 18:13:35 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/middleware.py changed, reloading.
+2024-08-10 18:13:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:13:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:13:41 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:13:41 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:13:41 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:13:41 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:14:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:14:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:14:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:14:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:15:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:15:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:15:01 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:15:01 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:15:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:15:13 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:15:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:15:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:15:16 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:15:16 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 18:15:16 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:15:16 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 18:15:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:15:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:15:47 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:15:47 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:15:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:15:57 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:15:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:15:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:16:10 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 18:16:10 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 18:16:11 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 18:16:11 - django.server - INFO - "GET /api/tracking/track/IjhkNjVhMjA3LTRlY2ItNDQ1NS04M2NjLTE5NzJiY2VkNGY4NiI:1sckvf:l2kdJPFDNjCIo7qhioJN_P82jjANfuQz6a3aOST8Fso/ HTTP/1.1" 302 0
+2024-08-10 18:16:16 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 554
+2024-08-10 18:16:16 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 554
+2024-08-10 18:16:16 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
+2024-08-10 18:16:16 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329

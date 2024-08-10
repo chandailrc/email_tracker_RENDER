@@ -68,16 +68,27 @@ def track_item(request, encoded_item_id):
         prefetch_timediff = 3
         multhit_timediff = 2
         
-        if time_difference <= timedelta(seconds=prefetch_timediff):
-            logger.warning(f"First request received for {tracking_item.email.recipient} with email_id {tracking_item.email.id} within {prefetch_timediff} secs. Potential prefetching. Abandoning request!")
-            return HttpResponse("Not found", status=404)
-        
-        last_log = TrackingEvent.objects.filter(tracking_item=tracking_item).order_by('-timestamp').first()
-        if last_log:
-            time_diff = curr_time - last_log.timestamp
-            if time_diff <= timedelta(seconds=multhit_timediff):
-                logger.warning(f"Request received for {tracking_item.email.recipient} with email_id {tracking_item.email.id} within {multhit_timediff} secs. Random fetching. Abandoning request!")
+        if tracking_item.item_type == 'PIXEL':
+            if time_difference <= timedelta(seconds=prefetch_timediff):
+                logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {tracking_item.email.sent_at} | Difference: {time_difference}")
+                logger.warning(f"views.py/handle_tracking: First request received for {tracking_item.email.recipient} with email_id {tracking_item.email.id} within {prefetch_timediff} secs. Potential prefetching. Abandoning request!")
                 return HttpResponse("Not found", status=404)
+            else:
+                logger.info(f"views.py/handle_tracking: PrefetchCheck - Current time: {curr_time} | Mail sent: {tracking_item.email.sent_at} | Difference: {time_difference}")
+                # Retrieve the most recent TrackingLog for this email
+                last_log = TrackingEvent.objects.filter(tracking_item=tracking_item).order_by('-timestamp').first()
+                if last_log:
+                    time_diff = curr_time - last_log.timestamp
+    
+                    if time_diff <= timedelta(seconds=multhit_timediff):
+                        logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.timestamp} | Difference: {time_diff}")
+                        logger.warning(f"views.py/handle_tracking: Request received for for {tracking_item.email.recipient} with email_id {tracking_item.email.id} within {multhit_timediff} secs. Random fetching. Abandoning request!")
+                        return HttpResponse("Not found", status=404)
+                    else:
+                        logger.info(f"views.py/handle_tracking: MultihitCheck - Current time: {curr_time} | last_log time: {last_log.timestamp} | Difference: {time_diff}")
+                        logger.info(f"Greater than {multhit_timediff} seconds since the last log")
+                else:
+                    logger.info("No previous logs found")
         
         TrackingEvent.objects.create(
             tracking_item=tracking_item,

@@ -42,3 +42,19 @@
 2024-08-05 15:18:36 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 2745
 2024-08-05 15:18:36 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 49956
 2024-08-05 15:19:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker_barebones/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 17:58:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 17:59:25 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
+2024-08-10 17:59:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 17:59:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 17:59:37 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 17:59:37 - django.server - INFO - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 200 95
+2024-08-10 17:59:38 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-10 17:59:38 - django.request - WARNING - Not Found: /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/
+2024-08-10 17:59:38 - django.server - WARNING - "GET /api/tracking/track/IjBlM2VmMTFjLTY0NDktNDJjMy1iY2I2LTNmOTQzZTNiY2U3YyI:1sckvf:Odw7btDfjRLtsp3VcRG9vVgyH9FPxB8zEp2CBmpo8AU/ HTTP/1.1" 404 9
+2024-08-10 18:02:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:02:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:05:44 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:05:44 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:06:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/tracking/views.py changed, reloading.
+2024-08-10 18:06:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-10 18:06:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/settings.py changed, reloading.
