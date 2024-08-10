@@ -1,11 +1,14 @@
+import os
 import time
+import uuid
 import random
 
 from . import sending_utils
 
-from django.http import JsonResponse
+from django.http import JsonResponse, FileResponse, HttpResponse
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
+from django.conf import settings
 
 from receiving.models import ReceivedEmail
 
@@ -80,3 +83,15 @@ def reply_send_tracked_email(request, received_email_id):
         'failed_recipients': failed_recipients
     })
 
+def serve_image(request, image_name):
+    image_path = os.path.join(settings.BASE_DIR, 'static/images', image_name)
+    if os.path.exists(image_path):
+        response = FileResponse(open(image_path, 'rb'), content_type="image/png")
+        response['Cache-Control'] = 'no-cache, no-store, must-revalidate, max_age=0'
+        response['Pragma'] = 'no-cache'
+        response['Expires'] = '0'
+        response['Cache-Buster'] = uuid.uuid4().hex  # Custom header
+
+        return response#FileResponse(open(image_path, 'rb'), content_type='image/png')
+    else:
+        return HttpResponse('Image not found.', status=404)

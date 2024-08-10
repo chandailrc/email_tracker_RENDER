@@ -28,13 +28,12 @@
                 <th>Method</th>
                 <th>Host</th>
                 <th>Connection</th>
-                <th>Tracking Type</th>
             </tr>
         </thead>
         <tbody>
-            {% for log in tracking_logs %}
+            {% for log in pixel_events %}
                 <tr>
-                    <td>{{ log.opened_at }}</td>
+                    <td>{{ log.timestamp }}</td>
                     <td>{{ log.ip_address }}</td>
                     <td>{{ log.user_agent }}</td>
                     <td>{{ log.geo_location }}</td>
@@ -46,7 +45,6 @@
                     <td>{{ log.method }}</td>
                     <td>{{ log.host }}</td>
                     <td>{{ log.connection }}</td>
-                    <td>{{ log.tracking_type }}</td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -72,9 +70,9 @@
             </tr>
         </thead>
         <tbody>
-            {% for click in link_clicks %}
+            {% for click in link_events %}
                 <tr>
-                    <td>{{ click.clicked_at }}</td>
+                    <td>{{ click.timestamp }}</td>
                     <td>{{ click.ip_address }}</td>
                     <td>{{ click.user_agent }}</td>
                     <td>{{ click.geo_location }}</td>
@@ -86,7 +84,7 @@
                     <td>{{ click.method }}</td>
                     <td>{{ click.host }}</td>
                     <td>{{ click.connection }}</td>
-                    <td>{{ click.link.url }}</td>
+                    <td>{{ click.tracking_item.url }}</td>
                 </tr>
             {% endfor %}
         </tbody>

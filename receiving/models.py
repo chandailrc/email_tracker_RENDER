@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 from django.conf import settings
 
-
 class ReceivedEmail(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='received_emails')
     sender = models.EmailField()

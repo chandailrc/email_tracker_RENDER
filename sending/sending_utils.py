@@ -1,44 +1,27 @@
+import re
 import uuid
 from django.utils import timezone
-from datetime import timedelta
-from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
-import re
-from .models import SentEmail, Link, TrackingPixelToken
-from unsubscribers.models import UnsubscribedUser
-from django.core.mail import make_msgid
-from conversations.email_processor import process_email
-from smtplib import SMTPRecipientsRefused, SMTPServerDisconnected
-from django.core import signing
+from django.core.mail import EmailMultiAlternatives
 from django.contrib.auth import get_user_model
+from email.utils import make_msgid
+from smtplib import SMTPRecipientsRefused, SMTPServerDisconnected
+from .models import SentEmail
+from unsubscribers.models import UnsubscribedUser
+from tracking.tracking_utils import generate_tracking_url
+from conversations.email_processor import process_email
+from django.core import signing
 
 import logging
 
-logger = logging.getLogger('django')
-
-def generate_tracking_urls(email, sender_username):
-    unique_id = uuid.uuid4().hex
-    expiration = timezone.now() + timedelta(hours=24)  # URL valid for 24 hours
-
-    TrackingPixelToken.objects.create(
-        email=email,
-        token=unique_id,
-        expires_at=expiration
-    )
-
-    encoded_username = signing.dumps(sender_username, salt='email-pixel-link')
-    base_url = f"{settings.BASE_URL}/api/tracking/track-pixel/{unique_id}/?sender={encoded_username}"
-    pixel_url = f"{base_url}&resource=pixel.png"
-    css_url = f"{base_url}&resource=style.css"
-
-    return pixel_url, css_url
+logger = logging.getLogger(__name__)
 
 def generate_unsubscribe_link(recipient_email, sender_username):
     encoded_username = signing.dumps(sender_username, salt='email-unsubscribe-link')
     return f"{settings.BASE_URL}/frontend/unsubscribe/?email={recipient_email}&sender={encoded_username}"
 
-
-    
+def get_visible_image_url():
+    return f"{settings.BASE_URL}/api/sending/serve-image/logo.png"
 
 def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
     User = get_user_model()
@@ -46,7 +29,6 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     if UnsubscribedUser.objects.filter(email=recipient).exists():
         logger.info(f"sending_utils.py: Email not sent to {recipient} as they have unsubscribed.")
         return False, "Recipient has unsubscribed"
-
     try:
         message_id = make_msgid(domain=settings.EMAIL_DOMAIN)
         
@@ -56,7 +38,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
                 subject = f"Re: {in_reply_to.subject}"
         else:
             thread_id = str(uuid.uuid4())
-
+        
         email = SentEmail.objects.create(
             user=user,
             recipient=recipient,
@@ -72,18 +54,15 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         )
         logger.info(f"sending_utils.py: Email db entry created for {recipient} at {timezone.now()}")
         
-        def replace_link(match, email, sender_username):
+        def replace_link(match):
             original_url = match.group(0)
-            link = Link.objects.create(email=email, url=original_url)
-            encoded_username = signing.dumps(sender_username, salt='email-link-link')
-            tracked_url = f"{settings.BASE_URL}/api/tracking/track-link/{link.id}/?sender={encoded_username}"
+            tracked_url = generate_tracking_url(email, 'LINK', original_url)
             return f'<a href="{tracked_url}" style="color: #007bff; text-decoration: none;">{original_url}</a>'
-
         
-        tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', lambda match: replace_link(match, email, user.username), body)
+        tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, body)
         html_body = tracked_body.replace('\n', '<br>')  # Convert newlines to <br> tags
-        pixel_url, css_url = generate_tracking_urls(email, user.username)
-        visible_image_url = f"{settings.BASE_URL}/api/tracking/serve-image/logo.png"  # Adjust this URL to point to your logo image
+        pixel_url = generate_tracking_url(email, 'PIXEL')
+        visible_image_url = get_visible_image_url()
         unsub_url = generate_unsubscribe_link(recipient, user.username)
         
         email_body = f"""
@@ -133,6 +112,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         </body>
         </html>
         """
+        
         msg = EmailMultiAlternatives(
             subject=subject,
             body=tracked_body,
@@ -143,7 +123,6 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
             headers={'Message-ID': message_id}
         )
         msg.attach_alternative(email_body, "text/html")
-
         msg.send()
         logger.info(f"sending_utils.py: Email sent successfully to {recipient}")
         
@@ -162,14 +141,3 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         logger.error(f"sending_utils.py: Error sending email to {recipient}: {e}")
         email.delete()
         return False, f"Error sending email: {str(e)}"
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

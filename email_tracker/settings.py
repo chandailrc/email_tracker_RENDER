@@ -43,9 +43,13 @@ if RENDER_EXTERNAL_HOSTNAME:
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'b28d-2405-201-5009-6022-8fef-7e89-a12e-b610.ngrok-free.app']
 
 # CSRF_TRUSTED_ORIGINS = ['https://b28d-2405-201-5009-6022-8fef-7e89-a12e-b610.ngrok-free.app']
-CSRF_TRUSTED_ORIGINS = [env('CSRF_TRUSTED_ORIGINS')]
+# CSRF_TRUSTED_ORIGINS = [env('CSRF_TRUSTED_ORIGINS')]
 
-AUTH_USER_MODEL = 'users.CustomUser'
+# Only assign if you have a custom user definition. Returns the assigned custom defined 'CustomUser' of the custom app 'users'. 
+# Otherwise AUTH_USER_MODEL is still usable and returns the default django User
+# It is safer to user 'AUTH_USER_MODEL' and 'get_user_model()' while coding since it automatically changes to default user if no custom definition is available.
+# AUTH_USER_MODEL = 'users.CustomUser' 
+
 
 LOGIN_URL = '/frontend/login/'
 
@@ -390,7 +394,7 @@ LOGGING = {
     },
     'loggers': {
         'tracking': {  # For middleware and any other tracking-specific logs
-            'handlers': ['trackingMiddleware_file', 'console'],
+            'handlers': ['trackingMiddleware_file'],
             'level': 'DEBUG',  # Or INFO if you want to exclude DEBUG messages
             'propagate': False,  # Prevent logs from being propagated to the root logger
         },
@@ -399,11 +403,11 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,  # Allows propagation to parent loggers if needed
         },
-        '': {  # Root logger configuration for any other logs
-            'handlers': ['general_file', 'console'],
-            'level': 'INFO',
-            'propagate': True,
-        },
+        # '': {  # Root logger configuration for any other logs
+        #     'handlers': ['general_file', 'console'],
+        #     'level': 'INFO',
+        #     'propagate': True,
+        # },
     },
 }
 

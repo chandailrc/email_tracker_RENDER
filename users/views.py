@@ -1,13 +1,8 @@
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-from django.contrib.auth import login
 from django.views.decorators.csrf import csrf_exempt
-
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from .forms import CustomUserCreationForm
-from .models import CustomUser
+from django.contrib.auth.decorators import login_required
 
 @csrf_exempt
 def register_user(request):
@@ -20,9 +15,6 @@ def register_user(request):
             return JsonResponse({'success': False, 'errors': form.errors})
     return JsonResponse({'success': False, 'message': 'Invalid request method'})
 
-from django.contrib.auth import authenticate, login
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def login_user(request):
@@ -37,14 +29,7 @@ def login_user(request):
             return JsonResponse({'success': False, 'message': 'Invalid credentials'})
     return JsonResponse({'success': False, 'message': 'Invalid request method'})
 
-from django.contrib.auth import logout
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-
-from django.contrib.auth import logout
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-
+@login_required
 @csrf_exempt
 def logout_user(request):
     if request.method == 'POST':
@@ -52,10 +37,6 @@ def logout_user(request):
         return JsonResponse({'success': True, 'message': 'User logged out successfully'})
     return JsonResponse({'success': False, 'message': 'Invalid request method'})
 
-from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from .forms import CustomUserChangeForm
 
 @csrf_exempt
 @login_required
@@ -78,10 +59,10 @@ def get_user_info(request):
             'user_info': {
                 'username': user.username,
                 'email': user.email,
-                'user_type': user.user_type,
-                'phone': user.phone,
-                'address': user.address,
-                'company': user.company,
+                'user_type': user.profile.user_type,
+                'phone': user.profile.phone,
+                'address': user.profile.address,
+                'company': user.profile.company,
             }
         })
     return JsonResponse({'success': False, 'message': 'User not authenticated'})

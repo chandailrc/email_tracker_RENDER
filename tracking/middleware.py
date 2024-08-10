@@ -72,14 +72,14 @@ class TrackingPixelMiddleware:
             # Extract device fingerprint
             browser_info, os_info, device_type = extract_device_fingerprint(user_agent)
 
-            if any(ua in user_agent for ua in KNOWN_PREFETCH_USER_AGENTS) or ip_address in KNOWN_PREFETCH_IP_RANGES:
-                logger.info(f"Prefetch detected - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
-            elif any(keyword in user_agent.lower() for keyword in SUSPICIOUS_KEYWORDS):
-                logger.info(f"Suspicious user agent detected - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
-            elif any(keyword in headers.get(key, '').lower() for key in headers for keyword in SUSPICIOUS_KEYWORDS):
-                logger.info(f"Suspicious header detected - IP: {ip_address}, User-Agent: {user_agent}, Headers: {headers}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
-            else:
-                logger.info(f"Valid open - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+            # if any(ua in user_agent for ua in KNOWN_PREFETCH_USER_AGENTS) or ip_address in KNOWN_PREFETCH_IP_RANGES:
+            #     logger.info(f"Prefetch detected - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+            # elif any(keyword in user_agent.lower() for keyword in SUSPICIOUS_KEYWORDS):
+            #     logger.info(f"Suspicious user agent detected - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+            # elif any(keyword in headers.get(key, '').lower() for key in headers for keyword in SUSPICIOUS_KEYWORDS):
+            #     logger.info(f"Suspicious header detected - IP: {ip_address}, User-Agent: {user_agent}, Headers: {headers}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
+            # else:
+            #     logger.info(f"Valid open - IP: {ip_address}, User-Agent: {user_agent}, Browser: {browser_info}, OS: {os_info}, Device: {device_type}")
 
         response = self.get_response(request)
         return response
