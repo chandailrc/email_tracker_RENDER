@@ -269,6 +269,17 @@ def conversation_list(request):
     conversations = response.json()['conversations']
     return render(request, 'conversation_list.html', {'conversations': conversations})
 
+# @login_required
+# def conversation_detail(request, conversation_id):
+#     csrf_token = get_token(request)
+#     session_cookie = request.COOKIES.get('sessionid')
+#     headers = {'X-CSRFToken': csrf_token,
+#                'Cookie': f'sessionid={session_cookie}'}
+    
+#     response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/', headers=headers)
+#     conversation = response.json()
+#     return render(request, 'conversation_detail.html', {'conversation': conversation})
+
 @login_required
 def conversation_detail(request, conversation_id):
     csrf_token = get_token(request)
@@ -278,7 +289,17 @@ def conversation_detail(request, conversation_id):
     
     response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/', headers=headers)
     conversation = response.json()
-    return render(request, 'conversation_detail.html', {'conversation': conversation})
+
+    # Determine the recipient's email (the other participant)
+    recipient_email = next((email for email in conversation['participants'] if email != request.user.email), '')
+
+    # Add recipient_email to the context
+    context = {
+        'conversation': conversation,
+        'recipient_email': recipient_email
+    }
+
+    return render(request, 'conversation_detail.html', context)
 
 
 def register_page(request):

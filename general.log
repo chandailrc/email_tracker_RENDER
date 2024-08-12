@@ -2866,3 +2866,5 @@ AttributeError: 'SentEmail' object has no attribute 'receipient'
 2024-08-10 18:16:16 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 554
 2024-08-10 18:16:16 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
 2024-08-10 18:16:16 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
+2024-08-12 22:00:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:00:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
