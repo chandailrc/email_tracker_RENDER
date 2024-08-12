@@ -1,50 +1,65 @@
 {% extends "base.html" %}
-
-{% block title %}Email Management{% endblock %}
-
-{% block header %}Email Management{% endblock %}
-
+{% block title %}Email Conversation: {{ conversation.subject }}{% endblock %}
+{% block header %}Email Conversation{% endblock %}
 {% block content %}
-<!-- frontend/templates/frontend/conversation_detail.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ conversation.subject }}</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-        .message { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
-        .message-header { background-color: #f0f0f0; padding: 5px; margin-bottom: 5px; }
-        .message-content { white-space: pre-wrap; }
-    </style>
-</head>
-<body>
-    <h1>{{ conversation.subject }}</h1>
-    
-    <h2>Participants:</h2>
-    <ul>
-    {% for participant in conversation.participants %}
-        <li>{{ participant }}</li>
-    {% endfor %}
-    </ul>
+<style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; }
+    .message { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+    .message-header { background-color: #f0f0f0; padding: 5px; margin-bottom: 5px; }
+    .message-content { white-space: pre-wrap; }
+    .reply-form { margin-top: 20px; border: 1px solid #ddd; padding: 20px; }
+    .reply-form textarea, .reply-form input[type="text"] { width: 100%; padding: 5px; margin-bottom: 10px; }
+    .reply-form button { padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+    .reply-form button:hover { background-color: #0056b3; }
+</style>
 
-    <h2>Messages:</h2>
-    {% for message in conversation.messages %}
-        <div class="message">
-            <div class="message-header">
-                <strong>{{ message.sender }}</strong>
-                <span>({{ message.timestamp }})</span>
-            </div>
-            <div class="message-content">
-                {{ message.content|safe }}
-            </div>
+<h1>{{ conversation.subject }}</h1>
+
+<h2>Participants:</h2>
+<ul>
+{% for participant in conversation.participants %}
+    <li>{{ participant }}</li>
+{% endfor %}
+</ul>
+
+<h2>Messages:</h2>
+{% for message in conversation.messages %}
+    <div class="message">
+        <div class="message-header">
+            <strong>{{ message.sender }}</strong>
+            <span>({{ message.timestamp }})</span>
         </div>
-    {% empty %}
-        <p>No messages in this conversation.</p>
-    {% endfor %}
+        <div class="message-content">
+            {{ message.content|safe }}
+        </div>
+    </div>
+{% empty %}
+    <p>No messages in this conversation.</p>
+{% endfor %}
 
-    <a href="{% url 'conversation_list' %}">Back to Conversations</a>
-</body>
-</html>
+<div class="reply-form">
+    <h3>Reply to this conversation</h3>
+    <form method="post" action="{% url 'send_tracked_email_view' %}">
+        {% csrf_token %}
+        <input type="hidden" name="conversation_id" value="{{ conversation.id }}">
+        
+        <label for="recipients">Recipients:</label>
+        <input type="text" id="recipients" name="recipients" value="{{ conversation.participants|join:', ' }}" readonly>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" value="Re: {{ conversation.subject }}" readonly>
+        
+        <label for="body">Your reply:</label>
+        <textarea id="body" name="body" rows="10" required></textarea>
+        
+        <input type="hidden" name="delay_type" value="fixed">
+        <input type="hidden" name="delay_value" value="0">
+        <input type="hidden" name="min_delay" value="0">
+        <input type="hidden" name="max_delay" value="0">
+        
+        <button type="submit">Send Reply</button>
+    </form>
+</div>
+
+<a href="{% url 'conversation_list' %}">Back to Conversations</a>
 {% endblock %}
