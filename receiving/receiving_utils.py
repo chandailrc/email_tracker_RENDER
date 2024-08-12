@@ -37,7 +37,7 @@ def process_incoming_email(raw_email, user_id):
     recipient = parseaddr(email_message['To'])[1]
     subject = email_message['Subject']
     message_id = email_message['Message-ID']
-    in_reply_to = email_message.get('In-Reply-To')
+    in_reply_to = email_message.get('In-Reply-To') # This is the message ID of the original email that is being replied to. This is not an email address
     
     # Check if this email has already been processed
     

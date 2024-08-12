@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 from email.utils import make_msgid
 from smtplib import SMTPRecipientsRefused, SMTPServerDisconnected
 from .models import SentEmail
+from receiving.models import ReceivedEmail
 from unsubscribers.models import UnsubscribedUser
 from tracking.tracking_utils import generate_tracking_url
 from conversations.email_processor import process_email
@@ -23,7 +24,7 @@ def generate_unsubscribe_link(recipient_email, sender_username):
 def get_visible_image_url():
     return f"{settings.BASE_URL}/api/sending/serve-image/logo.png"
 
-def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, in_reply_to=None):
+def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, in_reply_to_id=None):
     User = get_user_model()
     user = User.objects.get(id=user_id)
     if UnsubscribedUser.objects.filter(email=recipient).exists():
@@ -32,7 +33,8 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     try:
         message_id = make_msgid(domain=settings.EMAIL_DOMAIN)
         
-        if in_reply_to:
+        if in_reply_to_id:
+            in_reply_to = ReceivedEmail.objects.get(user=user, id=in_reply_to_id)
             thread_id = in_reply_to.thread_id or str(uuid.uuid4())
             if not subject.lower().startswith('re:'):
                 subject = f"Re: {in_reply_to.subject}"

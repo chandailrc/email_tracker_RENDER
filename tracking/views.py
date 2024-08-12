@@ -162,10 +162,10 @@ def dashboard_data(request):
         email__in=emails.values_list('recipient', flat=True)
     ).values_list('email', flat=True)
     
-    pixel_event_count_list = []
-    for email in emails:
-        pixel_event_count = TrackingEvent.objects.filter(tracking_item__email=email, tracking_item__item_type='PIXEL').count()
-        pixel_event_count_list.append(pixel_event_count)
+    # pixel_event_count_list = []
+    # for email in emails:
+    #     pixel_event_count = TrackingEvent.objects.filter(tracking_item__email=email, tracking_item__item_type='PIXEL').count()
+    #     pixel_event_count_list.append(pixel_event_count)
       
     # Serialize the email data
     emails_data = serializers.serialize('json', emails)
@@ -176,7 +176,7 @@ def dashboard_data(request):
     return JsonResponse({
         'emails': emails_data,
         'unsubscribed_users': list(unsubscribed_users),
-        'pixel_event_count_list': pixel_event_count_list
+        # 'pixel_event_count_list': pixel_event_count_list
     })
 
 def email_detail_data(request):

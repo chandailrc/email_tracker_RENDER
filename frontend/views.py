@@ -61,7 +61,6 @@ def dashboard(request):
     if response.status_code == 200:
         data = response.json()
         unsubscribed_emails = data['unsubscribed_users']
-        pixel_event_count_list = data['pixel_event_count_list']
         
         # Deserialize the email data
         email_objects = list(serializers.deserialize('json', data['emails']))

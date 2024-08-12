@@ -61,11 +61,13 @@ def send_tracked_email(request):
 @require_POST
 def reply_send_tracked_email(request, received_email_id):
     
+    user = request.user
+    
     received_email = ReceivedEmail.objects.get(id=received_email_id)
     subject = request.POST.get('subject')
     body = request.POST.get('body')
     
-    success = sending_utils.tracked_email_sender(received_email.sender, subject, body, in_reply_to=received_email)
+    success = sending_utils.tracked_email_sender(user.id, received_email.sender, subject, body, in_reply_to=received_email_id)
     
     if success:
         confirmation_message = 'Reply sent successfully to {received_email.sender}'
