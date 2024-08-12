@@ -60,30 +60,34 @@ def send_tracked_email(request):
 @csrf_protect
 @require_POST
 def reply_send_tracked_email(request, received_email_id):
-    
-    user = request.user
-    
-    received_email = ReceivedEmail.objects.get(id=received_email_id)
-    subject = request.POST.get('subject')
-    body = request.POST.get('body')
-    
-    success = sending_utils.tracked_email_sender(user.id, received_email.sender, subject, body, in_reply_to=received_email_id)
-    
-    if success:
-        confirmation_message = 'Reply sent successfully to {received_email.sender}'
-        sent_count = 1
-        failed_recipients = 0
-    else:
-        confirmation_message = 'Reply failed to {received_email.sender}'
-        sent_count = 0
-        failed_recipients = 1
-    
-    return JsonResponse({
-        'success': True,
-        'message': confirmation_message,
-        'sent_count': sent_count,
-        'failed_recipients': failed_recipients
-    })
+    try:
+        received_email = ReceivedEmail.objects.get(id=received_email_id)
+        subject = request.POST.get('subject')
+        body = request.POST.get('body')
+        
+        success, message = sending_utils.tracked_email_sender(
+            request.user.id,
+            received_email.sender,
+            subject,
+            body,
+            in_reply_to_id=received_email_id
+        )
+        
+        return JsonResponse({
+            'success': success,
+            'message': message
+        })
+    except ReceivedEmail.DoesNotExist:
+        return JsonResponse({
+            'success': False,
+            'message': "Received email not found"
+        }, status=404)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'message': str(e)
+        }, status=500)
+
 
 def serve_image(request, image_name):
     image_path = os.path.join(settings.BASE_DIR, 'static/images', image_name)

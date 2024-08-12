@@ -6,8 +6,6 @@ from django.http import HttpResponse
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
-
-
 import requests
 
 def home(request):
@@ -48,6 +46,37 @@ def send_tracked_email_view(request):
         return redirect('compose_email')
     
     return render(request, 'compose_email.html')
+
+@login_required
+def reply_send_tracked_email_view(request):
+    conversation_id = request.POST.get('conversation_id')
+    received_email_id = request.POST.get('received_email_id')
+    
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {
+        'X-CSRFToken': csrf_token,
+        'Cookie': f'sessionid={session_cookie}'
+    }
+    
+    response = requests.post(
+        f'{settings.BASE_URL}/api/sending/reply-send-tracked-email/{received_email_id}/',
+        data=request.POST,
+        headers=headers,
+        cookies=request.COOKIES
+    )
+    
+    if response.status_code == 200:
+        result = response.json()
+        if result['success']:
+            messages.success(request, 'Reply sent successfully.')
+        else:
+            messages.error(request, f'Failed to send reply: {result.get("message", "Unknown error")}')
+    else:
+        messages.error(request, f'An error occurred: {response.status_code}')
+    
+    return redirect('conversation_detail', conversation_id=conversation_id)
+
 
 @login_required
 def dashboard(request):

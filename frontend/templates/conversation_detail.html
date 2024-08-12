@@ -11,19 +11,20 @@
     .reply-form textarea, .reply-form input[type="text"] { width: 100%; padding: 5px; margin-bottom: 10px; }
     .reply-form button { padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
     .reply-form button:hover { background-color: #0056b3; }
+    .recipient-field { background-color: #e9ecef; }
 </style>
 
 <h1>{{ conversation.subject }}</h1>
 
 <h2>Participants:</h2>
 <ul>
-{% for participant in conversation.participants %}
-    <li>{{ participant }}</li>
+{% for participant in conversation.participants.all %}
+    <li>{{ participant.email }}</li>
 {% endfor %}
 </ul>
 
 <h2>Messages:</h2>
-{% for message in conversation.messages %}
+{% for message in conversation.conversationmessage_set.all|dictsort:"timestamp" %}
     <div class="message">
         <div class="message-header">
             <strong>{{ message.sender }}</strong>
@@ -39,12 +40,13 @@
 
 <div class="reply-form">
     <h3>Reply to this conversation</h3>
-    <form method="post" action="{% url 'send_tracked_email_view' %}">
+    <form method="post" action="{% url 'reply_send_tracked_email_view' %}">
         {% csrf_token %}
         <input type="hidden" name="conversation_id" value="{{ conversation.id }}">
+        <input type="hidden" name="received_email_id" value="{{ conversation.conversationmessage_set.last.received_email.id }}">
         
-        <label for="recipients">Recipients:</label>
-        <input type="text" id="recipients" name="recipients" value="{{ conversation.participants|join:', ' }}" readonly>
+        <label for="recipient">To:</label>
+        <input type="text" id="recipient" name="recipient" value="{{ conversation.participants.exclude(email=request.user.email).first.email }}" readonly class="recipient-field">
         
         <label for="subject">Subject:</label>
         <input type="text" id="subject" name="subject" value="Re: {{ conversation.subject }}" readonly>
@@ -52,14 +54,19 @@
         <label for="body">Your reply:</label>
         <textarea id="body" name="body" rows="10" required></textarea>
         
-        <input type="hidden" name="delay_type" value="fixed">
-        <input type="hidden" name="delay_value" value="0">
-        <input type="hidden" name="min_delay" value="0">
-        <input type="hidden" name="max_delay" value="0">
-        
         <button type="submit">Send Reply</button>
     </form>
 </div>
 
-<a href="{% url 'conversation_list' %}">Back to Conversations</a>
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<a href="{% url 'frontend:list_conversations' %}">Back to Conversations</a>
 {% endblock %}
