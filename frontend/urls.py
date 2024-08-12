@@ -7,6 +7,7 @@ urlpatterns = [
     path('home/', views.home, name='home'),
     path('compose/', views.compose_email_view, name='compose_email'),
     path('send-tracked-email/', views.send_tracked_email_view, name='send_tracked_email_view'),
+    path('reply-send-tracked-email/', views.reply_send_tracked_email_view, name='reply_send_tracked_email_view'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('email/<int:email_id>/', views.email_detail, name='email_detail'),
     path('unsubscribe/', views.unsubscribe, name='unsubscribe'),

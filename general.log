@@ -2878,3 +2878,171 @@ AttributeError: 'SentEmail' object has no attribute 'receipient'
 2024-08-12 22:29:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
 2024-08-12 22:29:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-08-12 22:29:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:44:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-08-12 22:44:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-08-12 22:44:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:44:57 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:46:02 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 302 0
+2024-08-12 22:46:02 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 302 0
+2024-08-12 22:46:02 - django.server - INFO - "GET /frontend/login/?next=/frontend/compose/ HTTP/1.1" 200 1984
+2024-08-12 22:46:02 - django.server - INFO - "GET /frontend/login/?next=/frontend/compose/ HTTP/1.1" 200 1984
+2024-08-12 22:46:02 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-12 22:46:02 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-12 22:46:10 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-08-12 22:46:10 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-08-12 22:46:10 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-08-12 22:46:10 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-08-12 22:46:10 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-08-12 22:46:10 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 2838
+2024-08-12 22:46:10 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 145
+2024-08-12 22:46:10 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 145
+2024-08-12 22:46:10 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-12 22:46:10 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-12 22:46:19 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 522
+2024-08-12 22:46:19 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 522
+2024-08-12 22:46:19 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
+2024-08-12 22:46:19 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
+2024-08-12 22:46:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 161
+2024-08-12 22:46:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 161
+2024-08-12 22:46:25 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2593
+2024-08-12 22:46:25 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2593
+2024-08-12 22:46:27 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 270
+2024-08-12 22:46:27 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 270
+2024-08-12 22:46:27 - django.request - ERROR - Internal Server Error: /frontend/conversations/1/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'frontend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 307, in conversation_detail
+    return render(request, 'conversation_detail.html', context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'frontend' is not a registered namespace
+2024-08-12 22:46:27 - django.request - ERROR - Internal Server Error: /frontend/conversations/1/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'frontend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 307, in conversation_detail
+    return render(request, 'conversation_detail.html', context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'frontend' is not a registered namespace
+2024-08-12 22:46:27 - django.server - ERROR - "GET /frontend/conversations/1/ HTTP/1.1" 500 192040
+2024-08-12 22:46:27 - django.server - ERROR - "GET /frontend/conversations/1/ HTTP/1.1" 500 192040
+2024-08-12 22:48:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:48:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:48:53 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 522
+2024-08-12 22:48:53 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 522
+2024-08-12 22:48:53 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
+2024-08-12 22:48:53 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
+2024-08-12 22:48:54 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-08-12 22:48:54 - django.server - INFO - "GET /api/unsubscribers/unsubscribed-users-data/ HTTP/1.1" 200 27
+2024-08-12 22:48:54 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2473
+2024-08-12 22:48:54 - django.server - INFO - "GET /frontend/unsubscribed-users/ HTTP/1.1" 200 2473
+2024-08-12 22:48:55 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-08-12 22:48:55 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-08-12 22:48:55 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2429
+2024-08-12 22:48:55 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2429
+2024-08-12 22:48:56 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-12 22:48:56 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-12 22:48:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 161
+2024-08-12 22:48:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 161
+2024-08-12 22:48:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2593
+2024-08-12 22:48:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 2593
+2024-08-12 22:48:59 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 270
+2024-08-12 22:48:59 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 270
+2024-08-12 22:48:59 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 4023
+2024-08-12 22:48:59 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 4023
