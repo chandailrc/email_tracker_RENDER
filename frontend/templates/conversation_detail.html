@@ -40,7 +40,7 @@
 
 <div class="reply-form">
     <h3>Reply to this conversation</h3>
-    <form method="post" action="{% url 'frontend:reply_send_tracked_email_view' %}">
+    <form method="post" action="{% url 'reply_send_tracked_email_view' %}">
         {% csrf_token %}
         <input type="hidden" name="conversation_id" value="{{ conversation.id }}">
         <input type="hidden" name="received_email_id" value="{{ last_message_id }}">
