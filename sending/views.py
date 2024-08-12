@@ -57,7 +57,7 @@ def send_tracked_email(request):
         'errors': errors
     })
 
-@csrf_protect
+@csrf_exempt
 @require_POST
 def reply_send_tracked_email(request, received_email_id):
     try:
