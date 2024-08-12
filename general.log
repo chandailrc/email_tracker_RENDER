@@ -2868,3 +2868,13 @@ AttributeError: 'SentEmail' object has no attribute 'receipient'
 2024-08-10 18:16:16 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 19329
 2024-08-12 22:00:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-08-12 22:00:03 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:24:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:24:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:27:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-12 22:27:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-12 22:27:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:27:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:29:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-12 22:29:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-12 22:29:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-12 22:29:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

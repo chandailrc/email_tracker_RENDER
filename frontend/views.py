@@ -291,12 +291,17 @@ def conversation_detail(request, conversation_id):
     conversation = response.json()
 
     # Determine the recipient's email (the other participant)
-    recipient_email = next((email for email in conversation['participants'] if email != request.user.email), '')
+    user_email = settings.DEFAULT_FROM_EMAIL
+    recipient_email = next((email for email in conversation['participants'] if email != user_email), '')
 
-    # Add recipient_email to the context
+    # Get the ID of the last message
+    last_message_id = conversation['messages'][-1]['id'] if conversation['messages'] else None
+
+    # Add recipient_email and last_message_id to the context
     context = {
         'conversation': conversation,
-        'recipient_email': recipient_email
+        'recipient_email': recipient_email,
+        'last_message_id': last_message_id
     }
 
     return render(request, 'conversation_detail.html', context)
