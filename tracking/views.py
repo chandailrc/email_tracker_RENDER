@@ -151,6 +151,7 @@ def delete_unsubscribed_users(request):
         UnsubscribedUser.objects.all().delete()
         return redirect('unsubscribed_users_list')
 
+from receiving.models import ReceivedEmail
 @csrf_exempt
 def dashboard_data(request):
     # Fetch emails sent by the current user
@@ -166,6 +167,47 @@ def dashboard_data(request):
     # for email in emails:
     #     pixel_event_count = TrackingEvent.objects.filter(tracking_item__email=email, tracking_item__item_type='PIXEL').count()
     #     pixel_event_count_list.append(pixel_event_count)
+    
+    
+    sent_emails = SentEmail.objects.all()
+    received_emails = ReceivedEmail.objects.all()
+    
+    print("\n\n >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SENT MAILS")
+    
+    for mail in sent_emails:
+        print("\n\n")
+        print('mail')
+        print(mail)
+        print('mail.subject')
+        print(mail.subject)
+        print('mail.body')
+        print(mail.body)
+        print('mail.id')
+        print(mail.id)
+        print('mail.message_id')
+        print(mail.message_id)
+        print('mail.thread_id')
+        print(mail.thread_id)
+        print('mail.in_reply_to')
+        print(mail.in_reply_to)
+        
+    print("\n\n >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> RECEIVED MAILS")
+    for mail in received_emails:
+        print("\n\n")
+        print('mail')
+        print(mail)
+        print('mail.subject')
+        print(mail.subject)
+        print('mail.body')
+        print(mail.body)
+        print('mail.id')
+        print(mail.id)
+        print('mail.message_id')
+        print(mail.message_id)
+        print('mail.thread_id')
+        print(mail.thread_id)
+        print('mail.in_reply_to')
+        print(mail.in_reply_to)
       
     # Serialize the email data
     emails_data = serializers.serialize('json', emails)
