@@ -39,6 +39,8 @@ def process_incoming_email(raw_email, user_id):
     message_id = email_message['Message-ID']
     in_reply_to = email_message.get('In-Reply-To') # This is the message ID of the original email that is being replied to. This is not an email address
     
+    print('***********FROM INSIDE RECEIVING. in_reply_to of the received message: \n {in_reply_to}')
+    
     # Check if this email has already been processed
     
     if ReceivedEmail.objects.filter(user=user, message_id=message_id).exists():
