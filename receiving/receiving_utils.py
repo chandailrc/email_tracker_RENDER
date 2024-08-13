@@ -9,6 +9,22 @@ from email.utils import parseaddr
 from conversations.email_processor import process_email
 from django.contrib.auth import get_user_model
 
+from django.core.exceptions import ObjectDoesNotExist
+
+def find_email_model(message_id):
+    try:
+        sent_email = SentEmail.objects.get(message_id=message_id)
+        return 'send', sent_email
+    except ObjectDoesNotExist:
+        pass
+    
+    try:
+        received_email = ReceivedEmail.objects.get(message_id=message_id)
+        return 'received', received_email
+    except ObjectDoesNotExist:
+        pass
+    
+    return None, None  # If message_id is not found in either model
 
 def fetch_and_process_emails(user_id):
     new_emails_count = 0
@@ -68,8 +84,9 @@ def process_incoming_email(raw_email, user_id):
 
     # Link to the original email if it's a reply
     if in_reply_to:
+       
         try:
-            original_email = SentEmail.objects.get(user=user, message_id=in_reply_to)
+            result_msg, original_email = find_email_model(user, in_reply_to) 
             received_email.in_reply_to = in_reply_to
             received_email.thread_id = original_email.thread_id
             received_email.save()
@@ -86,7 +103,7 @@ def process_incoming_email(raw_email, user_id):
                 # If we still can't find the original email, just continue without linking
                 pass
 
-    process_email(received_email, 'received', user_id)
+    process_email(received_email, 'received', user_id, result_msg)
 
     # Process attachments
     for part in email_message.walk():
