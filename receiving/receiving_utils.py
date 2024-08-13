@@ -70,7 +70,7 @@ def process_incoming_email(raw_email, user_id):
     if in_reply_to:
         try:
             original_email = SentEmail.objects.get(user=user, message_id=in_reply_to)
-            received_email.in_reply_to = message_id
+            received_email.in_reply_to = in_reply_to
             received_email.thread_id = original_email.thread_id
             received_email.save()
         except SentEmail.DoesNotExist:
@@ -79,7 +79,7 @@ def process_incoming_email(raw_email, user_id):
                     subject__startswith=re.sub(r'^Re:\s*', '', subject, flags=re.IGNORECASE),
                     recipient=sender
                 ).latest('sent_at')
-                received_email.in_reply_to = message_id
+                received_email.in_reply_to = in_reply_to
                 received_email.thread_id = original_email.thread_id
                 received_email.save()
             except SentEmail.DoesNotExist:
