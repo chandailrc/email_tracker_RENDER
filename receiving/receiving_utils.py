@@ -11,15 +11,15 @@ from django.contrib.auth import get_user_model
 
 from django.core.exceptions import ObjectDoesNotExist
 
-def find_email_model(message_id):
+def find_email_model(user, message_id):
     try:
-        sent_email = SentEmail.objects.get(message_id=message_id)
+        sent_email = SentEmail.objects.get(user=user, message_id=message_id)
         return 'send', sent_email
     except ObjectDoesNotExist:
         pass
     
     try:
-        received_email = ReceivedEmail.objects.get(message_id=message_id)
+        received_email = ReceivedEmail.objects.get(user=user, message_id=message_id)
         return 'received', received_email
     except ObjectDoesNotExist:
         pass
