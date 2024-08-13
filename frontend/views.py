@@ -50,7 +50,7 @@ def send_tracked_email_view(request):
 @login_required
 def reply_send_tracked_email_view(request):
     conversation_id = request.POST.get('conversation_id')
-    received_email_id = request.POST.get('received_email_id')
+    # received_email_id = request.POST.get('received_email_id')
     
     csrf_token = get_token(request)
     session_cookie = request.COOKIES.get('sessionid')
@@ -58,9 +58,11 @@ def reply_send_tracked_email_view(request):
         'X-CSRFToken': csrf_token,
         'Cookie': f'sessionid={session_cookie}'
     }
+    # print('frontend view: ')
+    # print(request.POST.get('sendOrRec'))
     
     response = requests.post(
-        f'{settings.BASE_URL}/api/sending/reply-send-tracked-email/{received_email_id}/',
+        f'{settings.BASE_URL}/api/sending/reply-send-tracked-email/',
         data=request.POST,
         headers=headers,
         cookies=request.COOKIES
@@ -280,6 +282,7 @@ def conversation_list(request):
 #     conversation = response.json()
 #     return render(request, 'conversation_detail.html', {'conversation': conversation})
 
+from sending.models import SentEmail
 @login_required
 def conversation_detail(request, conversation_id):
     csrf_token = get_token(request)
@@ -293,15 +296,27 @@ def conversation_detail(request, conversation_id):
     # Determine the recipient's email (the other participant)
     user_email = settings.DEFAULT_FROM_EMAIL
     recipient_email = next((email for email in conversation['participants'] if email != user_email), '')
+        
+    last_email_id = conversation['messages'][-1]['email_id']
+    sendOrRec_status = conversation['messages'][-1]['sendOrRec']
+    
+    print('last_email_id: ')
+    print(last_email_id)
+    
+    em = SentEmail.objects.get(user=request.user, id=last_email_id)
+    if em:
+        print('Success em')
+    else:
+        print('Fail em')
+    
+    print('sendOrRec_status: ')
+    print(sendOrRec_status)
 
-    # Get the ID of the last message
-    last_message_id = conversation['messages'][-1]['id'] if conversation['messages'] else None
-
-    # Add recipient_email and last_message_id to the context
     context = {
         'conversation': conversation,
         'recipient_email': recipient_email,
-        'last_message_id': last_message_id
+        'last_email_id': last_email_id,
+        'sendOrRec': sendOrRec_status
     }
 
     return render(request, 'conversation_detail.html', context)

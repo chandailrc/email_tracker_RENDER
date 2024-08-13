@@ -5,7 +5,7 @@ from receiving.models import ReceivedEmail
 from django.contrib.auth import get_user_model
 
 
-def process_email(email, email_type, user_id):
+def process_email(email, email_type, user_id, in_reply_sendOrRec=None):
     
     User = get_user_model()
     user = User.objects.get(id=user_id)
@@ -23,9 +23,19 @@ def process_email(email, email_type, user_id):
     if email.in_reply_to:
         try:
             if email_type == 'sent':
-                existing_message = ConversationMessage.objects.get(conversation__user=user, received_email=email.in_reply_to)
-            else:  # received
-                existing_message = ConversationMessage.objects.get(conversation__user=user, sent_email=email.in_reply_to)
+                if in_reply_sendOrRec == "send":
+                    in_reply_to_email = SentEmail.objects.get(user=user, message_id=email.in_reply_to)
+                    existing_message = ConversationMessage.objects.get(conversation__user=user, sent_email=in_reply_to_email)
+                else:
+                    in_reply_to_email = ReceivedEmail.objects.get(user=user, message_id=email.in_reply_to)
+                    existing_message = ConversationMessage.objects.get(conversation__user=user, received_email=in_reply_to_email)
+            else:  # received. DO THE SAME AS WHAT WE HAVE DONE FOR email_type == 'sent'
+                if in_reply_sendOrRec == "send":
+                    in_reply_to_email = SentEmail.objects.get(user=user, message_id=email.in_reply_to)
+                    existing_message = ConversationMessage.objects.get(conversation__user=user, sent_email=in_reply_to_email)                    
+                else:
+                    in_reply_to_email = ReceivedEmail.objects.get(user=user, message_id=email.in_reply_to)
+                    existing_message = ConversationMessage.objects.get(conversation__user=user, received_email=in_reply_to_email)
             conversation = existing_message.conversation
         except ConversationMessage.DoesNotExist:
             # If not found, create a new conversation

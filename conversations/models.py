@@ -40,3 +40,11 @@ class ConversationMessage(models.Model):
     @property
     def content(self):
         return self.sent_email.body if self.sent_email else self.received_email.body
+    
+    @property
+    def email_id(self):
+        return self.sent_email.id if self.sent_email else self.received_email.id
+    
+    @property
+    def sendOrRec(self):
+        return 'send' if self.sent_email else 'received'

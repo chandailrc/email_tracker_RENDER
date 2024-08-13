@@ -43,7 +43,8 @@
     <form method="post" action="{% url 'reply_send_tracked_email_view' %}">
         {% csrf_token %}
         <input type="hidden" name="conversation_id" value="{{ conversation.id }}">
-        <input type="hidden" name="received_email_id" value="{{ last_message_id }}">
+        <input type="hidden" name="last_email_id" value="{{ last_email_id }}">
+        <input type="hidden" name="sendOrRec" value="{{ sendOrRec }}">
         
         <label for="recipient">To:</label>
         <input type="text" id="recipient" name="recipient" value="{{ recipient_email }}" readonly class="recipient-field">

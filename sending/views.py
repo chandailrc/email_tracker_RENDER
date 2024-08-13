@@ -11,6 +11,7 @@ from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.conf import settings
 
 from receiving.models import ReceivedEmail
+from sending.models import SentEmail
 
 @csrf_exempt
 @require_POST
@@ -59,34 +60,48 @@ def send_tracked_email(request):
 
 @csrf_exempt
 @require_POST
-def reply_send_tracked_email(request, received_email_id):
-    try:
-        received_email = ReceivedEmail.objects.get(id=received_email_id)
-        subject = request.POST.get('subject')
-        body = request.POST.get('body')
+def reply_send_tracked_email(request):
+    # try:
+    print("request.POST.get('sendOrRec'): ")
+    print(request.POST.get('sendOrRec'))
+    print("request.POST.get('last_email_id'): ")
+    print(request.POST.get('last_email_id'))
         
-        success, message = sending_utils.tracked_email_sender(
-            request.user.id,
-            received_email.sender,
-            subject,
-            body,
-            in_reply_to_id=received_email_id
-        )
-        
-        return JsonResponse({
-            'success': success,
-            'message': message
+    if request.POST.get('sendOrRec') == 'send':
+        sent_email = SentEmail.objects.get(id=request.POST.get('last_email_id'), user=request.user)
+        recipient_address = sent_email.recipient
+        irt_msg_id = sent_email.message_id
+    else:    
+        received_email = ReceivedEmail.objects.get(id=request.POST.get('last_email_id'), user=request.user)
+        recipient_address = received_email.sender
+        irt_msg_id = received_email.message_id
+    
+    subject = request.POST.get('subject')
+    body = request.POST.get('body')
+    
+    success, message = sending_utils.tracked_email_sender(
+        request.user.id,
+        recipient_address,
+        subject,
+        body,
+        in_reply_to_message_id = irt_msg_id,
+        in_reply_sendOrRec = request.POST.get('sendOrRec')
+    )
+    
+    return JsonResponse({
+        'success': success,
+        'message': message
         })
-    except ReceivedEmail.DoesNotExist:
-        return JsonResponse({
-            'success': False,
-            'message': "Received email not found"
-        }, status=404)
-    except Exception as e:
-        return JsonResponse({
-            'success': False,
-            'message': str(e)
-        }, status=500)
+    # except ReceivedEmail.DoesNotExist:
+    #     return JsonResponse({
+    #         'success': False,
+    #         'message': "Received email not found"
+    #     }, status=404)
+    # except Exception as e:
+    #     return JsonResponse({
+    #         'success': False,
+    #         'message': str(e)
+    #     }, status=500)
 
 
 def serve_image(request, image_name):

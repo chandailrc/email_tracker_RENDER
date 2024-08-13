@@ -24,7 +24,7 @@ def generate_unsubscribe_link(recipient_email, sender_username):
 def get_visible_image_url():
     return f"{settings.BASE_URL}/api/sending/serve-image/logo.png"
 
-def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, in_reply_to_id=None):
+def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, in_reply_to_message_id=None, in_reply_sendOrRec=None):
     User = get_user_model()
     user = User.objects.get(id=user_id)
     if UnsubscribedUser.objects.filter(email=recipient).exists():
@@ -33,9 +33,16 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     # try:
     message_id = make_msgid(domain=settings.EMAIL_DOMAIN)
     
-    if in_reply_to_id:
-        in_reply_to = ReceivedEmail.objects.get(user=user, id=in_reply_to_id)
-        thread_id = in_reply_to.thread_id# or str(uuid.uuid4())
+    if in_reply_to_message_id:
+        if in_reply_sendOrRec == 'send':
+            in_reply_to = in_reply_to_message_id
+            sent_email = SentEmail.objects.get(user=user, message_id=in_reply_to_message_id)
+            thread_id = sent_email.thread_id
+        else:
+            in_reply_to = in_reply_to_message_id
+            received_email = ReceivedEmail.objects.get(user=user, message_id=in_reply_to_message_id)
+            thread_id = received_email.thread_id
+        # thread_id = in_reply_to.thread_id# or str(uuid.uuid4())
         if not subject.lower().startswith('re:'):
             subject = f"Re: {in_reply_to.subject}"
     else:
@@ -129,7 +136,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     msg.send()
     logger.info(f"sending_utils.py: Email sent successfully to {recipient}")
     
-    process_email(email, 'sent', user_id)
+    process_email(email, 'sent', user_id, in_reply_sendOrRec)
     
     return True, "Email sent successfully"
     # except SMTPRecipientsRefused:

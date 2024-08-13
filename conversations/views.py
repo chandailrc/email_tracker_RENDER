@@ -29,7 +29,9 @@ def get_conversation(request, conversation_id):
                 'id': msg.id,
                 'sender': msg.sender,
                 'content': msg.content,
-                'timestamp': msg.timestamp.isoformat()
+                'timestamp': msg.timestamp.isoformat(),
+                'email_id': msg.email_id,
+                'sendOrRec': msg.sendOrRec
             } for msg in messages]
         }
         return JsonResponse(data)
