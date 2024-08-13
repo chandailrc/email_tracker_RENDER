@@ -28,3 +28,23 @@
 2024-08-13 17:47:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
 2024-08-13 17:47:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-08-13 17:47:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-13 18:13:59 - django.request - WARNING - Not Found: /recommender/recommendations/
+2024-08-13 18:13:59 - django.request - WARNING - Not Found: /recommender/recommendations/
+2024-08-13 18:13:59 - django.server - WARNING - "GET /recommender/recommendations/ HTTP/1.1" 404 3199
+2024-08-13 18:13:59 - django.server - WARNING - "GET /recommender/recommendations/ HTTP/1.1" 404 3199
+2024-08-13 18:13:59 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-13 18:13:59 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-13 18:14:00 - django.request - WARNING - Not Found: /recommender/profile/
+2024-08-13 18:14:00 - django.request - WARNING - Not Found: /recommender/profile/
+2024-08-13 18:14:00 - django.server - WARNING - "GET /recommender/profile/ HTTP/1.1" 404 3175
+2024-08-13 18:14:00 - django.server - WARNING - "GET /recommender/profile/ HTTP/1.1" 404 3175
+2024-08-13 18:14:00 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-13 18:14:00 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-13 18:15:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-13 18:15:10 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-13 18:15:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-13 18:15:10 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-13 18:15:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-13 18:15:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-13 18:15:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-13 18:15:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
