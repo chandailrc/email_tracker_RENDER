@@ -5,6 +5,7 @@ from django.conf import settings
 from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 import requests
 
@@ -250,6 +251,7 @@ def email_management(request):
     }
     return render(request, 'email_management.html', context)
 
+@csrf_exempt
 @login_required
 def fetch_emails(request):
     csrf_token = get_token(request)
@@ -258,17 +260,15 @@ def fetch_emails(request):
                'Cookie': f'sessionid={session_cookie}'}
     
     if request.method == 'POST':
-    
         response = requests.post(f'{settings.BASE_URL}/api/receiving/fetch/',
                                  headers=headers,
-                                 cookies=request.COOKIES 
-                                 )
+                                 cookies=request.COOKIES)
         if response.status_code == 200:
             new_emails_count = response.json().get('new_emails', 0)
-            messages.success(request, f'Fetched {new_emails_count} new emails')
+            return JsonResponse({'status': 'success', 'new_emails_count': new_emails_count})
         else:
-            messages.error(request, "Failed to fetch new emails.")
-    return redirect('email_management')
+            return JsonResponse({'status': 'error', 'message': "Failed to fetch new emails."})
+    return JsonResponse({'status': 'error', 'message': "Invalid request method."})
 
 # @login_required
 # def conversation_list(request):

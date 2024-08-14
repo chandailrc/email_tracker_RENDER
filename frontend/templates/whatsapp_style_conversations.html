@@ -99,18 +99,22 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <ul class="conversation-list">
-                {% for conversation in conversations %}
-                <li class="conversation-item {% if conversation.id == active_conversation.id %}active{% endif %}" data-conversation-id="{{ conversation.id }}">
-                    <h3>{{ conversation.subject }}</h3>
-                    <p>Last updated: {{ conversation.last_updated }}</p>
-                </li>
-                {% empty %}
-                <li>No conversations found.</li>
-                {% endfor %}
-            </ul>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Conversations</h2>
+            <button class="fetch-emails-button">Fetch New Emails</button>
         </div>
+        <ul class="conversation-list">
+            {% for conversation in conversations %}
+            <li class="conversation-item {% if conversation.id == active_conversation.id %}active{% endif %}" data-conversation-id="{{ conversation.id }}">
+                <h3>{{ conversation.subject }}</h3>
+                <p>Last updated: {{ conversation.last_updated }}</p>
+            </li>
+            {% empty %}
+            <li>No conversations found.</li>
+            {% endfor %}
+        </ul>
+    </div>
         <div class="main-content">
             {% if conversation_selected %}
                 {% if active_conversation %}
@@ -219,6 +223,39 @@
                 }
             });
         }
+        
+        // Add a function to fetch emails
+        function fetchEmails() {
+            $.ajax({
+                url: '{% url 'fetch_emails' %}',
+                type: 'POST',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        alert('Fetched ' + response.new_emails_count + ' new emails');
+                        // If new emails were fetched, reload the current conversation
+                        if (response.new_emails_count > 0) {
+                            var activeConversationId = $('.conversation-item.active').data('conversation-id');
+                            if (activeConversationId) {
+                                loadConversation(activeConversationId);
+                            }
+                        }
+                    } else {
+                        alert('Error: ' + response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("An error occurred: " + error);
+                    alert("An error occurred while fetching emails. Please try again.");
+                }
+            });
+        }
+    
+        // Add a button or link to trigger email fetching
+        $('.fetch-emails-button').click(function(e) {
+            e.preventDefault();
+            fetchEmails();
+        });
     
         function updateConversationView(data) {
             var $mainContent = $('.main-content');

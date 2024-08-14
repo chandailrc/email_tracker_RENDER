@@ -1502,3 +1502,103 @@ DETAIL:  Key (in_reply_to)=(<172365005844.93155.11624975688584096762@razor-arts.
 2024-08-14 22:42:09 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
 2024-08-14 22:42:09 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
 2024-08-14 22:42:09 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 23:13:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 23:13:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 23:13:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 23:13:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 23:18:11 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:11 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:11 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10385
+2024-08-14 23:18:11 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10385
+2024-08-14 23:18:14 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:14 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:14 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 23:18:14 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 23:18:14 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 23:18:14 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 23:18:15 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:15 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:15 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 23:18:15 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 23:18:15 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 23:18:15 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 23:18:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:18:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 23:18:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 23:18:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 23:18:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 23:18:19 - django.security.csrf - WARNING - Forbidden (CSRF token missing.): /frontend/fetch-emails/
+2024-08-14 23:18:19 - django.security.csrf - WARNING - Forbidden (CSRF token missing.): /frontend/fetch-emails/
+2024-08-14 23:18:19 - django.server - WARNING - "POST /frontend/fetch-emails/ HTTP/1.1" 403 2505
+2024-08-14 23:18:19 - django.server - WARNING - "POST /frontend/fetch-emails/ HTTP/1.1" 403 2505
+2024-08-14 23:18:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 23:18:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 23:18:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 23:18:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 23:21:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 23:21:04 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 23:21:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 23:21:04 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 23:21:11 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:11 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:11 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 23:21:11 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 23:21:11 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 23:21:11 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 23:21:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:12 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 23:21:12 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 23:21:12 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 23:21:12 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 23:21:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:13 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 23:21:13 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 23:21:13 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 23:21:13 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 23:21:14 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:14 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 23:21:14 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 23:21:14 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 23:21:14 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 23:21:14 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 23:21:18 - django.request - ERROR - Internal Server Error: /api/receiving/fetch/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/views.py", line 19, in fetch_emails
+    new_emails_count = fetch_and_process_emails((request.user).id)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py", line 31, in fetch_and_process_emails
+    with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/conf/__init__.py", line 91, in __getattr__
+    val = getattr(_wrapped, name)
+AttributeError: 'Settings' object has no attribute 'EMAIL_IMAP_SERVER'
+2024-08-14 23:21:18 - django.request - ERROR - Internal Server Error: /api/receiving/fetch/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/views.py", line 19, in fetch_emails
+    new_emails_count = fetch_and_process_emails((request.user).id)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py", line 31, in fetch_and_process_emails
+    with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/conf/__init__.py", line 91, in __getattr__
+    val = getattr(_wrapped, name)
+AttributeError: 'Settings' object has no attribute 'EMAIL_IMAP_SERVER'
+2024-08-14 23:21:18 - django.server - ERROR - "POST /api/receiving/fetch/ HTTP/1.1" 500 89673
+2024-08-14 23:21:18 - django.server - ERROR - "POST /api/receiving/fetch/ HTTP/1.1" 500 89673
+2024-08-14 23:21:18 - django.server - INFO - "POST /frontend/fetch-emails/ HTTP/1.1" 200 61
+2024-08-14 23:21:18 - django.server - INFO - "POST /frontend/fetch-emails/ HTTP/1.1" 200 61
