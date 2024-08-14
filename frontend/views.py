@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.middleware.csrf import get_token
 from django.conf import settings
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
@@ -50,16 +50,12 @@ def send_tracked_email_view(request):
 @login_required
 def reply_send_tracked_email_view(request):
     conversation_id = request.POST.get('conversation_id')
-    # received_email_id = request.POST.get('received_email_id')
-    
     csrf_token = get_token(request)
     session_cookie = request.COOKIES.get('sessionid')
     headers = {
         'X-CSRFToken': csrf_token,
         'Cookie': f'sessionid={session_cookie}'
     }
-    # print('frontend view: ')
-    # print(request.POST.get('sendOrRec'))
     
     response = requests.post(
         f'{settings.BASE_URL}/api/sending/reply-send-tracked-email/',
@@ -71,13 +67,27 @@ def reply_send_tracked_email_view(request):
     if response.status_code == 200:
         result = response.json()
         if result['success']:
-            messages.success(request, 'Reply sent successfully.')
+            message = 'Reply sent successfully.'
+            status = 'success'
         else:
-            messages.error(request, f'Failed to send reply: {result.get("message", "Unknown error")}')
+            message = f'Failed to send reply: {result.get("message", "Unknown error")}'
+            status = 'error'
     else:
-        messages.error(request, f'An error occurred: {response.status_code}')
+        message = f'An error occurred: {response.status_code}'
+        status = 'error'
     
-    return redirect('conversation_detail', conversation_id=conversation_id)
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        return JsonResponse({
+            'status': status,
+            'message': message,
+            'conversation_id': conversation_id
+        })
+    else:
+        if status == 'success':
+            messages.success(request, message)
+        else:
+            messages.error(request, message)
+        return redirect('conversation_detail', conversation_id=conversation_id)
 
 
 @login_required
@@ -316,7 +326,17 @@ def conversation_list(request, conversation_id=None):
         'last_email_id': last_email_id,
         'sendOrRec': sendOrRec_status
     }
-
+    
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        # This is an AJAX request
+        return JsonResponse({
+            'conversation': active_conversation,
+            'recipient_email': recipient_email,
+            'last_email_id': last_email_id,
+            'sendOrRec': sendOrRec_status
+        })
+    
+    # Regular request, return the full page
     return render(request, 'whatsapp_style_conversations.html', context)
 
 # @login_required

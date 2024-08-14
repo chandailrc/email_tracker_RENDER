@@ -102,7 +102,7 @@
         <div class="sidebar">
             <ul class="conversation-list">
                 {% for conversation in conversations %}
-                <li class="conversation-item {% if conversation.id == active_conversation.id %}active{% endif %}" onclick="loadConversation({{ conversation.id }})">
+                <li class="conversation-item {% if conversation.id == active_conversation.id %}active{% endif %}" data-conversation-id="{{ conversation.id }}">
                     <h3>{{ conversation.subject }}</h3>
                     <p>Last updated: {{ conversation.last_updated }}</p>
                 </li>
@@ -163,16 +163,101 @@
             {% endif %}
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        function loadConversation(conversationId) {
-            window.location.href = `/frontend/conversations/${conversationId}/`;
-        }
+    $(document).ready(function() {
+        // Click handler for conversation items
+        $('.conversation-item').click(function(e) {
+            e.preventDefault();
+            var conversationId = $(this).data('conversation-id');
+            loadConversation(conversationId);
+            
+            // Update active class
+            $('.conversation-item').removeClass('active');
+            $(this).addClass('active');
+        });
+    
+        // Handle reply form submission
+        $(document).on('submit', '.reply-form form', function(e) {
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+            var formData = form.serialize();
         
-        // Scroll to bottom of messages
-        var messagesDiv = document.getElementById('conversation-messages');
-        if (messagesDiv) {
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    if (response.status === 'success') {
+                        // Reload the conversation to show the new reply
+                        loadConversation(response.conversation_id);
+                        // Clear the textarea after successful submission
+                        form.find('textarea[name="body"]').val('');
+                    } else {
+                        alert('Error: ' + response.message);  // Show error message
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("An error occurred: " + error);
+                    alert("An error occurred while sending the reply. Please try again.");
+                }
+            });
+        });
+    
+        function loadConversation(conversationId) {
+            $.ajax({
+                url: '{% url 'conversation_list' %}' + conversationId + '/',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    updateConversationView(data);
+                    // We're removing the history.pushState call here
+                },
+                error: function(xhr, status, error) {
+                    console.error("An error occurred: " + error);
+                }
+            });
         }
+    
+        function updateConversationView(data) {
+            var $mainContent = $('.main-content');
+            $mainContent.empty();
+    
+            if (data.conversation) {
+                var headerHtml = '<div class="conversation-header">' +
+                                 '<h2>' + data.conversation.subject + '</h2>' +
+                                 '<p>Participants: ' + data.conversation.participants.join(", ") + '</p>' +
+                                 '</div>';
+                
+                var messagesHtml = '<div class="conversation-messages" id="conversation-messages">';
+                data.conversation.messages.forEach(function(message) {
+                    messagesHtml += '<div class="message ' + (message.sender === '{{ request.user.email }}' ? 'message-sent' : 'message-received') + '">' +
+                                    '<div class="message-header"><strong>' + message.sender + '</strong> (' + message.timestamp + ')</div>' +
+                                    '<div class="message-content">' + message.content + '</div>' +
+                                    '</div>';
+                });
+                messagesHtml += '</div>';
+    
+                var replyFormHtml = '<div class="reply-form">' +
+                                    '<form method="post" action="{% url 'reply_send_tracked_email_view' %}">' +
+                                    '{% csrf_token %}' +
+                                    '<input type="hidden" name="conversation_id" value="' + data.conversation.id + '">' +
+                                    '<input type="hidden" name="recipient" value="' + data.recipient_email + '">' +
+                                    '<input type="hidden" name="subject" value="Re: ' + data.conversation.subject + '">' +
+                                    '<input type="hidden" name="last_email_id" value="' + data.last_email_id + '">' +
+                                    '<input type="hidden" name="sendOrRec" value="' + data.sendOrRec + '">' +
+                                    '<textarea name="body" placeholder="Type your message..." rows="3" required></textarea>' +
+                                    '<button type="submit">Send Reply</button>' +
+                                    '</form></div>';
+    
+                $mainContent.append(headerHtml + messagesHtml + replyFormHtml);
+            } else {
+                $mainContent.html('<div class="conversation-header"><h2>Error</h2></div>' +
+                                  '<div class="conversation-messages"><p>The selected conversation could not be loaded.</p></div>');
+            }
+        }
+    });
     </script>
 </body>
 </html>

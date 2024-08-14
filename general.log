@@ -916,3 +916,589 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2024-08-14 20:55:44 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 852
 2024-08-14 20:55:44 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 7483
 2024-08-14 20:55:44 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 7483
+2024-08-14 21:00:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 21:00:27 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 21:00:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 21:00:28 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 21:05:56 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:05:56 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:05:56 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7346
+2024-08-14 21:05:56 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7346
+2024-08-14 21:08:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:08:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:08:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7889
+2024-08-14 21:08:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7889
+2024-08-14 21:09:00 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:00 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:00 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:00 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:00 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:00 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:01 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:01 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:01 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:01 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:01 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:01 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:03 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 852
+2024-08-14 21:09:03 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 852
+2024-08-14 21:09:03 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 949
+2024-08-14 21:09:03 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 949
+2024-08-14 21:09:13 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 15:39:13.035908+00:00
+2024-08-14 21:09:13 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 21:09:13 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 21:09:13 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 21:09:13 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 21:09:13 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 21:09:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:13 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:13 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:13 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 11525
+2024-08-14 21:09:13 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 11525
+2024-08-14 21:09:27 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:27 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:27 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:27 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:27 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:27 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:28 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:28 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:28 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:28 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:28 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:28 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:30 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:30 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:30 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:30 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:30 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:09:30 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:38 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:38 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:38 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:38 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:38 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:39 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:39 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:39 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:09:39 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:09:42 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:42 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:42 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7889
+2024-08-14 21:09:42 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7889
+2024-08-14 21:09:44 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:44 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:44 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:44 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:09:44 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:44 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:09:45 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:45 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:45 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:09:45 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:09:45 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:10:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:10:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:10:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:10:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:10:33 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:33 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:33 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:10:33 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:10:33 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:10:33 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:10:48 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:48 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:48 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:10:48 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:10:48 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:10:48 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:10:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:49 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:10:49 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:10:49 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:10:49 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:10:51 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:51 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:51 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:10:51 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 21:10:51 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:10:51 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 497
+2024-08-14 21:10:58 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@test.com at 2024-08-14 15:40:58.459410+00:00
+2024-08-14 21:10:58 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@test.com
+2024-08-14 21:10:58 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 21:10:58 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 21:10:58 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 21:10:58 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 21:10:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:10:58 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 21:10:58 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 21:10:58 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 10185
+2024-08-14 21:10:58 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 10185
+2024-08-14 21:14:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:14:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:14:16 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:14:16 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 21:14:16 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:14:16 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 21:14:18 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:14:18 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:14:18 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:14:18 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 734
+2024-08-14 21:14:18 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:14:18 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 831
+2024-08-14 21:14:23 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@test.com at 2024-08-14 15:44:23.545149+00:00
+2024-08-14 21:14:23 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@test.com
+2024-08-14 21:14:23 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 21:14:23 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 21:14:23 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 21:14:23 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 21:14:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:14:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 21:14:23 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 21:14:23 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 21:14:23 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 11096
+2024-08-14 21:14:23 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 11096
+2024-08-14 21:21:06 - django.request - WARNING - Not Found: /recommender/recommendations/
+2024-08-14 21:21:06 - django.request - WARNING - Not Found: /recommender/recommendations/
+2024-08-14 22:10:48 - django.request - WARNING - Not Found: /search/
+2024-08-14 22:10:48 - django.request - WARNING - Not Found: /search/
+2024-08-14 22:10:48 - django.server - WARNING - "GET /search/ HTTP/1.1" 404 3136
+2024-08-14 22:10:48 - django.server - WARNING - "GET /search/ HTTP/1.1" 404 3136
+2024-08-14 22:10:48 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-14 22:10:48 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-14 22:10:51 - django.request - WARNING - Not Found: /recommender/profile/
+2024-08-14 22:10:51 - django.request - WARNING - Not Found: /recommender/profile/
+2024-08-14 22:10:51 - django.server - WARNING - "GET /recommender/profile/ HTTP/1.1" 404 3175
+2024-08-14 22:10:51 - django.server - WARNING - "GET /recommender/profile/ HTTP/1.1" 404 3175
+2024-08-14 22:10:51 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-14 22:10:51 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-14 22:10:56 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:10:56 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:10:56 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:10:56 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:10:56 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:10:56 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 22:10:57 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 22:10:57 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:10:57 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:10:57 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:10:57 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:20:21 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:21 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:21 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8833
+2024-08-14 22:20:21 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8833
+2024-08-14 22:20:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:24 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:20:24 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:20:24 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:20:24 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:20:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:25 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:20:25 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:20:25 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:20:25 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:20:26 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:26 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:26 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 22:20:26 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 22:20:26 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 22:20:26 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 22:20:30 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:30 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:30 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:20:30 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:20:30 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:20:30 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:20:31 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:31 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:31 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:20:31 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:20:31 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:20:31 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:20:52 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:52 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:52 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7889
+2024-08-14 22:20:52 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 7889
+2024-08-14 22:20:53 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:53 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:53 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:20:53 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:20:53 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:20:53 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:20:54 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:20:54 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 22:20:54 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1007
+2024-08-14 22:20:54 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 22:20:54 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1105
+2024-08-14 22:21:03 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 16:51:03.767894+00:00
+2024-08-14 22:21:03 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 22:21:03 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:21:03 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:21:03 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 22:21:03 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 22:21:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:21:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:21:03 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:21:03 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:21:03 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 11972
+2024-08-14 22:21:03 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 11972
+2024-08-14 22:23:29 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:29 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:29 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8742
+2024-08-14 22:23:29 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8742
+2024-08-14 22:23:31 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:31 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:31 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:23:31 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:23:31 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:23:31 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:23:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:23:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:23:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:23:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:23:33 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:33 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:33 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:23:33 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 556
+2024-08-14 22:23:33 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:23:33 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 653
+2024-08-14 22:23:43 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@test.com at 2024-08-14 16:53:43.765672+00:00
+2024-08-14 22:23:43 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@test.com
+2024-08-14 22:23:43 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:23:43 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:23:43 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 22:23:43 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 22:23:43 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:43 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:23:43 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 711
+2024-08-14 22:23:43 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 711
+2024-08-14 22:23:43 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 808
+2024-08-14 22:23:43 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 808
+2024-08-14 22:24:48 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172365005844.93155.11624975688584096762@razor-arts.com>) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 52, in tracked_email_sender
+    email = SentEmail.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172365005844.93155.11624975688584096762@razor-arts.com>) already exists.
+
+2024-08-14 22:24:48 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172365005844.93155.11624975688584096762@razor-arts.com>) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 52, in tracked_email_sender
+    email = SentEmail.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172365005844.93155.11624975688584096762@razor-arts.com>) already exists.
+
+2024-08-14 22:24:48 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 181017
+2024-08-14 22:24:48 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 181017
+2024-08-14 22:24:48 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 22:24:48 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 22:24:48 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:24:48 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:24:48 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 711
+2024-08-14 22:24:48 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 711
+2024-08-14 22:24:48 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 808
+2024-08-14 22:24:48 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 808
+2024-08-14 22:27:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 22:27:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 22:27:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 22:27:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 22:27:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:27:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:27:23 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8742
+2024-08-14 22:27:23 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8742
+2024-08-14 22:27:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:27:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:27:25 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 711
+2024-08-14 22:27:25 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 711
+2024-08-14 22:27:25 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 808
+2024-08-14 22:27:25 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 808
+2024-08-14 22:27:36 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@test.com at 2024-08-14 16:57:36.809941+00:00
+2024-08-14 22:27:36 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@test.com
+2024-08-14 22:27:36 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:27:36 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:27:36 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:27:36 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:27:36 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:27:36 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:27:36 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 873
+2024-08-14 22:27:36 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 873
+2024-08-14 22:27:36 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 970
+2024-08-14 22:27:36 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 970
+2024-08-14 22:29:15 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:15 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:15 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:29:15 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:29:15 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:29:15 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:29:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:29:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:29:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:29:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:29:17 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:29:17 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 873
+2024-08-14 22:29:17 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 873
+2024-08-14 22:29:17 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 970
+2024-08-14 22:29:17 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 970
+2024-08-14 22:29:23 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@test.com at 2024-08-14 16:59:23.400886+00:00
+2024-08-14 22:29:23 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@test.com
+2024-08-14 22:29:23 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:29:23 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:29:23 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:29:23 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:29:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:29:23 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1021
+2024-08-14 22:29:23 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1021
+2024-08-14 22:29:23 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1118
+2024-08-14 22:29:23 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1118
+2024-08-14 22:31:57 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:31:57 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:31:57 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9593
+2024-08-14 22:31:57 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9593
+2024-08-14 22:31:59 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:31:59 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:31:59 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:31:59 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 885
+2024-08-14 22:31:59 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:31:59 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 982
+2024-08-14 22:32:08 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@test.com at 2024-08-14 17:02:08.283314+00:00
+2024-08-14 22:32:08 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@test.com
+2024-08-14 22:32:08 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:32:08 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:32:08 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:32:08 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:32:08 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:32:08 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:32:08 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1048
+2024-08-14 22:32:08 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1048
+2024-08-14 22:32:08 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1145
+2024-08-14 22:32:08 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1145
+2024-08-14 22:32:16 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@test.com at 2024-08-14 17:02:16.803507+00:00
+2024-08-14 22:32:16 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@test.com
+2024-08-14 22:32:16 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:32:16 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:32:16 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:32:16 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:32:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:32:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:32:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 22:32:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 22:32:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 22:32:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 22:33:00 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:33:00 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:33:00 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10078
+2024-08-14 22:33:00 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10078
+2024-08-14 22:33:02 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:33:02 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:33:02 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:33:02 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1159
+2024-08-14 22:33:02 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:33:02 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1257
+2024-08-14 22:33:10 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 17:03:10.146459+00:00
+2024-08-14 22:33:10 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 22:33:10 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:33:10 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:33:10 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:33:10 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:33:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:33:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:33:10 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1306
+2024-08-14 22:33:10 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1306
+2024-08-14 22:33:10 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1404
+2024-08-14 22:33:10 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1404
+2024-08-14 22:34:23 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 17:04:23.971457+00:00
+2024-08-14 22:34:23 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 22:34:24 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:34:24 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:34:24 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:34:24 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:34:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:34:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:34:24 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 22:34:24 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 22:34:24 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 22:34:24 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 22:41:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:41:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:41:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8882
+2024-08-14 22:41:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 8882
+2024-08-14 22:41:59 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:41:59 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:41:59 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 22:41:59 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1452
+2024-08-14 22:41:59 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 22:41:59 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1550
+2024-08-14 22:42:00 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:42:00 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:42:00 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 22:42:00 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1198
+2024-08-14 22:42:00 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 22:42:00 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1295
+2024-08-14 22:42:01 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:42:01 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:42:01 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1021
+2024-08-14 22:42:01 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1021
+2024-08-14 22:42:01 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1118
+2024-08-14 22:42:01 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1118
+2024-08-14 22:42:09 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@test.com at 2024-08-14 17:12:09.540189+00:00
+2024-08-14 22:42:09 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@test.com
+2024-08-14 22:42:09 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:42:09 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 22:42:09 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:42:09 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-14 22:42:09 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:42:09 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 22:42:09 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 22:42:09 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 1173
+2024-08-14 22:42:09 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
+2024-08-14 22:42:09 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 1270
