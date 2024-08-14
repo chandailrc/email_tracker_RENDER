@@ -260,8 +260,19 @@ def fetch_emails(request):
             messages.error(request, "Failed to fetch new emails.")
     return redirect('email_management')
 
+# @login_required
+# def conversation_list(request):
+#     csrf_token = get_token(request)
+#     session_cookie = request.COOKIES.get('sessionid')
+#     headers = {'X-CSRFToken': csrf_token,
+#                'Cookie': f'sessionid={session_cookie}'}
+    
+#     response = requests.get(f'{settings.BASE_URL}/api/conversations/list/', headers=headers)
+#     conversations = response.json()['conversations']
+#     return render(request, 'conversation_list.html', {'conversations': conversations})
+
 @login_required
-def conversation_list(request):
+def conversation_list(request, conversation_id=None):
     csrf_token = get_token(request)
     session_cookie = request.COOKIES.get('sessionid')
     headers = {'X-CSRFToken': csrf_token,
@@ -269,7 +280,34 @@ def conversation_list(request):
     
     response = requests.get(f'{settings.BASE_URL}/api/conversations/list/', headers=headers)
     conversations = response.json()['conversations']
-    return render(request, 'conversation_list.html', {'conversations': conversations})
+
+    active_conversation = None
+    if conversations:
+        if conversation_id:
+            active_conversation_id = conversation_id
+        else:
+            active_conversation_id = request.GET.get('active', conversations[0]['id'])
+        
+        conversation_response = requests.get(f'{settings.BASE_URL}/api/conversations/{active_conversation_id}/', headers=headers)
+        active_conversation = conversation_response.json()
+
+        # Determine the recipient's email (the other participant)
+        user_email = settings.DEFAULT_FROM_EMAIL
+        recipient_email = next((email for email in active_conversation['participants'] if email != user_email), '')
+        
+        last_email = active_conversation['messages'][-1] if active_conversation['messages'] else None
+        last_email_id = last_email['email_id'] if last_email else None
+        sendOrRec_status = last_email['sendOrRec'] if last_email else None
+
+    context = {
+        'conversations': conversations,
+        'active_conversation': active_conversation,
+        'recipient_email': recipient_email if active_conversation else '',
+        'last_email_id': last_email_id,
+        'sendOrRec': sendOrRec_status
+    }
+
+    return render(request, 'whatsapp_style_conversations.html', context)
 
 # @login_required
 # def conversation_detail(request, conversation_id):

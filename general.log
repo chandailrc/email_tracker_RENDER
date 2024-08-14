@@ -80,3 +80,451 @@
 2024-08-13 18:51:05 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
 2024-08-13 18:51:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-08-13 18:51:05 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:15:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:15:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:15:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:15:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:15:58 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:15:58 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:15:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:15:58 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:16:02 - django.request - WARNING - Not Found: /conversations/2/
+2024-08-14 16:16:02 - django.request - WARNING - Not Found: /conversations/2/
+2024-08-14 16:16:02 - django.server - WARNING - "GET /conversations/2/ HTTP/1.1" 404 3163
+2024-08-14 16:16:02 - django.server - WARNING - "GET /conversations/2/ HTTP/1.1" 404 3163
+2024-08-14 16:16:08 - django.request - WARNING - Not Found: /conversations/1/
+2024-08-14 16:16:08 - django.request - WARNING - Not Found: /conversations/1/
+2024-08-14 16:16:08 - django.server - WARNING - "GET /conversations/1/ HTTP/1.1" 404 3163
+2024-08-14 16:16:08 - django.server - WARNING - "GET /conversations/1/ HTTP/1.1" 404 3163
+2024-08-14 16:16:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:16:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:16:13 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:16:13 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:16:13 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:16:13 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:16:29 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5157
+2024-08-14 16:16:29 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5157
+2024-08-14 16:16:39 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:39 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:41 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-08-14 16:16:41 - django.server - INFO - "GET /api/receiving/list/ HTTP/1.1" 200 14
+2024-08-14 16:16:41 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2429
+2024-08-14 16:16:41 - django.server - INFO - "GET /frontend/email-management/ HTTP/1.1" 200 2429
+2024-08-14 16:16:43 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:43 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:16:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:16:45 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:16:45 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:16:45 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:16:45 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:16:48 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:48 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:52 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:52 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 4883
+2024-08-14 16:16:55 - django.request - WARNING - Not Found: /conversations/3/
+2024-08-14 16:16:55 - django.request - WARNING - Not Found: /conversations/3/
+2024-08-14 16:16:55 - django.server - WARNING - "GET /conversations/3/ HTTP/1.1" 404 3163
+2024-08-14 16:16:55 - django.server - WARNING - "GET /conversations/3/ HTTP/1.1" 404 3163
+2024-08-14 16:17:04 - django.request - WARNING - Not Found: /fronted/conversations/3/
+2024-08-14 16:17:04 - django.request - WARNING - Not Found: /fronted/conversations/3/
+2024-08-14 16:17:04 - django.server - WARNING - "GET /fronted/conversations/3/ HTTP/1.1" 404 3187
+2024-08-14 16:17:04 - django.server - WARNING - "GET /fronted/conversations/3/ HTTP/1.1" 404 3187
+2024-08-14 16:17:58 - django.request - WARNING - Not Found: /conversations/2/
+2024-08-14 16:17:58 - django.request - WARNING - Not Found: /conversations/2/
+2024-08-14 16:17:58 - django.server - WARNING - "GET /conversations/2/ HTTP/1.1" 404 3163
+2024-08-14 16:17:58 - django.server - WARNING - "GET /conversations/2/ HTTP/1.1" 404 3163
+2024-08-14 16:18:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:18:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:18:04 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:18:04 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:18:04 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:18:04 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 5429
+2024-08-14 16:18:05 - django.request - WARNING - Not Found: /conversations/3/
+2024-08-14 16:18:05 - django.request - WARNING - Not Found: /conversations/3/
+2024-08-14 16:18:05 - django.server - WARNING - "GET /conversations/3/ HTTP/1.1" 404 3163
+2024-08-14 16:18:05 - django.server - WARNING - "GET /conversations/3/ HTTP/1.1" 404 3163
+2024-08-14 16:18:53 - django.request - WARNING - Not Found: /fronted/conversations/3/
+2024-08-14 16:18:53 - django.request - WARNING - Not Found: /fronted/conversations/3/
+2024-08-14 16:18:53 - django.server - WARNING - "GET /fronted/conversations/3/ HTTP/1.1" 404 3187
+2024-08-14 16:18:53 - django.server - WARNING - "GET /fronted/conversations/3/ HTTP/1.1" 404 3187
+2024-08-14 16:19:06 - django.request - ERROR - Internal Server Error: /frontend/conversations/3/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+TypeError: conversation_list() got an unexpected keyword argument 'conversation_id'
+2024-08-14 16:19:06 - django.request - ERROR - Internal Server Error: /frontend/conversations/3/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+TypeError: conversation_list() got an unexpected keyword argument 'conversation_id'
+2024-08-14 16:19:06 - django.server - ERROR - "GET /frontend/conversations/3/ HTTP/1.1" 500 76217
+2024-08-14 16:19:06 - django.server - ERROR - "GET /frontend/conversations/3/ HTTP/1.1" 500 76217
+2024-08-14 16:20:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 16:20:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 16:20:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:20:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:21:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:21:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:21:32 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:21:32 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:21:32 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5429
+2024-08-14 16:21:32 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5429
+2024-08-14 16:21:35 - django.request - WARNING - Not Found: /conversations/2/
+2024-08-14 16:21:35 - django.request - WARNING - Not Found: /conversations/2/
+2024-08-14 16:21:35 - django.server - WARNING - "GET /conversations/2/ HTTP/1.1" 404 3163
+2024-08-14 16:21:35 - django.server - WARNING - "GET /conversations/2/ HTTP/1.1" 404 3163
+2024-08-14 16:24:50 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:24:50 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:24:50 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 16:24:50 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 16:24:50 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5435
+2024-08-14 16:24:50 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5435
+2024-08-14 16:41:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-08-14 16:41:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-08-14 16:41:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:41:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:43:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:43:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:44:02 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:02 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:02 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 16:44:02 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 16:44:02 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5457
+2024-08-14 16:44:02 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5457
+2024-08-14 16:44:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:04 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:44:04 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:44:04 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5451
+2024-08-14 16:44:04 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5451
+2024-08-14 16:44:06 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:06 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:06 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 16:44:06 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 16:44:06 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5841
+2024-08-14 16:44:06 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5841
+2024-08-14 16:44:08 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:08 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:44:08 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:44:08 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 253
+2024-08-14 16:44:08 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5451
+2024-08-14 16:44:08 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5451
+2024-08-14 16:44:28 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 11:14:28.711112+00:00
+2024-08-14 16:44:28 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 16:44:28 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 16:44:28 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 16:44:28 - django.request - ERROR - Internal Server Error: /frontend/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 80, in reply_send_tracked_email_view
+    return redirect('conversation_detail', conversation_id=conversation_id)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'conversation_detail' not found. 'conversation_detail' is not a valid view function or pattern name.
+2024-08-14 16:44:28 - django.request - ERROR - Internal Server Error: /frontend/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 80, in reply_send_tracked_email_view
+    return redirect('conversation_detail', conversation_id=conversation_id)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'conversation_detail' not found. 'conversation_detail' is not a valid view function or pattern name.
+2024-08-14 16:44:28 - django.server - ERROR - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 500 101991
+2024-08-14 16:44:28 - django.server - ERROR - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 500 101991
+2024-08-14 16:51:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 16:51:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 16:51:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:51:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 16:52:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:52:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:52:04 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 16:52:04 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 16:52:04 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5457
+2024-08-14 16:52:04 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5457
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 16:52:05 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5841
+2024-08-14 16:52:05 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5841
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 409
+2024-08-14 16:52:05 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 409
+2024-08-14 16:52:05 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5832
+2024-08-14 16:52:05 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 5832
+2024-08-14 16:52:17 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 11:22:17.447195+00:00
+2024-08-14 16:52:17 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 16:52:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 16:52:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 16:52:17 - django.request - ERROR - Internal Server Error: /frontend/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 80, in reply_send_tracked_email_view
+    return redirect('conversation_list', conversation_id=conversation_id)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'conversation_list' not found. 'conversation_list' is not a valid view function or pattern name.
+2024-08-14 16:52:17 - django.request - ERROR - Internal Server Error: /frontend/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 80, in reply_send_tracked_email_view
+    return redirect('conversation_list', conversation_id=conversation_id)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'conversation_list' not found. 'conversation_list' is not a valid view function or pattern name.
+2024-08-14 16:52:17 - django.server - ERROR - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 500 102207
+2024-08-14 16:52:17 - django.server - ERROR - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 500 102207
+2024-08-14 17:01:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-08-14 17:01:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/email_tracker/urls.py changed, reloading.
+2024-08-14 17:01:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:01:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:01:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-08-14 17:01:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/urls.py changed, reloading.
+2024-08-14 17:01:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:01:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:03:14 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:14 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:14 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:03:14 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:03:14 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:03:14 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:03:21 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:21 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:21 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 564
+2024-08-14 17:03:21 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 564
+2024-08-14 17:03:21 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6199
+2024-08-14 17:03:21 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6199
+2024-08-14 17:03:22 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:22 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:22 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:03:22 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:03:22 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:03:22 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 17:03:23 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5828
+2024-08-14 17:03:23 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5828
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 564
+2024-08-14 17:03:23 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 564
+2024-08-14 17:03:23 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6199
+2024-08-14 17:03:23 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6199
+2024-08-14 17:03:42 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 11:33:42.979726+00:00
+2024-08-14 17:03:42 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 17:03:43 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:03:43 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:03:43 - django.request - ERROR - Internal Server Error: /frontend/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 80, in reply_send_tracked_email_view
+    return redirect('conversation_list', conversation_id=conversation_id)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'conversation_list' with keyword arguments '{'conversation_id': '3'}' not found. 1 pattern(s) tried: ['frontend/conversations/\\Z']
+2024-08-14 17:03:43 - django.request - ERROR - Internal Server Error: /frontend/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py", line 80, in reply_send_tracked_email_view
+    return redirect('conversation_list', conversation_id=conversation_id)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/urls/resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'conversation_list' with keyword arguments '{'conversation_id': '3'}' not found. 1 pattern(s) tried: ['frontend/conversations/\\Z']
+2024-08-14 17:03:43 - django.server - ERROR - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 500 103969
+2024-08-14 17:03:43 - django.server - ERROR - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 500 103969
+2024-08-14 17:04:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 17:04:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 17:04:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:04:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:04:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 17:04:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 17:04:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:04:23 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:05:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 17:05:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/frontend/views.py changed, reloading.
+2024-08-14 17:05:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:05:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-14 17:05:22 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:22 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:22 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:05:22 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:05:22 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:05:22 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:05:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:23 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:23 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 708
+2024-08-14 17:05:23 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 708
+2024-08-14 17:05:23 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6568
+2024-08-14 17:05:23 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6568
+2024-08-14 17:05:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:24 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 17:05:24 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 17:05:24 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5828
+2024-08-14 17:05:24 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5828
+2024-08-14 17:05:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:05:49 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 708
+2024-08-14 17:05:49 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 708
+2024-08-14 17:05:49 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6568
+2024-08-14 17:05:49 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6568
+2024-08-14 17:12:31 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test3@tests.com at 2024-08-14 11:42:31.042554+00:00
+2024-08-14 17:12:31 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test3@tests.com
+2024-08-14 17:12:31 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:12:31 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:12:31 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 17:12:31 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 17:12:31 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:12:31 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:12:31 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 852
+2024-08-14 17:12:31 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 852
+2024-08-14 17:12:31 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6937
+2024-08-14 17:12:31 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6937
+2024-08-14 17:12:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:12:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:12:38 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:12:38 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 257
+2024-08-14 17:12:38 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:12:38 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5444
+2024-08-14 17:12:39 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@test.com at 2024-08-14 11:42:39.545867+00:00
+2024-08-14 17:12:39 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@test.com
+2024-08-14 17:12:39 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:12:39 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:12:39 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 17:12:39 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 17:12:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:12:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:12:39 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 17:12:39 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 401
+2024-08-14 17:12:39 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5813
+2024-08-14 17:12:39 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 5813
+2024-08-14 17:13:24 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 4229
+2024-08-14 17:13:24 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 4229
+2024-08-14 17:13:24 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15607
+2024-08-14 17:13:24 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 15607
+2024-08-14 17:13:54 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:13:54 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:13:54 - django.server - INFO - "GET /api/tracking/track/ImI5ZDFlNjczLTNmNDMtNDlmOC04NzE2LTY2YmZkODAyODNjNSI:1seBxU:pj3qrbPccJ1hG_K2LR2rH4qKRJrHUVxpfZZMt36yk6o/ HTTP/1.1" 200 95
+2024-08-14 17:13:54 - django.server - INFO - "GET /api/tracking/track/ImI5ZDFlNjczLTNmNDMtNDlmOC04NzE2LTY2YmZkODAyODNjNSI:1seBxU:pj3qrbPccJ1hG_K2LR2rH4qKRJrHUVxpfZZMt36yk6o/ HTTP/1.1" 200 95
+2024-08-14 17:13:57 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:13:57 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:13:57 - django.server - INFO - "GET /api/tracking/track/ImQxNTgwMzgwLTQ0ODktNGQzZi04OTZhLWY0ODE3ZTU2NDU0YyI:1seC53:LKWCijRoX7PhA25k8YAuwNgYW94Os4vyvseskVzd3N4/ HTTP/1.1" 200 95
+2024-08-14 17:13:57 - django.server - INFO - "GET /api/tracking/track/ImQxNTgwMzgwLTQ0ODktNGQzZi04OTZhLWY0ODE3ZTU2NDU0YyI:1seC53:LKWCijRoX7PhA25k8YAuwNgYW94Os4vyvseskVzd3N4/ HTTP/1.1" 200 95
+2024-08-14 17:13:59 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:13:59 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:13:59 - django.server - INFO - "GET /api/tracking/track/ImUxNTFiMDBjLWFkMDgtNGE0MS1iYjRkLWExNDQ1NzJhMTViYyI:1seCG6:wNuDdypa0K0mCYdWa5OTpJ0Kynu197ACPWCWrl8vy9o/ HTTP/1.1" 200 95
+2024-08-14 17:13:59 - django.server - INFO - "GET /api/tracking/track/ImUxNTFiMDBjLWFkMDgtNGE0MS1iYjRkLWExNDQ1NzJhMTViYyI:1seCG6:wNuDdypa0K0mCYdWa5OTpJ0Kynu197ACPWCWrl8vy9o/ HTTP/1.1" 200 95
+2024-08-14 17:14:00 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:14:00 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:14:00 - django.server - INFO - "GET /api/tracking/track/IjcxMGI3N2FlLTFmY2QtNDU3NS1hZDE5LTgwMzIyZjRkYTdhMyI:1seCOd:c5_nnHnyes39Q6mOxv0gNMqnF-g7BFYorHbX4i4YWog/ HTTP/1.1" 200 95
+2024-08-14 17:14:00 - django.server - INFO - "GET /api/tracking/track/IjcxMGI3N2FlLTFmY2QtNDU3NS1hZDE5LTgwMzIyZjRkYTdhMyI:1seCOd:c5_nnHnyes39Q6mOxv0gNMqnF-g7BFYorHbX4i4YWog/ HTTP/1.1" 200 95
+2024-08-14 17:14:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:14:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-14 17:14:01 - django.server - INFO - "GET /api/tracking/track/ImYyOGZlZTMxLTJmZDUtNDRmYi1iNmRmLTA0NGJkOGUxZDllNSI:1seCOl:kb-yBJ7CUNTDz3yrP1g5FODNehCEj_PGuKaTzAlbWmM/ HTTP/1.1" 200 95
+2024-08-14 17:14:01 - django.server - INFO - "GET /api/tracking/track/ImYyOGZlZTMxLTJmZDUtNDRmYi1iNmRmLTA0NGJkOGUxZDllNSI:1seCOl:kb-yBJ7CUNTDz3yrP1g5FODNehCEj_PGuKaTzAlbWmM/ HTTP/1.1" 200 95
+2024-08-14 17:14:08 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 4229
+2024-08-14 17:14:08 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 4229
+2024-08-14 17:14:08 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17992
+2024-08-14 17:14:08 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 17992
+2024-08-14 17:14:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:14:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:14:12 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 852
+2024-08-14 17:14:12 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 852
+2024-08-14 17:14:12 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6937
+2024-08-14 17:14:12 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 6937
+2024-08-14 17:14:15 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:14:15 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:14:15 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 17:14:15 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 424
+2024-08-14 17:14:15 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5828
+2024-08-14 17:14:15 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 5828
+2024-08-14 17:14:22 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@test.com at 2024-08-14 11:44:22.192468+00:00
+2024-08-14 17:14:22 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@test.com
+2024-08-14 17:14:22 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:14:22 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-14 17:14:22 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 17:14:22 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 302 0
+2024-08-14 17:14:22 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:14:22 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 448
+2024-08-14 17:14:22 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 578
+2024-08-14 17:14:22 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 578
+2024-08-14 17:14:22 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 6206
+2024-08-14 17:14:22 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 6206
