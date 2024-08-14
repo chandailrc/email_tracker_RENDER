@@ -282,27 +282,37 @@ def conversation_list(request, conversation_id=None):
     conversations = response.json()['conversations']
 
     active_conversation = None
+    recipient_email = ''
+    last_email_id = None
+    sendOrRec_status = None
+    conversation_selected = False  # Initialize to False
+
     if conversations:
         if conversation_id:
             active_conversation_id = conversation_id
         else:
-            active_conversation_id = request.GET.get('active', conversations[0]['id'])
+            active_conversation_id = None #request.GET.get('active', conversations[0]['id'])
         
-        conversation_response = requests.get(f'{settings.BASE_URL}/api/conversations/{active_conversation_id}/', headers=headers)
-        active_conversation = conversation_response.json()
+        if active_conversation_id:
+            conversation_response = requests.get(f'{settings.BASE_URL}/api/conversations/{active_conversation_id}/', headers=headers)
+            active_conversation = conversation_response.json()            
 
-        # Determine the recipient's email (the other participant)
-        user_email = settings.DEFAULT_FROM_EMAIL
-        recipient_email = next((email for email in active_conversation['participants'] if email != user_email), '')
-        
-        last_email = active_conversation['messages'][-1] if active_conversation['messages'] else None
-        last_email_id = last_email['email_id'] if last_email else None
-        sendOrRec_status = last_email['sendOrRec'] if last_email else None
+        if active_conversation:
+            conversation_selected = True  # Set to True when there's an active conversation
+
+            # Determine the recipient's email (the other participant)
+            user_email = settings.DEFAULT_FROM_EMAIL
+            recipient_email = next((email for email in active_conversation['participants'] if email != user_email), '')
+            
+            last_email = active_conversation['messages'][-1] if active_conversation['messages'] else None
+            last_email_id = last_email['email_id'] if last_email else None
+            sendOrRec_status = last_email['sendOrRec'] if last_email else None
 
     context = {
         'conversations': conversations,
         'active_conversation': active_conversation,
-        'recipient_email': recipient_email if active_conversation else '',
+        'conversation_selected': conversation_selected,
+        'recipient_email': recipient_email,
         'last_email_id': last_email_id,
         'sendOrRec': sendOrRec_status
     }

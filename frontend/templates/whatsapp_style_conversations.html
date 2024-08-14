@@ -112,44 +112,54 @@
             </ul>
         </div>
         <div class="main-content">
-            {% if active_conversation %}
-            <div class="conversation-header">
-                <h2>{{ active_conversation.subject }}</h2>
-                <p>Participants: {{ active_conversation.participants|join:", " }}</p>
-            </div>
-            <div class="conversation-messages" id="conversation-messages">
-                {% for message in active_conversation.messages %}
-                <div class="message {% if message.sender == request.user.email %}message-sent{% else %}message-received{% endif %}">
-                    <div class="message-header">
-                        <strong>{{ message.sender }}</strong> ({{ message.timestamp }})
+            {% if conversation_selected %}
+                {% if active_conversation %}
+                    <div class="conversation-header">
+                        <h2>{{ active_conversation.subject }}</h2>
+                        <p>Participants: {{ active_conversation.participants|join:", " }}</p>
                     </div>
-                    <div class="message-content">
-                        {{ message.content|safe }}
+                    <div class="conversation-messages" id="conversation-messages">
+                        {% for message in active_conversation.messages %}
+                        <div class="message {% if message.sender == request.user.email %}message-sent{% else %}message-received{% endif %}">
+                            <div class="message-header">
+                                <strong>{{ message.sender }}</strong> ({{ message.timestamp }})
+                            </div>
+                            <div class="message-content">
+                                {{ message.content|safe }}
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p>No messages in this conversation.</p>
+                        {% endfor %}
                     </div>
-                </div>
-                {% empty %}
-                <p>No messages in this conversation.</p>
-                {% endfor %}
-            </div>
-            <div class="reply-form">
-                <form method="post" action="{% url 'reply_send_tracked_email_view' %}">
-                    {% csrf_token %}
-                    <input type="hidden" name="conversation_id" value="{{ active_conversation.id }}">
-                    <input type="hidden" name="recipient" value="{{ recipient_email }}">
-                    <input type="hidden" name="subject" value="Re: {{ active_conversation.subject }}">
-                    <input type="hidden" name="last_email_id" value="{{ last_email_id }}">
-                    <input type="hidden" name="sendOrRec" value="{{ sendOrRec }}">
-                    <textarea name="body" placeholder="Type your message..." rows="3" required></textarea>
-                    <button type="submit">Send Reply</button>
-                </form>
-            </div>
+                    <div class="reply-form">
+                        <form method="post" action="{% url 'reply_send_tracked_email_view' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="conversation_id" value="{{ active_conversation.id }}">
+                            <input type="hidden" name="recipient" value="{{ recipient_email }}">
+                            <input type="hidden" name="subject" value="Re: {{ active_conversation.subject }}">
+                            <input type="hidden" name="last_email_id" value="{{ last_email_id }}">
+                            <input type="hidden" name="sendOrRec" value="{{ sendOrRec }}">
+                            <textarea name="body" placeholder="Type your message..." rows="3" required></textarea>
+                            <button type="submit">Send Reply</button>
+                        </form>
+                    </div>
+                {% else %}
+                    <div class="conversation-header">
+                        <h2>Error</h2>
+                    </div>
+                    <div class="conversation-messages">
+                        <p>The selected conversation could not be loaded.</p>
+                    </div>
+                {% endif %}
             {% else %}
-            <div class="conversation-header">
-                <h2>Select a conversation</h2>
-            </div>
-            <div class="conversation-messages">
-                <p>Please select a conversation from the list to view messages.</p>
-            </div>
+                <!-- This is the new blank state when no conversation is selected -->
+                <div class="conversation-header">
+                    <h2>Welcome to Your Conversations</h2>
+                </div>
+                <div class="conversation-messages">
+                    <p>Select a conversation from the list to view messages.</p>
+                </div>
             {% endif %}
         </div>
     </div>
