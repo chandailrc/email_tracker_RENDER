@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Unsubscribe</title>
-</head>
-<body>
-    <h1>Unsubscribe</h1>
-    <p>Are you sure you want to unsubscribe the following email?</p>
-    <p><strong>{{ email }}</strong></p>
-    <form method="post">
-        {% csrf_token %}
-        <input type="hidden" name="email" value="{{ email }}">
-        <button type="submit">Confirm Unsubscribe</button>
-    </form>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Unsubscribe{% endblock %}
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-gray-800">Unsubscribe</h1>
 
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <p class="mb-4 text-gray-700">Are you sure you want to unsubscribe the following email?</p>
+        <p class="mb-6 text-lg font-bold text-gray-900">{{ email }}</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Confirm Unsubscribe
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

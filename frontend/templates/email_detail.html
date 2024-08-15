@@ -1,92 +1,178 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
 {% block title %}Email Details{% endblock %}
 
-{% block header %}Email Details{% endblock %}
+{% block extra_head %}
+<style>
+    .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .hover-shadow:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease-in-out;
+    }
+    .collapsible-content {
+        display: none;
+    }
+</style>
+{% endblock %}
 
 {% block content %}
-    <h2>Email Information</h2>
-    <p><strong>Sender:</strong> {{ email.sender }}</p>
-    <p><strong>Recipient:</strong> {{ email.recipient }}</p>
-    <p><strong>Subject:</strong> {{ email.subject }}</p>
-    <p><strong>Body:</strong> {{ email.body }}</p>
-    <p><strong>Sent At:</strong> {{ email.sent_at }}</p>
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-gray-800">Email Details</h1>
 
-    <h2>Tracking Logs</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Opened At</th>
-                <th>IP Address</th>
-                <th>User Agent</th>
-                <th>Geo Location</th>
-                <th>Referer</th>
-                <th>Device Type</th>
-                <th>Screen Resolution</th>
-                <th>Language</th>
-                <th>Protocol</th>
-                <th>Method</th>
-                <th>Host</th>
-                <th>Connection</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for log in pixel_events %}
-                <tr>
-                    <td>{{ log.timestamp }}</td>
-                    <td>{{ log.ip_address }}</td>
-                    <td>{{ log.user_agent }}</td>
-                    <td>{{ log.geo_location }}</td>
-                    <td>{{ log.referer }}</td>
-                    <td>{{ log.device_type }}</td>
-                    <td>{{ log.screen_resolution }}</td>
-                    <td>{{ log.language }}</td>
-                    <td>{{ log.protocol }}</td>
-                    <td>{{ log.method }}</td>
-                    <td>{{ log.host }}</td>
-                    <td>{{ log.connection }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="bg-white rounded-lg shadow-md p-6 mb-8 fade-in">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-700">Email Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <p class="mb-2"><span class="font-semibold">Sender:</span> {{ email.sender }}</p>
+                <p class="mb-2"><span class="font-semibold">Recipient:</span> {{ email.recipient }}</p>
+                <p class="mb-2"><span class="font-semibold">Subject:</span> {{ email.subject }}</p>
+                <p class="mb-2"><span class="font-semibold">Sent At:</span> {{ email.sent_at|date:"M d, Y H:i" }}</p>
+            </div>
+            <div>
+                <p class="mb-2"><span class="font-semibold">Body:</span></p>
+                <div class="bg-gray-100 p-3 rounded-md overflow-auto max-h-60">
+                    {{ email.body|linebreaksbr }}
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h2>Link Clicks</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Clicked At</th>
-                <th>IP Address</th>
-                <th>User Agent</th>
-                <th>Geo Location</th>
-                <th>Referer</th>
-                <th>Device Type</th>
-                <th>Screen Resolution</th>
-                <th>Language</th>
-                <th>Protocol</th>
-                <th>Method</th>
-                <th>Host</th>
-                <th>Connection</th>
-                <th>URL</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for click in link_events %}
-                <tr>
-                    <td>{{ click.timestamp }}</td>
-                    <td>{{ click.ip_address }}</td>
-                    <td>{{ click.user_agent }}</td>
-                    <td>{{ click.geo_location }}</td>
-                    <td>{{ click.referer }}</td>
-                    <td>{{ click.device_type }}</td>
-                    <td>{{ click.screen_resolution }}</td>
-                    <td>{{ click.language }}</td>
-                    <td>{{ click.protocol }}</td>
-                    <td>{{ click.method }}</td>
-                    <td>{{ click.host }}</td>
-                    <td>{{ click.connection }}</td>
-                    <td>{{ click.tracking_item.url }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="grid grid-cols-1 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6 fade-in">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">Tracking Logs</h2>
+            {% if pixel_events %}
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-2 text-left">Opened At</th>
+                                <th class="px-4 py-2 text-left">IP Address</th>
+                                <th class="px-4 py-2 text-left">User Agent</th>
+                                <th class="px-4 py-2 text-left">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for log in pixel_events %}
+                                <tr class="{% cycle 'bg-gray-100' '' %}">
+                                    <td class="px-4 py-2">{{ log.timestamp|date:"M d, Y H:i:s" }}</td>
+                                    <td class="px-4 py-2">{{ log.ip_address }}</td>
+                                    <td class="px-4 py-2">{{ log.user_agent|truncatechars:50 }}</td>
+                                    <td class="px-4 py-2">
+                                        <button class="text-blue-600 hover:text-blue-800 focus:outline-none collapsible-trigger" data-target="details-{{ log.id }}">
+                                            Show Details
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="collapsible-content" id="details-{{ log.id }}">
+                                    <td colspan="4" class="px-4 py-2">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <p><strong>Geo Location:</strong> {{ log.geo_location }}</p>
+                                                <p><strong>Referer:</strong> {{ log.referer|default:"N/A" }}</p>
+                                                <p><strong>Device Type:</strong> {{ log.device_type }}</p>
+                                                <p><strong>Screen Resolution:</strong> {{ log.screen_resolution|default:"N/A" }}</p>
+                                            </div>
+                                            <div>
+                                                <p><strong>Language:</strong> {{ log.language|default:"N/A" }}</p>
+                                                <p><strong>Protocol:</strong> {{ log.protocol }}</p>
+                                                <p><strong>Method:</strong> {{ log.method }}</p>
+                                                <p><strong>Host:</strong> {{ log.host }}</p>
+                                                <p><strong>Connection:</strong> {{ log.connection }}</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p class="text-gray-600">No tracking logs available.</p>
+            {% endif %}
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 fade-in">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">Link Clicks</h2>
+            {% if link_events %}
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-2 text-left">Clicked At</th>
+                                <th class="px-4 py-2 text-left">IP Address</th>
+                                <th class="px-4 py-2 text-left">URL</th>
+                                <th class="px-4 py-2 text-left">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for click in link_events %}
+                                <tr class="{% cycle 'bg-gray-100' '' %}">
+                                    <td class="px-4 py-2">{{ click.timestamp|date:"M d, Y H:i:s" }}</td>
+                                    <td class="px-4 py-2">{{ click.ip_address }}</td>
+                                    <td class="px-4 py-2">
+                                        <a href="{{ click.tracking_item.url }}" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                                            {{ click.tracking_item.url|truncatechars:50 }}
+                                        </a>
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        <button class="text-blue-600 hover:text-blue-800 focus:outline-none collapsible-trigger" data-target="click-details-{{ click.id }}">
+                                            Show Details
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="collapsible-content" id="click-details-{{ click.id }}">
+                                    <td colspan="4" class="px-4 py-2">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <p><strong>User Agent:</strong> {{ click.user_agent }}</p>
+                                                <p><strong>Geo Location:</strong> {{ click.geo_location }}</p>
+                                                <p><strong>Referer:</strong> {{ click.referer|default:"N/A" }}</p>
+                                                <p><strong>Device Type:</strong> {{ click.device_type }}</p>
+                                                <p><strong>Screen Resolution:</strong> {{ click.screen_resolution|default:"N/A" }}</p>
+                                            </div>
+                                            <div>
+                                                <p><strong>Language:</strong> {{ click.language|default:"N/A" }}</p>
+                                                <p><strong>Protocol:</strong> {{ click.protocol }}</p>
+                                                <p><strong>Method:</strong> {{ click.method }}</p>
+                                                <p><strong>Host:</strong> {{ click.host }}</p>
+                                                <p><strong>Connection:</strong> {{ click.connection }}</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p class="text-gray-600">No link clicks recorded.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const collapsibles = document.querySelectorAll('.collapsible-trigger');
+    collapsibles.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            const target = document.getElementById(this.dataset.target);
+            if (target.style.display === "table-row") {
+                target.style.display = "none";
+                this.textContent = "Show Details";
+            } else {
+                target.style.display = "table-row";
+                this.textContent = "Hide Details";
+            }
+        });
+    });
+});
+</script>
 {% endblock %}

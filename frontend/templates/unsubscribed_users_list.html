@@ -1,44 +1,43 @@
 {% extends "base.html" %}
-
 {% block title %}Unsubscribed Users{% endblock %}
-
-{% block header %}Unsubscribed Users{% endblock %}
-
 {% block content %}
-<!-- unsubscribed_list.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Unsubscribed Users</title>
-</head>
-<body>
-    <h1>Unsubscribed Users</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Email</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user_email in unsubscribed_emails %}
-                <tr>
-                    <td>{{ user_email }}</td>
-                    <td>
-                        <form method="post" action="{% url 'delete_unsubscribed_user' user_email %}">
-                            {% csrf_token %}
-                            <button type="submit">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <form method="post" action="{% url 'delete_unsubscribed_users' %}">
-        {% csrf_token %}
-        <button type="submit">Flush list</button>
-    </form>
-</body>
-</html>
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-gray-800">Unsubscribed Users</h1>
 
+    {% if unsubscribed_emails %}
+        <div class="bg-white shadow-md rounded-lg overflow-hidden mb-6">
+            <table class="min-w-full leading-normal">
+                <thead>
+                    <tr>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Email
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user_email in unsubscribed_emails %}
+                        <tr>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">{{ user_email }}</p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <form method="post" action="{% url 'delete_unsubscribed_user' user_email=user_email %}" class="inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="text-gray-600">No unsubscribed users found.</p>
+    {% endif %}
+</div>
 {% endblock %}

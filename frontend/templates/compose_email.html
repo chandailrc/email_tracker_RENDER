@@ -1,112 +1,77 @@
 {% extends "base.html" %}
-
-{% block title %}Email Management{% endblock %}
-
-{% block header %}Email Management{% endblock %}
-
+{% block title %}Compose Email{% endblock %}
 {% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-gray-800">Compose Email</h1>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compose Email</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            max-width: 600px; 
-            margin: 0 auto; 
-            padding: 20px; 
-        }
-        label { 
-            display: block; 
-            margin-top: 10px; 
-        }
-        input[type="text"], input[type="email"], input[type="number"], textarea, select { 
-            width: 100%; 
-            padding: 5px; 
-            margin-top: 5px; 
-        }
-        button { 
-            margin-top: 20px; 
-            padding: 10px; 
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .messages { 
-            margin-bottom: 20px; 
-        }
-        .alert { 
-            padding: 10px; 
-            margin-bottom: 10px; 
-            border: 1px solid transparent; 
-            border-radius: 4px; 
-        }
-        .alert-success { 
-            background-color: #d4edda; 
-            border-color: #c3e6cb; 
-            color: #155724; 
-        }
-        .alert-warning { 
-            background-color: #fff3cd; 
-            border-color: #ffeeba; 
-            color: #856404; 
-        }
-        .alert-error { 
-            background-color: #f8d7da; 
-            border-color: #f5c6cb; 
-            color: #721c24; 
-        }
-    </style>
-</head>
-<body>
-    <h2>Compose Email</h2>
-    
     {% if messages %}
-    <div class="messages">
-        {% for message in messages %}
-            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    </div>
+        <div class="mb-6">
+            {% for message in messages %}
+                <div class="p-4 mb-4 rounded-md {% if message.tags %}{{ message.tags }}{% else %}bg-blue-100 text-blue-700{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
     {% endif %}
-    
-    <form method="post" action="{% url 'send_tracked_email_view' %}">
+
+    <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         {% csrf_token %}
-        
-        <label for="recipients">Recipients (one email per line):</label>
-        <textarea id="recipients" name="recipients" rows="5" required></textarea>
-        
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-        
-        <label for="body">Body:</label>
-        <textarea id="body" name="body" rows="10" required></textarea>
-        
-        <label for="delay_type">Delay Type:</label>
-        <select id="delay_type" name="delay_type" required>
-            <option value="fixed">Fixed Delay</option>
-            <option value="random">Random Delay</option>
-        </select>
-        
-        <label for="delay_value">Fixed Delay (seconds):</label>
-        <input type="number" id="delay_value" name="delay_value" min="0" value="0" required>
-        
-        <label for="min_delay">Minimum Delay (seconds):</label>
-        <input type="number" id="min_delay" name="min_delay" min="0" value="0" required>
-        
-        <label for="max_delay">Maximum Delay (seconds):</label>
-        <input type="number" id="max_delay" name="max_delay" min="0" value="0" required>
-        
-        <button type="submit">Send Emails</button>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="recipients">
+                Recipients (one email per line):
+            </label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="recipients" name="recipients" rows="3"></textarea>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">
+                Subject:
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject" name="subject" type="text">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="body">
+                Body:
+            </label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="body" name="body" rows="6"></textarea>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">
+                Delay Type:
+            </label>
+            <div class="mt-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" class="form-radio" name="delay_type" value="fixed">
+                    <span class="ml-2">Fixed Delay</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="delay_type" value="random">
+                    <span class="ml-2">Random Delay</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="fixed_delay">
+                Fixed Delay (seconds):
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fixed_delay" name="fixed_delay" type="number" min="0">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="min_delay">
+                Minimum Delay (seconds):
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="min_delay" name="min_delay" type="number" min="0">
+        </div>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="max_delay">
+                Maximum Delay (seconds):
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="max_delay" name="max_delay" type="number" min="0">
+        </div>
+        <div class="flex items-center justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                Send Emails
+            </button>
+        </div>
     </form>
-</body>
-</html>
+</div>
 {% endblock %}

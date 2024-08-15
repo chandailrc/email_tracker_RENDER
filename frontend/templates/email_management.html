@@ -1,45 +1,65 @@
 {% extends "base.html" %}
-
 {% block title %}Email Management{% endblock %}
-
-{% block header %}Email Management{% endblock %}
-
 {% block content %}
-<div>
-    <form method="post" action="{% url 'fetch_emails' %}">
-        {% csrf_token %}
-        <button type="submit">Fetch New Emails</button>
-    </form>
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-gray-800">Email Management</h1>
+
+    <div class="mb-8">
+        <form method="post" class="inline">
+            {% csrf_token %}
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Fetch New Emails
+            </button>
+        </form>
+    </div>
+
     {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
+        <div class="mb-6">
+            {% for message in messages %}
+                <div class="p-4 mb-4 rounded-md {% if message.tags %}{{ message.tags }}{% else %}bg-blue-100 text-blue-700{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">Received Emails</h2>
+
+    {% if emails %}
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <table class="min-w-full leading-normal">
+                <thead>
+                    <tr>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            From
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Subject
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            Received At
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for email in emails %}
+                        <tr>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">{{ email.sender }}</p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">{{ email.subject }}</p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">{{ email.received_at }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="text-gray-600">No emails found.</p>
     {% endif %}
 </div>
-
-<h2>Received Emails</h2>
-<table id="emailTable">
-    <thead>
-        <tr>
-            <th>From</th>
-            <th>Subject</th>
-            <th>Received At</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for email in emails %}
-        <tr>
-            <td>{{ email.sender }}</td>
-            <td>{{ email.subject }}</td>
-            <td>{{ email.received_at }}</td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="3">No emails found.</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
 {% endblock %}

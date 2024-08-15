@@ -91,6 +91,9 @@ def reply_send_tracked_email_view(request):
         return redirect('conversation_detail', conversation_id=conversation_id)
 
 
+from django.core.paginator import Paginator
+from django.db.models import Count
+
 @login_required
 def dashboard(request):
     csrf_token = get_token(request)
@@ -107,13 +110,31 @@ def dashboard(request):
         # Deserialize the email data
         email_objects = list(serializers.deserialize('json', data['emails']))
         
-        # Extract the actual model instances
-        emails = [obj.object for obj in email_objects]
-               
-        return render(request, 'dashboard.html', {
-            'emails': emails, 
+        # Extract the actual model instances and reverse the order
+        emails = [obj.object for obj in email_objects][::-1]
+        
+        # Paginate emails
+        paginator = Paginator(emails, 9)  # Show 9 emails per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        
+        # Prepare data for charts (only for current page)
+        email_subjects = [email.subject[:20] + '...' if len(email.subject) > 20 else email.subject for email in page_obj][::-1]
+        email_opens = [email.trackingitem_set.count() for email in page_obj][::-1]
+        
+        subscribed_count = len(emails) - len(unsubscribed_emails)
+        unsubscribed_count = len(unsubscribed_emails)
+        
+        context = {
+            'page_obj': page_obj, 
             'unsubscribed_emails': unsubscribed_emails,
-        })
+            'email_subjects': email_subjects,
+            'email_opens': email_opens,
+            'subscribed_count': subscribed_count,
+            'unsubscribed_count': unsubscribed_count,
+        }
+        
+        return render(request, 'dashboard.html', context)
     else:
         # Handle error case
         return render(request, 'dashboard.html', {
