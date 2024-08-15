@@ -39,7 +39,17 @@
 
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-sm font-medium text-gray-700">
-                        <i class="fas fa-eye mr-2"></i>Opens: {{ email.trackingitem_set.count }}
+                        <i class="fas fa-eye mr-2"></i>{% if email.trackingitem_set.all %}
+                        <ul>
+                            {% for item in email.trackingitem_set.all %}
+                                {% if item.item_type == 'PIXEL' %}
+                                    Opens: {{item.trackingevent_set.count}}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                            Opens: 00
+                        {% endif %}</td>
                     </span>
                     <span class="text-sm font-medium text-gray-700">
                         <i class="fas fa-check-circle mr-2"></i>Genuine: {{ email.genuineopen_set.count }}
@@ -50,16 +60,22 @@
                 <div class="mb-4">
                     <h4 class="text-sm font-semibold mb-2 text-gray-700">Link Clicks:</h4>
                     <div class="link-clicks text-xs">
-                        {% for item in email.trackingitem_set.all %}
-                            {% if item.item_type == 'LINK' %}
-                                <p>
-                                    <span class="font-medium">{{ item.trackingevent_set.count }} clicks:</span>
-                                    <a href="{{ item.url }}" class="text-blue-600 hover:underline" title="{{ item.url }}">
-                                        {{ item.url|truncatechars:30 }}
-                                    </a>
-                                </p>
-                            {% endif %}
-                        {% endfor %}
+                        {% with link_items=email.trackingitem_set.all %}
+                            {% for item in link_items %}
+                                {% if item.item_type == 'LINK' %}
+                                    {% if forloop.counter <= 3 %}
+                                        <p>
+                                            <span class="font-medium">{{ item.trackingevent_set.count }} clicks:</span>
+                                            <a href="{{ item.url }}" class="text-blue-600 hover:underline" title="{{ item.url }}">
+                                                {{ item.url|truncatechars:30 }}
+                                            </a>
+                                        </p>
+                                    {% elif forloop.counter == 4 %}
+                                        <p class="text-gray-500 italic">... and {{ link_items|length|add:"-3" }} more links</p>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endwith %}
                     </div>
                 </div>
                 {% endif %}
