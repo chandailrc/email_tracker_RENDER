@@ -4,9 +4,7 @@ from sending.models import SentEmail
 from receiving.models import ReceivedEmail
 from django.contrib.auth import get_user_model
 
-
 def process_email(email, email_type, user_id, in_reply_sendOrRec=None):
-    
     User = get_user_model()
     user = User.objects.get(id=user_id)
     
@@ -29,7 +27,7 @@ def process_email(email, email_type, user_id, in_reply_sendOrRec=None):
                 else:
                     in_reply_to_email = ReceivedEmail.objects.get(user=user, message_id=email.in_reply_to)
                     existing_message = ConversationMessage.objects.get(conversation__user=user, received_email=in_reply_to_email)
-            else:  # received. DO THE SAME AS WHAT WE HAVE DONE FOR email_type == 'sent'
+            else:  # received
                 if in_reply_sendOrRec == "send":
                     in_reply_to_email = SentEmail.objects.get(user=user, message_id=email.in_reply_to)
                     existing_message = ConversationMessage.objects.get(conversation__user=user, sent_email=in_reply_to_email)                    
@@ -51,9 +49,9 @@ def process_email(email, email_type, user_id, in_reply_sendOrRec=None):
     
     # Add the message to the conversation
     if email_type == 'sent':
-        ConversationMessage.objects.create(conversation=conversation, sent_email=email)
+        ConversationMessage.objects.create(conversation=conversation, sent_email=email, content=email.body)
     else:
-        ConversationMessage.objects.create(conversation=conversation, received_email=email)
+        ConversationMessage.objects.create(conversation=conversation, received_email=email, content=email.body)
     
     conversation.save()  # Update the last_updated field
     return conversation

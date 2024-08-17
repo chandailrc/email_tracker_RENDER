@@ -8,6 +8,7 @@ from email.utils import make_msgid
 from smtplib import SMTPRecipientsRefused, SMTPServerDisconnected
 from .models import SentEmail
 from receiving.models import ReceivedEmail
+from conversations.models import Conversation, ConversationMessage
 from unsubscribers.models import UnsubscribedUser
 from tracking.tracking_utils import generate_tracking_url
 from conversations.email_processor import process_email
@@ -30,25 +31,62 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     if UnsubscribedUser.objects.filter(email=recipient).exists():
         logger.info(f"sending_utils.py: Email not sent to {recipient} as they have unsubscribed.")
         return False, "Recipient has unsubscribed"
+
     # try:
     message_id = make_msgid(domain=settings.EMAIL_DOMAIN)
     
     if in_reply_to_message_id:
         if in_reply_sendOrRec == 'send':
-            in_reply_to = in_reply_to_message_id
-            sent_email = SentEmail.objects.get(user=user, message_id=in_reply_to_message_id)
-            thread_id = sent_email.thread_id
+            # original_email - Email being responded to
+            original_email = SentEmail.objects.get(user=user, message_id=in_reply_to_message_id)
+            thread_id = original_email.thread_id
         else:
-            in_reply_to = in_reply_to_message_id
-            received_email = ReceivedEmail.objects.get(user=user, message_id=in_reply_to_message_id)
-            thread_id = received_email.thread_id
-        # thread_id = in_reply_to.thread_id# or str(uuid.uuid4())
+            original_email = ReceivedEmail.objects.get(user=user, message_id=in_reply_to_message_id)
+            thread_id = original_email.thread_id
+        
         if not subject.lower().startswith('re:'):
-            subject = f"Re: {in_reply_to.subject}"
+            subject = f"Re: {subject}"
+        
+        # Fetch the conversation and previous messages
+        try:
+            conversation = Conversation.objects.get(
+                user=user,
+                conversationmessage__sent_email__message_id=in_reply_to_message_id
+            ) if in_reply_sendOrRec == 'send' else Conversation.objects.get(
+                user=user,
+                conversationmessage__received_email__message_id=in_reply_to_message_id
+            )
+            previous_messages = ConversationMessage.objects.filter(
+                conversation=conversation
+            ).order_by('-timestamp')[:5]  # Limit to last 5 messages
+
+            # Format the email history
+            history = "\n\n".join([
+                f"On {msg.timestamp.strftime('%Y-%m-%d %H:%M')}, {msg.sender} wrote:\n{msg.content}"
+                for msg in reversed(previous_messages)
+            ])
+
+            # Append the history to the new email body
+            full_body = f"{body}\n\n{'*' * 50}\n\n{history}"
+            
+            if hasattr(original_email, 'references') and original_email.references:
+                references = f"{original_email.references} {in_reply_to_message_id}"
+            else:
+                references = in_reply_to_message_id
+            
+        except Conversation.DoesNotExist:
+            full_body = body
     else:
-        in_reply_to = None
         thread_id = str(uuid.uuid4())
-    
+        full_body = body
+        references = None
+        
+    headers = {
+        'Message-ID': message_id,
+        'In-Reply-To': in_reply_to_message_id,
+        'References': references
+    }
+
     email = SentEmail.objects.create(
         user=user,
         recipient=recipient,
@@ -56,11 +94,12 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         bcc=','.join(bcc) if bcc else '',
         subject=subject,
         body=body,
+        full_body=full_body,
         sent_at=timezone.now(),
         sender=settings.DEFAULT_FROM_EMAIL,
         message_id=message_id,
         thread_id=thread_id,
-        in_reply_to=in_reply_to
+        in_reply_to=in_reply_to_message_id
     )
     logger.info(f"sending_utils.py: Email db entry created for {recipient} at {timezone.now()}")
     
@@ -69,7 +108,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         tracked_url = generate_tracking_url(email, 'LINK', original_url)
         return f'<a href="{tracked_url}" style="color: #007bff; text-decoration: none;">{original_url}</a>'
     
-    tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, body)
+    tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, full_body)
     html_body = tracked_body.replace('\n', '<br>')  # Convert newlines to <br> tags
     pixel_url = generate_tracking_url(email, 'PIXEL')
     visible_image_url = get_visible_image_url()
@@ -130,7 +169,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         to=[recipient],
         cc=cc,
         bcc=bcc,
-        headers={'Message-ID': message_id}
+        headers=headers
     )
     msg.attach_alternative(email_body, "text/html")
     msg.send()

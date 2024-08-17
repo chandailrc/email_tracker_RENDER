@@ -29,17 +29,14 @@ class ConversationMessage(models.Model):
     sent_email = models.OneToOneField(SentEmail, on_delete=models.SET_NULL, null=True, blank=True)
     received_email = models.OneToOneField(ReceivedEmail, on_delete=models.SET_NULL, null=True, blank=True)
     timestamp = models.DateTimeField(default=timezone.now)
-    
+    content = models.TextField()  # Add this field
+
     def __str__(self):
         return f"Message in {self.conversation} at {self.timestamp}"
     
     @property
     def sender(self):
         return self.sent_email.sender if self.sent_email else self.received_email.sender
-    
-    @property
-    def content(self):
-        return self.sent_email.body if self.sent_email else self.received_email.body
     
     @property
     def email_id(self):

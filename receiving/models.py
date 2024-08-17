@@ -14,6 +14,7 @@ class ReceivedEmail(models.Model):
     in_reply_to = models.CharField(max_length=255, unique=True, null=True)
     message_id = models.CharField(max_length=255, unique=True, null=True)
     thread_id = models.CharField(max_length=255, null=True, blank=True)
+    full_body = models.TextField()
 
     def __str__(self):
         return f"Email from {self.sender} to {self.recipient}: {self.subject}"

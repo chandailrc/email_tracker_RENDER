@@ -14,6 +14,7 @@ class SentEmail(models.Model):
     in_reply_to = models.CharField(max_length=255, unique=True, null=True, blank=True)
     message_id = models.CharField(max_length=255, unique=True, null=True, blank=True)
     thread_id = models.CharField(max_length=255, null=True, blank=True)
+    full_body = models.TextField(blank=True)
 
     def __str__(self):
         return f"Email to {self.recipient} from {self.sender}: {self.subject}"

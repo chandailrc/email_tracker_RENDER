@@ -11,6 +11,21 @@ from django.contrib.auth import get_user_model
 
 from django.core.exceptions import ObjectDoesNotExist
 
+def parse_email_body(body):
+    # Simple regex to find the start of the quoted text
+    # This might need to be adjusted based on the exact format of the emails you're receiving
+    split_pattern = r'\n\s*On .+?wrote:\s*\n'
+    parts = re.split(split_pattern, body, maxsplit=1)
+    
+    if len(parts) > 1:
+        new_content = parts[0].strip()
+        history = parts[1].strip()
+    else:
+        new_content = body.strip()
+        history = ''
+    
+    return new_content, history
+
 def find_email_model(user, message_id):
     try:
         sent_email = SentEmail.objects.get(user=user, message_id=message_id)
@@ -72,14 +87,17 @@ def process_incoming_email(raw_email, user_id):
     else:
         body = email_message.get_payload(decode=True).decode()
 
+    new_content, history = parse_email_body(body)
+
     # Create ReceivedEmail instance
     received_email = ReceivedEmail.objects.create(
-        user = user,
+        user=user,
         sender=sender,
         recipient=recipient,
         subject=subject,
-        body=body,
-        message_id=message_id
+        body=new_content,
+        full_body=body,
+        message_id=message_id,
     )
 
     # Link to the original email if it's a reply
