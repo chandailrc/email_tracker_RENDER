@@ -4836,3 +4836,1254 @@ AttributeError: can't set attribute 'content'
 2024-08-17 17:37:28 - django.server - INFO - "GET /api/sending/serve-image/logo.png HTTP/1.1" 301 0
 2024-08-17 17:37:28 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
 2024-08-17 17:37:28 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 18:07:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:07:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:07:04 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10801
+2024-08-17 18:07:04 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10801
+2024-08-17 18:07:05 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:07:05 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:07:05 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:07:05 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:07:05 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:07:05 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:09:06 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:06 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:06 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10801
+2024-08-17 18:09:06 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10801
+2024-08-17 18:09:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:09:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:09:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:09:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:09:35 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:35 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:35 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:09:35 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:09:35 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:09:35 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:09:35 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:35 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:35 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10801
+2024-08-17 18:09:35 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10801
+2024-08-17 18:09:37 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:37 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:09:37 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:09:37 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:09:37 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:09:37 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:19:26 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:26 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:26 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10219
+2024-08-17 18:19:26 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10219
+2024-08-17 18:19:27 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:27 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:27 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:19:27 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:19:27 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:19:27 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:19:46 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:46 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:46 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10123
+2024-08-17 18:19:46 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10123
+2024-08-17 18:19:47 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:47 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:19:47 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:19:47 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:19:47 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:19:47 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:21:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:20 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9982
+2024-08-17 18:21:20 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9982
+2024-08-17 18:21:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:20 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:21:20 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:21:20 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:21:20 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:21:43 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:43 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:43 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9957
+2024-08-17 18:21:43 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9957
+2024-08-17 18:21:44 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:44 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:21:44 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:21:44 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:21:44 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:21:44 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:23:47 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:23:47 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:23:47 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:23:47 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:23:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:23:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:23:49 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:23:49 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:23:49 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:23:49 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:25:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:12 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:12 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:25:12 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:25:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:13 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:25:13 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 791
+2024-08-17 18:25:13 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:25:13 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 888
+2024-08-17 18:25:16 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-17 12:55:16.904900+00:00
+2024-08-17 18:25:16 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-17 18:25:16 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 18:25:16 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 18:25:16 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 18:25:16 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 18:25:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:16 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:25:16 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:25:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:25:16 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:25:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:39 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9982
+2024-08-17 18:25:39 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 9982
+2024-08-17 18:25:40 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:40 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:40 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:25:40 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:25:40 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:25:40 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:25:47 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:47 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:47 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10676
+2024-08-17 18:25:47 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10676
+2024-08-17 18:25:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:49 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:25:49 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:25:49 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:25:49 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:25:49 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:26:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:26:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:26:03 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:26:03 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:26:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:26:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:26:04 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:26:04 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 939
+2024-08-17 18:26:04 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:26:04 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1036
+2024-08-17 18:26:20 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-17 12:56:20.867293+00:00
+2024-08-17 18:26:20 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-17 18:26:20 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 18:26:20 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 18:26:20 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 18:26:20 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 18:26:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:26:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:26:20 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1111
+2024-08-17 18:26:20 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1111
+2024-08-17 18:26:20 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1208
+2024-08-17 18:26:20 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1208
+2024-08-17 18:28:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 18:28:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 18:28:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 18:28:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 18:36:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 18:36:22 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 18:36:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 18:36:22 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 18:37:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:37:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:37:10 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:37:10 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10817
+2024-08-17 18:37:11 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:37:11 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:37:11 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1111
+2024-08-17 18:37:11 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1111
+2024-08-17 18:37:11 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1208
+2024-08-17 18:37:11 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1208
+2024-08-17 18:37:23 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-17 13:07:23.996899+00:00
+2024-08-17 18:37:24 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-17 18:37:24 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 18:37:24 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 18:37:24 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 18:37:24 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 18:37:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:37:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 18:37:24 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1272
+2024-08-17 18:37:24 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1272
+2024-08-17 18:37:24 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1369
+2024-08-17 18:37:24 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1369
+2024-08-17 18:37:32 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 18:37:32 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 18:37:32 - django.server - INFO - "GET /api/tracking/track/IjNkNGIxYjY3LTc1OGMtNGNlZi05ZDRlLTNhYzE1MjlmZDJlMyI:1sfJ9Q:K6m1ao3EikrhAfAROLCkBKeiMdAWTl17biIPQnYEbnc/ HTTP/1.1" 200 95
+2024-08-17 18:37:32 - django.server - INFO - "GET /api/tracking/track/IjNkNGIxYjY3LTc1OGMtNGNlZi05ZDRlLTNhYzE1MjlmZDJlMyI:1sfJ9Q:K6m1ao3EikrhAfAROLCkBKeiMdAWTl17biIPQnYEbnc/ HTTP/1.1" 200 95
+2024-08-17 20:39:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:39:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:39:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:39:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:40:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:40:26 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:40:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:40:26 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:40:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:40:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:40:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:40:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:41:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:41:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:41:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:41:40 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:42:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:42:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:42:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:42:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:42:24 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:42:24 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:42:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:42:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:42:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:42:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:42:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:42:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:43:37 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-17 15:13:37.611513+00:00
+2024-08-17 20:43:37 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-17 20:43:37 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:43:37 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:43:37 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:43:37 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:43:37 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 20:43:37 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 20:43:37 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1430
+2024-08-17 20:43:37 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1430
+2024-08-17 20:43:37 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1527
+2024-08-17 20:43:37 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1527
+2024-08-17 20:43:40 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:43:40 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:43:40 - django.server - INFO - "GET /api/tracking/track/ImU2NzUwM2UzLTIwMmItNDM2MS04YWY1LTY2ODQ0ZTRkYWFkZCI:1sfL7Z:7GsykPJJXCVpHk3cBT503bGgPfDb1ZPxtpGscClwuIQ/ HTTP/1.1" 200 95
+2024-08-17 20:43:40 - django.server - INFO - "GET /api/tracking/track/ImU2NzUwM2UzLTIwMmItNDM2MS04YWY1LTY2ODQ0ZTRkYWFkZCI:1sfL7Z:7GsykPJJXCVpHk3cBT503bGgPfDb1ZPxtpGscClwuIQ/ HTTP/1.1" 200 95
+2024-08-17 20:44:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:44:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:44:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:44:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:44:28 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-17 15:14:28.347374+00:00
+2024-08-17 20:44:28 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-17 20:44:28 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:44:28 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:44:28 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:44:28 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:44:28 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 20:44:28 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 20:44:28 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1587
+2024-08-17 20:44:28 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1587
+2024-08-17 20:44:28 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1684
+2024-08-17 20:44:28 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1684
+2024-08-17 20:44:29 - django.request - WARNING - Not Found: /api/tracking/track/ImU0YTJlMWQ1LTliODQtNDZiNi1iZTIyLTE5YTc5ODNkZDNlZSI:1sfL8O:0D-IXX3Dh_8_cb6Bh-Qb23bwP_l85ZyOlccOtNXk6eI/
+2024-08-17 20:44:29 - django.request - WARNING - Not Found: /api/tracking/track/ImU0YTJlMWQ1LTliODQtNDZiNi1iZTIyLTE5YTc5ODNkZDNlZSI:1sfL8O:0D-IXX3Dh_8_cb6Bh-Qb23bwP_l85ZyOlccOtNXk6eI/
+2024-08-17 20:44:29 - django.server - WARNING - "GET /api/tracking/track/ImU0YTJlMWQ1LTliODQtNDZiNi1iZTIyLTE5YTc5ODNkZDNlZSI:1sfL8O:0D-IXX3Dh_8_cb6Bh-Qb23bwP_l85ZyOlccOtNXk6eI/ HTTP/1.1" 404 9
+2024-08-17 20:44:29 - django.server - WARNING - "GET /api/tracking/track/ImU0YTJlMWQ1LTliODQtNDZiNi1iZTIyLTE5YTc5ODNkZDNlZSI:1sfL8O:0D-IXX3Dh_8_cb6Bh-Qb23bwP_l85ZyOlccOtNXk6eI/ HTTP/1.1" 404 9
+2024-08-17 20:44:29 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:44:29 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:45:09 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:45:09 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:45:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:45:09 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:45:20 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-17 15:15:20.540893+00:00
+2024-08-17 20:45:20 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-17 20:45:20 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:45:20 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:45:20 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:45:20 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:45:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 20:45:20 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 165
+2024-08-17 20:45:20 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1741
+2024-08-17 20:45:20 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 1741
+2024-08-17 20:45:20 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1839
+2024-08-17 20:45:20 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 1839
+2024-08-17 20:45:31 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:45:31 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:45:31 - django.server - INFO - "GET /api/tracking/track/IjZlNzZlOTQ2LTM5ODUtNDZkOS05MTJlLWE4MjgzNzA4N2Y2MyI:1sfL9E:Lo-3NhTKDURFF7WLouoIMs-WKZ4VS6hQ9p7JSWmBG1Y/ HTTP/1.1" 200 95
+2024-08-17 20:45:31 - django.server - INFO - "GET /api/tracking/track/IjZlNzZlOTQ2LTM5ODUtNDZkOS05MTJlLWE4MjgzNzA4N2Y2MyI:1sfL9E:Lo-3NhTKDURFF7WLouoIMs-WKZ4VS6hQ9p7JSWmBG1Y/ HTTP/1.1" 200 95
+2024-08-17 20:45:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:45:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:45:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:45:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:46:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:46:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:46:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:46:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:46:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:46:40 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:46:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:46:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:47:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:47:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:47:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:47:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:47:37 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 20:47:37 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 20:47:37 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-17 20:47:37 - django.request - WARNING - Not Found: /favicon.ico
+2024-08-17 20:47:58 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@tests.com at 2024-08-17 15:17:58.981532+00:00
+2024-08-17 20:47:59 - django.request - ERROR - Internal Server Error: /api/sending/send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 34, in send_tracked_email
+    success, message = sending_utils.tracked_email_sender(user.id, recipient, subject, body)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 179, in tracked_email_sender
+    'In-Reply-To': in_reply_to,
+UnboundLocalError: local variable 'in_reply_to' referenced before assignment
+2024-08-17 20:47:59 - django.request - ERROR - Internal Server Error: /api/sending/send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 34, in send_tracked_email
+    success, message = sending_utils.tracked_email_sender(user.id, recipient, subject, body)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 179, in tracked_email_sender
+    'In-Reply-To': in_reply_to,
+UnboundLocalError: local variable 'in_reply_to' referenced before assignment
+2024-08-17 20:47:59 - django.server - ERROR - "POST /api/sending/send-tracked-email/ HTTP/1.1" 500 96486
+2024-08-17 20:47:59 - django.server - ERROR - "POST /api/sending/send-tracked-email/ HTTP/1.1" 500 96486
+2024-08-17 20:47:59 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 20:47:59 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 20:47:59 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5694
+2024-08-17 20:47:59 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5694
+2024-08-17 20:48:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:48:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:48:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:48:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:49:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:49:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:49:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:49:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:49:11 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 20:49:11 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 20:49:21 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@tests.com at 2024-08-17 15:19:21.681120+00:00
+2024-08-17 20:49:21 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@tests.com
+2024-08-17 20:49:21 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-17 20:49:21 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-17 20:49:21 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 20:49:21 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 20:49:21 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5703
+2024-08-17 20:49:21 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5703
+2024-08-17 20:49:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:49:26 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:49:26 - django.server - INFO - "GET /api/tracking/track/Ijg2YmJjYWE3LTNkZjQtNGU4MS1iOTczLWE5OGNlNTZhY2NmZSI:1sfLD7:UxFf3eba6SR64T5_KajCeXIZV5GZEXcSonuKtp5cmYA/ HTTP/1.1" 200 95
+2024-08-17 20:49:26 - django.server - INFO - "GET /api/tracking/track/Ijg2YmJjYWE3LTNkZjQtNGU4MS1iOTczLWE5OGNlNTZhY2NmZSI:1sfLD7:UxFf3eba6SR64T5_KajCeXIZV5GZEXcSonuKtp5cmYA/ HTTP/1.1" 200 95
+2024-08-17 20:50:02 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:02 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:02 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11019
+2024-08-17 20:50:02 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11019
+2024-08-17 20:50:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:04 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:04 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 255
+2024-08-17 20:50:04 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 255
+2024-08-17 20:50:04 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 353
+2024-08-17 20:50:04 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 353
+2024-08-17 20:50:17 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@tests.com at 2024-08-17 15:20:17.690908+00:00
+2024-08-17 20:50:17 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@tests.com
+2024-08-17 20:50:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:17 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:17 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:17 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 433
+2024-08-17 20:50:17 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 433
+2024-08-17 20:50:17 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 531
+2024-08-17 20:50:17 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 531
+2024-08-17 20:50:21 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@tests.com at 2024-08-17 15:20:21.758904+00:00
+2024-08-17 20:50:21 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@tests.com
+2024-08-17 20:50:21 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:21 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:21 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:21 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:21 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:21 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:21 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 581
+2024-08-17 20:50:21 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 581
+2024-08-17 20:50:21 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 679
+2024-08-17 20:50:21 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 679
+2024-08-17 20:50:24 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@tests.com at 2024-08-17 15:20:24.892476+00:00
+2024-08-17 20:50:24 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@tests.com
+2024-08-17 20:50:24 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:24 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:24 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:24 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:24 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 729
+2024-08-17 20:50:24 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 729
+2024-08-17 20:50:24 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 827
+2024-08-17 20:50:24 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 827
+2024-08-17 20:50:27 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@tests.com at 2024-08-17 15:20:27.534249+00:00
+2024-08-17 20:50:27 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test2@tests.com
+2024-08-17 20:50:27 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:27 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 20:50:27 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:27 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 20:50:27 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:27 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 20:50:27 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 879
+2024-08-17 20:50:27 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 879
+2024-08-17 20:50:27 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 977
+2024-08-17 20:50:27 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 977
+2024-08-17 20:50:30 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:50:30 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:50:30 - django.server - INFO - "GET /api/tracking/track/IjNlZTYyOTJiLTU5OGYtNDdiNS1hM2I2LTExMzQ1NTU3MDVmOCI:1sfLEB:cN1oeLUZzBntSQnPVwKIsJwcMZu9GxUeLGVUk1U8-Ug/ HTTP/1.1" 200 95
+2024-08-17 20:50:30 - django.server - INFO - "GET /api/tracking/track/IjNlZTYyOTJiLTU5OGYtNDdiNS1hM2I2LTExMzQ1NTU3MDVmOCI:1sfLEB:cN1oeLUZzBntSQnPVwKIsJwcMZu9GxUeLGVUk1U8-Ug/ HTTP/1.1" 200 95
+2024-08-17 20:50:39 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:50:39 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:50:39 - django.server - INFO - "GET /api/tracking/track/ImUzMWNmMzZjLWI1MGUtNDA3NS05MGU1LWUyMGRlMjRkYTBkYyI:1sfLE8:B60y1SNzD6jmEtzbRCIf4YyvoKS1qHcy7KYJY1JOKb8/ HTTP/1.1" 200 95
+2024-08-17 20:50:39 - django.server - INFO - "GET /api/tracking/track/ImUzMWNmMzZjLWI1MGUtNDA3NS05MGU1LWUyMGRlMjRkYTBkYyI:1sfLE8:B60y1SNzD6jmEtzbRCIf4YyvoKS1qHcy7KYJY1JOKb8/ HTTP/1.1" 200 95
+2024-08-17 20:50:49 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:50:49 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:50:49 - django.server - INFO - "GET /api/tracking/track/IjJjMmUwOTI3LWZkOGYtNDE3MS04ODk0LWM0Yjc1OGU3OTFmYyI:1sfLE5:T8XOjOD-dMb4fHM9r4v1LBpgzEt6cyiTbrTxjfq8meI/ HTTP/1.1" 200 95
+2024-08-17 20:50:49 - django.server - INFO - "GET /api/tracking/track/IjJjMmUwOTI3LWZkOGYtNDE3MS04ODk0LWM0Yjc1OGU3OTFmYyI:1sfLE5:T8XOjOD-dMb4fHM9r4v1LBpgzEt6cyiTbrTxjfq8meI/ HTTP/1.1" 200 95
+2024-08-17 20:51:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:51:01 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 20:51:01 - django.server - INFO - "GET /api/tracking/track/IjNlZTYyOTJiLTU5OGYtNDdiNS1hM2I2LTExMzQ1NTU3MDVmOCI:1sfLEB:cN1oeLUZzBntSQnPVwKIsJwcMZu9GxUeLGVUk1U8-Ug/ HTTP/1.1" 200 95
+2024-08-17 20:51:01 - django.server - INFO - "GET /api/tracking/track/IjNlZTYyOTJiLTU5OGYtNDdiNS1hM2I2LTExMzQ1NTU3MDVmOCI:1sfLEB:cN1oeLUZzBntSQnPVwKIsJwcMZu9GxUeLGVUk1U8-Ug/ HTTP/1.1" 200 95
+2024-08-17 20:55:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:55:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:55:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:55:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:56:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:56:30 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 20:56:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 20:56:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:00:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:00:07 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:00:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:00:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:00:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:00:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:00:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:00:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:01:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:01:17 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:01:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:01:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:01:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:01:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:01:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:01:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:01:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:01:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:01:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:01:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:02:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:02:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:02:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:02:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:05:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:05:29 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:05:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:05:30 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:05:53 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 65, in tracked_email_sender
+    history = "\n\n".join([
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 66, in <listcomp>
+    f"On {email.utils.format_datetime(msg.timestamp)}, {msg.sender} wrote:\n> " + msg.content.replace('\n', '\n> ')
+NameError: free variable 'email' referenced before assignment in enclosing scope
+2024-08-17 21:05:53 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 65, in tracked_email_sender
+    history = "\n\n".join([
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 66, in <listcomp>
+    f"On {email.utils.format_datetime(msg.timestamp)}, {msg.sender} wrote:\n> " + msg.content.replace('\n', '\n> ')
+NameError: free variable 'email' referenced before assignment in enclosing scope
+2024-08-17 21:05:53 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 95742
+2024-08-17 21:05:53 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 95742
+2024-08-17 21:05:53 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:05:53 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:07:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:07:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:07:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:07:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:09:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:09:08 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:09:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:09:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:09:20 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test2@tests.com at 2024-08-17 15:39:20.675189+00:00
+2024-08-17 21:09:20 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 118, in tracked_email_sender
+    email_body = """
+KeyError: 'html_body'
+2024-08-17 21:09:20 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 118, in tracked_email_sender
+    email_body = """
+KeyError: 'html_body'
+2024-08-17 21:09:20 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 97197
+2024-08-17 21:09:20 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 97197
+2024-08-17 21:09:20 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:09:20 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:09:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:09:45 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:09:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:09:45 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:09:58 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:09:58 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:09:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:09:58 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:10:13 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 91, in tracked_email_sender
+    email = SentEmail.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+2024-08-17 21:10:13 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 91, in tracked_email_sender
+    email = SentEmail.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+2024-08-17 21:10:13 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 193995
+2024-08-17 21:10:13 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 193995
+2024-08-17 21:10:13 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:10:13 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:10:38 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 21:10:38 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 21:10:44 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for t at 2024-08-17 15:40:44.643483+00:00
+2024-08-17 21:10:44 - django.request - ERROR - Internal Server Error: /api/sending/send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 34, in send_tracked_email
+    success, message = sending_utils.tracked_email_sender(user.id, recipient, subject, body)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 165, in tracked_email_sender
+    {history}
+UnboundLocalError: local variable 'history' referenced before assignment
+2024-08-17 21:10:44 - django.request - ERROR - Internal Server Error: /api/sending/send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 34, in send_tracked_email
+    success, message = sending_utils.tracked_email_sender(user.id, recipient, subject, body)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 165, in tracked_email_sender
+    {history}
+UnboundLocalError: local variable 'history' referenced before assignment
+2024-08-17 21:10:44 - django.server - ERROR - "POST /api/sending/send-tracked-email/ HTTP/1.1" 500 93275
+2024-08-17 21:10:44 - django.server - ERROR - "POST /api/sending/send-tracked-email/ HTTP/1.1" 500 93275
+2024-08-17 21:10:44 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 21:10:44 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 21:10:44 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5694
+2024-08-17 21:10:44 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5694
+2024-08-17 21:11:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:11:06 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:11:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:11:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:11:09 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 21:11:09 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 21:11:09 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11019
+2024-08-17 21:11:09 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11019
+2024-08-17 21:11:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 21:11:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 308
+2024-08-17 21:11:10 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 879
+2024-08-17 21:11:10 - django.server - INFO - "GET /api/conversations/2/ HTTP/1.1" 200 879
+2024-08-17 21:11:10 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 977
+2024-08-17 21:11:10 - django.server - INFO - "GET /frontend/conversations/2/ HTTP/1.1" 200 977
+2024-08-17 21:11:14 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 90, in tracked_email_sender
+    email = SentEmail.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+2024-08-17 21:11:14 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 90, in tracked_email_sender
+    email = SentEmail.objects.create(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "sending_sentemail_in_reply_to_key"
+DETAIL:  Key (in_reply_to)=(<172390802751.40015.8633766737206672339@razor-arts.com>) already exists.
+
+2024-08-17 21:11:14 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 190913
+2024-08-17 21:11:14 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 190913
+2024-08-17 21:11:14 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:11:14 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:11:26 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 21:11:26 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-17 21:11:32 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 15:41:32.462181+00:00
+2024-08-17 21:11:32 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:11:32 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-17 21:11:32 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-17 21:11:32 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 21:11:32 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-17 21:11:32 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5703
+2024-08-17 21:11:32 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5703
+2024-08-17 21:11:34 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:11:34 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:11:34 - django.request - WARNING - Not Found: /api/tracking/track/IjgwNjlmMDIzLWI3NzAtNDZhYy04ODNkLTI4NWI1MDIwMGVmMiI:1sfLYa:uoGr8t5eHrVMGxaGHMqy2jX97jGRLypxQPCHP1bGSQI/
+2024-08-17 21:11:34 - django.request - WARNING - Not Found: /api/tracking/track/IjgwNjlmMDIzLWI3NzAtNDZhYy04ODNkLTI4NWI1MDIwMGVmMiI:1sfLYa:uoGr8t5eHrVMGxaGHMqy2jX97jGRLypxQPCHP1bGSQI/
+2024-08-17 21:11:34 - django.server - WARNING - "GET /api/tracking/track/IjgwNjlmMDIzLWI3NzAtNDZhYy04ODNkLTI4NWI1MDIwMGVmMiI:1sfLYa:uoGr8t5eHrVMGxaGHMqy2jX97jGRLypxQPCHP1bGSQI/ HTTP/1.1" 404 9
+2024-08-17 21:11:34 - django.server - WARNING - "GET /api/tracking/track/IjgwNjlmMDIzLWI3NzAtNDZhYy04ODNkLTI4NWI1MDIwMGVmMiI:1sfLYa:uoGr8t5eHrVMGxaGHMqy2jX97jGRLypxQPCHP1bGSQI/ HTTP/1.1" 404 9
+2024-08-17 21:11:37 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:37 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:37 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11216
+2024-08-17 21:11:37 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11216
+2024-08-17 21:11:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:38 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:38 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 231
+2024-08-17 21:11:38 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 231
+2024-08-17 21:11:38 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 315
+2024-08-17 21:11:38 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 315
+2024-08-17 21:11:39 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 15:41:39.687991+00:00
+2024-08-17 21:11:39 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:11:39 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:11:39 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:11:39 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:11:39 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:11:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:39 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 377
+2024-08-17 21:11:39 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 377
+2024-08-17 21:11:39 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 461
+2024-08-17 21:11:39 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 461
+2024-08-17 21:11:41 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 15:41:41.289456+00:00
+2024-08-17 21:11:41 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:11:41 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:11:41 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:11:41 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:11:41 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:11:41 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:41 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:11:41 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 526
+2024-08-17 21:11:41 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 526
+2024-08-17 21:11:41 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 610
+2024-08-17 21:11:41 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 610
+2024-08-17 21:11:47 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:11:47 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:11:47 - django.server - INFO - "GET /api/tracking/track/ImRlMDE1MjExLWQwNGYtNDQ4NC05MjYwLTI3ZGYwNThmNGM0MCI:1sfLYj:FV3f1CaPhUn39DGePhk7GU2HFmHWD8X2rQYDXhLW7Z8/ HTTP/1.1" 200 95
+2024-08-17 21:11:47 - django.server - INFO - "GET /api/tracking/track/ImRlMDE1MjExLWQwNGYtNDQ4NC05MjYwLTI3ZGYwNThmNGM0MCI:1sfLYj:FV3f1CaPhUn39DGePhk7GU2HFmHWD8X2rQYDXhLW7Z8/ HTTP/1.1" 200 95
+2024-08-17 21:28:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:28:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:28:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:28:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:29:07 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 15:59:07.003365+00:00
+2024-08-17 21:29:07 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:29:07 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:29:07 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:29:07 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:29:07 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:29:07 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:29:07 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:29:07 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 678
+2024-08-17 21:29:07 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 678
+2024-08-17 21:29:07 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 762
+2024-08-17 21:29:07 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 762
+2024-08-17 21:29:10 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 15:59:10.428316+00:00
+2024-08-17 21:29:10 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:29:10 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:29:10 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:29:10 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:29:10 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:29:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:29:10 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:29:10 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 826
+2024-08-17 21:29:10 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 826
+2024-08-17 21:29:10 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 910
+2024-08-17 21:29:10 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 910
+2024-08-17 21:29:17 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 15:59:17.785173+00:00
+2024-08-17 21:29:17 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:29:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:29:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:29:17 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:29:17 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:29:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:29:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:29:17 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 984
+2024-08-17 21:29:17 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 984
+2024-08-17 21:29:17 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1068
+2024-08-17 21:29:17 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1068
+2024-08-17 21:29:19 - django.request - WARNING - Not Found: /api/tracking/track/ImNlNWFkMWQ3LTYyNjAtNDljZi1hYmZjLTMwOTM0YmE5YWQxZiI:1sfLpl:z8KkX1O4dybHDIiwJt8MU3k153v3IttYISEwqqRBNe8/
+2024-08-17 21:29:19 - django.request - WARNING - Not Found: /api/tracking/track/ImNlNWFkMWQ3LTYyNjAtNDljZi1hYmZjLTMwOTM0YmE5YWQxZiI:1sfLpl:z8KkX1O4dybHDIiwJt8MU3k153v3IttYISEwqqRBNe8/
+2024-08-17 21:29:19 - django.server - WARNING - "GET /api/tracking/track/ImNlNWFkMWQ3LTYyNjAtNDljZi1hYmZjLTMwOTM0YmE5YWQxZiI:1sfLpl:z8KkX1O4dybHDIiwJt8MU3k153v3IttYISEwqqRBNe8/ HTTP/1.1" 404 9
+2024-08-17 21:29:19 - django.server - WARNING - "GET /api/tracking/track/ImNlNWFkMWQ3LTYyNjAtNDljZi1hYmZjLTMwOTM0YmE5YWQxZiI:1sfLpl:z8KkX1O4dybHDIiwJt8MU3k153v3IttYISEwqqRBNe8/ HTTP/1.1" 404 9
+2024-08-17 21:29:19 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:29:19 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:36:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:36:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:36:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:36:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:37:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:37:34 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:37:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:37:34 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:38:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:38:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:38:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:38:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:38:47 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:38:47 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:38:47 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:38:47 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:39:07 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:09:07.058699+00:00
+2024-08-17 21:39:07 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:39:07 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:39:07 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:39:07 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:39:07 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:39:07 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:39:07 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:39:07 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1153
+2024-08-17 21:39:07 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1153
+2024-08-17 21:39:07 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1237
+2024-08-17 21:39:07 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1237
+2024-08-17 21:39:08 - django.request - WARNING - Not Found: /api/tracking/track/IjhjMzE3Zjg0LWIxYTUtNGRlMS1iOWIwLTRjODVkMjhlNjhkNCI:1sfLzH:OR8NtwSEXGp4I9SjWOh-YbH6mPhfSpH5fZRTq2SRXHA/
+2024-08-17 21:39:08 - django.request - WARNING - Not Found: /api/tracking/track/IjhjMzE3Zjg0LWIxYTUtNGRlMS1iOWIwLTRjODVkMjhlNjhkNCI:1sfLzH:OR8NtwSEXGp4I9SjWOh-YbH6mPhfSpH5fZRTq2SRXHA/
+2024-08-17 21:39:08 - django.server - WARNING - "GET /api/tracking/track/IjhjMzE3Zjg0LWIxYTUtNGRlMS1iOWIwLTRjODVkMjhlNjhkNCI:1sfLzH:OR8NtwSEXGp4I9SjWOh-YbH6mPhfSpH5fZRTq2SRXHA/ HTTP/1.1" 404 9
+2024-08-17 21:39:08 - django.server - WARNING - "GET /api/tracking/track/IjhjMzE3Zjg0LWIxYTUtNGRlMS1iOWIwLTRjODVkMjhlNjhkNCI:1sfLzH:OR8NtwSEXGp4I9SjWOh-YbH6mPhfSpH5fZRTq2SRXHA/ HTTP/1.1" 404 9
+2024-08-17 21:39:08 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:39:08 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:45:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:45:51 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:45:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:45:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:47:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:47:16 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:47:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:47:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:47:49 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 87, in tracked_email_sender
+    quoted_history = format_email_history(previous_messages, settings.DEFAULT_FROM_EMAIL)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 33, in format_email_history
+    f"{'>' * quote_level}*To:* {msg.recipient}\n"
+AttributeError: 'ConversationMessage' object has no attribute 'recipient'
+2024-08-17 21:47:49 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 87, in tracked_email_sender
+    quoted_history = format_email_history(previous_messages, settings.DEFAULT_FROM_EMAIL)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 33, in format_email_history
+    f"{'>' * quote_level}*To:* {msg.recipient}\n"
+AttributeError: 'ConversationMessage' object has no attribute 'recipient'
+2024-08-17 21:47:49 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 97644
+2024-08-17 21:47:49 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 97644
+2024-08-17 21:47:49 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:47:49 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 21:49:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:49:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:49:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:49:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:53:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:53:33 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:53:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:53:33 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:54:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:54:48 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:54:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:54:48 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:55:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:55:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 21:55:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:55:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 21:55:59 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:25:59.847782+00:00
+2024-08-17 21:55:59 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 21:55:59 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:55:59 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 21:55:59 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:55:59 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 21:55:59 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:55:59 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:55:59 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1321
+2024-08-17 21:55:59 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1321
+2024-08-17 21:55:59 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1405
+2024-08-17 21:55:59 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1405
+2024-08-17 21:56:02 - django.request - WARNING - Not Found: /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/
+2024-08-17 21:56:02 - django.request - WARNING - Not Found: /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/
+2024-08-17 21:56:02 - django.server - WARNING - "GET /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/ HTTP/1.1" 404 9
+2024-08-17 21:56:02 - django.server - WARNING - "GET /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/ HTTP/1.1" 404 9
+2024-08-17 21:56:02 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:56:02 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:57:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:57:45 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 21:57:45 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11216
+2024-08-17 21:57:45 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 11216
+2024-08-17 21:57:51 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 19258
+2024-08-17 21:57:51 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 19258
+2024-08-17 21:57:51 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 24609
+2024-08-17 21:57:51 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 24609
+2024-08-17 21:58:01 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 19258
+2024-08-17 21:58:01 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 19258
+2024-08-17 21:58:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 24609
+2024-08-17 21:58:01 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 24609
+2024-08-17 21:58:12 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:58:12 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:58:12 - django.server - INFO - "GET /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/ HTTP/1.1" 200 95
+2024-08-17 21:58:12 - django.server - INFO - "GET /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/ HTTP/1.1" 200 95
+2024-08-17 21:58:22 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 19258
+2024-08-17 21:58:22 - django.server - INFO - "GET /api/tracking/dashboard-data/ HTTP/1.1" 200 19258
+2024-08-17 21:58:22 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 24609
+2024-08-17 21:58:22 - django.server - INFO - "GET /frontend/dashboard/ HTTP/1.1" 200 24609
+2024-08-17 21:58:28 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:58:28 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 21:58:28 - django.server - INFO - "GET /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/ HTTP/1.1" 200 95
+2024-08-17 21:58:28 - django.server - INFO - "GET /api/tracking/track/IjkwMjZkMDdhLWRlMDItNDNlOC1hNGY4LWNjZWI5ZTA2NWM3OSI:1sfMFb:5TJsxLJ7WqWgbhkwZaPA8ManObWZctsrd-kT7NewELE/ HTTP/1.1" 200 95
+2024-08-17 22:00:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:00:49 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:00:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:00:49 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:00:55 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:30:55.528014+00:00
+2024-08-17 22:00:55 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 22:00:55 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:00:55 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:00:55 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:00:55 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:00:55 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:00:55 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:00:55 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1469
+2024-08-17 22:00:55 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1469
+2024-08-17 22:00:55 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1553
+2024-08-17 22:00:55 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1553
+2024-08-17 22:01:04 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:01:04 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:01:04 - django.server - INFO - "GET /api/tracking/track/IjM1NDgwOGMzLWI2ZWYtNDI4OC04NjU4LWY1ZTBmZDA5MmQ0OSI:1sfMKN:ynAzOiN7WVabeQi2ArxiXBTknrUirgZp4kx-EX-VKak/ HTTP/1.1" 200 95
+2024-08-17 22:01:04 - django.server - INFO - "GET /api/tracking/track/IjM1NDgwOGMzLWI2ZWYtNDI4OC04NjU4LWY1ZTBmZDA5MmQ0OSI:1sfMKN:ynAzOiN7WVabeQi2ArxiXBTknrUirgZp4kx-EX-VKak/ HTTP/1.1" 200 95
+2024-08-17 22:01:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:01:55 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:01:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:01:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:02:03 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:32:03.611293+00:00
+2024-08-17 22:02:03 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 22:02:03 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:02:03 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:02:03 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:02:03 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:02:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:02:03 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:02:03 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1615
+2024-08-17 22:02:03 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1615
+2024-08-17 22:02:03 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1699
+2024-08-17 22:02:03 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1699
+2024-08-17 22:02:05 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:02:05 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:02:05 - django.request - WARNING - Not Found: /api/tracking/track/IjZjNmRiYzY2LWFmNmItNDMwZi1iZTFmLWY1NWNiN2M1MGEzMyI:1sfMLT:ceMXID4SrC6XV7c8s5DBsdQcWQFpRc35uMfaRgXzsOA/
+2024-08-17 22:02:05 - django.request - WARNING - Not Found: /api/tracking/track/IjZjNmRiYzY2LWFmNmItNDMwZi1iZTFmLWY1NWNiN2M1MGEzMyI:1sfMLT:ceMXID4SrC6XV7c8s5DBsdQcWQFpRc35uMfaRgXzsOA/
+2024-08-17 22:02:05 - django.server - WARNING - "GET /api/tracking/track/IjZjNmRiYzY2LWFmNmItNDMwZi1iZTFmLWY1NWNiN2M1MGEzMyI:1sfMLT:ceMXID4SrC6XV7c8s5DBsdQcWQFpRc35uMfaRgXzsOA/ HTTP/1.1" 404 9
+2024-08-17 22:02:05 - django.server - WARNING - "GET /api/tracking/track/IjZjNmRiYzY2LWFmNmItNDMwZi1iZTFmLWY1NWNiN2M1MGEzMyI:1sfMLT:ceMXID4SrC6XV7c8s5DBsdQcWQFpRc35uMfaRgXzsOA/ HTTP/1.1" 404 9
+2024-08-17 22:02:14 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:02:14 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:02:14 - django.server - INFO - "GET /api/tracking/track/IjZjNmRiYzY2LWFmNmItNDMwZi1iZTFmLWY1NWNiN2M1MGEzMyI:1sfMLT:ceMXID4SrC6XV7c8s5DBsdQcWQFpRc35uMfaRgXzsOA/ HTTP/1.1" 200 95
+2024-08-17 22:02:14 - django.server - INFO - "GET /api/tracking/track/IjZjNmRiYzY2LWFmNmItNDMwZi1iZTFmLWY1NWNiN2M1MGEzMyI:1sfMLT:ceMXID4SrC6XV7c8s5DBsdQcWQFpRc35uMfaRgXzsOA/ HTTP/1.1" 200 95
+2024-08-17 22:05:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:05:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:05:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:05:20 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:05:26 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:35:26.562414+00:00
+2024-08-17 22:05:26 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 22:05:26 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:05:26 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:05:26 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:05:26 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:05:26 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:05:26 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:05:26 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1774
+2024-08-17 22:05:26 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1774
+2024-08-17 22:05:26 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1858
+2024-08-17 22:05:26 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 1858
+2024-08-17 22:05:33 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:05:33 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:05:33 - django.server - INFO - "GET /api/tracking/track/IjliZTNiNzc4LTFlYTctNGI3MS05NzU3LTEzMDBjYmEyNjYzNSI:1sfMOk:iHgSRmIKegtbLhUEW7LIU9VvxJ1Svwl8nCWdOLKEAuQ/ HTTP/1.1" 200 95
+2024-08-17 22:05:33 - django.server - INFO - "GET /api/tracking/track/IjliZTNiNzc4LTFlYTctNGI3MS05NzU3LTEzMDBjYmEyNjYzNSI:1sfMOk:iHgSRmIKegtbLhUEW7LIU9VvxJ1Svwl8nCWdOLKEAuQ/ HTTP/1.1" 200 95
+2024-08-17 22:06:12 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:06:12 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:06:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:06:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:06:17 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:36:17.828176+00:00
+2024-08-17 22:06:17 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 22:06:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:06:17 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:06:17 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:06:17 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:06:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:06:17 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:06:17 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1925
+2024-08-17 22:06:17 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 1925
+2024-08-17 22:06:17 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2009
+2024-08-17 22:06:17 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2009
+2024-08-17 22:06:23 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:06:23 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:06:23 - django.server - INFO - "GET /api/tracking/track/IjM3MWI4M2NlLWY0NWYtNDU5MC04NGM4LWU3MjlhODQxOTgzYyI:1sfMPZ:FocfZNS4RIQttPqDCFZopAQ-Jc87BwsP5buWIgA-ciY/ HTTP/1.1" 200 95
+2024-08-17 22:06:23 - django.server - INFO - "GET /api/tracking/track/IjM3MWI4M2NlLWY0NWYtNDU5MC04NGM4LWU3MjlhODQxOTgzYyI:1sfMPZ:FocfZNS4RIQttPqDCFZopAQ-Jc87BwsP5buWIgA-ciY/ HTTP/1.1" 200 95
+2024-08-17 22:07:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:07:28 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:07:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:07:29 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:07:31 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 82, in tracked_email_sender
+    previous_messages = ConversationMessage.objects.filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 431, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+2024-08-17 22:07:31 - django.request - ERROR - Internal Server Error: /api/sending/reply-send-tracked-email/
+Traceback (most recent call last):
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/views.py", line 82, in reply_send_tracked_email
+    success, message = sending_utils.tracked_email_sender(
+  File "/home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py", line 82, in tracked_email_sender
+    previous_messages = ConversationMessage.objects.filter(
+  File "/home/rahul/anaconda3/envs/trackerRENDER/lib/python3.10/site-packages/django/db/models/query.py", line 431, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+2024-08-17 22:07:31 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 95602
+2024-08-17 22:07:31 - django.server - ERROR - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 500 95602
+2024-08-17 22:07:31 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 22:07:31 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 80
+2024-08-17 22:07:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:07:41 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:07:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:07:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:10:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:10:21 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:10:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:10:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:10:29 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:40:29.484115+00:00
+2024-08-17 22:10:29 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 22:10:29 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:10:29 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:10:29 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:10:29 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:10:29 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:10:29 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:10:29 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 2074
+2024-08-17 22:10:29 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 2074
+2024-08-17 22:10:29 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2158
+2024-08-17 22:10:29 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2158
+2024-08-17 22:10:31 - django.request - WARNING - Not Found: /api/tracking/track/ImM5MDI3YTQ3LTQxOWEtNDVlOC05Y2IyLTFiMjNmZDc0YzcwMyI:1sfMTd:1CTSOoZfhaVmsnBMbAo8BwWlf7Bwn6m-TxLEOE43NUc/
+2024-08-17 22:10:31 - django.request - WARNING - Not Found: /api/tracking/track/ImM5MDI3YTQ3LTQxOWEtNDVlOC05Y2IyLTFiMjNmZDc0YzcwMyI:1sfMTd:1CTSOoZfhaVmsnBMbAo8BwWlf7Bwn6m-TxLEOE43NUc/
+2024-08-17 22:10:31 - django.server - WARNING - "GET /api/tracking/track/ImM5MDI3YTQ3LTQxOWEtNDVlOC05Y2IyLTFiMjNmZDc0YzcwMyI:1sfMTd:1CTSOoZfhaVmsnBMbAo8BwWlf7Bwn6m-TxLEOE43NUc/ HTTP/1.1" 404 9
+2024-08-17 22:10:31 - django.server - WARNING - "GET /api/tracking/track/ImM5MDI3YTQ3LTQxOWEtNDVlOC05Y2IyLTFiMjNmZDc0YzcwMyI:1sfMTd:1CTSOoZfhaVmsnBMbAo8BwWlf7Bwn6m-TxLEOE43NUc/ HTTP/1.1" 404 9
+2024-08-17 22:10:31 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:10:31 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:13:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:13:02 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:13:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:13:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:13:13 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for d at 2024-08-17 16:43:13.873028+00:00
+2024-08-17 22:13:13 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to d
+2024-08-17 22:13:13 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:13:13 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-17 22:13:13 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:13:13 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-17 22:13:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:13:13 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 432
+2024-08-17 22:13:13 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 2243
+2024-08-17 22:13:13 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 2243
+2024-08-17 22:13:13 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2327
+2024-08-17 22:13:13 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2327
+2024-08-17 22:13:15 - django.request - WARNING - Not Found: /api/tracking/track/IjBiZjQ5MmFhLWQzY2ItNGIzOS05NWEwLWUyMDNlZDFkMjhlYSI:1sfMWH:bO17767_gYl2x0W25kMfZj4vBkYGxsS-FJy6axHVcq0/
+2024-08-17 22:13:15 - django.request - WARNING - Not Found: /api/tracking/track/IjBiZjQ5MmFhLWQzY2ItNGIzOS05NWEwLWUyMDNlZDFkMjhlYSI:1sfMWH:bO17767_gYl2x0W25kMfZj4vBkYGxsS-FJy6axHVcq0/
+2024-08-17 22:13:15 - django.server - WARNING - "GET /api/tracking/track/IjBiZjQ5MmFhLWQzY2ItNGIzOS05NWEwLWUyMDNlZDFkMjhlYSI:1sfMWH:bO17767_gYl2x0W25kMfZj4vBkYGxsS-FJy6axHVcq0/ HTTP/1.1" 404 9
+2024-08-17 22:13:15 - django.server - WARNING - "GET /api/tracking/track/IjBiZjQ5MmFhLWQzY2ItNGIzOS05NWEwLWUyMDNlZDFkMjhlYSI:1sfMWH:bO17767_gYl2x0W25kMfZj4vBkYGxsS-FJy6axHVcq0/ HTTP/1.1" 404 9
+2024-08-17 22:13:15 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:13:15 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-17 22:13:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:13:38 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-17 22:13:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-17 22:13:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

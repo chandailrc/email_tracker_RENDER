@@ -18,6 +18,29 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+def format_email_history(previous_messages, user_email):
+    history = []
+    quote_level = 0
+    for msg in reversed(previous_messages):
+        sender = msg.sender
+        timestamp = msg.timestamp.strftime('%a, %b %d, %Y at %I:%M %p')
+        content = msg.content.replace('\n', '\n' + '>' * (quote_level + 1) + ' ')
+        
+        if sender == user_email:  # This is a sent email
+            header = (f"{'>' * quote_level}------------------------------\n"
+                      f"{'>' * quote_level}*From:* {sender}\n"
+                      f"{'>' * quote_level}*Sent:* {timestamp}\n"
+                      f"{'>' * quote_level}*To:* {msg.sent_email.recipient}\n"
+                      f"{'>' * quote_level}*Subject:* {msg.sent_email.subject}\n")
+        else:  # This is a received email
+            header = f"{'>' * quote_level}On {timestamp} {sender} wrote:\n"
+        
+        quoted_message = f"{header}\n{'>' * quote_level}{content}"
+        history.append(quoted_message)
+        quote_level += 1
+
+    return '\n\n'.join(history)
+
 def generate_unsubscribe_link(recipient_email, sender_username):
     encoded_username = signing.dumps(sender_username, salt='email-unsubscribe-link')
     return f"{settings.BASE_URL}/frontend/unsubscribe/?email={recipient_email}&sender={encoded_username}"
@@ -36,13 +59,13 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     message_id = make_msgid(domain=settings.EMAIL_DOMAIN)
     
     if in_reply_to_message_id:
-        if in_reply_sendOrRec == 'send':
+        if in_reply_sendOrRec == 'send': # Whether we are adding to or replying to our own email that we had sent
             # original_email - Email being responded to
             original_email = SentEmail.objects.get(user=user, message_id=in_reply_to_message_id)
-            thread_id = original_email.thread_id
-        else:
+        else: # Whether we are responding to an email we have received
             original_email = ReceivedEmail.objects.get(user=user, message_id=in_reply_to_message_id)
-            thread_id = original_email.thread_id
+        
+        thread_id = original_email.thread_id
         
         if not subject.lower().startswith('re:'):
             subject = f"Re: {subject}"
@@ -58,16 +81,13 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
             )
             previous_messages = ConversationMessage.objects.filter(
                 conversation=conversation
-            ).order_by('-timestamp')[:5]  # Limit to last 5 messages
+            ).order_by('-timestamp')[:6][::-1]  # Limit to first 5 messages
 
-            # Format the email history
-            history = "\n\n".join([
-                f"On {msg.timestamp.strftime('%Y-%m-%d %H:%M')}, {msg.sender} wrote:\n{msg.content}"
-                for msg in reversed(previous_messages)
-            ])
+            # Format the email history with progressive quoting
+            quoted_history = format_email_history(previous_messages, settings.DEFAULT_FROM_EMAIL)
 
             # Append the history to the new email body
-            full_body = f"{body}\n\n{'*' * 50}\n\n{history}"
+            full_body = f"{body}\n\n{quoted_history}"
             
             if hasattr(original_email, 'references') and original_email.references:
                 references = f"{original_email.references} {in_reply_to_message_id}"
