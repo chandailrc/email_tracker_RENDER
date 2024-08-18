@@ -26,6 +26,15 @@ def parse_email_body(body):
     
     return new_content, history
 
+def extract_message_id(header_value):
+    if not header_value:
+        return None
+    # This regex looks for anything enclosed in < >, including the brackets
+    match = re.search(r'(<[^>]+>)', header_value)
+    if match:
+        return match.group(1)
+    return None
+
 def find_email_model(user, message_id):
     try:
         sent_email = SentEmail.objects.get(user=user, message_id=message_id)
@@ -40,15 +49,6 @@ def find_email_model(user, message_id):
         pass
     
     return None, None  # If message_id is not found in either model
-
-def extract_message_id(header_value):
-    if not header_value:
-        return None
-    # This regex looks for anything enclosed in < >, which is typically the format for Message-IDs
-    match = re.search(r'<([^>]+)>', header_value)
-    if match:
-        return match.group(1)
-    return None
 
 def fetch_and_process_emails(user_id):
     new_emails_count = 0
