@@ -140,7 +140,9 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     }
     
     print(f"Message-ID: {message_id}")
+    print(f"In-Reply-To: {in_reply_to_message_id}")
     print(f"References: {references}")
+    print(f"Thread-ID: {thread_id}")
 
     email = SentEmail.objects.create(
         user=user,

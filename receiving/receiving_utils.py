@@ -89,8 +89,12 @@ def process_incoming_email(raw_email, user_id):
     else:
         references = None
     
+    print(f'***********FROM INSIDE RECEIVING. sender of the received message: \n {sender}')
+    print(f'***********FROM INSIDE RECEIVING. recipient of the received message: \n {recipient}')
+    print(f'***********FROM INSIDE RECEIVING. subject of the received message: \n {subject}')
     print(f'***********FROM INSIDE RECEIVING. message_id of the received message: \n {message_id}')
     print(f'***********FROM INSIDE RECEIVING. in_reply_to of the received message: \n {in_reply_to}')
+    print(f'***********FROM INSIDE RECEIVING. references of the received message: \n {references}')
     
     # Check if this email has already been processed
     
@@ -126,7 +130,10 @@ def process_incoming_email(raw_email, user_id):
         try:
             result_msg, original_email = find_email_model(user, in_reply_to) 
             received_email.in_reply_to = in_reply_to
-            received_email.thread_id = original_email.thread_id
+            if original_email:
+                received_email.thread_id = original_email.thread_id
+            else:
+                received_email.thread_id = None
             received_email.save()
         except SentEmail.DoesNotExist:
             # try:
