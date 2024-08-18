@@ -1493,3 +1493,104 @@
 2024-08-17 22:13:15 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
 2024-08-17 22:13:15 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-17 16:43:15.712896+00:00 | Mail sent: 2024-08-17 16:43:13.847291+00:00 | Difference: 0:00:01.865605
 2024-08-17 22:13:15 - tracking.views - WARNING - views.py/handle_tracking: First request received for d with email_id 34 within 3 secs. Potential prefetching. Abandoning request!
+2024-08-18 15:15:28 - tracking - INFO - request.path : /frontend/conversations/
+2024-08-18 15:15:28 - tracking - INFO - request.path : /favicon.ico
+2024-08-18 15:15:28 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:15:29 - tracking - INFO - request.path : /frontend/conversations/3/
+2024-08-18 15:15:29 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:15:29 - tracking - INFO - request.path : /api/conversations/3/
+2024-08-18 15:15:30 - tracking - INFO - request.path : /frontend/conversations/2/
+2024-08-18 15:15:30 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:15:30 - tracking - INFO - request.path : /api/conversations/2/
+2024-08-18 15:15:31 - tracking - INFO - request.path : /frontend/conversations/1/
+2024-08-18 15:15:31 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:15:31 - tracking - INFO - request.path : /api/conversations/1/
+2024-08-18 15:15:31 - tracking - INFO - request.path : /frontend/conversations/3/
+2024-08-18 15:15:31 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:15:32 - tracking - INFO - request.path : /api/conversations/3/
+2024-08-18 15:26:01 - tracking - INFO - request.path : /frontend/compose/
+2024-08-18 15:26:01 - tracking - INFO - request.path : /favicon.ico
+2024-08-18 15:26:15 - tracking - INFO - request.path : /frontend/send-tracked-email/
+2024-08-18 15:26:15 - tracking - INFO - request.path : /api/sending/send-tracked-email/
+2024-08-18 15:26:16 - tracking - INFO - request.path : /frontend/compose/
+2024-08-18 15:26:22 - tracking - INFO - request.path : /api/tracking/track/IjkwYjgxNmFkLTE1OWQtNDVlYy05ZWRlLTAwOWY3NDllNDUzMyI:1sfce0:mwKMnLa9V_MDcRSdJWGCT0BBjjukhW1cyl3pvkXiqx4/
+2024-08-18 15:26:22 - tracking - INFO - request.path : /api/sending/serve-image/logo.png
+2024-08-18 15:26:22 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 15:26:22 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 09:56:22.270818+00:00 | Mail sent: 2024-08-18 09:56:15.860647+00:00 | Difference: 0:00:06.410171
+2024-08-18 15:26:22 - tracking.views - INFO - No previous logs found
+2024-08-18 15:27:20 - tracking - INFO - request.path : /frontend/dashboard/
+2024-08-18 15:27:20 - tracking - INFO - request.path : /api/tracking/dashboard-data/
+2024-08-18 15:27:28 - tracking - INFO - request.path : /frontend/conversations/
+2024-08-18 15:27:28 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:27:30 - tracking - INFO - request.path : /frontend/conversations/4/
+2024-08-18 15:27:30 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:27:30 - tracking - INFO - request.path : /api/conversations/4/
+2024-08-18 15:27:37 - tracking - INFO - request.path : /frontend/reply-send-tracked-email/
+2024-08-18 15:27:37 - tracking - INFO - request.path : /api/sending/reply-send-tracked-email/
+2024-08-18 15:27:38 - tracking - INFO - request.path : /frontend/conversations/4/
+2024-08-18 15:27:38 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:27:38 - tracking - INFO - request.path : /api/conversations/4/
+2024-08-18 15:27:42 - tracking - INFO - request.path : /api/tracking/track/IjBiODNiOTUwLTEyOWUtNDQ5ZC1iNmRhLTFhYThiZDkzZmJiOCI:1sfcfJ:a-4SmF7fdKGQ6KsDQUqsw7wwh42nLGVf6qpj0qhg1Hs/
+2024-08-18 15:27:42 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 15:27:42 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 09:57:42.559438+00:00 | Mail sent: 2024-08-18 09:57:37.934964+00:00 | Difference: 0:00:04.624474
+2024-08-18 15:27:42 - tracking.views - INFO - No previous logs found
+2024-08-18 15:34:25 - tracking - INFO - request.path : /frontend/conversations/
+2024-08-18 15:34:25 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:34:26 - tracking - INFO - request.path : /frontend/conversations/4/
+2024-08-18 15:34:26 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:34:26 - tracking - INFO - request.path : /api/conversations/4/
+2024-08-18 15:34:31 - tracking - INFO - request.path : /frontend/reply-send-tracked-email/
+2024-08-18 15:34:31 - tracking - INFO - request.path : /api/sending/reply-send-tracked-email/
+2024-08-18 15:34:31 - tracking - INFO - request.path : /frontend/conversations/4/
+2024-08-18 15:34:31 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:34:31 - tracking - INFO - request.path : /api/conversations/4/
+2024-08-18 15:34:38 - tracking - INFO - request.path : /api/tracking/track/IjUyMDM0NzE5LTNhYTAtNDhkNC1hZWI5LTc3MTIwYzg2OWE0OCI:1sfclz:kq2cjrQ6tth5VziUn4PNeX4XPFNw21a9RlOiO0asbxA/
+2024-08-18 15:34:38 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 15:34:38 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 10:04:38.945479+00:00 | Mail sent: 2024-08-18 10:04:31.425972+00:00 | Difference: 0:00:07.519507
+2024-08-18 15:34:38 - tracking.views - INFO - No previous logs found
+2024-08-18 15:51:01 - tracking - INFO - request.path : /frontend/conversations/3/
+2024-08-18 15:51:01 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:51:01 - tracking - INFO - request.path : /api/conversations/3/
+2024-08-18 15:51:02 - tracking - INFO - request.path : /frontend/conversations/4/
+2024-08-18 15:51:02 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:51:02 - tracking - INFO - request.path : /api/conversations/4/
+2024-08-18 15:51:08 - tracking - INFO - request.path : /frontend/reply-send-tracked-email/
+2024-08-18 15:51:08 - tracking - INFO - request.path : /api/sending/reply-send-tracked-email/
+2024-08-18 15:51:08 - tracking - INFO - request.path : /frontend/conversations/4/
+2024-08-18 15:51:08 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 15:51:08 - tracking - INFO - request.path : /api/conversations/4/
+2024-08-18 15:51:13 - tracking - INFO - request.path : /api/tracking/track/IjFhMWYyNWM0LTExNmMtNGFlNS1hZDM5LTRkZWM4ZDJlNTcyZiI:1sfd24:0YOj1X78vsGforu-JoyjnZyJcn-Eotc-UP24ASEGlac/
+2024-08-18 15:51:13 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 10:21:13.688177+00:00 | Mail sent: 2024-08-18 10:21:08.799244+00:00 | Difference: 0:00:04.888933
+2024-08-18 15:51:13 - tracking.views - INFO - No previous logs found
+2024-08-18 15:51:13 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 15:51:17 - tracking - INFO - request.path : /api/tracking/track/IjFhMWYyNWM0LTExNmMtNGFlNS1hZDM5LTRkZWM4ZDJlNTcyZiI:1sfd24:0YOj1X78vsGforu-JoyjnZyJcn-Eotc-UP24ASEGlac/
+2024-08-18 15:51:17 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 15:51:17 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 10:21:17.580403+00:00 | Mail sent: 2024-08-18 10:21:08.799244+00:00 | Difference: 0:00:08.781159
+2024-08-18 15:51:17 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-18 10:21:17.580403+00:00 | last_log time: 2024-08-18 10:21:13.691249+00:00 | Difference: 0:00:03.889154
+2024-08-18 15:51:17 - tracking.views - INFO - Greater than 2 seconds since the last log
+2024-08-18 16:22:33 - tracking - INFO - request.path : /frontend/reply-send-tracked-email/
+2024-08-18 16:22:33 - tracking - INFO - request.path : /api/sending/reply-send-tracked-email/
+2024-08-18 16:22:33 - tracking - INFO - request.path : /frontend/conversations/4/
+2024-08-18 16:22:33 - tracking - INFO - request.path : /api/conversations/list/
+2024-08-18 16:22:33 - tracking - INFO - request.path : /api/conversations/4/
+2024-08-18 16:22:38 - tracking - INFO - request.path : /api/tracking/track/IjdjNGI2MWRlLWUxZjUtNGM5Yi04ZmVjLTg3ZjdmMDg4N2E3MiI:1sfdWT:zag3_ariTdSt3D6iHEbyn0BHzk40xj82P95t6xdA1Q8/
+2024-08-18 16:22:38 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 16:22:38 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 10:52:38.571316+00:00 | Mail sent: 2024-08-18 10:52:33.223040+00:00 | Difference: 0:00:05.348276
+2024-08-18 16:22:38 - tracking.views - INFO - No previous logs found
+2024-08-18 16:22:42 - tracking - INFO - request.path : /api/tracking/track/IjdjNGI2MWRlLWUxZjUtNGM5Yi04ZmVjLTg3ZjdmMDg4N2E3MiI:1sfdWT:zag3_ariTdSt3D6iHEbyn0BHzk40xj82P95t6xdA1Q8/
+2024-08-18 16:22:42 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 16:22:42 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 10:52:42.792038+00:00 | Mail sent: 2024-08-18 10:52:33.223040+00:00 | Difference: 0:00:09.568998
+2024-08-18 16:22:42 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-18 10:52:42.792038+00:00 | last_log time: 2024-08-18 10:52:38.573924+00:00 | Difference: 0:00:04.218114
+2024-08-18 16:22:42 - tracking.views - INFO - Greater than 2 seconds since the last log
+2024-08-18 16:23:16 - tracking - INFO - request.path : /frontend/send-tracked-email/
+2024-08-18 16:23:16 - tracking - INFO - request.path : /api/sending/send-tracked-email/
+2024-08-18 16:23:16 - tracking - INFO - request.path : /frontend/compose/
+2024-08-18 16:23:18 - tracking - INFO - request.path : /api/tracking/track/ImJmNDE0OTNjLWY3OTktNDVlYy05MDExLWE1YTg1M2MxZWYyYyI:1sfdXA:xiIeSntZwnNLceeu4DKp9cARDkpIITYz3XF6ASYaeik/
+2024-08-18 16:23:18 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 10:53:18.838332+00:00 | Mail sent: 2024-08-18 10:53:16.169382+00:00 | Difference: 0:00:02.668950
+2024-08-18 16:23:18 - tracking.views - WARNING - views.py/handle_tracking: First request received for jjjjjjjjj with email_id 40 within 3 secs. Potential prefetching. Abandoning request!
+2024-08-18 16:23:18 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/
+2024-08-18 16:23:27 - tracking - INFO - request.path : /api/tracking/track/IjdjNGI2MWRlLWUxZjUtNGM5Yi04ZmVjLTg3ZjdmMDg4N2E3MiI:1sfdWT:zag3_ariTdSt3D6iHEbyn0BHzk40xj82P95t6xdA1Q8/
+2024-08-18 16:23:27 - tracking.views - INFO - views.py/handle_tracking: PrefetchCheck - Current time: 2024-08-18 10:53:27.448954+00:00 | Mail sent: 2024-08-18 10:52:33.223040+00:00 | Difference: 0:00:54.225914
+2024-08-18 16:23:27 - tracking.views - INFO - views.py/handle_tracking: MultihitCheck - Current time: 2024-08-18 10:53:27.448954+00:00 | last_log time: 2024-08-18 10:52:42.794487+00:00 | Difference: 0:00:44.654467
+2024-08-18 16:23:27 - tracking.views - INFO - Greater than 2 seconds since the last log
+2024-08-18 16:23:27 - tracking - INFO - request.path : /api/sending/serve-image/logo.png/

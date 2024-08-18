@@ -20,26 +20,31 @@ logger = logging.getLogger(__name__)
 
 def format_email_history(previous_messages, user_email):
     history = []
-    quote_level = 0
+    html_history = []
+
     for msg in reversed(previous_messages):
         sender = msg.sender
         timestamp = msg.timestamp.strftime('%a, %b %d, %Y at %I:%M %p')
-        content = msg.content.replace('\n', '\n' + '>' * (quote_level + 1) + ' ')
-        
-        if sender == user_email:  # This is a sent email
-            header = (f"{'>' * quote_level}------------------------------\n"
-                      f"{'>' * quote_level}*From:* {sender}\n"
-                      f"{'>' * quote_level}*Sent:* {timestamp}\n"
-                      f"{'>' * quote_level}*To:* {msg.sent_email.recipient}\n"
-                      f"{'>' * quote_level}*Subject:* {msg.sent_email.subject}\n")
-        else:  # This is a received email
-            header = f"{'>' * quote_level}On {timestamp} {sender} wrote:\n"
-        
-        quoted_message = f"{header}\n{'>' * quote_level}{content}"
-        history.append(quoted_message)
-        quote_level += 1
+        content_plain = msg.content.replace('\n', '\n> ')  # Standard quoting for plain text
+        content_html = msg.content.replace('\n', '<br>')   # HTML version with <br> tags
 
-    return '\n\n'.join(history)
+        if sender == user_email:  # This is a sent email
+            header_plain = f"On {timestamp}, {sender} wrote:\n"
+            header_html = f"On {timestamp}, {sender} wrote:<br>"
+        else:  # This is a received email
+            header_plain = f"On {timestamp}, {sender} wrote:\n"
+            header_html = f"On {timestamp}, {sender} wrote:<br>"
+        
+        quoted_message_plain = f"{header_plain}\n> {content_plain}"
+        quoted_message_html = f"{header_html}<blockquote>{content_html}</blockquote>"
+
+        history.append(quoted_message_plain)
+        html_history.append(quoted_message_html)
+
+    plain_history = '\n\n'.join(history)
+    html_history = '<br><br>'.join(html_history)  # Ensure correct spacing between messages in HTML
+
+    return plain_history, html_history
 
 def generate_unsubscribe_link(recipient_email, sender_username):
     encoded_username = signing.dumps(sender_username, salt='email-unsubscribe-link')
@@ -84,10 +89,11 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
             ).order_by('-timestamp')[:6][::-1]  # Limit to first 5 messages
 
             # Format the email history with progressive quoting
-            quoted_history = format_email_history(previous_messages, settings.DEFAULT_FROM_EMAIL)
+            
+            quoted_history_plain, quoted_history_html = format_email_history(previous_messages, settings.DEFAULT_FROM_EMAIL)
 
             # Append the history to the new email body
-            full_body = f"{body}\n\n{quoted_history}"
+            full_body = f"{body}\n\n-- \n\n{quoted_history_plain}"
             
             if hasattr(original_email, 'references') and original_email.references:
                 references = f"{original_email.references} {in_reply_to_message_id}"
@@ -128,8 +134,16 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         tracked_url = generate_tracking_url(email, 'LINK', original_url)
         return f'<a href="{tracked_url}" style="color: #007bff; text-decoration: none;">{original_url}</a>'
     
-    tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, full_body)
-    html_body = tracked_body.replace('\n', '<br>')  # Convert newlines to <br> tags
+    tracked_full_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, full_body)
+    tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, body)
+    
+    html_body = tracked_body.replace('\n', '<br>')
+    
+    if in_reply_to_message_id:
+        full_body_html = f"{html_body}\n\n-- \n\n{quoted_history_html}"
+    else:
+        full_body_html = html_body
+    # 
     pixel_url = generate_tracking_url(email, 'PIXEL')
     visible_image_url = get_visible_image_url()
     unsub_url = generate_unsubscribe_link(recipient, user.username)
@@ -173,7 +187,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     <body>
         <img src="{pixel_url}" alt="" width="1px" height="1px">
         <img src="{visible_image_url}" alt="Company Logo" width="44" height="55" class="logo">
-        <div>{html_body}</div>
+        <div>{full_body_html}</div>
         <div class="footer">
             <p>This email was sent to {recipient}. If you no longer wish to receive these emails, you can 
             <a href="{unsub_url}" class="unsubscribe">unsubscribe here</a>.</p>
@@ -184,7 +198,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     
     msg = EmailMultiAlternatives(
         subject=subject,
-        body=tracked_body,
+        body=tracked_full_body,
         from_email=settings.DEFAULT_FROM_EMAIL,
         to=[recipient],
         cc=cc,
