@@ -6373,3 +6373,199 @@ ValueError: Negative indexing is not supported.
 2024-08-18 16:23:27 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
 2024-08-18 16:23:27 - django.server - INFO - "GET /api/tracking/track/IjdjNGI2MWRlLWUxZjUtNGM5Yi04ZmVjLTg3ZjdmMDg4N2E3MiI:1sfdWT:zag3_ariTdSt3D6iHEbyn0BHzk40xj82P95t6xdA1Q8/ HTTP/1.1" 200 95
 2024-08-18 16:23:27 - django.server - INFO - "GET /api/tracking/track/IjdjNGI2MWRlLWUxZjUtNGM5Yi04ZmVjLTg3ZjdmMDg4N2E3MiI:1sfdWT:zag3_ariTdSt3D6iHEbyn0BHzk40xj82P95t6xdA1Q8/ HTTP/1.1" 200 95
+2024-08-18 17:53:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 17:53:18 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 17:53:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 17:53:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 17:56:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 17:56:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 17:56:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 17:56:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:07:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:07:50 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:07:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:07:50 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:13:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:13:56 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:13:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:13:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:15:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:15:14 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:15:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:15:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:16:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:16:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:16:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:16:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:17:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:17:20 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:17:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:17:21 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:17:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:17:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:17:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:17:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:18:32 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:18:32 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:18:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:18:32 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:18:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:18:42 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:18:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:18:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 2243
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/3/ HTTP/1.1" 200 2243
+2024-08-18 18:18:51 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2327
+2024-08-18 18:18:51 - django.server - INFO - "GET /frontend/conversations/3/ HTTP/1.1" 200 2327
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/4/ HTTP/1.1" 200 893
+2024-08-18 18:18:51 - django.server - INFO - "GET /api/conversations/4/ HTTP/1.1" 200 893
+2024-08-18 18:18:51 - django.server - INFO - "GET /frontend/conversations/4/ HTTP/1.1" 200 990
+2024-08-18 18:18:51 - django.server - INFO - "GET /frontend/conversations/4/ HTTP/1.1" 200 990
+2024-08-18 18:18:58 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test4@test.com at 2024-08-18 12:48:58.586396+00:00
+2024-08-18 18:18:58 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test4@test.com
+2024-08-18 18:18:58 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:18:58 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:18:58 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:18:58 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:18:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:18:58 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:18:58 - django.server - INFO - "GET /api/conversations/4/ HTTP/1.1" 200 1066
+2024-08-18 18:18:58 - django.server - INFO - "GET /api/conversations/4/ HTTP/1.1" 200 1066
+2024-08-18 18:18:58 - django.server - INFO - "GET /frontend/conversations/4/ HTTP/1.1" 200 1163
+2024-08-18 18:18:58 - django.server - INFO - "GET /frontend/conversations/4/ HTTP/1.1" 200 1163
+2024-08-18 18:19:05 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-18 18:19:05 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-18 18:19:05 - django.server - INFO - "GET /api/tracking/track/IjMzOGNkMmM2LWM1ODEtNDQ2ZS1hMDIxLTc1MzY5NjRhOGYzMCI:1sffL8:VrB0vJFyKcMowoeL2NtI8W0Bj74u_Aj41VbmELK7_uM/ HTTP/1.1" 200 95
+2024-08-18 18:19:05 - django.server - INFO - "GET /api/tracking/track/IjMzOGNkMmM2LWM1ODEtNDQ2ZS1hMDIxLTc1MzY5NjRhOGYzMCI:1sffL8:VrB0vJFyKcMowoeL2NtI8W0Bj74u_Aj41VbmELK7_uM/ HTTP/1.1" 200 95
+2024-08-18 18:20:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:20:19 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:20:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:20:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:27:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:27:52 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:27:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:27:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:28:08 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test4@test.com at 2024-08-18 12:58:08.690717+00:00
+2024-08-18 18:28:08 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test4@test.com
+2024-08-18 18:28:08 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:28:08 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:28:08 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:28:08 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:28:08 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:28:08 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 706
+2024-08-18 18:28:08 - django.server - INFO - "GET /api/conversations/4/ HTTP/1.1" 200 1221
+2024-08-18 18:28:08 - django.server - INFO - "GET /api/conversations/4/ HTTP/1.1" 200 1221
+2024-08-18 18:28:08 - django.server - INFO - "GET /frontend/conversations/4/ HTTP/1.1" 200 1318
+2024-08-18 18:28:08 - django.server - INFO - "GET /frontend/conversations/4/ HTTP/1.1" 200 1318
+2024-08-18 18:29:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:29:54 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:29:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:29:55 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:30:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:30:00 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:30:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:30:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:31:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/models.py changed, reloading.
+2024-08-18 18:31:31 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/models.py changed, reloading.
+2024-08-18 18:31:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:31:31 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:33:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/models.py changed, reloading.
+2024-08-18 18:33:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/models.py changed, reloading.
+2024-08-18 18:33:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:33:59 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:34:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/models.py changed, reloading.
+2024-08-18 18:34:46 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/models.py changed, reloading.
+2024-08-18 18:34:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:34:46 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:37:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-18 18:37:37 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-18 18:37:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:37:37 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:37:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-18 18:37:43 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-18 18:37:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:37:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:37:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-18 18:37:53 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/receiving/receiving_utils.py changed, reloading.
+2024-08-18 18:37:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:37:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:45:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:45:35 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:45:46 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 302 0
+2024-08-18 18:45:46 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 302 0
+2024-08-18 18:45:46 - django.server - INFO - "GET /frontend/login/?next=/frontend/compose/ HTTP/1.1" 200 2593
+2024-08-18 18:45:46 - django.server - INFO - "GET /frontend/login/?next=/frontend/compose/ HTTP/1.1" 200 2593
+2024-08-18 18:45:50 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 3110
+2024-08-18 18:45:50 - django.server - INFO - "GET /frontend/register/ HTTP/1.1" 200 3110
+2024-08-18 18:45:58 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 60
+2024-08-18 18:45:58 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 200 60
+2024-08-18 18:45:58 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 302 0
+2024-08-18 18:45:58 - django.server - INFO - "POST /frontend/handle-register/ HTTP/1.1" 302 0
+2024-08-18 18:45:58 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 302 0
+2024-08-18 18:45:58 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 302 0
+2024-08-18 18:45:58 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 2593
+2024-08-18 18:45:58 - django.server - INFO - "GET /frontend/login/?next=/frontend/profile/ HTTP/1.1" 200 2593
+2024-08-18 18:45:59 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-08-18 18:45:59 - django.server - INFO - "POST /api/users/login/ HTTP/1.1" 200 59
+2024-08-18 18:46:00 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-08-18 18:46:00 - django.server - INFO - "POST /frontend/handle-login/ HTTP/1.1" 302 0
+2024-08-18 18:46:00 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 3486
+2024-08-18 18:46:00 - django.server - INFO - "GET /frontend/profile/ HTTP/1.1" 200 3486
+2024-08-18 18:46:00 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 145
+2024-08-18 18:46:00 - django.server - INFO - "GET /api/users/info/ HTTP/1.1" 200 145
+2024-08-18 18:46:02 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-18 18:46:02 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5531
+2024-08-18 18:46:12 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-18 13:16:12.277053+00:00
+2024-08-18 18:46:12 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-18 18:46:12 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-18 18:46:12 - django.server - INFO - "POST /api/sending/send-tracked-email/ HTTP/1.1" 200 117
+2024-08-18 18:46:12 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-18 18:46:12 - django.server - INFO - "POST /frontend/send-tracked-email/ HTTP/1.1" 302 0
+2024-08-18 18:46:12 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5703
+2024-08-18 18:46:12 - django.server - INFO - "GET /frontend/compose/ HTTP/1.1" 200 5703
+2024-08-18 18:46:19 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-18 18:46:19 - django.server - INFO - "GET /api/sending/serve-image/logo.png/ HTTP/1.1" 200 7276
+2024-08-18 18:46:19 - django.server - INFO - "GET /api/tracking/track/IjY1NDJjOGJkLWQzNzItNDkxOC04MDIyLWQzYTRiNDMyNzc5YyI:1sfflU:K4yVmgX8q3jgeNxuFhWX0XRl3UYm0V-jcthc8qezXJ0/ HTTP/1.1" 200 95
+2024-08-18 18:46:19 - django.server - INFO - "GET /api/tracking/track/IjY1NDJjOGJkLWQzNzItNDkxOC04MDIyLWQzYTRiNDMyNzc5YyI:1sfflU:K4yVmgX8q3jgeNxuFhWX0XRl3UYm0V-jcthc8qezXJ0/ HTTP/1.1" 200 95
+2024-08-18 18:46:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:46:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:46:24 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10814
+2024-08-18 18:46:24 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10814
+2024-08-18 18:46:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:46:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:46:25 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 252
+2024-08-18 18:46:25 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 252
+2024-08-18 18:46:25 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 349
+2024-08-18 18:46:25 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 349
+2024-08-18 18:46:32 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-18 13:16:32.221497+00:00
+2024-08-18 18:46:32 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-18 18:46:32 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:46:32 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:46:32 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:46:32 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:46:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:46:32 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:46:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 406
+2024-08-18 18:46:32 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 406
+2024-08-18 18:46:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 503
+2024-08-18 18:46:32 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 503
+2024-08-18 18:46:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:46:59 - django.utils.autoreload - INFO - /home/rahul/conda_ws/django_ws/email_tracker/et_api_solotracker/email_tracker_RENDER/sending/sending_utils.py changed, reloading.
+2024-08-18 18:47:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:47:00 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 18:47:39 - sending.sending_utils - INFO - sending_utils.py: Email db entry created for test1@tests.com at 2024-08-18 13:17:39.123340+00:00
+2024-08-18 18:47:39 - sending.sending_utils - INFO - sending_utils.py: Email sent successfully to test1@tests.com
+2024-08-18 18:47:39 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:47:39 - django.server - INFO - "POST /api/sending/reply-send-tracked-email/ HTTP/1.1" 200 55
+2024-08-18 18:47:39 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:47:39 - django.server - INFO - "POST /frontend/reply-send-tracked-email/ HTTP/1.1" 200 84
+2024-08-18 18:47:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:47:39 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 18:47:39 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 561
+2024-08-18 18:47:39 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 561
+2024-08-18 18:47:39 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 658
+2024-08-18 18:47:39 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 658

@@ -21,25 +21,51 @@ logger = logging.getLogger(__name__)
 def format_email_history(previous_messages, user_email):
     history = []
     html_history = []
+    quote_level = 0
 
     for msg in reversed(previous_messages):
         sender = msg.sender
         timestamp = msg.timestamp.strftime('%a, %b %d, %Y at %I:%M %p')
+        content = msg.content.replace('\n', '\n' + '>' * (quote_level + 1) + ' ')
         content_plain = msg.content.replace('\n', '\n> ')  # Standard quoting for plain text
         content_html = msg.content.replace('\n', '<br>')   # HTML version with <br> tags
+        opening_blockquotes = "<blockquote>" * quote_level
+        closing_blockquotes = "</blockquote>" * quote_level
+
 
         if sender == user_email:  # This is a sent email
-            header_plain = f"On {timestamp}, {sender} wrote:\n"
-            header_html = f"On {timestamp}, {sender} wrote:<br>"
+            header_plain = (f"{'>' * quote_level}------------------------------\n"
+                      f"{'>' * quote_level}*From:* {sender}\n"
+                      f"{'>' * quote_level}*Sent:* {timestamp}\n"
+                      f"{'>' * quote_level}*To:* {msg.sent_email.recipient}\n"
+                      f"{'>' * quote_level}*Subject:* {msg.sent_email.subject}\n"
+                      )
+            
+            # Create the email header
+            header_html = (
+                    f"{opening_blockquotes}"
+                    f"<div>------------------------------</div>"
+                    f"<div><strong>From:</strong> {sender}</div>"
+                    f"<div><strong>Sent:</strong> {timestamp}</div>"
+                    f"<div><strong>To:</strong> {msg.sent_email.recipient}</div>"
+                    f"<div><strong>Subject:</strong> {msg.sent_email.subject}</div>"
+                    f"{closing_blockquotes}"
+                    )
         else:  # This is a received email
-            header_plain = f"On {timestamp}, {sender} wrote:\n"
-            header_html = f"On {timestamp}, {sender} wrote:<br>"
+            header_plain = f"{'>' * quote_level}On {timestamp} {sender} wrote:\n"
+            header_html = (f"{opening_blockquotes}"
+                           f"{'>' * quote_level}On {timestamp} {sender} wrote:<br>"
+                           f"{closing_blockquotes}")
         
-        quoted_message_plain = f"{header_plain}\n> {content_plain}"
-        quoted_message_html = f"{header_html}<blockquote>{content_html}</blockquote>"
+        quoted_message_plain = f"{header_plain}\n{'>' * quote_level}{content_plain}"
+        quoted_message_html = (f"{header_html}"
+                               f"{opening_blockquotes}"
+                               f"{content_html}"
+                               f"{closing_blockquotes}")
 
         history.append(quoted_message_plain)
         html_history.append(quoted_message_html)
+        quote_level += 1
 
     plain_history = '\n\n'.join(history)
     html_history = '<br><br>'.join(html_history)  # Ensure correct spacing between messages in HTML
@@ -93,7 +119,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
             quoted_history_plain, quoted_history_html = format_email_history(previous_messages, settings.DEFAULT_FROM_EMAIL)
 
             # Append the history to the new email body
-            full_body = f"{body}\n\n-- \n\n{quoted_history_plain}"
+            full_body = f"{body}\n\n\n\n{quoted_history_plain}"
             
             if hasattr(original_email, 'references') and original_email.references:
                 references = f"{original_email.references} {in_reply_to_message_id}"
@@ -112,6 +138,9 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         'In-Reply-To': in_reply_to_message_id,
         'References': references
     }
+    
+    print(f"Message-ID: {message_id}")
+    print(f"References: {references}")
 
     email = SentEmail.objects.create(
         user=user,
@@ -125,7 +154,8 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         sender=settings.DEFAULT_FROM_EMAIL,
         message_id=message_id,
         thread_id=thread_id,
-        in_reply_to=in_reply_to_message_id
+        in_reply_to=in_reply_to_message_id,
+        references=references
     )
     logger.info(f"sending_utils.py: Email db entry created for {recipient} at {timezone.now()}")
     

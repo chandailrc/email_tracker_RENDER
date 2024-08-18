@@ -69,6 +69,7 @@ def process_incoming_email(raw_email, user_id):
     subject = email_message['Subject']
     message_id = email_message['Message-ID']
     in_reply_to = email_message.get('In-Reply-To') # This is the message ID of the original email that is being replied to. This is not an email address
+    references = email_message.get('References')
     
     print(f'***********FROM INSIDE RECEIVING. message_id of the received message: \n {message_id}')
     print(f'***********FROM INSIDE RECEIVING. in_reply_to of the received message: \n {in_reply_to}')
@@ -98,6 +99,7 @@ def process_incoming_email(raw_email, user_id):
         body=new_content,
         full_body=body,
         message_id=message_id,
+        references=references
     )
 
     # Link to the original email if it's a reply
