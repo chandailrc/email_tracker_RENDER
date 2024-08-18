@@ -6569,3 +6569,15 @@ ValueError: Negative indexing is not supported.
 2024-08-18 18:47:39 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 561
 2024-08-18 18:47:39 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 658
 2024-08-18 18:47:39 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 658
+2024-08-18 20:34:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 20:34:16 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-08-18 20:34:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 20:34:24 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 20:34:24 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10814
+2024-08-18 20:34:24 - django.server - INFO - "GET /frontend/conversations/ HTTP/1.1" 200 10814
+2024-08-18 20:34:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 20:34:25 - django.server - INFO - "GET /api/conversations/list/ HTTP/1.1" 200 162
+2024-08-18 20:34:25 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 561
+2024-08-18 20:34:25 - django.server - INFO - "GET /api/conversations/1/ HTTP/1.1" 200 561
+2024-08-18 20:34:25 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 658
+2024-08-18 20:34:25 - django.server - INFO - "GET /frontend/conversations/1/ HTTP/1.1" 200 658

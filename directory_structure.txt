@@ -1,0 +1,135 @@
+.
+├── adminUserManagement
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── build.sh
+├── contacts
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── conversations
+│   ├── admin.py
+│   ├── apps.py
+│   ├── email_processor.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── db.sqlite3
+├── directory_structure.txt
+├── email_tracker
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── frontend
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── templates
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── general.log
+├── GeoLite2-City.mmdb
+├── manage.py
+├── notes.txt
+├── receiving
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── receiving_utils.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── recommendations
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tests.py
+│   └── views.py
+├── render.yaml
+├── requirements.txt
+├── sending
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── management
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── sending_utils.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── static
+│   ├── css
+│   └── images
+├── staticfiles
+│   ├── admin
+│   └── staticfiles.json
+├── tracking
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── middleware.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tests.py
+│   ├── tracking_utils.py
+│   ├── urls.py
+│   └── views.py
+├── trackingMiddleware.log
+├── unsubscribers
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+└── users
+    ├── admin.py
+    ├── apps.py
+    ├── forms.py
+    ├── __init__.py
+    ├── migrations
+    ├── models.py
+    ├── __pycache__
+    ├── tests.py
+    ├── urls.py
+    └── views.py
+
+39 directories, 93 files
