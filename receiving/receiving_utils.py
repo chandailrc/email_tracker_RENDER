@@ -41,6 +41,15 @@ def find_email_model(user, message_id):
     
     return None, None  # If message_id is not found in either model
 
+def extract_message_id(header_value):
+    if not header_value:
+        return None
+    # This regex looks for anything enclosed in < >, which is typically the format for Message-IDs
+    match = re.search(r'<([^>]+)>', header_value)
+    if match:
+        return match.group(1)
+    return None
+
 def fetch_and_process_emails(user_id):
     new_emails_count = 0
     with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
@@ -70,6 +79,14 @@ def process_incoming_email(raw_email, user_id):
     message_id = email_message['Message-ID']
     in_reply_to = email_message.get('In-Reply-To') # This is the message ID of the original email that is being replied to. This is not an email address
     references = email_message.get('References')
+    
+    references = email_message.get('References')
+    if references:
+        references = [extract_message_id(ref) for ref in references.split()]
+        references = [ref for ref in references if ref]  # Remove any None values
+        references = ' '.join(references)
+    else:
+        references = None
     
     print(f'***********FROM INSIDE RECEIVING. message_id of the received message: \n {message_id}')
     print(f'***********FROM INSIDE RECEIVING. in_reply_to of the received message: \n {in_reply_to}')
