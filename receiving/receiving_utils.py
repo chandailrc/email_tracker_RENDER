@@ -189,6 +189,9 @@ def process_incoming_email(raw_email, user_id):
             # except SentEmail.DoesNotExist:
             #     # If we still can't find the original email, just continue without linking
             pass
+    else:
+        received_email.thread_id = None
+        received_email.save()
 
     process_email(received_email, 'received', user_id, result_msg)
 
