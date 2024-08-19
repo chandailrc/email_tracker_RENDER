@@ -37,8 +37,8 @@ def format_email_history(previous_messages, user_email):
             header_plain = (f"{'>' * quote_level}------------------------------\n"
                       f"{'>' * quote_level}*From:* {sender}\n"
                       f"{'>' * quote_level}*Sent:* {timestamp}\n"
-                      f"{'>' * quote_level}*To:* {msg.sent_email.recipient}\n"
-                      f"{'>' * quote_level}*Subject:* {msg.sent_email.subject}\n"
+                      f"{'>' * quote_level}*To:* {msg.received_email.recipient}\n"
+                      f"{'>' * quote_level}*Subject:* {msg.received_email.subject}\n"
                       )
             
             # Create the email header
@@ -47,8 +47,8 @@ def format_email_history(previous_messages, user_email):
                     f"<div>------------------------------</div>"
                     f"<div><strong>From:</strong> {sender}</div>"
                     f"<div><strong>Sent:</strong> {timestamp}</div>"
-                    f"<div><strong>To:</strong> {msg.sent_email.recipient}</div>"
-                    f"<div><strong>Subject:</strong> {msg.sent_email.subject}</div>"
+                    f"<div><strong>To:</strong> {msg.received_email.recipient}</div>"
+                    f"<div><strong>Subject:</strong> {msg.received_email.subject}</div>"
                     f"{closing_blockquotes}"
                     )
         else:  # This is a received email
