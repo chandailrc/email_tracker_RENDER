@@ -34,7 +34,7 @@ def format_email_history(previous_messages, user_email):
 
 
         if sender != user_email:  # This is a sent email
-            header_plain = (f"{'>' * quote_level}------------------------------\n"
+            header_plain = (f"{'>' * quote_level}________________________________\n"
                       f"{'>' * quote_level}*From:* {sender}\n"
                       f"{'>' * quote_level}*Sent:* {timestamp}\n"
                       f"{'>' * quote_level}*To:* {msg.received_email.recipient}\n"
@@ -44,7 +44,7 @@ def format_email_history(previous_messages, user_email):
             # Create the email header
             header_html = (
                     f"{opening_blockquotes}"
-                    f"<div>------------------------------</div>"
+                    f"<div>________________________________</div>"
                     f"<div><strong>From:</strong> {sender}</div>"
                     f"<div><strong>Sent:</strong> {timestamp}</div>"
                     f"<div><strong>To:</strong> {msg.received_email.recipient}</div>"
@@ -175,7 +175,8 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         full_body_html = f"{html_body}\n\n\n\n{quoted_history_html}"
     else:
         # full_body_html = html_body
-        quoted_history_html = None
+        quoted_history_html = ''
+
     # 
     pixel_url = generate_tracking_url(email, 'PIXEL')
     visible_image_url = get_visible_image_url()

@@ -12,19 +12,48 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
 
 def parse_email_body(body):
-    # Simple regex to find the start of the quoted text
-    # This might need to be adjusted based on the exact format of the emails you're receiving
-    split_pattern = r'\n\s*On .+?wrote:\s*\n'
-    parts = re.split(split_pattern, body, maxsplit=1)
-    
+    # Patterns for different email clients
+    patterns = [
+        # Gmail and many others
+        r'\n\s*On .+?wrote:\s*\n',
+        # Outlook
+        r'\n\s*-----Original Message-----\s*\n',
+        # Another Outlook format
+        r'\n\s*From:.*\n\s*Sent:.*\n\s*To:.*\n\s*Subject:.*\n',
+        # Apple Mail
+        r'\n\s*On .+?, .+ wrote:\s*\n',
+        # Yahoo Mail
+        r'\n\s*-{3,}\s*\n.*\n.*wrote:\s*\n'
+    ]
+
+    # Combine all patterns
+    combined_pattern = '|'.join(patterns)
+
+    # Split the body using the combined pattern
+    parts = re.split(combined_pattern, body, maxsplit=1, flags=re.IGNORECASE | re.DOTALL)
+
     if len(parts) > 1:
         new_content = parts[0].strip()
         history = parts[1].strip()
+
+        # Check if the split point is actually in the middle of the new content
+        # This can happen if the new content contains something that looks like a header
+        if len(new_content.splitlines()) < 3 and len(history.splitlines()) > 10:
+            # If the new_content is very short and history is long, assume the split was incorrect
+            new_content = body.strip()
+            history = ''
     else:
         new_content = body.strip()
         history = ''
-    
+
     return new_content, history
+
+# Additional helper function to clean up the parsed content
+def clean_parsed_content(content):
+    # Remove any leading '>' characters and extra whitespace
+    lines = content.splitlines()
+    cleaned_lines = [line.lstrip('>').strip() for line in lines]
+    return '\n'.join(cleaned_lines).strip()
 
 def extract_message_id(header_value):
     if not header_value:
