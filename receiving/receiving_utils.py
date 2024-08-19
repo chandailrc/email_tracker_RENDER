@@ -48,12 +48,22 @@ def parse_email_body(body):
 
     return new_content, history
 
-# Additional helper function to clean up the parsed content
 def clean_parsed_content(content):
     # Remove any leading '>' characters and extra whitespace
     lines = content.splitlines()
-    cleaned_lines = [line.lstrip('>').strip() for line in lines]
-    return '\n'.join(cleaned_lines).strip()
+    cleaned_lines = []
+    for line in lines:
+        line = line.lstrip('>').strip()
+        # Remove Outlook's separator if it's alone on a line
+        if not line.strip('_') and len(line) > 20:
+            continue
+        cleaned_lines.append(line)
+    
+    # Join lines and remove any trailing Outlook separators
+    cleaned_content = '\n'.join(cleaned_lines).strip()
+    cleaned_content = re.sub(r'\n_{20,}\s*$', '', cleaned_content)
+    
+    return cleaned_content
 
 def extract_message_id(header_value):
     if not header_value:
