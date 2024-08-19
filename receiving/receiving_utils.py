@@ -54,21 +54,16 @@ def clean_parsed_content(content):
     cleaned_lines = []
     for line in lines:
         line = line.lstrip('>').strip()
-        # Remove Outlook's separator if it contains many underscores
-        if '_' in line and len(line.strip('_')) / len(line) < 0.2:
+        # Remove Outlook's separator if it's alone on a line
+        if not line.strip('_') and len(line) > 20:
             continue
         cleaned_lines.append(line)
     
-    # Join lines
+    # Join lines and remove any trailing Outlook separators
     cleaned_content = '\n'.join(cleaned_lines).strip()
+    cleaned_content = re.sub(r'\n_{20,}\s*$', '', cleaned_content)
     
-    # Remove any trailing Outlook separators or underscores
-    cleaned_content = re.sub(r'\s*_{20,}\s*$', '', cleaned_content)
-    
-    # Remove any remaining lines that are just underscores (allowing for some text)
-    cleaned_content = re.sub(r'\n.{0,10}_{20,}.{0,10}\s*', '\n', cleaned_content)
-    
-    return cleaned_content.strip()
+    return cleaned_content
 
 def extract_message_id(header_value):
     if not header_value:
@@ -123,15 +118,18 @@ def process_incoming_email(raw_email, user_id):
     message_id = email_message['Message-ID']
     message_id = extract_message_id(message_id)
     in_reply_to = email_message.get('In-Reply-To')
-    in_reply_to = extract_message_id(in_reply_to)
-    references = email_message.get('References')
-    
-    if references:
-        references = [extract_message_id(ref) for ref in references.split()]
-        references = [ref for ref in references if ref]  # Remove any None values
-        references = ' '.join(references)
+    if in_reply_to:
+        in_reply_to = extract_message_id(in_reply_to)
+        references = email_message.get('References')
+        
+        if references:
+            references = [extract_message_id(ref) for ref in references.split()]
+            references = [ref for ref in references if ref]  # Remove any None values
+            references = ' '.join(references)
+        else:
+            references = ''
     else:
-        references = None
+        references = ''
     
     print(f'***********FROM INSIDE RECEIVING. sender of the received message: \n {sender}')
     print(f'***********FROM INSIDE RECEIVING. recipient of the received message: \n {recipient}')
@@ -141,8 +139,8 @@ def process_incoming_email(raw_email, user_id):
     print(f'***********FROM INSIDE RECEIVING. references of the received message: \n {references}')
     
     # Check if this email has already been processed
-    
     if ReceivedEmail.objects.filter(user=user, message_id=message_id).exists():
+        print(f'Email with message id {message_id} has already been received. Abandoning to prevent duplicate!')
         return False
 
     # Get the email body
