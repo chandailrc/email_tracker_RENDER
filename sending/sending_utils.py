@@ -172,9 +172,10 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     html_body = tracked_body.replace('\n', '<br>')
     
     if in_reply_to_message_id:
-        full_body_html = f"{html_body}\n\n-- \n\n{quoted_history_html}"
+        full_body_html = f"{html_body}\n\n\n\n{quoted_history_html}"
     else:
-        full_body_html = html_body
+        # full_body_html = html_body
+        quoted_history_html = None
     # 
     pixel_url = generate_tracking_url(email, 'PIXEL')
     visible_image_url = get_visible_image_url()
@@ -219,11 +220,12 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
     <body>
         <img src="{pixel_url}" alt="" width="1px" height="1px">
         <img src="{visible_image_url}" alt="Company Logo" width="44" height="55" class="logo">
-        <div>{full_body_html}</div>
+        <div>{html_body}</div>
         <div class="footer">
             <p>This email was sent to {recipient}. If you no longer wish to receive these emails, you can 
             <a href="{unsub_url}" class="unsubscribe">unsubscribe here</a>.</p>
         </div>
+        <div class="gmail_quote">{quoted_history_html}</div>
     </body>
     </html>
     """
