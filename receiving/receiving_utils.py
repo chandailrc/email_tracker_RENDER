@@ -169,32 +169,21 @@ def process_incoming_email(raw_email, user_id):
     # Link to the original email if it's a reply
     if in_reply_to:
        
-        try:
-            result_msg, original_email = find_email_model(user, in_reply_to) 
-            received_email.in_reply_to = in_reply_to
-            if original_email:
-                received_email.thread_id = original_email.thread_id
-            else:
-                received_email.thread_id = ''
-            received_email.save()
-        except SentEmail.DoesNotExist:
-            # try:
-            #     original_email = SentEmail.objects.filter(user=user,
-            #         subject__startswith=re.sub(r'^Re:\s*', '', subject, flags=re.IGNORECASE),
-            #         recipient=sender
-            #     ).latest('sent_at')
-            #     received_email.in_reply_to = in_reply_to
-            #     received_email.thread_id = original_email.thread_id
-            #     received_email.save()
-            # except SentEmail.DoesNotExist:
-            #     # If we still can't find the original email, just continue without linking
-            pass
+        result_msg, original_email = find_email_model(user, in_reply_to) 
+        received_email.in_reply_to = in_reply_to
+        if original_email:
+            received_email.thread_id = original_email.thread_id
+        else:
+            received_email.thread_id = ''
+        received_email.save()
+        
+        process_email(received_email, 'received', user_id, result_msg)
+        
     else:
         received_email.in_reply_to = in_reply_to
         received_email.thread_id = ''
         received_email.save()
-
-    process_email(received_email, 'received', user_id, result_msg)
+        process_email(received_email, 'received', user_id)
 
     # Process attachments
     for part in email_message.walk():
