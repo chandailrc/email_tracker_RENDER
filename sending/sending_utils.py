@@ -26,8 +26,8 @@ def format_email_history(previous_messages, user_email):
     for msg in reversed(previous_messages):
         sender = msg.sender
         timestamp = msg.timestamp.strftime('%a, %b %d, %Y at %I:%M %p')
-        content_plain = msg.content.replace('\n', '\n' + '>' * (quote_level + 1) + ' ')  # Adjusted quoting for plain text
-        content_html = msg.content.replace('\n', '<br>' + '>' * (quote_level + 1) + ' ')  # Adjusted HTML version with <br> tags
+        content_plain = msg.content.replace('\n', '\n' + '>' * (quote_level) + ' ')  # Adjusted quoting for plain text
+        content_html = msg.content.replace('\n', '<br>' + '>' * (quote_level) + ' ')  # Adjusted HTML version with <br> tags
 
         opening_blockquotes = "<blockquote>" * quote_level
         closing_blockquotes = "</blockquote>" * quote_level

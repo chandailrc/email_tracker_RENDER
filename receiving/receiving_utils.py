@@ -54,16 +54,21 @@ def clean_parsed_content(content):
     cleaned_lines = []
     for line in lines:
         line = line.lstrip('>').strip()
-        # Remove Outlook's separator if it's alone on a line
-        if not line.strip('_') and len(line) > 20:
+        # Remove Outlook's separator if it contains many underscores
+        if '_' in line and len(line.strip('_')) / len(line) < 0.2:
             continue
         cleaned_lines.append(line)
     
-    # Join lines and remove any trailing Outlook separators
+    # Join lines
     cleaned_content = '\n'.join(cleaned_lines).strip()
-    cleaned_content = re.sub(r'\n_{20,}\s*$', '', cleaned_content)
     
-    return cleaned_content
+    # Remove any trailing Outlook separators or underscores
+    cleaned_content = re.sub(r'\s*_{20,}\s*$', '', cleaned_content)
+    
+    # Remove any remaining lines that are just underscores (allowing for some text)
+    cleaned_content = re.sub(r'\n.{0,10}_{20,}.{0,10}\s*', '\n', cleaned_content)
+    
+    return cleaned_content.strip()
 
 def extract_message_id(header_value):
     if not header_value:
