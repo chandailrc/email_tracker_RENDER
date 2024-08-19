@@ -175,7 +175,7 @@ def process_incoming_email(raw_email, user_id):
             if original_email:
                 received_email.thread_id = original_email.thread_id
             else:
-                received_email.thread_id = None
+                received_email.thread_id = ''
             received_email.save()
         except SentEmail.DoesNotExist:
             # try:
@@ -190,7 +190,8 @@ def process_incoming_email(raw_email, user_id):
             #     # If we still can't find the original email, just continue without linking
             pass
     else:
-        received_email.thread_id = None
+        received_email.in_reply_to = in_reply_to
+        received_email.thread_id = ''
         received_email.save()
 
     process_email(received_email, 'received', user_id, result_msg)
