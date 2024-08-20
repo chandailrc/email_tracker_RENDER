@@ -19,6 +19,7 @@ urlpatterns = [
     # path('conversations/<int:conversation_id>/', views.conversation_detail, name='conversation_detail'),
     path('conversations/', views.conversation_list, name='conversation_list'),
     path('conversations/<int:conversation_id>/', views.conversation_list, name='conversation_detail'),
+    path('get-latest-conversations/', views.get_latest_conversations, name='get_latest_conversations'),
     path('register/', views.register_page, name='register_page'),
     path('login/', views.login_page, name='login_page'),
     path('profile/', views.profile_page, name='profile_page'),

@@ -4,54 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Conversations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #333333;
+            --light-text-color: #7f8c8d;
+            --border-color: #bdc3c7;
+        }
+
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
+
         .container {
             display: flex;
             height: 100vh;
+            max-width: 1400px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
+
         .sidebar {
             width: 30%;
-            background-color: #f6f6f6;
-            border-right: 1px solid #ddd;
+            background-color: #ffffff;
+            border-right: 1px solid var(--border-color);
             overflow-y: auto;
         }
+
         .sidebar-header {
-            padding: 15px;
-            background-color: #ededed;
-            border-bottom: 1px solid #ddd;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
         }
+
         .conversation-list {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
+
         .conversation-item {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
             cursor: pointer;
+            transition: background-color 0.3s;
         }
+
         .conversation-item:hover {
-            background-color: #ebebeb;
+            background-color: #f5f5f5;
         }
+
         .conversation-item.active {
-            background-color: #e1f5fe;
+            background-color: #e8f0fe;
+            border-left: 4px solid var(--accent-color);
         }
+
         .main-content {
             width: 70%;
             display: flex;
             flex-direction: column;
+            background-color: #ffffff;
         }
+
         .conversation-header {
-            padding: 10px;
-            background-color: #ededed;
-            border-bottom: 1px solid #ddd;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: white;
         }
+
         .conversation-messages {
             flex-grow: 1;
             overflow-y: auto;
@@ -60,65 +89,114 @@
             display: flex;
             flex-direction: column;
         }
+        
         .message-container {
             display: flex;
             margin-bottom: 10px;
+            max-width: 75%;
         }
+        
         .message-received {
-            justify-content: flex-start;
+            align-self: flex-start;
+            margin-right: auto;
         }
+        
         .message-sent {
-            justify-content: flex-end;
+            align-self: flex-end;
+            margin-left: auto;
         }
+        
         .message {
-            max-width: 65%;
-            padding: 10px;
+            padding: 8px 12px;
             border-radius: 7.5px;
             position: relative;
-        }
-        .message-sent .message {
-            background-color: #dcf8c6;
-        }
-        .message-received .message {
-            background-color: #ffffff;
-        }
-        .message-header {
-            font-size: 0.8em;
-            color: #666;
-            margin-bottom: 5px;
-        }
-        .message-content {
             word-wrap: break-word;
         }
-        .reply-form {
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-top: 1px solid #ddd;
+        
+        .message-sent .message {
+            background-color: #dcf8c6;
+            border-top-right-radius: 0;
         }
+        
+        .message-received .message {
+            background-color: #ffffff;
+            border-top-left-radius: 0;
+        }
+        
+        .message-header {
+            font-size: 0.75em;
+            color: #667781;
+            margin-bottom: 4px;
+        }
+        
+        .message-content {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .message-time {
+            font-size: 0.7em;
+            color: #667781;
+            float: right;
+            margin-top: 4px;
+            margin-left: 8px;
+        }
+
+        .reply-form {
+            padding: 20px;
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
+        }
+
         .reply-form textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
             resize: none;
+            font-family: inherit;
+            font-size: 14px;
         }
+
         .reply-form button {
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: #128C7E;
+            background-color: var(--accent-color);
             color: white;
             border: none;
-            border-radius: 20px;
+            border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 500;
         }
+
+        .reply-form button:hover {
+            background-color: #2980b9;
+        }
+
         .fetch-emails-button {
-            padding: 5px 10px;
-            background-color: #128C7E;
+            padding: 8px 15px;
+            background-color: var(--accent-color);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
             font-size: 0.9em;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        .fetch-emails-button:hover {
+            background-color: #2980b9;
+        }
+
+        h2, h3 {
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0;
         }
     </style>
 </head>
@@ -149,12 +227,15 @@
                     </div>
                     <div class="conversation-messages" id="conversation-messages">
                         {% for message in active_conversation.messages %}
-                        <div class="message {% if message.sender == request.user.email %}message-sent{% else %}message-received{% endif %}">
-                            <div class="message-header">
-                                <strong>{{ message.sender }}</strong> ({{ message.timestamp }})
-                            </div>
-                            <div class="message-content">
-                                {{ message.content|safe }}
+                        <div class="message-container {% if message.sendOrRec == 'send' %}message-sent{% else %}message-received{% endif %}">
+                            <div class="message">
+                                <div class="message-header">
+                                    <strong>{{ message.sender }}</strong>
+                                </div>
+                                <div class="message-content">
+                                    {{ message.content|safe }}
+                                </div>
+                                <div class="message-time">{{ message.timestamp }}</div>
                             </div>
                         </div>
                         {% empty %}
@@ -195,10 +276,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function() {
-        // Click handler for conversation items
-        $('.conversation-item').click(function(e) {
+        // Add this line at the beginning of your script
+        var currentlySelectedConversationId = null;
+    
+        // Modify the click handler for conversation items
+        $(document).on('click', '.conversation-item', function(e) {
             e.preventDefault();
             var conversationId = $(this).data('conversation-id');
+            currentlySelectedConversationId = conversationId; // Set the global variable
             loadConversation(conversationId);
             
             // Update active class
@@ -233,6 +318,22 @@
                 }
             });
         });
+        
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+        
+            if (diffDays === 0) {
+                return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            } else if (diffDays === 1) {
+                return 'Yesterday';
+            } else if (diffDays < 7) {
+                return date.toLocaleDateString([], { weekday: 'long' });
+            } else {
+                return date.toLocaleDateString([], { year: 'numeric', month: 'short', day: 'numeric' });
+            }
+        }
     
         function loadConversation(conversationId) {
             $.ajax({
@@ -294,11 +395,13 @@
                 
                 var messagesHtml = '<div class="conversation-messages" id="conversation-messages">';
                 data.conversation.messages.forEach(function(message) {
-                    var messageClass = message.sender === '{{ request.user.email }}' ? 'message-sent' : 'message-received';
+                    var formattedTime = formatDate(message.timestamp);
+                    var messageClass = message.sendOrRec === 'send' ? 'message-sent' : 'message-received';
                     messagesHtml += '<div class="message-container ' + messageClass + '">' +
                                     '<div class="message">' +
-                                    '<div class="message-header"><strong>' + message.sender + '</strong> (' + message.timestamp + ')</div>' +
+                                    '<div class="message-header"><strong>' + message.sender + '</strong></div>' +
                                     '<div class="message-content">' + message.content + '</div>' +
+                                    '<div class="message-time">' + formattedTime + '</div>' +
                                     '</div></div>';
                 });
                 messagesHtml += '</div>';
@@ -321,6 +424,57 @@
                                   '<div class="conversation-messages"><p>The selected conversation could not be loaded.</p></div>');
             }
         }
+        
+        function updateConversationList(conversations) {
+            var $conversationList = $('.conversation-list');
+            $conversationList.empty();
+            conversations.forEach(function(conversation) {
+                // Use the global variable to determine if this conversation is active
+                var isActive = conversation.id == currentlySelectedConversationId;
+                var formattedConversationTime = formatDate(conversation.last_updated);
+                var conversationHtml = `
+                    <li class="conversation-item ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
+                        <h3>${conversation.subject}</h3>
+                        <p>Last updated: ${formattedConversationTime}</p>
+                    </li>
+                `;
+                $conversationList.append(conversationHtml);
+            });
+        
+            // Reattach click event to new conversation items
+            $('.conversation-item').click(function(e) {
+                e.preventDefault();
+                var conversationId = $(this).data('conversation-id');
+                loadConversation(conversationId);
+                
+                $('.conversation-item').removeClass('active');
+                $(this).addClass('active');
+            });
+        }
+
+    function pollForNewConversations() {
+        $.ajax({
+            url: '{% url 'get_latest_conversations' %}',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                if (response.conversations) {
+                    updateConversationList(response.conversations);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("Error fetching conversations: " + error);
+            },
+            complete: function() {
+                // Schedule the next poll
+                setTimeout(pollForNewConversations, 10000); // Poll every 10 seconds
+            }
+        });
+    }
+
+    // Start polling
+    pollForNewConversations();
+        
     });
     </script>
 </body>

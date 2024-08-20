@@ -360,56 +360,19 @@ def conversation_list(request, conversation_id=None):
     # Regular request, return the full page
     return render(request, 'whatsapp_style_conversations.html', context)
 
-# @login_required
-# def conversation_detail(request, conversation_id):
-#     csrf_token = get_token(request)
-#     session_cookie = request.COOKIES.get('sessionid')
-#     headers = {'X-CSRFToken': csrf_token,
-#                'Cookie': f'sessionid={session_cookie}'}
-    
-#     response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/', headers=headers)
-#     conversation = response.json()
-#     return render(request, 'conversation_detail.html', {'conversation': conversation})
-
-from sending.models import SentEmail
 @login_required
-def conversation_detail(request, conversation_id):
+def get_latest_conversations(request):
     csrf_token = get_token(request)
     session_cookie = request.COOKIES.get('sessionid')
     headers = {'X-CSRFToken': csrf_token,
                'Cookie': f'sessionid={session_cookie}'}
     
-    response = requests.get(f'{settings.BASE_URL}/api/conversations/{conversation_id}/', headers=headers)
-    conversation = response.json()
-
-    # Determine the recipient's email (the other participant)
-    user_email = settings.DEFAULT_FROM_EMAIL
-    recipient_email = next((email for email in conversation['participants'] if email != user_email), '')
-        
-    last_email_id = conversation['messages'][-1]['email_id']
-    sendOrRec_status = conversation['messages'][-1]['sendOrRec']
-    
-    print('last_email_id: ')
-    print(last_email_id)
-    
-    em = SentEmail.objects.get(user=request.user, id=last_email_id)
-    if em:
-        print('Success em')
+    response = requests.get(f'{settings.BASE_URL}/api/conversations/list/', headers=headers)
+    if response.status_code == 200:
+        conversations = response.json()['conversations']
+        return JsonResponse({'conversations': conversations})
     else:
-        print('Fail em')
-    
-    print('sendOrRec_status: ')
-    print(sendOrRec_status)
-
-    context = {
-        'conversation': conversation,
-        'recipient_email': recipient_email,
-        'last_email_id': last_email_id,
-        'sendOrRec': sendOrRec_status
-    }
-
-    return render(request, 'conversation_detail.html', context)
-
+        return JsonResponse({'error': 'Failed to fetch conversations'}, status=400)
 
 def register_page(request):
     return render(request, 'users/register.html')
