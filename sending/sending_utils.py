@@ -241,7 +241,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
         
         msg = EmailMultiAlternatives(
             subject=subject,
-            body=tracked_full_body,
+            body=tracked_body,
             from_email=settings.DEFAULT_FROM_EMAIL,
             to=[recipient],
             cc=cc,

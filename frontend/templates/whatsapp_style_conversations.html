@@ -15,7 +15,7 @@
             --light-text-color: #7f8c8d;
             --border-color: #bdc3c7;
         }
-
+        
         body, html {
             margin: 0;
             padding: 0;
@@ -24,7 +24,7 @@
             background-color: var(--background-color);
             color: var(--text-color);
         }
-
+        
         .container {
             display: flex;
             height: 100vh;
@@ -32,55 +32,103 @@
             margin: 0 auto;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-
+        
         .sidebar {
             width: 30%;
             background-color: #ffffff;
             border-right: 1px solid var(--border-color);
             overflow-y: auto;
         }
-
+        
         .sidebar-header {
             padding: 20px;
             background-color: var(--primary-color);
             color: white;
         }
-
+        
         .conversation-list {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-
+        
         .conversation-item {
-            padding: 15px 20px;
+            position: relative;
+            padding: 10px 15px 10px 35px; /* Increased left padding for the icon */
             border-bottom: 1px solid var(--border-color);
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            overflow: hidden; /* For text truncation */
         }
-
+        
         .conversation-item:hover {
             background-color: #f5f5f5;
         }
-
+        
         .conversation-item.active {
             background-color: #e8f0fe;
             border-left: 4px solid var(--accent-color);
         }
-
+        
+        .conversation-item.new-conversation {
+            background-color: #e6f3ff;
+            border-left: 4px solid #3498db;
+            animation: pulse 2s infinite;
+        }
+        
+        .conversation-item.new-conversation::before {
+            content: "🔔";
+            position: absolute;
+            left: 10px;
+            top: 12px; /* Adjusted to align with the subject line */
+            font-size: 1.2em;
+        }
+        
+        .conversation-item h3 {
+            margin: 0 0 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .conversation-item.new-conversation h3 {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        
+        .conversation-item:hover h3 {
+            white-space: normal;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Show only 2 lines */
+            -webkit-box-orient: vertical;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+            }
+        }
+        
         .main-content {
             width: 70%;
             display: flex;
             flex-direction: column;
             background-color: #ffffff;
         }
-
+        
         .conversation-header {
             padding: 20px;
             background-color: var(--secondary-color);
             color: white;
         }
-
+        
         .conversation-messages {
             flex-grow: 1;
             overflow-y: auto;
@@ -141,13 +189,13 @@
             margin-top: 4px;
             margin-left: 8px;
         }
-
+        
         .reply-form {
             padding: 20px;
             background-color: #ffffff;
             border-top: 1px solid var(--border-color);
         }
-
+        
         .reply-form textarea {
             width: 100%;
             padding: 12px;
@@ -157,7 +205,7 @@
             font-family: inherit;
             font-size: 14px;
         }
-
+        
         .reply-form button {
             margin-top: 10px;
             padding: 10px 20px;
@@ -169,11 +217,11 @@
             transition: background-color 0.3s;
             font-weight: 500;
         }
-
+        
         .reply-form button:hover {
             background-color: #2980b9;
         }
-
+        
         .fetch-emails-button {
             padding: 8px 15px;
             background-color: var(--accent-color);
@@ -185,16 +233,16 @@
             transition: background-color 0.3s;
             font-weight: 500;
         }
-
+        
         .fetch-emails-button:hover {
             background-color: #2980b9;
         }
-
+        
         h2, h3 {
             margin: 0 0 10px 0;
             font-weight: 600;
         }
-
+        
         p {
             margin: 0;
         }
@@ -276,19 +324,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function() {
-        // Add this line at the beginning of your script
         var currentlySelectedConversationId = null;
     
-        // Modify the click handler for conversation items
+        // Move the click handler outside of the document.ready function
         $(document).on('click', '.conversation-item', function(e) {
             e.preventDefault();
             var conversationId = $(this).data('conversation-id');
-            currentlySelectedConversationId = conversationId; // Set the global variable
+            currentlySelectedConversationId = conversationId;
             loadConversation(conversationId);
             
-            // Update active class
             $('.conversation-item').removeClass('active');
-            $(this).addClass('active');
+            $(this).addClass('active').removeClass('new-conversation');
+            
+            newUnclickedConversations.delete(conversationId);
         });
     
         // Handle reply form submission
@@ -425,57 +473,74 @@
             }
         }
         
+        let knownConversationIds = new Set();
+        let newUnclickedConversations = new Set();
+        
         function updateConversationList(conversations) {
             var $conversationList = $('.conversation-list');
-            $conversationList.empty();
+            
             conversations.forEach(function(conversation) {
-                // Use the global variable to determine if this conversation is active
+                var isNew = !knownConversationIds.has(conversation.id);
+                if (isNew) {
+                    knownConversationIds.add(conversation.id);
+                    newUnclickedConversations.add(conversation.id);
+                }
+                
+                var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
+                var formattedTime = formatDate(conversation.last_updated);
+                
                 var isActive = conversation.id == currentlySelectedConversationId;
-                var formattedConversationTime = formatDate(conversation.last_updated);
+                var isNewUnclicked = newUnclickedConversations.has(conversation.id);
                 var conversationHtml = `
-                    <li class="conversation-item ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
-                        <h3>${conversation.subject}</h3>
-                        <p>Last updated: ${formattedConversationTime}</p>
+                    <li class="conversation-item ${isNewUnclicked ? 'new-conversation' : ''} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
+                        <h3 title="${conversation.subject}">${conversation.subject}</h3>
+                        <p>Last updated: ${formattedTime}</p>
                     </li>
                 `;
-                $conversationList.append(conversationHtml);
-            });
-        
-            // Reattach click event to new conversation items
-            $('.conversation-item').click(function(e) {
-                e.preventDefault();
-                var conversationId = $(this).data('conversation-id');
-                loadConversation(conversationId);
                 
-                $('.conversation-item').removeClass('active');
-                $(this).addClass('active');
+                if ($existingItem.length) {
+                    $existingItem.replaceWith($(conversationHtml));
+                } else {
+                    $conversationList.prepend($(conversationHtml));
+                }
+            });
+            
+            // Remove conversations that no longer exist
+            $conversationList.find('.conversation-item').each(function() {
+                var id = $(this).data('conversation-id');
+                if (!conversations.some(c => c.id === id)) {
+                    $(this).remove();
+                    newUnclickedConversations.delete(id);
+                }
             });
         }
-
-    function pollForNewConversations() {
-        $.ajax({
-            url: '{% url 'get_latest_conversations' %}',
-            type: 'GET',
-            dataType: 'json',
-            success: function(response) {
-                if (response.conversations) {
-                    updateConversationList(response.conversations);
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error("Error fetching conversations: " + error);
-            },
-            complete: function() {
-                // Schedule the next poll
-                setTimeout(pollForNewConversations, 10000); // Poll every 10 seconds
-            }
-        });
-    }
-
-    // Start polling
-    pollForNewConversations();
         
-    });
+        function pollForNewConversations() {
+            $.ajax({
+                url: '{% url 'get_latest_conversations' %}',
+                type: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.conversations) {
+                        updateConversationList(response.conversations);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error fetching conversations: " + error);
+                },
+                complete: function() {
+                    setTimeout(pollForNewConversations, 10000); // Poll every 10 seconds
+                }
+            });
+        }
+        
+        // Initialize known conversation IDs and start polling
+        $('.conversation-item').each(function() {
+            knownConversationIds.add($(this).data('conversation-id'));
+        });
+        
+        pollForNewConversations();
+        });
     </script>
 </body>
 </html>
