@@ -373,7 +373,7 @@
                     if (response.status === 'success') {
                         var $item = $(`.conversation-item[data-conversation-id="${conversationId}"]`);
                         var formattedTime = formatDate(response.last_updated);
-                        $item.find('p').text('Last updated: ' + formattedTime);
+                        $item.find('p').text(formattedTime);
                     } else {
                         console.error('Failed to mark conversation as read');
                     }
@@ -412,16 +412,22 @@
         function formatDate(dateString) {
             const date = new Date(dateString);
             const now = new Date();
-            const diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+            const yesterday = new Date(now);
+            yesterday.setDate(now.getDate() - 1);
+            yesterday.setHours(0, 0, 0, 0);
         
-            if (diffDays === 0) {
-                return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            } else if (diffDays === 1) {
-                return 'Yesterday';
-            } else if (diffDays < 7) {
-                return date.toLocaleDateString([], { weekday: 'long' });
+            const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+            if (date >= new Date(now.setHours(0, 0, 0, 0))) {
+                return `Today at ${timeString}`;
+            } else if (date >= yesterday) {
+                return `Yesterday at ${timeString}`;
+            } else if (date >= new Date(now.setDate(now.getDate() - 6))) {
+                return `${date.toLocaleDateString([], { weekday: 'long' })} at ${timeString}`;
+            } else if (date.getFullYear() === now.getFullYear()) {
+                return date.toLocaleDateString([], { month: 'short', day: 'numeric' }) + ` at ${timeString}`;
             } else {
-                return date.toLocaleDateString([], { year: 'numeric', month: 'short', day: 'numeric' });
+                return date.toLocaleDateString([], { year: 'numeric', month: 'short', day: 'numeric' }) + ` at ${timeString}`;
             }
         }
     
@@ -536,7 +542,7 @@
                 var conversationHtml = `
                     <li class="conversation-item ${isUnread ? 'new-conversation' : ''} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
                         <h3 title="${conversation.subject}">${conversation.subject}</h3>
-                        <p>Last updated: ${formattedTime}</p>
+                        <p>${formattedTime}</p>
                     </li>
                 `;
                 
