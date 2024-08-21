@@ -26,8 +26,8 @@ def format_email_history(previous_messages, user_email):
     for msg in reversed(previous_messages):
         sender = msg.sender
         timestamp = msg.timestamp.strftime('%a, %b %d, %Y at %I:%M %p')
-        content_plain = msg.content.replace('\n', '\n' + '>' * (quote_level) + ' ')  # Adjusted quoting for plain text
-        content_html = msg.content.replace('\n', '<br>' + '>' * (quote_level) + ' ')  # Adjusted HTML version with <br> tags
+        content_plain = msg.content.replace('\n', '\n' + '>' * (quote_level+1) + ' ')  # Adjusted quoting for plain text
+        content_html = msg.content.replace('\n', '<br>' + '>' * (quote_level+1) + ' ')  # Adjusted HTML version with <br> tags
 
         opening_blockquotes = "<blockquote>" * quote_level
         closing_blockquotes = "</blockquote>" * quote_level
@@ -45,16 +45,16 @@ def format_email_history(previous_messages, user_email):
             header_html = (
                     f"{opening_blockquotes}"
                     f"<div>________________________________</div>"
-                    f"<div><strong>From:</strong> {sender}</div>"
-                    f"<div><strong>Sent:</strong> {timestamp}</div>"
-                    f"<div><strong>To:</strong> {msg.received_email.recipient}</div>"
-                    f"<div><strong>Subject:</strong> {msg.received_email.subject}</div>"
+                    f"<div><strong>*From:*</strong> {sender}</div>"
+                    f"<div><strong>*Sent:*</strong> {timestamp}</div>"
+                    f"<div><strong>*To:*</strong> {msg.received_email.recipient}</div>"
+                    f"<div><strong>*Subject:*</strong> {msg.received_email.subject}</div>"
                     f"{closing_blockquotes}"
                     )
         else:  # This is a received email
             header_plain = f"{'>' * quote_level}On {timestamp} {sender} wrote:\n"
             header_html = (f"{opening_blockquotes}"
-                           f"{'>' * quote_level}On {timestamp} {sender} wrote:<br>"
+                           f"On {timestamp} {sender} wrote:<br>"
                            f"{closing_blockquotes}")
         
         quoted_message_plain = f"{header_plain}\n{'>' * quote_level}{content_plain}"

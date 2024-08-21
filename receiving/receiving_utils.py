@@ -11,42 +11,148 @@ from django.contrib.auth import get_user_model
 
 from django.core.exceptions import ObjectDoesNotExist
 
-def parse_email_body(body):
-    # Patterns for different email clients
+def parse_email_body(email_body):
+    """
+    Parses the email body into new content and history/trace of older emails for Gmail, Outlook (Desktop and Webmail), and Yahoo Mail.
+    
+    :param email_body: The full body of the email as a string.
+    :return: A tuple containing new_content and history/trace.
+    """
+    # Combined patterns for Gmail, Outlook, and Yahoo Mail
     patterns = [
-        # Gmail and many others
-        r'\n\s*On .+?wrote:\s*\n',
-        # Outlook
-        r'\n\s*-----Original Message-----\s*\n',
-        # Another Outlook format
-        r'\n\s*From:.*\n\s*Sent:.*\n\s*To:.*\n\s*Subject:.*\n',
-        # Apple Mail
-        r'\n\s*On .+?, .+ wrote:\s*\n',
-        # Yahoo Mail
-        r'\n\s*-{3,}\s*\n.*\n.*wrote:\s*\n'
+        # Most specific patterns first
+        re.compile(r'^-+\sForwarded message\s-+', re.IGNORECASE),  # Gmail forwarded message
+        re.compile(r'^-+\sForwarded Message\s-+', re.IGNORECASE),  # Yahoo forwarded message
+        re.compile(r'^-+\sOriginal Message\s-+', re.IGNORECASE),   # Outlook Desktop original message
+        re.compile(r'^-+\sForwarded by\s', re.IGNORECASE),         # Outlook Desktop forwarded message
+        
+        # Outlook Webmail-specific patterns
+        re.compile(r'^_{5,}', re.MULTILINE),                       # Line of underscores
+        
+        # Specific reply indicators
+        re.compile(r'On\s(.+?)\swrote:', re.IGNORECASE),           # Common reply pattern
+        
+        # Quoted content
+        re.compile(r'^(>)+\s?', re.MULTILINE),                     # Quoted lines
+        
+        # Email headers (more specific to less specific)
+        re.compile(r'^From:\s(.+?)\s\[mailto:', re.IGNORECASE),    # Outlook Desktop "From" with email
+        re.compile(r'^From:\s.+@.+\.\w{2,3}', re.IGNORECASE),      # "From" with email address
+        re.compile(r'^Subject:\s', re.IGNORECASE | re.MULTILINE),  # "Subject:" header
+        re.compile(r'^Sent:\s', re.IGNORECASE | re.MULTILINE),     # "Sent:" header
+        re.compile(r'^To:\s', re.IGNORECASE | re.MULTILINE),       # "To:" header
+        re.compile(r'^From:\s', re.IGNORECASE | re.MULTILINE),     # General "From:" header (least specific)
     ]
 
-    # Combine all patterns
-    combined_pattern = '|'.join(patterns)
+    # Attempt to find the split point
+    split_index = len(email_body)
+    for pattern in patterns:
+        match = pattern.search(email_body)
+        if match:
+            split_index = match.start()
+            break
 
-    # Split the body using the combined pattern
-    parts = re.split(combined_pattern, body, maxsplit=1, flags=re.IGNORECASE | re.DOTALL)
+    # Split the email into new content and history/trace
+    new_content = email_body[:split_index].strip()
+    history_trace = email_body[split_index:].strip()
 
-    if len(parts) > 1:
-        new_content = parts[0].strip()
-        history = parts[1].strip()
+    return new_content, history_trace
 
-        # Check if the split point is actually in the middle of the new content
-        # This can happen if the new content contains something that looks like a header
-        if len(new_content.splitlines()) < 3 and len(history.splitlines()) > 10:
-            # If the new_content is very short and history is long, assume the split was incorrect
-            new_content = body.strip()
-            history = ''
-    else:
-        new_content = body.strip()
-        history = ''
 
-    return new_content, history
+# def parse_email_body(email_body):
+#     """
+#     Parses the Outlook Webmail email body into new content and history/trace of older emails.
+    
+#     :param email_body: The full body of the Outlook Webmail email as a string.
+#     :return: A tuple containing new_content and history/trace.
+#     """
+#     # Patterns specific to Outlook Webmail emails
+#     patterns = [
+#         re.compile(r'^_{5,}', re.MULTILINE),                     # Pattern for a line of underscores "_____"
+#         re.compile(r'On\s(.+?)\swrote:', re.IGNORECASE),          # Pattern for "On [date], [name] wrote:"
+#         re.compile(r'^From:\s', re.IGNORECASE),                   # Pattern for "From:"
+#         re.compile(r'^Sent:\s', re.IGNORECASE),                   # Pattern for "Sent:"
+#         re.compile(r'^To:\s', re.IGNORECASE),                     # Pattern for "To:"
+#         re.compile(r'^Subject:\s', re.IGNORECASE),                # Pattern for "Subject:"
+#         re.compile(r'^From:\s.+@.+\.\w{2,3}', re.IGNORECASE),     # Pattern for email headers with email addresses
+#         re.compile(r'^(>)+\s?', re.MULTILINE)                     # Pattern for quoted lines (usually indented with '>')
+#     ]
+
+#     # Attempt to find the split point
+#     split_index = len(email_body)
+#     for pattern in patterns:
+#         match = pattern.search(email_body)
+#         if match:
+#             split_index = match.start()
+#             break
+
+#     # Split the email into new content and history/trace
+#     new_content = email_body[:split_index].strip()
+#     history_trace = email_body[split_index:].strip()
+
+#     return new_content, history_trace
+
+# def parse_email_body(email_body):
+#     """
+#     Parses the Outlook email body into new content and history/trace of older emails.
+    
+#     :param email_body: The full body of the Outlook email as a string.
+#     :return: A tuple containing new_content and history/trace.
+#     """
+#     # Patterns specific to Outlook emails
+#     patterns = [
+#         re.compile(r'^-+\sOriginal Message\s-+', re.IGNORECASE),  # Pattern for "-----Original Message-----"
+#         re.compile(r'^-+\sForwarded by\s', re.IGNORECASE),        # Pattern for "----- Forwarded by"
+#         re.compile(r'^From:\s(.+?)\s\[mailto:', re.IGNORECASE),   # Pattern for "From: [Name] [email]"
+#         re.compile(r'^Sent:\s(.+)', re.IGNORECASE),               # Pattern for "Sent: [Date]"
+#         re.compile(r'^To:\s(.+)', re.IGNORECASE),                 # Pattern for "To: [Name]"
+#         re.compile(r'^Subject:\s(.+)', re.IGNORECASE)             # Pattern for "Subject: [Subject]"
+#     ]
+
+#     # Attempt to find the split point
+#     split_index = len(email_body)
+#     for pattern in patterns:
+#         match = pattern.search(email_body)
+#         if match:
+#             split_index = match.start()
+#             break
+
+#     # Split the email into new content and history/trace
+#     new_content = email_body[:split_index].strip()
+#     history_trace = email_body[split_index:].strip()
+
+#     return new_content, history_trace
+
+# def parse_email_body(email_body):
+#     """
+#     Parses the Gmail email body into new content and history/trace of older emails.
+    
+#     :param email_body: The full body of the Gmail email as a string.
+#     :return: A tuple containing new_content and history/trace.
+#     """
+#     # Patterns to detect the start of the email history/trace
+#     patterns = [
+#         re.compile(r'On\s(.+?)\swrote:', re.IGNORECASE),          # Pattern for "On [date], [name] wrote:"
+#         re.compile(r'^-+\sForwarded message\s-+', re.IGNORECASE), # Pattern for "--- Forwarded message ---"
+#         re.compile(r'^From:\s', re.IGNORECASE),                   # Pattern for "From:"
+#         re.compile(r'^Sent:\s', re.IGNORECASE),                   # Pattern for "Sent:"
+#         re.compile(r'^To:\s', re.IGNORECASE),                     # Pattern for "To:"
+#         re.compile(r'^Subject:\s', re.IGNORECASE)                 # Pattern for "Subject:"
+#     ]
+
+#     # Attempt to find the split point
+#     split_index = len(email_body)
+#     for pattern in patterns:
+#         match = pattern.search(email_body)
+#         if match:
+#             split_index = match.start()
+#             break
+
+#     # Split the email into new content and history/trace
+#     new_content = email_body[:split_index].strip()
+#     history_trace = email_body[split_index:].strip()
+
+#     return new_content, history_trace
 
 def clean_parsed_content(content):
     # Remove any leading '>' characters and extra whitespace
