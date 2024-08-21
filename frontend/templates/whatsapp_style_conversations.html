@@ -265,6 +265,16 @@
         p {
             margin: 0;
         }
+        
+        @keyframes highlightFade {
+            0% { background-color: rgba(255, 255, 160, 0.5); }
+            50% { background-color: rgba(255, 255, 210, 0.25); }
+            100% { background-color: #ffffff; }
+        }
+        
+        .highlight-new-message {
+            animation: highlightFade 5s ease-out forwards;
+        }
     </style>
 </head>
 <body>
@@ -535,16 +545,30 @@
                                  '</div>';
                 
                 var messagesHtml = '<div class="conversation-messages" id="conversation-messages">';
-                data.conversation.messages.forEach(function(message) {
+                
+                // Count received messages from the end
+                var receivedMessageCount = 0;
+                var unreadCount = data.conversation.unread_count || 0;
+                
+                data.conversation.messages.forEach(function(message, index) {
                     var formattedTime = formatDate(message.timestamp);
                     var messageClass = message.sendOrRec === 'send' ? 'message-sent' : 'message-received';
+                    
+                    if (message.sendOrRec === 'received') {
+                        receivedMessageCount++;
+                    }
+                    
+                    var isNewMessage = message.sendOrRec === 'received' && 
+                                       (data.conversation.messages.length - index) <= unreadCount;
+                    
                     messagesHtml += '<div class="message-container ' + messageClass + '">' +
-                                    '<div class="message">' +
+                                    '<div class="message ' + (isNewMessage ? 'highlight-new-message' : '') + '">' +
                                     '<div class="message-header"><strong>' + message.sender + '</strong></div>' +
                                     '<div class="message-content">' + message.content + '</div>' +
                                     '<div class="message-time">' + formattedTime + '</div>' +
                                     '</div></div>';
                 });
+                
                 messagesHtml += '</div>';
         
                 var replyFormHtml = '<div class="reply-form">' +
@@ -560,6 +584,10 @@
                                     '</form></div>';
         
                 $mainContent.append(headerHtml + messagesHtml + replyFormHtml);
+        
+                // Scroll to the bottom of the conversation
+                var $conversationMessages = $('#conversation-messages');
+                $conversationMessages.scrollTop($conversationMessages[0].scrollHeight);
             } else {
                 $mainContent.html('<div class="conversation-header"><h2>Error</h2></div>' +
                                   '<div class="conversation-messages"><p>The selected conversation could not be loaded.</p></div>');
