@@ -28,6 +28,7 @@ def get_conversation(request, conversation_id):
             'id': conversation.id,
             'subject': conversation.subject,
             'participants': [p.email for p in conversation.participants.all()],
+            'unread_count': conversation.unread_count,
             'messages': [{
                 'id': msg.id,
                 'sender': msg.sender,

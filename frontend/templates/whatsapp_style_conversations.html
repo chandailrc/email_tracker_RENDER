@@ -566,22 +566,6 @@
             }
         }
     
-        function updateConversationState(conversationId, isNewConversation, unreadCount) {
-            const $conversationItem = $(`.conversation-item[data-conversation-id="${conversationId}"]`);
-            if (!$conversationItem.length) return;
-        
-            $conversationItem.removeClass('new-conversation unread-messages');
-            $conversationItem.find('.unread-badge, .new-conversation-icon').remove();
-        
-            if (isNewConversation) {
-                $conversationItem.addClass('new-conversation');
-                $conversationItem.append('<span class="new-conversation-icon">🔔</span>');
-            } else if (unreadCount > 0) {
-                $conversationItem.addClass('unread-messages');
-                $conversationItem.append(`<span class="unread-badge">${unreadCount}</span>`);
-            }
-        }
-    
         function updateConversationList(conversations) {
             var $conversationList = $('.conversation-list');
             
