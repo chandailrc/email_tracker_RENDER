@@ -13,7 +13,9 @@ def list_conversations(request):
         'subject': conv.subject,
         'last_updated': conv.last_updated.isoformat(),
         'participants': [p.email for p in conv.participants.all()],
-        'unread': conv.unread
+        'is_new': conv.is_new,
+        'unread': conv.unread,
+        'unread_count': conv.unread_count
     } for conv in conversations]
     return JsonResponse({'conversations': data})
 
@@ -115,7 +117,9 @@ def fetch_unread_id_list(request):
             'id': conv.id,
             'subject': conv.subject,
             'last_updated': conv.last_updated.isoformat(),
+            'is_new': conv.is_new,
             'unread': conv.unread,
+            'unread_count': conv.unread_count
             # Add any other fields you need
         }
         for conv in all_conversations
@@ -125,3 +129,15 @@ def fetch_unread_id_list(request):
         'unread_conversations': unread_ids,
         'conversations': serialized_conversations
     })
+
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def reset_conversation_unread_count(request, conversation_id):
+    try:
+        conversation = Conversation.objects.get(id=conversation_id, user=request.user)
+        conversation.mark_as_read()        
+        return JsonResponse({'success': True})
+    except Conversation.DoesNotExist:
+        return JsonResponse({'success': False, 'error': 'Conversation not found'}, status=404)

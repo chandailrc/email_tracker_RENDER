@@ -30,17 +30,18 @@ def process_email(email, email_type, user_id, in_reply_sendOrRec=None):
             else:  # received
                 if in_reply_sendOrRec == "send":
                     in_reply_to_email = SentEmail.objects.get(user=user, message_id=email.in_reply_to)
-                    existing_message = ConversationMessage.objects.get(conversation__user=user, sent_email=in_reply_to_email)                    
+                    existing_message = ConversationMessage.objects.get(conversation__user=user, sent_email=in_reply_to_email)
                 else:
                     in_reply_to_email = ReceivedEmail.objects.get(user=user, message_id=email.in_reply_to)
                     existing_message = ConversationMessage.objects.get(conversation__user=user, received_email=in_reply_to_email)
+                existing_message.conversation.increment_unread_count() # Increase the unread counter for ANY received email
             conversation = existing_message.conversation
         except ConversationMessage.DoesNotExist:
             # If not found, create a new conversation
             conversation = Conversation.objects.create(user=user, subject=email.subject)
     else:
         # Create a new conversation
-        conversation = Conversation.objects.create(user=user, subject=email.subject)
+        conversation = Conversation.objects.create(user=user, subject=email.subject, unread=True, is_new=True)
     
     # Add participants
     participants = [email.sender, email.recipient] + email.get_cc_list() + email.get_bcc_list()

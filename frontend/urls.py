@@ -20,6 +20,7 @@ urlpatterns = [
     path('conversations/', views.conversation_list, name='conversation_list'),
     path('conversations/<int:conversation_id>/', views.conversation_list, name='conversation_detail'),
     path('conversations/mark_read/<int:conversation_id>/', views.mark_conversation_read, name='mark_conversation_read'),
+    path('conversations/reset_conversation_unread/<int:conversation_id>/', views.reset_conversation_unread, name='reset_conversation_unread'),
     path('get-latest-conversations/', views.get_latest_conversations, name='get_latest_conversations'),
     path('conversations/unreadlist/', views.sync_unread_conversations, name='sync_unread_conversations'),
     path('register/', views.register_page, name='register_page'),

@@ -419,6 +419,22 @@ def sync_unread_conversations(request):
         })
     else:
         return JsonResponse({'error': 'Failed to sync/fetch unread ids and covnersations'}, status=400)
+    
+@csrf_exempt
+@login_required
+def reset_conversation_unread(request, conversation_id):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.post(f'{settings.BASE_URL}/api/conversations/reset_conversation_unread_count/{conversation_id}/', headers=headers)
+    
+    if response.status_code == 200:
+        response_success = response.json()['success']
+        return JsonResponse({'success': response_success})
+    else:
+        return JsonResponse({'error': f'Failed to update conversation {conversation_id}\'s unread status'}, status=400)
 
 def register_page(request):
     return render(request, 'users/register.html')

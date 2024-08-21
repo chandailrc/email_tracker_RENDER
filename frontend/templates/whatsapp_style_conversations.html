@@ -71,7 +71,6 @@
         }
         
         .conversation-item.new-conversation {
-            background-color: #e6f3ff;
             border-left: 4px solid #3498db;
             animation: pulse 2s infinite;
         }
@@ -89,19 +88,39 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            max-height: 1.2em; /* Approximate height of one line */
+            transition: max-height 0.5s ease, white-space 0s linear 2s;
         }
         
         .conversation-item.new-conversation h3 {
             color: #2980b9;
             font-weight: bold;
         }
-        
+
         .conversation-item:hover h3 {
             white-space: normal;
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 2; /* Show only 2 lines */
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+            max-height: 2.4em; /* Approximate height of two lines */
+            transition: max-height 0.5s ease 1s, white-space 0s linear 2s;
+        }
+        
+        .conversation-item.unread-messages {
+            background-color: #fff0e0;
+            border-left: 4px solid #ffa500;
+        }
+        
+        .unread-badge {
+            background-color: #ffa500;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.8em;
+            position: absolute;
+            right: 10px;
+            top: 10px;
         }
         
         @keyframes pulse {
@@ -257,10 +276,14 @@
         </div>
         <ul class="conversation-list">
             {% for conversation in conversations %}
-            <li class="conversation-item {% if conversation.id == active_conversation.id %}active{% endif %}" data-conversation-id="{{ conversation.id }}">
+            <div class="conversation-item {% if conversation.unread %}new-conversation{% elif conversation.unread_count > 0 %}unread-messages{% endif %} {% if conversation.id == active_conversation.id %}active{% endif %}"
+                 data-conversation-id="{{ conversation.id }}">
                 <h3>{{ conversation.subject }}</h3>
                 <p>Last updated: {{ conversation.last_updated }}</p>
-            </li>
+                {% if conversation.unread_count > 0 %}
+                    <span class="unread-badge">{{ conversation.unread_count }}</span>
+                {% endif %}
+            </div>
             {% empty %}
             <li>No conversations found.</li>
             {% endfor %}
@@ -327,8 +350,8 @@
         var currentlySelectedConversationId = null;
         let knownConversationIds = new Set();
         let unreadConversations = new Set();
+        let unreadMessageCounts = {};
     
-        // Initialize unread conversations from local storage
         function initializeUnreadConversations() {
             const storedUnread = localStorage.getItem('unreadConversations');
             if (storedUnread) {
@@ -336,49 +359,74 @@
             }
         }
     
-        // Save unread conversations to local storage
         function saveUnreadConversations() {
             localStorage.setItem('unreadConversations', JSON.stringify([...unreadConversations]));
         }
     
-        // Mark conversation as unread
         function markConversationAsUnread(conversationId) {
             unreadConversations.add(conversationId);
             saveUnreadConversations();
         }
     
-        // Mark conversation as read
         function markConversationAsRead(conversationId) {
             unreadConversations.delete(conversationId);
             saveUnreadConversations();
         }
     
-        // Modified click handler for conversation items
-        $(document).on('click', '.conversation-item', function(e) {
-            e.preventDefault();
-            var conversationId = $(this).data('conversation-id');
+        function updateUnreadMessageCount(conversationId, count) {
+            unreadMessageCounts[conversationId] = count;
+            saveUnreadMessageCounts();
+        }
+    
+        function saveUnreadMessageCounts() {
+            localStorage.setItem('unreadMessageCounts', JSON.stringify(unreadMessageCounts));
+        }
+    
+        function loadUnreadMessageCounts() {
+            const stored = localStorage.getItem('unreadMessageCounts');
+            if (stored) {
+                unreadMessageCounts = JSON.parse(stored);
+            }
+        }
+    
+        function handleConversationClick(conversationId) {
             currentlySelectedConversationId = conversationId;
             loadConversation(conversationId);
             
             $('.conversation-item').removeClass('active');
-            $(this).addClass('active').removeClass('new-conversation');
+            const $clickedItem = $(`.conversation-item[data-conversation-id="${conversationId}"]`);
+            $clickedItem.addClass('active').removeClass('new-conversation unread-messages');
+            $clickedItem.find('.unread-badge').remove();
             
             markConversationAsRead(conversationId);
+            updateUnreadMessageCount(conversationId, 0);
             
-            // Mark conversation as read on the server
+            console.log('conversationId:')
+            console.log(conversationId)
+            
+            // Reset unread state on the server
             $.ajax({
-                url: `/frontend/conversations/mark_read/${conversationId}/`,
-                type: 'GET',
+                url: `/frontend/conversations/reset_conversation_unread/${conversationId}/`,  // Use backticks and ${} to insert the variable
+                method: 'POST',
                 success: function(response) {
-                    if (response.status === 'success') {
-                        var $item = $(`.conversation-item[data-conversation-id="${conversationId}"]`);
-                        var formattedTime = formatDate(response.last_updated);
-                        $item.find('p').text(formattedTime);
+                    if (response.success) {
+                        console.log(`Conversation ${conversationId} marked as read on the server`);
                     } else {
-                        console.error('Failed to mark conversation as read');
+                        console.error('Failed to mark conversation as read on the server');
                     }
+                },
+                error: function(xhr, status, error) {
+                    console.error(`Error marking conversation as read for ${conversationId}: ${error}`);
                 }
             });
+        }
+    
+        $(document).on('click', '.conversation-item', function(e) {
+            e.preventDefault();
+            var conversationId = $(this).data('conversation-id');
+            console.log('conversationId:from outside handle:')
+            console.log(conversationId)
+            handleConversationClick(conversationId);
         });
     
         // Handle reply form submission
@@ -408,7 +456,7 @@
                 }
             });
         });
-        
+    
         function formatDate(dateString) {
             const date = new Date(dateString);
             const now = new Date();
@@ -433,20 +481,18 @@
     
         function loadConversation(conversationId) {
             $.ajax({
-                url: '{% url 'conversation_list' %}' + conversationId + '/',
+                url: '{% url 'conversation_list' %}' + conversationId + '/',                
                 type: 'GET',
                 dataType: 'json',
                 success: function(data) {
                     updateConversationView(data);
-                    // We're removing the history.pushState call here
                 },
                 error: function(xhr, status, error) {
                     console.error("An error occurred: " + error);
                 }
             });
         }
-        
-        // Add a function to fetch emails
+    
         function fetchEmails() {
             $.ajax({
                 url: '{% url 'fetch_emails' %}',
@@ -473,7 +519,6 @@
             });
         }
     
-        // Add a button or link to trigger email fetching
         $('.fetch-emails-button').click(function(e) {
             e.preventDefault();
             fetchEmails();
@@ -520,29 +565,43 @@
                                   '<div class="conversation-messages"><p>The selected conversation could not be loaded.</p></div>');
             }
         }
+    
+        function updateConversationState(conversationId, isNewConversation, unreadCount) {
+            const $conversationItem = $(`.conversation-item[data-conversation-id="${conversationId}"]`);
+            if (!$conversationItem.length) return;
         
+            $conversationItem.removeClass('new-conversation unread-messages');
+            $conversationItem.find('.unread-badge, .new-conversation-icon').remove();
+        
+            if (isNewConversation) {
+                $conversationItem.addClass('new-conversation');
+                $conversationItem.append('<span class="new-conversation-icon">🔔</span>');
+            } else if (unreadCount > 0) {
+                $conversationItem.addClass('unread-messages');
+                $conversationItem.append(`<span class="unread-badge">${unreadCount}</span>`);
+            }
+        }
+    
         function updateConversationList(conversations) {
             var $conversationList = $('.conversation-list');
             
             conversations.forEach(function(conversation) {
-                var isNew = !knownConversationIds.has(conversation.id);
-                if (isNew) {
+                var isNew = conversation.is_new;
+                if (!knownConversationIds.has(conversation.id)) {
                     knownConversationIds.add(conversation.id);
-                }
-                
-                if (conversation.unread) {
-                    markConversationAsUnread(conversation.id);
                 }
                 
                 var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
                 var formattedTime = formatDate(conversation.last_updated);
                 
                 var isActive = conversation.id == currentlySelectedConversationId;
-                var isUnread = unreadConversations.has(conversation.id);
+                var unreadCount = conversation.unread_count || 0;
+                
                 var conversationHtml = `
-                    <li class="conversation-item ${isUnread ? 'new-conversation' : ''} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
+                    <li class="conversation-item ${isNew ? 'new-conversation' : ''} ${!isNew && unreadCount > 0 ? 'unread-messages' : ''} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
                         <h3 title="${conversation.subject}">${conversation.subject}</h3>
                         <p>${formattedTime}</p>
+                        ${!isNew && unreadCount > 0 ? `<span class="unread-badge">${unreadCount}</span>` : ''}
                     </li>
                 `;
                 
@@ -551,6 +610,8 @@
                 } else {
                     $conversationList.prepend($(conversationHtml));
                 }
+                
+                updateUnreadMessageCount(conversation.id, unreadCount);
             });
             
             // Remove conversations that no longer exist
@@ -559,26 +620,31 @@
                 if (!conversations.some(c => c.id === id)) {
                     $(this).remove();
                     unreadConversations.delete(id);
+                    delete unreadMessageCounts[id];
                     saveUnreadConversations();
+                    saveUnreadMessageCounts();
                 }
             });
         }
     
         function syncUnreadStatus() {
             $.ajax({
-                url: '{% url 'sync_unread_conversations' %}',
+                url: '{% url 'sync_unread_conversations' %}',                
                 type: 'GET',
                 success: function(response) {
                     unreadConversations = new Set(response.unread_conversations);
                     saveUnreadConversations();
                     updateConversationList(response.conversations);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error syncing unread status: " + error);
                 }
             });
         }
-        
+    
         function pollForNewConversations() {
             $.ajax({
-                url: '{% url 'get_latest_conversations' %}',
+                url: '{% url 'get_latest_conversations' %}',                
                 type: 'GET',
                 dataType: 'json',
                 success: function(response) {
@@ -594,17 +660,17 @@
                 }
             });
         }
-        
-        // Initialize known conversation IDs, unread conversations, and start polling
+    
+        // Initialize
+        loadUnreadMessageCounts();
+        initializeUnreadConversations();
         $('.conversation-item').each(function() {
             knownConversationIds.add($(this).data('conversation-id'));
         });
-        
-        initializeUnreadConversations();
         pollForNewConversations();
         
         // Sync unread status periodically
-        setInterval(syncUnreadStatus, 1 * 60 * 1000); // Every 1 minutes
+        setInterval(syncUnreadStatus, 60000); // Every 1 minute
     });
     </script>
 </body>

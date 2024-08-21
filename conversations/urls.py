@@ -8,4 +8,5 @@ urlpatterns = [
     path('<int:conversation_id>/add_message/', views.add_message_to_conversation, name='add_message_to_conversation'),
     path('update_unread/<int:conversation_id>/', views.update_conversation_unread_status, name='update_conversation_unread_status'),
     path('fetch_unread_id_list/', views.fetch_unread_id_list, name='fetch_unread_id_list'),
+    path('reset_conversation_unread_count/<int:conversation_id>/', views.reset_conversation_unread_count, name='reset_conversation_unread_count'),
 ]

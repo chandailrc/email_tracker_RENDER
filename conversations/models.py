@@ -10,7 +10,26 @@ class Conversation(models.Model):
     subject = models.CharField(max_length=255)
     created_at = models.DateTimeField(default=timezone.now)
     last_updated = models.DateTimeField(auto_now=True)
+    is_new = models.BooleanField(default=True)
     unread = models.BooleanField(default=True)
+    unread_count = models.IntegerField(default=0)
+
+    def mark_as_read(self):
+        self.is_new = False
+        self.unread = False
+        self.unread_count = 0
+        self.save(update_fields=['is_new', 'unread', 'unread_count'])
+
+    def increment_unread_count(self):
+        if not self.is_new:
+            self.unread_count += 1
+            self.unread = True
+            self.save(update_fields=['unread_count', 'unread'])
+    
+    def reset_unread_count(self):
+        self.unread_count = 0
+        self.unread = False
+        self.save(update_fields=['unread_count', 'unread'])
     
     def save(self, *args, **kwargs):
         if not self.id:
@@ -19,6 +38,8 @@ class Conversation(models.Model):
     
     def __str__(self):
         return f"{self.subject} (Last updated: {self.last_updated})"
+    
+
 
 class ConversationParticipant(models.Model):
     conversation = models.ForeignKey(Conversation, on_delete=models.CASCADE, related_name='participants')
