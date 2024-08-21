@@ -374,6 +374,52 @@ def get_latest_conversations(request):
     else:
         return JsonResponse({'error': 'Failed to fetch conversations'}, status=400)
 
+@login_required
+def mark_conversation_read(request, conversation_id):
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/conversations/update_unread/{conversation_id}/', headers=headers)
+    
+    # Debugging: print the response text
+    # print(f'Response status code: {response.status_code}')
+    # print(f'Response content: {response.text}')
+    
+    if response.status_code == 200:
+        response_success = response.json()
+        print(f'mcr: Conversation marking as read: {response_success} for conversation id: {conversation_id}')
+        return JsonResponse({'status': response_success['status'],
+                             'last_updated': response_success['last_updated']})
+    else:
+        return JsonResponse({'error': f'Failed to update conversation {conversation_id}\'s unread status'}, status=400)
+
+@login_required
+def sync_unread_conversations(request):
+        
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/conversations/fetch_unread_id_list/', headers=headers)
+    
+    # Debugging: print the response text
+    # print(f'Request headers: {request.headers}')
+    # print(f'Response status code: {response.status_code}')
+    # print(f'Response content: {response.text}')
+    
+    if response.status_code == 200:
+        unread_ids_wConversations = response.json()
+        
+        return JsonResponse({
+            'unread_conversations': unread_ids_wConversations['unread_conversations'],
+            'conversations': unread_ids_wConversations['conversations']
+        })
+    else:
+        return JsonResponse({'error': 'Failed to sync/fetch unread ids and covnersations'}, status=400)
+
 def register_page(request):
     return render(request, 'users/register.html')
 

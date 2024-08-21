@@ -10,6 +10,12 @@ class Conversation(models.Model):
     subject = models.CharField(max_length=255)
     created_at = models.DateTimeField(default=timezone.now)
     last_updated = models.DateTimeField(auto_now=True)
+    unread = models.BooleanField(default=True)
+    
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.last_updated = timezone.now()
+        super(Conversation, self).save(*args, **kwargs)
     
     def __str__(self):
         return f"{self.subject} (Last updated: {self.last_updated})"

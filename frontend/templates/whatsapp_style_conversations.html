@@ -325,8 +325,35 @@
     <script>
     $(document).ready(function() {
         var currentlySelectedConversationId = null;
+        let knownConversationIds = new Set();
+        let unreadConversations = new Set();
     
-        // Move the click handler outside of the document.ready function
+        // Initialize unread conversations from local storage
+        function initializeUnreadConversations() {
+            const storedUnread = localStorage.getItem('unreadConversations');
+            if (storedUnread) {
+                unreadConversations = new Set(JSON.parse(storedUnread));
+            }
+        }
+    
+        // Save unread conversations to local storage
+        function saveUnreadConversations() {
+            localStorage.setItem('unreadConversations', JSON.stringify([...unreadConversations]));
+        }
+    
+        // Mark conversation as unread
+        function markConversationAsUnread(conversationId) {
+            unreadConversations.add(conversationId);
+            saveUnreadConversations();
+        }
+    
+        // Mark conversation as read
+        function markConversationAsRead(conversationId) {
+            unreadConversations.delete(conversationId);
+            saveUnreadConversations();
+        }
+    
+        // Modified click handler for conversation items
         $(document).on('click', '.conversation-item', function(e) {
             e.preventDefault();
             var conversationId = $(this).data('conversation-id');
@@ -336,7 +363,22 @@
             $('.conversation-item').removeClass('active');
             $(this).addClass('active').removeClass('new-conversation');
             
-            newUnclickedConversations.delete(conversationId);
+            markConversationAsRead(conversationId);
+            
+            // Mark conversation as read on the server
+            $.ajax({
+                url: `/frontend/conversations/mark_read/${conversationId}/`,
+                type: 'GET',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        var $item = $(`.conversation-item[data-conversation-id="${conversationId}"]`);
+                        var formattedTime = formatDate(response.last_updated);
+                        $item.find('p').text('Last updated: ' + formattedTime);
+                    } else {
+                        console.error('Failed to mark conversation as read');
+                    }
+                }
+            });
         });
     
         // Handle reply form submission
@@ -473,9 +515,6 @@
             }
         }
         
-        let knownConversationIds = new Set();
-        let newUnclickedConversations = new Set();
-        
         function updateConversationList(conversations) {
             var $conversationList = $('.conversation-list');
             
@@ -483,16 +522,19 @@
                 var isNew = !knownConversationIds.has(conversation.id);
                 if (isNew) {
                     knownConversationIds.add(conversation.id);
-                    newUnclickedConversations.add(conversation.id);
+                }
+                
+                if (conversation.unread) {
+                    markConversationAsUnread(conversation.id);
                 }
                 
                 var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
                 var formattedTime = formatDate(conversation.last_updated);
                 
                 var isActive = conversation.id == currentlySelectedConversationId;
-                var isNewUnclicked = newUnclickedConversations.has(conversation.id);
+                var isUnread = unreadConversations.has(conversation.id);
                 var conversationHtml = `
-                    <li class="conversation-item ${isNewUnclicked ? 'new-conversation' : ''} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
+                    <li class="conversation-item ${isUnread ? 'new-conversation' : ''} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
                         <h3 title="${conversation.subject}">${conversation.subject}</h3>
                         <p>Last updated: ${formattedTime}</p>
                     </li>
@@ -510,7 +552,20 @@
                 var id = $(this).data('conversation-id');
                 if (!conversations.some(c => c.id === id)) {
                     $(this).remove();
-                    newUnclickedConversations.delete(id);
+                    unreadConversations.delete(id);
+                    saveUnreadConversations();
+                }
+            });
+        }
+    
+        function syncUnreadStatus() {
+            $.ajax({
+                url: '{% url 'sync_unread_conversations' %}',
+                type: 'GET',
+                success: function(response) {
+                    unreadConversations = new Set(response.unread_conversations);
+                    saveUnreadConversations();
+                    updateConversationList(response.conversations);
                 }
             });
         }
@@ -534,13 +589,17 @@
             });
         }
         
-        // Initialize known conversation IDs and start polling
+        // Initialize known conversation IDs, unread conversations, and start polling
         $('.conversation-item').each(function() {
             knownConversationIds.add($(this).data('conversation-id'));
         });
         
+        initializeUnreadConversations();
         pollForNewConversations();
-        });
+        
+        // Sync unread status periodically
+        setInterval(syncUnreadStatus, 1 * 60 * 1000); // Every 1 minutes
+    });
     </script>
 </body>
 </html>

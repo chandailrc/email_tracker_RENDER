@@ -12,7 +12,8 @@ def list_conversations(request):
         'id': conv.id,
         'subject': conv.subject,
         'last_updated': conv.last_updated.isoformat(),
-        'participants': [p.email for p in conv.participants.all()]
+        'participants': [p.email for p in conv.participants.all()],
+        'unread': conv.unread
     } for conv in conversations]
     return JsonResponse({'conversations': data})
 
@@ -83,3 +84,44 @@ def add_message_to_conversation(request, conversation_id):
         return JsonResponse({'error': 'Conversation or Email not found'}, status=404)
     except json.JSONDecodeError:
         return JsonResponse({'error': 'Invalid JSON'}, status=400)
+
+@require_http_methods(["GET"])
+def update_conversation_unread_status(request, conversation_id):
+    if request.method == 'GET':
+        conversation = Conversation.objects.get(id=conversation_id, user=request.user)
+        if conversation.unread:
+            conversation.unread = False
+            conversation.save(update_fields=['unread'])
+        return JsonResponse({
+            'status': 'success',
+            'last_updated': conversation.last_updated.isoformat()
+        })
+    return JsonResponse({'status': 'error'}, status=400)
+
+@require_http_methods(["GET"])
+def fetch_unread_id_list(request):
+    # Get all unread conversations for the current user
+    unread_conversations = Conversation.objects.filter(user=request.user, unread=True)
+    
+    # Create a list of unread conversation IDs
+    unread_ids = list(unread_conversations.values_list('id', flat=True))
+    
+    # Get all conversations for the user, ordered by last_updated
+    all_conversations = Conversation.objects.filter(user=request.user).order_by('-last_updated')
+    
+    # Serialize the conversations
+    serialized_conversations = [
+        {
+            'id': conv.id,
+            'subject': conv.subject,
+            'last_updated': conv.last_updated.isoformat(),
+            'unread': conv.unread,
+            # Add any other fields you need
+        }
+        for conv in all_conversations
+    ]
+    
+    return JsonResponse({
+        'unread_conversations': unread_ids,
+        'conversations': serialized_conversations
+    })
