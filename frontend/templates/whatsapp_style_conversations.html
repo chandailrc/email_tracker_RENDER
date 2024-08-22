@@ -67,7 +67,7 @@
         
         .conversation-item.active {
             background-color: #e8f0fe;
-            border-left: 4px solid var(--accent-color);
+            border-right: 12px solid var(--accent-color);
         }
         
         .conversation-item.new-conversation {
@@ -289,7 +289,7 @@
             <div class="conversation-item {% if conversation.unread %}new-conversation{% elif conversation.unread_count > 0 %}unread-messages{% endif %} {% if conversation.id == active_conversation.id %}active{% endif %}"
                  data-conversation-id="{{ conversation.id }}">
                 <h3>{{ conversation.subject }}</h3>
-                <p>Last updated: {{ conversation.last_updated }}</p>
+                <p>{{ conversation.last_updated }}</p>
                 {% if conversation.unread_count > 0 %}
                     <span class="unread-badge">{{ conversation.unread_count }}</span>
                 {% endif %}
@@ -491,11 +491,18 @@
     
         function loadConversation(conversationId) {
             $.ajax({
-                url: '{% url 'conversation_list' %}' + conversationId + '/',                
+                url: '{% url 'conversation_list' %}' + conversationId + '/',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data) {
                     updateConversationView(data);
+                    currentlySelectedConversationId = conversationId;
+                    
+                    // Reset unread count for this conversation
+                    resetConversationUnreadCount(conversationId);
+                    
+                    // Update the conversation list to reflect changes
+                    pollForNewConversations();
                 },
                 error: function(xhr, status, error) {
                     console.error("An error occurred: " + error);
@@ -517,6 +524,8 @@
                             if (activeConversationId) {
                                 loadConversation(activeConversationId);
                             }
+                            // Update the conversation list
+                            pollForNewConversations();
                         }
                     } else {
                         alert('Error: ' + response.message);
@@ -599,31 +608,31 @@
             
             conversations.forEach(function(conversation) {
                 var isNew = conversation.is_new;
-                if (!knownConversationIds.has(conversation.id)) {
-                    knownConversationIds.add(conversation.id);
-                }
-                
-                var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
-                var formattedTime = formatDate(conversation.last_updated);
-                
                 var isActive = conversation.id == currentlySelectedConversationId;
                 var unreadCount = conversation.unread_count || 0;
                 
+                // Only apply unread styling if the conversation is not active
+                var unreadClass = (!isActive && unreadCount > 0) ? 'unread-messages' : '';
+                
                 var conversationHtml = `
-                    <li class="conversation-item ${isNew ? 'new-conversation' : ''} ${!isNew && unreadCount > 0 ? 'unread-messages' : ''} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
+                    <li class="conversation-item ${isNew ? 'new-conversation' : ''} ${unreadClass} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
                         <h3 title="${conversation.subject}">${conversation.subject}</h3>
-                        <p>${formattedTime}</p>
-                        ${!isNew && unreadCount > 0 ? `<span class="unread-badge">${unreadCount}</span>` : ''}
+                        <p>${formatDate(conversation.last_updated)}</p>
+                        ${(!isActive && unreadCount > 0) ? `<span class="unread-badge">${unreadCount}</span>` : ''}
                     </li>
                 `;
                 
+                var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
                 if ($existingItem.length) {
                     $existingItem.replaceWith($(conversationHtml));
                 } else {
                     $conversationList.prepend($(conversationHtml));
                 }
                 
-                updateUnreadMessageCount(conversation.id, unreadCount);
+                // If the conversation is active, reset its unread count
+                if (isActive && unreadCount > 0) {
+                    resetConversationUnreadCount(conversation.id);
+                }
             });
             
             // Remove conversations that no longer exist
@@ -635,6 +644,23 @@
                     delete unreadMessageCounts[id];
                     saveUnreadConversations();
                     saveUnreadMessageCounts();
+                }
+            });
+        }
+        
+        function resetConversationUnreadCount(conversationId) {
+            $.ajax({
+                url: `/frontend/conversations/reset_conversation_unread/${conversationId}/`,
+                method: 'POST',
+                success: function(response) {
+                    if (response.success) {
+                        console.log(`Unread count reset for conversation ${conversationId}`);
+                    } else {
+                        console.error('Failed to reset unread count');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(`Error resetting unread count: ${error}`);
                 }
             });
         }
