@@ -91,12 +91,8 @@
             max-height: 1.2em; /* Approximate height of one line */
             transition: max-height 0.5s ease, white-space 0s linear 2s;
         }
-        
-        .conversation-item.new-conversation h3 {
-            color: #2980b9;
-            font-weight: bold;
-        }
 
+        .conversation-item.force-hover h3,
         .conversation-item:hover h3 {
             white-space: normal;
             overflow: hidden;
@@ -105,6 +101,11 @@
             -webkit-box-orient: vertical;
             max-height: 2.4em; /* Approximate height of two lines */
             transition: max-height 0.5s ease 1s, white-space 0s linear 2s;
+        }
+        
+        .conversation-item.new-conversation h3 {
+            color: #2980b9;
+            font-weight: bold;
         }
         
         .conversation-item.unread-messages {
@@ -415,20 +416,7 @@
             console.log(conversationId)
             
             // Reset unread state on the server
-            $.ajax({
-                url: `/frontend/conversations/reset_conversation_unread/${conversationId}/`,  // Use backticks and ${} to insert the variable
-                method: 'POST',
-                success: function(response) {
-                    if (response.success) {
-                        console.log(`Conversation ${conversationId} marked as read on the server`);
-                    } else {
-                        console.error('Failed to mark conversation as read on the server');
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error(`Error marking conversation as read for ${conversationId}: ${error}`);
-                }
-            });
+            // resetConversationUnreadCount(conversationId)
         }
     
         $(document).on('click', '.conversation-item', function(e) {
@@ -606,27 +594,36 @@
         function updateConversationList(conversations) {
             var $conversationList = $('.conversation-list');
             
+            // Store the ID of the conversation item being hovered, if any
+            var hoveredItemId = $conversationList.find('.conversation-item:hover').data('conversation-id');
+            
+            conversations.sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated));
+            
+            $conversationList.empty();
+            
             conversations.forEach(function(conversation) {
                 var isNew = conversation.is_new;
                 var isActive = conversation.id == currentlySelectedConversationId;
                 var unreadCount = conversation.unread_count || 0;
                 
+                var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
+                var isHovered = conversation.id === hoveredItemId;
+                               
                 // Only apply unread styling if the conversation is not active
                 var unreadClass = (!isActive && unreadCount > 0) ? 'unread-messages' : '';
                 
                 var conversationHtml = `
-                    <li class="conversation-item ${isNew ? 'new-conversation' : ''} ${unreadClass} ${isActive ? 'active' : ''}" data-conversation-id="${conversation.id}">
+                    <li class="conversation-item ${isNew ? 'new-conversation' : ''} ${unreadClass} ${isActive ? 'active' : ''} ${isHovered ? 'force-hover' : ''}" data-conversation-id="${conversation.id}">
                         <h3 title="${conversation.subject}">${conversation.subject}</h3>
                         <p>${formatDate(conversation.last_updated)}</p>
                         ${(!isActive && unreadCount > 0) ? `<span class="unread-badge">${unreadCount}</span>` : ''}
                     </li>
                 `;
                 
-                var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
                 if ($existingItem.length) {
                     $existingItem.replaceWith($(conversationHtml));
                 } else {
-                    $conversationList.prepend($(conversationHtml));
+                    $conversationList.append($(conversationHtml));
                 }
                 
                 // If the conversation is active, reset its unread count
@@ -681,13 +678,17 @@
         }
     
         function pollForNewConversations() {
+            var $conversationList = $('.conversation-list');
+            var scrollTop = $conversationList.scrollTop();
+        
             $.ajax({
-                url: '{% url 'get_latest_conversations' %}',                
+                url: '{% url 'get_latest_conversations' %}',
                 type: 'GET',
                 dataType: 'json',
                 success: function(response) {
                     if (response.conversations) {
                         updateConversationList(response.conversations);
+                        $conversationList.scrollTop(scrollTop);
                     }
                 },
                 error: function(xhr, status, error) {
