@@ -54,5 +54,5 @@ def process_email(email, email_type, user_id, in_reply_sendOrRec=None, imap_date
     else:
         ConversationMessage.objects.create(conversation=conversation, received_email=email, content=email.body)
     
-    conversation.save(delivered_timestamp=imap_datetime)  # Update the last_updated field
+    conversation.save(delivered_timestamp=imap_datetime)  # Update the last_updated field. If imap_datetime is Non
     return conversation

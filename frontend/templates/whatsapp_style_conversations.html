@@ -498,14 +498,17 @@
             });
         }
     
-        function fetchEmails() {
+        function fetchEmails(buttonPressed=false) {
             $.ajax({
                 url: '{% url 'fetch_emails' %}',
                 type: 'POST',
                 dataType: 'json',
                 success: function(response) {
                     if (response.status === 'success') {
-                        alert('Fetched ' + response.new_emails_count + ' new emails');
+                        console.log("Fetching emails ever 30 seconds")
+                        if (buttonPressed){
+                            alert('Fetched ' + response.new_emails_count + ' new emails');
+                        }
                         // If new emails were fetched, reload the current conversation
                         if (response.new_emails_count > 0) {
                             var activeConversationId = $('.conversation-item.active').data('conversation-id');
@@ -528,7 +531,7 @@
     
         $('.fetch-emails-button').click(function(e) {
             e.preventDefault();
-            fetchEmails();
+            fetchEmails(true);
         });
     
         function updateConversationView(data) {
@@ -543,17 +546,11 @@
                 
                 var messagesHtml = '<div class="conversation-messages" id="conversation-messages">';
                 
-                // Count received messages from the end
-                var receivedMessageCount = 0;
                 var unreadCount = data.conversation.unread_count || 0;
                 
                 data.conversation.messages.forEach(function(message, index) {
                     var formattedTime = formatDate(message.timestamp);
                     var messageClass = message.sendOrRec === 'send' ? 'message-sent' : 'message-received';
-                    
-                    if (message.sendOrRec === 'received') {
-                        receivedMessageCount++;
-                    }
                     
                     var isNewMessage = message.sendOrRec === 'received' && 
                                        (data.conversation.messages.length - index) <= unreadCount;
@@ -667,6 +664,7 @@
                 url: '{% url 'sync_unread_conversations' %}',                
                 type: 'GET',
                 success: function(response) {
+                    console.log("Syncing unread status")
                     unreadConversations = new Set(response.unread_conversations);
                     saveUnreadConversations();
                     updateConversationList(response.conversations);
@@ -720,9 +718,12 @@
         $('.conversation-item').each(function() {
             knownConversationIds.add($(this).data('conversation-id'));
         });
+        
         initializeConversations();
         pollForNewConversations();
         
+        // Fetch emails periodically fromt he imap server and update list
+        setInterval(fetchEmails, 30000);
         // Sync unread status periodically
         setInterval(syncUnreadStatus, 60000); // Every 1 minute
     });
