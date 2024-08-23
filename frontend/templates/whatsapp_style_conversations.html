@@ -677,25 +677,37 @@
             });
         }
     
-        function pollForNewConversations() {
-            var $conversationList = $('.conversation-list');
-            var scrollTop = $conversationList.scrollTop();
+        let lastPollTime = 0; // Initialize to 0 to ensure first poll always updates
         
+        function initializeConversations() {
+            pollForNewConversations(true); // true flag indicates it's the initial poll
+        }
+        
+        function pollForNewConversations(isInitialPoll = false) {
             $.ajax({
                 url: '{% url 'get_latest_conversations' %}',
                 type: 'GET',
                 dataType: 'json',
                 success: function(response) {
                     if (response.conversations) {
-                        updateConversationList(response.conversations);
-                        $conversationList.scrollTop(scrollTop);
+                        let hasUpdates = isInitialPoll || response.conversations.some(conv => 
+                            new Date(conv.last_updated).getTime() > lastPollTime
+                        );
+        
+                        if (hasUpdates) {
+                            updateConversationList(response.conversations);
+                            console.log('Conversation list updated');
+                        } else {
+                            console.log('No updates');
+                        }
                     }
+                    lastPollTime = new Date().getTime();
                 },
                 error: function(xhr, status, error) {
                     console.error("Error fetching conversations: " + error);
                 },
                 complete: function() {
-                    setTimeout(pollForNewConversations, 10000); // Poll every 10 seconds
+                    setTimeout(() => pollForNewConversations(false), 10000); // Poll every 10 seconds
                 }
             });
         }
@@ -706,6 +718,7 @@
         $('.conversation-item').each(function() {
             knownConversationIds.add($(this).data('conversation-id'));
         });
+        initializeConversations();
         pollForNewConversations();
         
         // Sync unread status periodically
