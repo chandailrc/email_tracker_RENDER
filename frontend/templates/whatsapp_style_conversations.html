@@ -433,6 +433,7 @@
             var form = $(this);
             var url = form.attr('action');
             var formData = form.serialize();
+            var conversationId = form.find('input[name="conversation_id"]').val();
         
             $.ajax({
                 url: url,
@@ -440,8 +441,12 @@
                 data: formData,
                 success: function(response) {
                     if (response.status === 'success') {
+                        // Clear preserved content for this conversation
+                        delete replyFormContents[conversationId];
+                        
                         // Reload the conversation to show the new reply
                         loadConversation(response.conversation_id);
+                        
                         // Clear the textarea after successful submission
                         form.find('textarea[name="body"]').val('');
                     } else {
@@ -534,8 +539,23 @@
             fetchEmails(true);
         });
     
+        // Object to store reply form content for each conversation
+        let replyFormContents = {};
+        
         function updateConversationView(data) {
             var $mainContent = $('.main-content');
+            
+            // Preserve reply form content for the current conversation
+            var currentConversationId = $mainContent.find('input[name="conversation_id"]').val();
+            if (currentConversationId) {
+                var currentReplyContent = $mainContent.find('.reply-form textarea').val();
+                if (currentReplyContent) {
+                    replyFormContents[currentConversationId] = currentReplyContent;
+                } else {
+                    delete replyFormContents[currentConversationId];
+                }
+            }
+            
             $mainContent.empty();
         
             if (data.conversation) {
@@ -564,6 +584,9 @@
                 });
                 
                 messagesHtml += '</div>';
+                
+                // Retrieve preserved content for this conversation, if any
+                var preservedContent = replyFormContents[data.conversation.id] || '';
         
                 var replyFormHtml = '<div class="reply-form">' +
                                     '<form method="post" action="{% url 'reply_send_tracked_email_view' %}">' +
@@ -573,7 +596,7 @@
                                     '<input type="hidden" name="subject" value="Re: ' + data.conversation.subject + '">' +
                                     '<input type="hidden" name="last_email_id" value="' + data.last_email_id + '">' +
                                     '<input type="hidden" name="sendOrRec" value="' + data.sendOrRec + '">' +
-                                    '<textarea name="body" placeholder="Type your message..." rows="3" required></textarea>' +
+                                    '<textarea name="body" placeholder="Type your message..." rows="3" required>' + preservedContent + '</textarea>' +
                                     '<button type="submit">Send Reply</button>' +
                                     '</form></div>';
         
