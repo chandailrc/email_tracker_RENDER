@@ -4,7 +4,7 @@ from sending.models import SentEmail
 from receiving.models import ReceivedEmail
 from django.contrib.auth import get_user_model
 
-def process_email(email, email_type, user_id, in_reply_sendOrRec=None):
+def process_email(email, email_type, user_id, in_reply_sendOrRec=None, imap_datetime=None):
     User = get_user_model()
     user = User.objects.get(id=user_id)
     
@@ -54,5 +54,5 @@ def process_email(email, email_type, user_id, in_reply_sendOrRec=None):
     else:
         ConversationMessage.objects.create(conversation=conversation, received_email=email, content=email.body)
     
-    conversation.save()  # Update the last_updated field
+    conversation.save(delivered_timestamp=imap_datetime)  # Update the last_updated field
     return conversation

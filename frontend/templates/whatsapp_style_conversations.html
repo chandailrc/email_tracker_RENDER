@@ -676,12 +676,12 @@
                 }
             });
         }
-    
-        let lastPollTime = 0; // Initialize to 0 to ensure first poll always updates
-        
+           
         function initializeConversations() {
             pollForNewConversations(true); // true flag indicates it's the initial poll
         }
+        
+        let lastPollTime = 0; // Initialize to 0 to ensure first poll always updates
         
         function pollForNewConversations(isInitialPoll = false) {
             $.ajax({
@@ -689,19 +689,21 @@
                 type: 'GET',
                 dataType: 'json',
                 success: function(response) {
-                    if (response.conversations) {
-                        let hasUpdates = isInitialPoll || response.conversations.some(conv => 
-                            new Date(conv.last_updated).getTime() > lastPollTime
-                        );
+                    if (response.conversations && response.conversations.length > 0) {
+                        // Find the most recent last_updated timestamp
+                        let mostRecentUpdate = Math.max(...response.conversations.map(conv => new Date(conv.last_updated).getTime()));
+                        
+                        let hasUpdates = isInitialPoll || mostRecentUpdate > lastPollTime;
         
                         if (hasUpdates) {
                             updateConversationList(response.conversations);
                             console.log('Conversation list updated');
+                            // Update lastPollTime to the most recent update time
+                            lastPollTime = mostRecentUpdate;
                         } else {
                             console.log('No updates');
                         }
                     }
-                    lastPollTime = new Date().getTime();
                 },
                 error: function(xhr, status, error) {
                     console.error("Error fetching conversations: " + error);

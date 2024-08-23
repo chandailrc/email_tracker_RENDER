@@ -32,9 +32,19 @@ class Conversation(models.Model):
         self.save(update_fields=['unread_count', 'unread'])
     
     def save(self, *args, **kwargs):
-        if not self.id:
+        delivered_timestamp = kwargs.pop('delivered_timestamp', None)
+        if delivered_timestamp:
+            self.last_updated = delivered_timestamp
+        elif not self.id:
             self.last_updated = timezone.now()
         super(Conversation, self).save(*args, **kwargs)
+        
+    # if delivered_timestamp==None
+    # If the instance is new (not self.id is True):
+    #     last_updated is set to the current time (timezone.now()).
+
+    # If the instance is not new (already saved before):  
+    #     last_updated is not explicitly set within the modified save method and instead will be updated by auto_now=True, which also sets it to the current time.
     
     def __str__(self):
         return f"{self.subject} (Last updated: {self.last_updated})"

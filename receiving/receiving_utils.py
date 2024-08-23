@@ -8,7 +8,7 @@ from django.core.files.base import ContentFile
 from email.utils import parseaddr
 from conversations.email_processor import process_email
 from django.contrib.auth import get_user_model
-
+from email.utils import parsedate_to_datetime
 from django.core.exceptions import ObjectDoesNotExist
 
 def parse_email_body(email_body):
@@ -125,9 +125,14 @@ def process_incoming_email(raw_email, user_id):
     sender = parseaddr(email_message['From'])[1]
     recipient = parseaddr(email_message['To'])[1]
     subject = email_message['Subject']
+    imap_stamp = email_message['Date'] # Time at which the email was deilvered on the IMAP server
+    imap_datetime = parsedate_to_datetime(imap_stamp)
     message_id = email_message['Message-ID']
     message_id = extract_message_id(message_id)
+    
+    
     in_reply_to = email_message.get('In-Reply-To')
+    
     if in_reply_to:
         in_reply_to = extract_message_id(in_reply_to)
         references = email_message.get('References')
@@ -187,13 +192,13 @@ def process_incoming_email(raw_email, user_id):
             received_email.thread_id = ''
         received_email.save()
         
-        process_email(received_email, 'received', user_id, result_msg)
+        process_email(received_email, 'received', user_id, in_reply_sendOrRec=result_msg, imap_datetime=imap_datetime)
         
     else:
         received_email.in_reply_to = in_reply_to
         received_email.thread_id = ''
         received_email.save()
-        process_email(received_email, 'received', user_id)
+        process_email(received_email, 'received', user_id, imap_datetime=imap_datetime)
 
     # Process attachments
     for part in email_message.walk():
