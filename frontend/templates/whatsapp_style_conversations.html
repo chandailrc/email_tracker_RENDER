@@ -545,6 +545,11 @@
         function updateConversationView(data) {
             var $mainContent = $('.main-content');
             
+            // Check if the textarea is currently focused and get its cursor position
+            var $existingTextarea = $mainContent.find('.reply-form textarea');
+            var isFocused = $existingTextarea.is(':focus');
+            var cursorPosition = isFocused ? $existingTextarea[0].selectionStart : 0;
+            
             // Preserve reply form content for the current conversation
             var currentConversationId = $mainContent.find('input[name="conversation_id"]').val();
             if (currentConversationId) {
@@ -605,6 +610,15 @@
                 // Scroll to the bottom of the conversation
                 var $conversationMessages = $('#conversation-messages');
                 $conversationMessages.scrollTop($conversationMessages[0].scrollHeight);
+                
+                // Restore focus and cursor position if the textarea was focused before
+                if (isFocused) {
+                    var $newTextarea = $mainContent.find('.reply-form textarea');
+                    $newTextarea.focus();
+                    $newTextarea[0].setSelectionRange(cursorPosition, cursorPosition);
+                }
+                // else: No else
+                
             } else {
                 $mainContent.html('<div class="conversation-header"><h2>Error</h2></div>' +
                                   '<div class="conversation-messages"><p>The selected conversation could not be loaded.</p></div>');
