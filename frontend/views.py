@@ -358,7 +358,7 @@ def conversation_list(request, conversation_id=None):
         })
     
     # Regular request, return the full page
-    return render(request, 'whatsapp_style_conversations.html', context)
+    return render(request, 'inbox_conversations.html', context)
 
 @login_required
 def get_latest_conversations(request):

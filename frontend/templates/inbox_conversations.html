@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Conversations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #333333;
+            --light-text-color: #7f8c8d;
+            --border-color: #bdc3c7;
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+            max-width: 1400px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar {
+            width: 30%;
+            background-color: #ffffff;
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+        }
+        
+        .sidebar-header {
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .conversation-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .conversation-item {
+            position: relative;
+            padding: 10px 15px 10px 35px; /* Increased left padding for the icon */
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden; /* For text truncation */
+        }
+        
+        .conversation-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .conversation-item.active {
+            background-color: #e8f0fe;
+            border-right: 12px solid var(--accent-color);
+        }
+        
+        .conversation-item.new-conversation {
+            border-left: 4px solid #3498db;
+            animation: pulse 2s infinite;
+        }
+        
+        .conversation-item.new-conversation::before {
+            content: "🔔";
+            position: absolute;
+            left: 10px;
+            top: 12px; /* Adjusted to align with the subject line */
+            font-size: 1.2em;
+        }
+        
+        .conversation-item h3 {
+            margin: 0 0 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 1.2em; /* Approximate height of one line */
+            transition: max-height 0.5s ease, white-space 0s linear 2s;
+        }
+
+        .conversation-item.force-hover h3,
+        .conversation-item:hover h3 {
+            white-space: normal;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            max-height: 2.4em; /* Approximate height of two lines */
+            transition: max-height 0.5s ease 1s, white-space 0s linear 2s;
+        }
+        
+        .conversation-item.new-conversation h3 {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        
+        .conversation-item.unread-messages {
+            background-color: #fff0e0;
+            border-left: 4px solid #ffa500;
+        }
+        
+        .unread-badge {
+            background-color: #ffa500;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.8em;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+            }
+        }
+        
+        .main-content {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+        
+        .conversation-header {
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .conversation-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #e5ddd5;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .message-container {
+            display: flex;
+            margin-bottom: 10px;
+            max-width: 75%;
+        }
+        
+        .message-received {
+            align-self: flex-start;
+            margin-right: auto;
+        }
+        
+        .message-sent {
+            align-self: flex-end;
+            margin-left: auto;
+        }
+        
+        .message {
+            padding: 8px 12px;
+            border-radius: 7.5px;
+            position: relative;
+            word-wrap: break-word;
+        }
+        
+        .message-sent .message {
+            background-color: #dbf1f7;
+            border-top-right-radius: 0;
+        }
+        
+        .message-received .message {
+            background-color: #ffffff;
+            border-top-left-radius: 0;
+        }
+        
+        .message-header {
+            font-size: 0.75em;
+            color: #667781;
+            margin-bottom: 4px;
+        }
+        
+        .message-content {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .message-time {
+            font-size: 0.7em;
+            color: #667781;
+            float: right;
+            margin-top: 4px;
+            margin-left: 8px;
+        }
+        
+        .reply-form {
+            padding: 20px;
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .reply-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            resize: none;
+            font-family: inherit;
+            font-size: 14px;
+        }
+        
+        .reply-form button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        
+        .reply-form button:hover {
+            background-color: #2980b9;
+        }
+        
+        .fetch-emails-button {
+            padding: 8px 15px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        
+        .fetch-emails-button:hover {
+            background-color: #2980b9;
+        }
+        
+        h2, h3 {
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        @keyframes highlightFade {
+            0% { background-color: rgba(255, 255, 160, 0.5); }
+            50% { background-color: rgba(255, 255, 210, 0.25); }
+            100% { background-color: #ffffff; }
+        }
+        
+        .highlight-new-message {
+            animation: highlightFade 5s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Conversations</h2>
+            <button class="fetch-emails-button">Fetch New Emails</button>
+        </div>
+        <ul class="conversation-list">
+            {% for conversation in conversations %}
+            <div class="conversation-item {% if conversation.unread %}new-conversation{% elif conversation.unread_count > 0 %}unread-messages{% endif %} {% if conversation.id == active_conversation.id %}active{% endif %}"
+                 data-conversation-id="{{ conversation.id }}">
+                <h3>{{ conversation.subject }}</h3>
+                <p>{{ conversation.last_updated }}</p>
+                {% if conversation.unread_count > 0 %}
+                    <span class="unread-badge">{{ conversation.unread_count }}</span>
+                {% endif %}
+            </div>
+            {% empty %}
+            <li>No conversations found.</li>
+            {% endfor %}
+        </ul>
+    </div>
+        <div class="main-content">
+            {% if conversation_selected %}
+                {% if active_conversation %}
+                    <div class="conversation-header">
+                        <h2>{{ active_conversation.subject }}</h2>
+                        <p>Participants: {{ active_conversation.participants|join:", " }}</p>
+                    </div>
+                    <div class="conversation-messages" id="conversation-messages">
+                        {% for message in active_conversation.messages %}
+                        <div class="message-container {% if message.sendOrRec == 'send' %}message-sent{% else %}message-received{% endif %}">
+                            <div class="message">
+                                <div class="message-header">
+                                    <strong>{{ message.sender }}</strong>
+                                </div>
+                                <div class="message-content">
+                                    {{ message.content|safe }}
+                                </div>
+                                <div class="message-time">{{ message.timestamp }}</div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p>No messages in this conversation.</p>
+                        {% endfor %}
+                    </div>
+                    <div class="reply-form">
+                        <form method="post" action="{% url 'reply_send_tracked_email_view' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="conversation_id" value="{{ active_conversation.id }}">
+                            <input type="hidden" name="recipient" value="{{ recipient_email }}">
+                            <input type="hidden" name="subject" value="Re: {{ active_conversation.subject }}">
+                            <input type="hidden" name="last_email_id" value="{{ last_email_id }}">
+                            <input type="hidden" name="sendOrRec" value="{{ sendOrRec }}">
+                            <textarea name="body" placeholder="Type your message..." rows="3" required></textarea>
+                            <button type="submit">Send Reply</button>
+                        </form>
+                    </div>
+                {% else %}
+                    <div class="conversation-header">
+                        <h2>Error</h2>
+                    </div>
+                    <div class="conversation-messages">
+                        <p>The selected conversation could not be loaded.</p>
+                    </div>
+                {% endif %}
+            {% else %}
+                <!-- This is the new blank state when no conversation is selected -->
+                <div class="conversation-header">
+                    <h2>Welcome to Your Conversations</h2>
+                </div>
+                <div class="conversation-messages">
+                    <p>Select a conversation from the list to view messages.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var currentlySelectedConversationId = null;
+        let knownConversationIds = new Set();
+        let unreadConversations = new Set();
+        let unreadMessageCounts = {};
+    
+        function initializeUnreadConversations() {
+            const storedUnread = localStorage.getItem('unreadConversations');
+            if (storedUnread) {
+                unreadConversations = new Set(JSON.parse(storedUnread));
+            }
+        }
+    
+        function saveUnreadConversations() {
+            localStorage.setItem('unreadConversations', JSON.stringify([...unreadConversations]));
+        }
+    
+        function markConversationAsUnread(conversationId) {
+            unreadConversations.add(conversationId);
+            saveUnreadConversations();
+        }
+    
+        function markConversationAsRead(conversationId) {
+            unreadConversations.delete(conversationId);
+            saveUnreadConversations();
+        }
+    
+        function updateUnreadMessageCount(conversationId, count) {
+            unreadMessageCounts[conversationId] = count;
+            saveUnreadMessageCounts();
+        }
+    
+        function saveUnreadMessageCounts() {
+            localStorage.setItem('unreadMessageCounts', JSON.stringify(unreadMessageCounts));
+        }
+    
+        function loadUnreadMessageCounts() {
+            const stored = localStorage.getItem('unreadMessageCounts');
+            if (stored) {
+                unreadMessageCounts = JSON.parse(stored);
+            }
+        }
+    
+        function handleConversationClick(conversationId) {
+            currentlySelectedConversationId = conversationId;
+            loadConversation(conversationId);
+            
+            $('.conversation-item').removeClass('active');
+            const $clickedItem = $(`.conversation-item[data-conversation-id="${conversationId}"]`);
+            $clickedItem.addClass('active').removeClass('new-conversation unread-messages');
+            $clickedItem.find('.unread-badge').remove();
+            
+            markConversationAsRead(conversationId);
+            updateUnreadMessageCount(conversationId, 0);
+            
+            console.log('conversationId:')
+            console.log(conversationId)
+            
+            // Reset unread state on the server
+            // resetConversationUnreadCount(conversationId)
+        }
+    
+        $(document).on('click', '.conversation-item', function(e) {
+            e.preventDefault();
+            var conversationId = $(this).data('conversation-id');
+            console.log('conversationId:from outside handle:')
+            console.log(conversationId)
+            handleConversationClick(conversationId);
+        });
+    
+        // Handle reply form submission
+        $(document).on('submit', '.reply-form form', function(e) {
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+            var formData = form.serialize();
+            var conversationId = form.find('input[name="conversation_id"]').val();
+        
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    if (response.status === 'success') {
+                        // Clear preserved content for this conversation
+                        delete replyFormContents[conversationId];
+                        
+                        // Reload the conversation to show the new reply
+                        loadConversation(response.conversation_id);
+                        
+                        // Clear the textarea after successful submission
+                        form.find('textarea[name="body"]').val('');
+                    } else {
+                        alert('Error: ' + response.message);  // Show error message
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("An error occurred: " + error);
+                    alert("An error occurred while sending the reply. Please try again.");
+                }
+            });
+        });
+    
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const yesterday = new Date(now);
+            yesterday.setDate(now.getDate() - 1);
+            yesterday.setHours(0, 0, 0, 0);
+        
+            const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+            if (date >= new Date(now.setHours(0, 0, 0, 0))) {
+                return `Today at ${timeString}`;
+            } else if (date >= yesterday) {
+                return `Yesterday at ${timeString}`;
+            } else if (date >= new Date(now.setDate(now.getDate() - 6))) {
+                return `${date.toLocaleDateString([], { weekday: 'long' })} at ${timeString}`;
+            } else if (date.getFullYear() === now.getFullYear()) {
+                return date.toLocaleDateString([], { month: 'short', day: 'numeric' }) + ` at ${timeString}`;
+            } else {
+                return date.toLocaleDateString([], { year: 'numeric', month: 'short', day: 'numeric' }) + ` at ${timeString}`;
+            }
+        }
+    
+        function loadConversation(conversationId) {
+            $.ajax({
+                url: '{% url 'conversation_list' %}' + conversationId + '/',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    updateConversationView(data);
+                    currentlySelectedConversationId = conversationId;
+                    
+                    // Reset unread count for this conversation
+                    resetConversationUnreadCount(conversationId);
+                    
+                    // Update the conversation list to reflect changes
+                    pollForNewConversations();
+                },
+                error: function(xhr, status, error) {
+                    console.error("An error occurred: " + error);
+                }
+            });
+        }
+    
+        function fetchEmails(buttonPressed=false) {
+            $.ajax({
+                url: '{% url 'fetch_emails' %}',
+                type: 'POST',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        console.log("Fetching emails ever 30 seconds")
+                        if (buttonPressed){
+                            alert('Fetched ' + response.new_emails_count + ' new emails');
+                        }
+                        // If new emails were fetched, reload the current conversation
+                        if (response.new_emails_count > 0) {
+                            var activeConversationId = $('.conversation-item.active').data('conversation-id');
+                            if (activeConversationId) {
+                                loadConversation(activeConversationId);
+                            }
+                            // Update the conversation list
+                            pollForNewConversations();
+                        }
+                    } else {
+                        alert('Error: ' + response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("An error occurred: " + error);
+                    alert("An error occurred while fetching emails. Please try again.");
+                }
+            });
+        }
+    
+        $('.fetch-emails-button').click(function(e) {
+            e.preventDefault();
+            fetchEmails(true);
+        });
+    
+        // Object to store reply form content for each conversation
+        let replyFormContents = {};
+        
+        function updateConversationView(data) {
+            var $mainContent = $('.main-content');
+            
+            // Check if the textarea is currently focused and get its cursor position
+            var $existingTextarea = $mainContent.find('.reply-form textarea');
+            var isFocused = $existingTextarea.is(':focus');
+            var cursorPosition = isFocused ? $existingTextarea[0].selectionStart : 0;
+            
+            // Preserve reply form content for the current conversation
+            var currentConversationId = $mainContent.find('input[name="conversation_id"]').val();
+            if (currentConversationId) {
+                var currentReplyContent = $mainContent.find('.reply-form textarea').val();
+                if (currentReplyContent) {
+                    replyFormContents[currentConversationId] = currentReplyContent;
+                } else {
+                    delete replyFormContents[currentConversationId];
+                }
+            }
+            
+            $mainContent.empty();
+        
+            if (data.conversation) {
+                var headerHtml = '<div class="conversation-header">' +
+                                 '<h2>' + data.conversation.subject + '</h2>' +
+                                 '<p>Participants: ' + data.conversation.participants.join(", ") + '</p>' +
+                                 '</div>';
+                
+                var messagesHtml = '<div class="conversation-messages" id="conversation-messages">';
+                
+                var unreadCount = data.conversation.unread_count || 0;
+                
+                data.conversation.messages.forEach(function(message, index) {
+                    var formattedTime = formatDate(message.timestamp);
+                    var messageClass = message.sendOrRec === 'send' ? 'message-sent' : 'message-received';
+                    
+                    var isNewMessage = message.sendOrRec === 'received' && 
+                                       (data.conversation.messages.length - index) <= unreadCount;
+                    
+                    messagesHtml += '<div class="message-container ' + messageClass + '">' +
+                                    '<div class="message ' + (isNewMessage ? 'highlight-new-message' : '') + '">' +
+                                    '<div class="message-header"><strong>' + message.sender + '</strong></div>' +
+                                    '<div class="message-content">' + message.content + '</div>' +
+                                    '<div class="message-time">' + formattedTime + '</div>' +
+                                    '</div></div>';
+                });
+                
+                messagesHtml += '</div>';
+                
+                // Retrieve preserved content for this conversation, if any
+                var preservedContent = replyFormContents[data.conversation.id] || '';
+        
+                var replyFormHtml = '<div class="reply-form">' +
+                                    '<form method="post" action="{% url 'reply_send_tracked_email_view' %}">' +
+                                    '{% csrf_token %}' +
+                                    '<input type="hidden" name="conversation_id" value="' + data.conversation.id + '">' +
+                                    '<input type="hidden" name="recipient" value="' + data.recipient_email + '">' +
+                                    '<input type="hidden" name="subject" value="Re: ' + data.conversation.subject + '">' +
+                                    '<input type="hidden" name="last_email_id" value="' + data.last_email_id + '">' +
+                                    '<input type="hidden" name="sendOrRec" value="' + data.sendOrRec + '">' +
+                                    '<textarea name="body" placeholder="Type your message..." rows="3" required>' + preservedContent + '</textarea>' +
+                                    '<button type="submit">Send Reply</button>' +
+                                    '</form></div>';
+        
+                $mainContent.append(headerHtml + messagesHtml + replyFormHtml);
+        
+                // Scroll to the bottom of the conversation
+                var $conversationMessages = $('#conversation-messages');
+                $conversationMessages.scrollTop($conversationMessages[0].scrollHeight);
+                
+                // Restore focus and cursor position if the textarea was focused before
+                if (isFocused) {
+                    var $newTextarea = $mainContent.find('.reply-form textarea');
+                    $newTextarea.focus();
+                    $newTextarea[0].setSelectionRange(cursorPosition, cursorPosition);
+                }
+                // else: No else
+                
+            } else {
+                $mainContent.html('<div class="conversation-header"><h2>Error</h2></div>' +
+                                  '<div class="conversation-messages"><p>The selected conversation could not be loaded.</p></div>');
+            }
+        }
+    
+        function updateConversationList(conversations) {
+            var $conversationList = $('.conversation-list');
+            
+            // Store the ID of the conversation item being hovered, if any
+            var hoveredItemId = $conversationList.find('.conversation-item:hover').data('conversation-id');
+            
+            conversations.sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated));
+            
+            $conversationList.empty();
+            
+            conversations.forEach(function(conversation) {
+                var isNew = conversation.is_new;
+                var isActive = conversation.id == currentlySelectedConversationId;
+                var unreadCount = conversation.unread_count || 0;
+                
+                var $existingItem = $conversationList.find(`[data-conversation-id="${conversation.id}"]`);
+                var isHovered = conversation.id === hoveredItemId;
+                               
+                // Only apply unread styling if the conversation is not active
+                var unreadClass = (!isActive && unreadCount > 0) ? 'unread-messages' : '';
+                
+                var conversationHtml = `
+                    <li class="conversation-item ${isNew ? 'new-conversation' : ''} ${unreadClass} ${isActive ? 'active' : ''} ${isHovered ? 'force-hover' : ''}" data-conversation-id="${conversation.id}">
+                        <h3 title="${conversation.subject}">${conversation.subject}</h3>
+                        <p>${formatDate(conversation.last_updated)}</p>
+                        ${(!isActive && unreadCount > 0) ? `<span class="unread-badge">${unreadCount}</span>` : ''}
+                    </li>
+                `;
+                
+                if ($existingItem.length) {
+                    $existingItem.replaceWith($(conversationHtml));
+                } else {
+                    $conversationList.append($(conversationHtml));
+                }
+                
+                // If the conversation is active, reset its unread count
+                if (isActive && unreadCount > 0) {
+                    resetConversationUnreadCount(conversation.id);
+                }
+            });
+            
+            // Remove conversations that no longer exist
+            $conversationList.find('.conversation-item').each(function() {
+                var id = $(this).data('conversation-id');
+                if (!conversations.some(c => c.id === id)) {
+                    $(this).remove();
+                    unreadConversations.delete(id);
+                    delete unreadMessageCounts[id];
+                    saveUnreadConversations();
+                    saveUnreadMessageCounts();
+                }
+            });
+        }
+        
+        function resetConversationUnreadCount(conversationId) {
+            $.ajax({
+                url: `/frontend/conversations/reset_conversation_unread/${conversationId}/`,
+                method: 'POST',
+                success: function(response) {
+                    if (response.success) {
+                        console.log(`Unread count reset for conversation ${conversationId}`);
+                    } else {
+                        console.error('Failed to reset unread count');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(`Error resetting unread count: ${error}`);
+                }
+            });
+        }
+    
+        function syncUnreadStatus() {
+            $.ajax({
+                url: '{% url 'sync_unread_conversations' %}',                
+                type: 'GET',
+                success: function(response) {
+                    console.log("Syncing unread status")
+                    unreadConversations = new Set(response.unread_conversations);
+                    saveUnreadConversations();
+                    updateConversationList(response.conversations);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error syncing unread status: " + error);
+                }
+            });
+        }
+           
+        function initializeConversations() {
+            pollForNewConversations(true); // true flag indicates it's the initial poll
+        }
+        
+        let lastPollTime = 0; // Initialize to 0 to ensure first poll always updates
+        
+        function pollForNewConversations(isInitialPoll = false) {
+        
+            $.ajax({
+                url: '{% url 'get_latest_conversations' %}',
+                type: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.conversations && response.conversations.length > 0) {
+                        // Find the most recent last_updated timestamp
+                        let mostRecentUpdate = Math.max(...response.conversations.map(conv => new Date(conv.last_updated).getTime()));
+                        
+                        let hasUpdates = isInitialPoll || mostRecentUpdate > lastPollTime;
+        
+                        if (hasUpdates) {
+                            updateConversationList(response.conversations);
+                            console.log('Conversation list updated');
+                            // Update lastPollTime to the most recent update time
+                            lastPollTime = mostRecentUpdate;
+                        } else {
+                            console.log('No updates');
+                        }
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error fetching conversations: " + error);
+                },
+            });
+        }
+    
+        // Initialize
+        loadUnreadMessageCounts();
+        initializeUnreadConversations();
+        $('.conversation-item').each(function() {
+            knownConversationIds.add($(this).data('conversation-id'));
+        });
+        
+        initializeConversations();
+        
+        // Poll for updates every 10 seconds
+        setInterval(pollForNewConversations, 10000);  // Poll every 10 seconds
+        // Fetch emails periodically fromt he imap server and update list
+        setInterval(fetchEmails, 30000);
+        // Sync unread status periodically
+        setInterval(syncUnreadStatus, 60000); // Every 1 minute
+    });
+    </script>
+</body>
+</html>

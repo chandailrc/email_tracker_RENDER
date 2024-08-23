@@ -1,0 +1,126 @@
+fa9a87b,chandailrc,2024-08-23,Changed the sent message background colour
+787b8d4,chandailrc,2024-08-23,Updated fix to keep the reply window alive while typing if a new message comes in
+30b6f8a,chandailrc,2024-08-23,Added teemporary fix to perserve reply form text using client side. Will update with saving drafts later
+603ab84,chandailrc,2024-08-23,Added email polling every 30 seconds
+1fc50a7,chandailrc,2024-08-23,Change last_updated timestamp for received emails to match IMAP delivery time
+285af2f,chandailrc,2024-08-23,Implemented fix to prevent polling from triggering updates any time conversations are polled. Update happens only if there is a new update
+afe0ce6,chandailrc,2024-08-22,Fixed order of received conversations in the sidebar. Fixed conversation item drop down not sustaining with a new poll.
+483cdcf,chandailrc,2024-08-22,Fixed new message notification to not show when a new email message comes in while conversation is active
+b0ebfcb,chandailrc,2024-08-22,Small update with new message fade animation
+934e27e,chandailrc,2024-08-21,Removed unnecessary function from conversation JS
+dfdbbd1,chandailrc,2024-08-21,Working conversations with new message notifications and new conversation notifications
+604ccee,chandailrc,2024-08-21,Fixed the parser to somewhat work for multiple mailers
+87c0e03,chandailrc,2024-08-21,Updated conversation timestamp format
+7d508d2,chandailrc,2024-08-21,Fixed last updated timestamp to show the correct time on conversation
+783832b,chandailrc,2024-08-20,Added notifications for new conversation addition
+66b298c,chandailrc,2024-08-20,Updated the conversations loook. Fixed the send/received right/left alignment.
+20a2d58,chandailrc,2024-08-19,Updating reciving utils to handle fresh email received with no in-reply-to
+59df873,chandailrc,2024-08-19,Updating reciving utils to handle fresh email received with no in-reply-to
+20cd8b4,chandailrc,2024-08-19,Updating reciving utils to handle fresh email received with no in-reply-to
+29d8c48,chandailrc,2024-08-19,Updating reciving utils to handle fresh email received with no in-reply-to
+5c709e2,chandailrc,2024-08-19,Updaeted. But pausing parsing and history updates for now.
+c58ff10,chandailrc,2024-08-19,Improved email parser
+25a9d1f,chandailrc,2024-08-19,Improved email parsing to include outlook email parsing. A bit confused now about how the history is building.
+49446fd,chandailrc,2024-08-19,Testing history again
+984b611,chandailrc,2024-08-19,Reversing the sender/receiver history notations
+3de5834,chandailrc,2024-08-19,Reversing the sender/receiver history notations
+a4a0d3a,chandailrc,2024-08-18,Fixed the message-id extractor to include < > brackets
+3584d62,chandailrc,2024-08-18,Correctly used the parser
+8917e49,chandailrc,2024-08-18,Correctly used the parser
+3a9c75b,chandailrc,2024-08-18,Added parser to extract the correct message id, inReplyTo, and references
+c867553,chandailrc,2024-08-18,Updating build.sh since models changed
+05d8c88,chandailrc,2024-08-18,Added references to the email(s) attributes. Fixed references header while sending/receiveing emails
+85b1a41,chandailrc,2024-08-18,Another attempt to fix history quoted messages
+9c84f47,chandailrc,2024-08-17,Checking to see if the history working the right way
+a287977,chandailrc,2024-08-17,Trying out email history implementation
+8ac2844,chandailrc,2024-08-15,Fixed dashboard email open count. Reverted to old templates for most of the templates due to functionality breaking.
+a2a9780,chandailrc,2024-08-15,Updated base template and most of the remaining templates to match the base template
+8e80cdb,chandailrc,2024-08-14,Testing email fetch button on covnersation list template
+128db23,chandailrc,2024-08-14,Added AJAX to the frontend conversation_list views and template
+5735c2a,chandailrc,2024-08-14,Updated conversation_list page to show blank page on first load until a conversation is selected
+1f1430f,chandailrc,2024-08-14,Added whatsapp style email conversations view
+d0d4001,chandailrc,2024-08-13,Final working conversation thread with reply
+bbfa3ab,chandailrc,2024-08-13,Fix 5
+843fb4e,chandailrc,2024-08-13,Fix 4
+757b1f9,chandailrc,2024-08-13,Fix 3
+789d6cc,chandailrc,2024-08-13,Fix:debug 2
+14aeda2,chandailrc,2024-08-13,Debugging 2
+dcb6c89,chandailrc,2024-08-13,Debugging 1
+c1804b4,chandailrc,2024-08-13,Updated for debugging emails
+47bf4a3,chandailrc,2024-08-13,Updated build.sh to reset db
+87bd9e8,chandailrc,2024-08-13,Fixed MO reply part. Need to test live
+8604e6d,chandailrc,2024-08-12,Fixing reply - 1
+17703ae,chandailrc,2024-08-12,Fixing reply - fremoved frontend: namespace references
+4fffd31,chandailrc,2024-08-12,Fixing reply - updated conversation_detail.html
+882625e,chandailrc,2024-08-12,Fixing reply - updated conversation_detail frontend view
+0a1584a,chandailrc,2024-08-12,More fixes to the reply functionality
+02d0c57,chandailrc,2024-08-12,Fixing reply functionality
+1b778b6,chandailrc,2024-08-12,Adding reply functionality to conversations
+1f49282,chandailrc,2024-08-12,Updates to test the full send/receive chain
+42c398d,chandailrc,2024-08-10,Fixed issues with the track_item view logger
+adb8113,chandailrc,2024-08-10,**** Overhauled tracking system to rely on solotracker. Removed username from tracking links
+b3ce14b,chandailrc,2024-08-05,Minor changes to fix logging to separate files: middleware vs everything else
+9051246,chandailrc,2024-08-05,Reworked genuine open logic
+5bb6804,chandailrc,2024-08-05,Reverting logging cofiguration
+5e74bf9,chandailrc,2024-08-05,Updated logging configuration to try for papertrailapp logging
+cdf62f0,chandailrc,2024-08-05,Added headers to all frontend view requests to api
+68ba3e3,chandailrc,2024-08-04,Updated bash file
+d2f3b39,chandailrc,2024-08-04,Updated requirements.txt
+37ae09a,chandailrc,2024-08-04,Updated tracking request log middleware
+9d59b1e,chandailrc,2024-08-01,**** Added user association for all apps. Added adminUserAgent app to manage users.
+d5d8c72,chandailrc,2024-07-31,Updated reset_db command. Reset db and migrations
+44ac741,chandailrc,2024-07-31,Added users and contacts. Trying to add user to other apps
+56f0380,chandailrc,2024-07-27,**** Fixed genuine open logic to represent true genuine open based on open event + linkclick/form_submission
+2a10d42,chandailrc,2024-07-27,**** Added logic for genuine open hit
+0649ceb,chandailrc,2024-07-26,changing csrf_protect to csrf_exempt in send_tracked_email_view
+95da229,chandailrc,2024-07-26,Added csrf_trusted_origins env variable to settings.py
+722f3b6,chandailrc,2024-07-26,Re-Fixed request url in frontend's conversation views
+595ce80,chandailrc,2024-07-26,Fixed request url in frontend's conversation views
+29425c1,chandailrc,2024-07-26,**** Re-did conversations app. Fixed util names. Changed model name from Email to SentEmail in sending app
+c650703,chandailrc,2024-07-26,Added conversations app
+5e16954,chandailrc,2024-07-25,Unable to fix csrf protect for fetch_emails frontend. Making receiving fetch csrf_exempt
+656efad,chandailrc,2024-07-25,**** Added csrf for receiving; Redid models sending/receiving app; Added support for cc and bcc AND replying to received mail in sending app. And more
+c80fea5,chandailrc,2024-07-25,Updated with CSRF exemption. Will include CSRF later
+1efdf65,chandailrc,2024-07-25,Fixed path in frontend view requests to backend receiving api
+acc8eeb,chandailrc,2024-07-25,Changed email_management to html and css. Also implemented frontend-backend API based non-REST functionality
+632238d,chandailrc,2024-07-25,Updated IMAP variables to match settings.py
+7181420,chandailrc,2024-07-25,Added IMAP variables to settings.py
+0f7703b,chandailrc,2024-07-25,Change teh reset_db command and added it to the build script
+7ed4a60,chandailrc,2024-07-25,Adding receiving app with some supporting frontend changes
+9c21123,chandailrc,2024-07-24,Moving back to working on 'receiving' app
+8279463,chandailrc,2024-07-20,Added unsubscribers app to handle subscriptions
+60221f6,chandailrc,2024-07-20,Added functionality to delete individual unsubscribed users
+bfc5d77,chandailrc,2024-07-19,Created front and back end for sending and tracking
+21b23f4,chandailrc,2024-07-18,First commit to new branch with updated code for API
+eae4d3d,chandailrc,2024-07-17,Added more details parsed from request. Added page to view details in dashboard per email. Added sender to dashboard
+9feaade,chandailrc,2024-07-16,Added a custom header paramter to response cache-buster
+77df5d8,chandailrc,2024-07-16,Going back to the new plain html tracking pixel. Issue with gmail tracking caused by Mozilla since tracking working in other browsers/mobile
+e43ed26,chandailrc,2024-07-16,Gmail still caching. Changing cache control parameters. And Removing logo image
+6ccae52,chandailrc,2024-07-16,rolling back both image tags in email_utils completely to the last functional state
+ff43c0b,chandailrc,2024-07-15,No css confirmed messing with gmail. Adding css back in img tag
+8ab5393,chandailrc,2024-07-15,Another try with no css in img tag for pixel
+a4c5d3a,chandailrc,2024-07-15,Last commit didn't fix issue with gmail. Reverting to add style parameter in img tag to check if it fixes it back
+fc10fa2,chandailrc,2024-07-15,Changing the logo image tag in email_utils to add css in order to force recipient client to load the image
+2fc95d3,chandailrc,2024-07-15,Updated pixel link to try to fix apple delivery
+2f2d5c3,chandailrc,2024-07-15,Added settings for IONOS mail. Added mailgun functionality
+128ad72,chandailrc,2024-07-14,Updated code in handle_tracking to match serve_image for creating response
+dc7af46,chandailrc,2024-07-14,Fixed bug in urls.py in logger for link tracking requests
+74ab4bd,chandailrc,2024-07-14,Removed debug from affecting static_root
+f7ccaf6,chandailrc,2024-07-14,Fixed bug in the view serving logo
+78908b2,chandailrc,2024-07-14,Updating requrirements.txt
+f6961ed,chandailrc,2024-07-14,Mailgun setup complete for SMTP and API
+561829f,chandailrc,2024-07-11,Reverting to original combination
+54e0fc3,chandailrc,2024-07-11,Testing response header combination - private
+34a2e5b,chandailrc,2024-07-11,Testing response header combination - only must-revalidate
+c96921e,chandailrc,2024-07-11,Testing response header combination - only cache-control
+aef8940,chandailrc,2024-07-11,Changed response from HttpRespone to FileResponse in views fro image files including tracking pixel
+b9ecadc,chandailrc,2024-07-11,Corrected the email configurations in settings.py back to gmail
+5851560,chandailrc,2024-07-11,Added headers to image serving to test if it makes a difference
+6fcdc94,chandailrc,2024-07-11,Added logo.png to email template for image testing. Added functioniality to flush usubscribed users
+a6cf221,chandailrc,2024-07-10,Fixed handle tracking logs to show the current time difference for MultihitCheck
+ffe8cb7,chandailrc,2024-07-10,Updated handle_tracking view with logs for multihit and adjusted time threshold
+d81bc91,chandailrc,2024-07-10,Removed intentional test delay from send_tracked_email
+9d83080,chandailrc,2024-07-10,Updated env variables in settings.py
+aeb17c9,chandailrc,2024-07-09,Updated correct settings.py
+1b03453,chandailrc,2024-07-09,Updated requirements.txt
+45f5b0f,chandailrc,2024-07-09,First push for RENDER
