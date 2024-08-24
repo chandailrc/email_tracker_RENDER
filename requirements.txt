@@ -16,11 +16,15 @@ geoip2==4.8.0
 gunicorn==22.0.0
 h11==0.14.0
 idna==3.7
+IMAPClient==3.0.1
 maxminddb==2.6.2
 multidict==6.0.5
 packaging==24.1
 psycopg2-binary==2.9.9
+python-dateutil==2.9.0.post0
+pytz==2024.1
 requests==2.32.3
+six==1.16.0
 sqlparse==0.5.0
 typing_extensions==4.12.2
 ua-parser==0.18.0
