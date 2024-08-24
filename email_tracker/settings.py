@@ -215,6 +215,12 @@ if mail_case == 'GMAIL':
     EMAIL_HOST_USER = env('GMAIL_EMAIL_USER') # Use your personal gmail here
     EMAIL_HOST_PASSWORD = env('GMAIL_EMAIL_PASS')  # Use your gmail app pass key. Different from your account password
     DEFAULT_FROM_EMAIL = env('GMAIL_DEFAULT_EMAIL')  # Replace with your default email address
+    EMAIL_DOMAIN = 'gmail.com'
+    
+    # IMAP
+    EMAIL_IMAP_SERVER = 'imap.gmail.com'
+    EMAIL_IMAP_PORT = 993
+    EMAIL_IMAP_USE_SSL = True
     
 if mail_case == 'IONOS':
     

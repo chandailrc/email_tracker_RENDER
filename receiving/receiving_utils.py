@@ -99,13 +99,45 @@ def find_email_model(user, message_id):
     
     return None, None  # If message_id is not found in either model
 
-def fetch_and_process_emails(user_id):
+def subject_has_re(subject):
+    return subject.strip().lower().startswith("re: ")
+
+from imapclient import IMAPClient
+import email
+
+# def fetch_and_process_emails(user_id):
+#     with IMAPClient(settings.EMAIL_IMAP_SERVER) as client:
+#         client.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
+#         client.select_folder('INBOX')
+
+#         messages = client.search(['UNSEEN'])
+#         for uid, message_data in client.fetch(messages, ['RFC822']).items():
+#             raw_email = message_data[b'RFC822']
+#             email_message = email.message_from_bytes(raw_email)
+#             process_incoming_email(email_message, user_id)
+
+from datetime import datetime
+since_date = datetime(2023, 8, 20)  # Fetch emails from this date onwards
+
+from datetime import datetime
+
+def fetch_and_process_emails(user_id, since_date=datetime(2024, 8, 24), sender_email="chandailrc@gmail.com"):#"sophie.geller@razor-arts.com"):
     new_emails_count = 0
     with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
         mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         mail.select('inbox')
 
-        _, search_data = mail.search(None, 'UNSEEN')
+        # Format the date to match IMAP's expected format (DD-Mon-YYYY)
+        formatted_date = since_date.strftime('%d-%b-%Y')
+
+        # Build the search criteria
+        search_criteria = f'(UNSEEN SINCE {formatted_date})'
+        if sender_email:
+            search_criteria = f'(UNSEEN SINCE {formatted_date} FROM "{sender_email}")'
+
+        # Search for emails based on the criteria
+        _, search_data = mail.search(None, search_criteria)
+
         for num in search_data[0].split():
             _, data = mail.fetch(num, '(RFC822)')
             raw_email = data[0][1]
@@ -113,6 +145,22 @@ def fetch_and_process_emails(user_id):
                 new_emails_count += 1
 
     return new_emails_count
+
+
+# def fetch_and_process_emails(user_id):
+#     new_emails_count = 0
+#     with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
+#         mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
+#         mail.select('inbox')
+
+#         _, search_data = mail.search(None, 'UNSEEN')
+#         for num in search_data[0].split():
+#             _, data = mail.fetch(num, '(RFC822)')
+#             raw_email = data[0][1]
+#             if process_incoming_email(raw_email, user_id):
+#                 new_emails_count += 1
+
+#     return new_emails_count
 
 def process_incoming_email(raw_email, user_id):
     
@@ -164,6 +212,8 @@ def process_incoming_email(raw_email, user_id):
             if part.get_content_type() == "text/plain":
                 body = part.get_payload(decode=True).decode()
                 break
+            else:
+                body = "Body defaulted to empty. Check original"
     else:
         body = email_message.get_payload(decode=True).decode()
 
