@@ -22,7 +22,7 @@ urlpatterns = [
     path('conversations/mark_read/<int:conversation_id>/', views.mark_conversation_read, name='mark_conversation_read'),
     path('conversations/reset_conversation_unread/<int:conversation_id>/', views.reset_conversation_unread, name='reset_conversation_unread'),
     path('get-latest-conversations/', views.get_latest_conversations, name='get_latest_conversations'),
-    path('conversations/unreadlist/', views.sync_unread_conversations, name='sync_unread_conversations'),
+    path('conversations/sync_unreadlist/', views.sync_unread_conversations, name='sync_unread_conversations'),
     path('register/', views.register_page, name='register_page'),
     path('login/', views.login_page, name='login_page'),
     path('profile/', views.profile_page, name='profile_page'),
@@ -40,4 +40,5 @@ urlpatterns = [
     path('admin/users/', views.admin_user_list, name='admin_user_list'),
     path('admin/users/create/', views.admin_user_create, name='admin_user_create'),
     path('admin/users/<int:user_id>/', views.admin_user_detail, name='admin_user_detail'),
+    path('conversations/static/images/user-avatar.jpg', views.serve_user_avatar, name='serve_user_avatar'),
 ]

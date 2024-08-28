@@ -8,4 +8,5 @@ urlpatterns = [
     path('lists/<int:list_id>/contacts/', views.get_contacts, name='get_contacts'),
     path('contacts/<int:contact_id>/update/', views.update_contact, name='update_contact'),
     path('contacts/<int:contact_id>/delete/', views.delete_contact, name='delete_contact'),
+    path('recalculate-icp-scores/', views.recalculate_icp_scores, name='recalculate_icp_scores'),
 ]

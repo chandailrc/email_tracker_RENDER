@@ -121,17 +121,22 @@ since_date = datetime(2023, 8, 20)  # Fetch emails from this date onwards
 
 from datetime import datetime
 
-def fetch_and_process_emails(user_id, since_date=datetime(2024, 8, 24), sender_email="chandailrc@gmail.com"):#"sophie.geller@razor-arts.com"):
+# def fetch_and_process_emails(user_id, since_date=datetime(2024, 8, 24), sender_email="chandailrc@gmail.com"):
+def fetch_and_process_emails(user_id, since_date=None, sender_email=None):
     new_emails_count = 0
     with imaplib.IMAP4_SSL(settings.EMAIL_IMAP_SERVER, settings.EMAIL_IMAP_PORT) as mail:
         mail.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         mail.select('inbox')
+        
+        search_criteria = 'UNSEEN'
+        
+        if since_date:
+            # Format the date to match IMAP's expected format (DD-Mon-YYYY)
+            formatted_date = since_date.strftime('%d-%b-%Y')
 
-        # Format the date to match IMAP's expected format (DD-Mon-YYYY)
-        formatted_date = since_date.strftime('%d-%b-%Y')
-
-        # Build the search criteria
-        search_criteria = f'(UNSEEN SINCE {formatted_date})'
+            # Build the search criteria
+            search_criteria = f'(UNSEEN SINCE {formatted_date})'
+            
         if sender_email:
             search_criteria = f'(UNSEEN SINCE {formatted_date} FROM "{sender_email}")'
 

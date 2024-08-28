@@ -36,7 +36,25 @@ def create_contact(request, list_id):
             contact = form.save(commit=False)
             contact.contact_list = contact_list
             contact.save()
-            return JsonResponse({'success': True, 'id': contact.id, 'name': contact.name, 'email': contact.email})
+            contact.calculate_icp_score()
+            return JsonResponse({'success': True, 'id': contact.id, 'name': contact.name, 'email': contact.email, 'icp_score': contact.icp_score})
+        return JsonResponse({'success': False, 'errors': form.errors})
+    return JsonResponse({'success': False, 'message': 'Invalid request method'})
+
+@csrf_exempt
+@login_required
+def update_contact(request, contact_id):
+    try:
+        contact = Contact.objects.get(id=contact_id, contact_list__user=request.user)
+    except Contact.DoesNotExist:
+        return JsonResponse({'success': False, 'message': 'Contact not found'})
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST, instance=contact)
+        if form.is_valid():
+            contact = form.save()
+            contact.calculate_icp_score()
+            return JsonResponse({'success': True, 'message': 'Contact updated successfully', 'icp_score': contact.icp_score})
         return JsonResponse({'success': False, 'errors': form.errors})
     return JsonResponse({'success': False, 'message': 'Invalid request method'})
 
@@ -52,22 +70,6 @@ def get_contacts(request, list_id):
 
 @csrf_exempt
 @login_required
-def update_contact(request, contact_id):
-    try:
-        contact = Contact.objects.get(id=contact_id, contact_list__user=request.user)
-    except Contact.DoesNotExist:
-        return JsonResponse({'success': False, 'message': 'Contact not found'})
-
-    if request.method == 'POST':
-        form = ContactForm(request.POST, instance=contact)
-        if form.is_valid():
-            form.save()
-            return JsonResponse({'success': True, 'message': 'Contact updated successfully'})
-        return JsonResponse({'success': False, 'errors': form.errors})
-    return JsonResponse({'success': False, 'message': 'Invalid request method'})
-
-@csrf_exempt
-@login_required
 def delete_contact(request, contact_id):
     try:
         contact = Contact.objects.get(id=contact_id, contact_list__user=request.user)
@@ -77,4 +79,14 @@ def delete_contact(request, contact_id):
     if request.method == 'POST':
         contact.delete()
         return JsonResponse({'success': True, 'message': 'Contact deleted successfully'})
+    return JsonResponse({'success': False, 'message': 'Invalid request method'})
+
+@csrf_exempt
+@login_required
+def recalculate_icp_scores(request):
+    if request.method == 'POST':
+        contacts = Contact.objects.filter(contact_list__user=request.user)
+        for contact in contacts:
+            contact.calculate_icp_score()
+        return JsonResponse({'success': True, 'message': 'ICP scores recalculated successfully'})
     return JsonResponse({'success': False, 'message': 'Invalid request method'})

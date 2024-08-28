@@ -107,10 +107,10 @@ def track_item(request, encoded_item_id):
         
         
         if tracking_item.item_type == 'PIXEL':
-            
+                       
             EmailInteraction.objects.create(
                 email=tracking_item.email,
-                interaction_type='open',
+                interaction_type='OPEN',
                 timestamp=timezone.now()
             )
             
@@ -127,7 +127,7 @@ def track_item(request, encoded_item_id):
             
             EmailInteraction.objects.create(
                 email=tracking_item.email,
-                interaction_type='click',
+                interaction_type='CLICK',
                 timestamp=timezone.now()
             )
             

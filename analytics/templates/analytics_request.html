@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Metrics Request</title>
+</head>
+<body>
+    <h1>Submit Metrics Request</h1>
+    <form id="metricsForm" method="post">
+        {% csrf_token %}
+        <label for="campaign_id">Campaign ID:</label>
+        <input type="number" id="campaign_id" name="campaign_id"><br><br>
+
+        <label for="time_period">Time Period:</label>
+        <select id="time_period" name="time_period">
+            <option value="custom">Custom</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select><br><br>
+
+        <label for="start_date">Start Date (YYYY-MM-DD):</label>
+        <input type="date" id="start_date" name="start_date"><br><br>
+
+        <label for="end_date">End Date (YYYY-MM-DD):</label>
+        <input type="date" id="end_date" name="end_date"><br><br>
+
+        <label for="team_id">Team ID:</label>
+        <input type="number" id="team_id" name="team_id"><br><br>
+
+        <label for="user_id">User ID:</label>
+        <input type="number" id="user_id" name="user_id"><br><br>
+
+        <label for="lead_source">Lead Source:</label>
+        <input type="text" id="lead_source" name="lead_source"><br><br>
+
+        <label for="recipient_domain">Recipient Domain:</label>
+        <input type="text" id="recipient_domain" name="recipient_domain"><br><br>
+
+        <label for="subject_contains">Subject Contains:</label>
+        <input type="text" id="subject_contains" name="subject_contains"><br><br>
+
+        <label for="contactListId">Contact List ID:</label>
+        <input type="number" id="contactListId" name="contactListId" value="1"><br><br>
+
+        <button type="button" onclick="submitMetricsRequest()">Submit</button>
+    </form>
+
+    <h2>Response</h2>
+    <pre id="responseOutput"></pre>
+
+    <script>
+        function submitMetricsRequest() {
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const formData = new FormData(document.getElementById('metricsForm'));
+            const data = {};
+
+            formData.forEach((value, key) => {
+                if (value) data[key] = value;
+            });
+
+            fetch('/api/analytics/analytics/metrics/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseOutput').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('responseOutput').textContent = `Error: ${error}`;
+            });
+        }
+    </script>
+</body>
+</html>

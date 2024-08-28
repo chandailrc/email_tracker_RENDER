@@ -23,9 +23,9 @@ def aggregate_genuine_opens(emails):
         last_open_event = None
         
         for event in all_events:
-            if event.interaction_type == 'open':
+            if event.interaction_type == 'OPEN':
                 last_open_event = event
-            elif event.interaction_type in ['click', 'form_submission']:
+            elif event.interaction_type in ['CLICK', 'form_submission']:
                 if last_open_event:
                     # We found a genuine open
                     genuine_opens += 1

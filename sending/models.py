@@ -16,6 +16,9 @@ class SentEmail(models.Model):
     thread_id = models.CharField(max_length=255, null=True, blank=True)
     full_body = models.TextField(blank=True)
     references = models.CharField(max_length=5000, blank=True, null=True)
+    campaign_id = models.CharField(max_length=100, default='default_campaign', blank=True)
+    is_bounced = models.BooleanField(default=False)
+    bounce_reason = models.CharField(default="ImplementationPending", max_length=255, blank=True, null=True)
 
     def __str__(self):
         return f"Email to {self.recipient} from {self.sender}: {self.subject}"

@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'tracking',
     'sending',
     'frontend',
@@ -72,19 +73,34 @@ INSTALLED_APPS = [
     'users',
     'contacts',
     'adminUserManagement',
+    'analytics',
 ]
 
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'tracking.middleware.TrackingPixelMiddleware',
-]
+if env('RENDER').lower() == 'true':
+
+    MIDDLEWARE = [
+        'django.middleware.security.SecurityMiddleware',
+        'whitenoise.middleware.WhiteNoiseMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'tracking.middleware.TrackingPixelMiddleware',
+    ]
+    
+else:
+    MIDDLEWARE = [
+        'django.middleware.security.SecurityMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'tracking.middleware.TrackingPixelMiddleware',
+    ]
 
 ROOT_URLCONF = 'email_tracker.urls'
 
@@ -121,14 +137,24 @@ WSGI_APPLICATION = 'email_tracker.wsgi.application'
 # DATABASE_USER = env('POSTGRESQL_USER')
 # DATABASE_PASS = env('POSTGRESQL_PASS')
 # DATABASE_NAME = env('POSTGRESQL_DB_NAME')
-    
-DATABASES = {
-    'default': dj_database_url.config(
-        default= env('DATABASE_URL'),
-        #f'postgresql://{DATABASE_USER}:{DATABASE_PASS}@localhost:5432/{DATABASE_NAME}',
-        #f'postgresql://email_tracker_user:password@localhost:5432/email_tracker_db',
-        conn_max_age=600)
+
+import sys
+
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': ':memory:',
+        }
     }
+else:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default= env('DATABASE_URL'),
+            #f'postgresql://{DATABASE_USER}:{DATABASE_PASS}@localhost:5432/{DATABASE_NAME}',
+            #f'postgresql://email_tracker_user:password@localhost:5432/email_tracker_db',
+            conn_max_age=600)
+        }
 
 
 # Password validation
@@ -170,18 +196,22 @@ STATIC_URL = '/static/'
 
 # This production code might break development mode, so we check whether we're in DEBUG mode
 # if not DEBUG:    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+if env('RENDER').lower() == 'true':
+    
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
     # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
     # and renames the files with unique names for each version to support long-term caching
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # # The absolute path to the directory where collectstatic will collect static files for deployment.
 # STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
 # # Additional locations the staticfiles app will traverse to collect static files.
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
+else:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static'),
+    ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

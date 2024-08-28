@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.middleware.csrf import get_token
 from django.conf import settings
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, FileResponse
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
@@ -358,7 +358,7 @@ def conversation_list(request, conversation_id=None):
         })
     
     # Regular request, return the full page
-    return render(request, 'inbox_conversations.html', context)
+    return render(request, 'ibox_conversations.html', context)
 
 @login_required
 def get_latest_conversations(request):
@@ -762,3 +762,21 @@ def admin_user_create(request):
         else:
             messages.error(request, 'Failed to create user')
     return render(request, 'adminUserManagement/admin_user_create.html')
+
+
+
+
+
+
+
+
+##################### Template Server Views ########################
+import os
+
+def serve_user_avatar(request):
+    image_path = os.path.join(settings.BASE_DIR, 'static/images', 'user-avatar.jpg')
+    return FileResponse(open(image_path, 'rb'), content_type='image/jpg')    
+
+
+
+

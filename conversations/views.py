@@ -118,6 +118,7 @@ def fetch_unread_id_list(request):
             'id': conv.id,
             'subject': conv.subject,
             'last_updated': conv.last_updated.isoformat(),
+            'participants': [p.email for p in conv.participants.all()],
             'is_new': conv.is_new,
             'unread': conv.unread,
             'unread_count': conv.unread_count

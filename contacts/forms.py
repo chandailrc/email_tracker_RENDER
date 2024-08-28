@@ -9,4 +9,6 @@ class ContactListForm(forms.ModelForm):
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['name', 'email', 'phone', 'address', 'occupation', 'company']
+        fields = ['name', 'email', 'phone', 'address', 'occupation', 'company',
+                  'company_size', 'industry', 'location', 'technology_stack',
+                  'budget', 'decision_maker_role', 'pain_points', 'previous_engagement']
