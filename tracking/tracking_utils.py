@@ -38,6 +38,12 @@ def aggregate_genuine_opens(emails):
 def generate_tracking_url(email, item_type, original_url=None):
     tracking_uuid = uuid.uuid4()
     expiration = timezone.now() + timedelta(hours=24000)
+    
+    print('From inside gtu')
+    print(email)
+    print(item_type)
+    print(original_url)
+    
     TrackingItem.objects.create(
         id=tracking_uuid,
         email=email,

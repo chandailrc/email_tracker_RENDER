@@ -1,81 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics Metrics Request</title>
-</head>
-<body>
-    <h1>Submit Metrics Request</h1>
-    <form id="metricsForm" method="post">
-        {% csrf_token %}
-        <label for="campaign_id">Campaign ID:</label>
-        <input type="number" id="campaign_id" name="campaign_id"><br><br>
+# Submit Metrics Request
 
-        <label for="time_period">Time Period:</label>
-        <select id="time_period" name="time_period">
-            <option value="custom">Custom</option>
-            <option value="daily">Daily</option>
-            <option value="weekly">Weekly</option>
-            <option value="monthly">Monthly</option>
-        </select><br><br>
+{% csrf_token %}
+Campaign ID: <input type="text" id="campaignId" name="campaignId"><br>
 
-        <label for="start_date">Start Date (YYYY-MM-DD):</label>
-        <input type="date" id="start_date" name="start_date"><br><br>
+Time Period: 
+<select id="timePeriod" name="timePeriod">
+    <option value="custom">Custom</option>
+    <option value="24hrs">24hrs</option>
+    <option value="7days">7days</option>
+    <option value="1month">1month</option>
+</select><br>
 
-        <label for="end_date">End Date (YYYY-MM-DD):</label>
-        <input type="date" id="end_date" name="end_date"><br><br>
+Segments: 
+<select id="segmentation" name="segmentation">
+    <option value="">None</option>
+    <option value="daily">Daily</option>
+    <option value="weekly">Weekly</option>
+    <option value="monthly">Monthly</option>
+</select><br>
 
-        <label for="team_id">Team ID:</label>
-        <input type="number" id="team_id" name="team_id"><br><br>
+Start Date (YYYY-MM-DD): <input type="date" id="startDate" name="startDate"><br>
+End Date (YYYY-MM-DD): <input type="date" id="endDate" name="endDate"><br>
+Team ID: <input type="text" id="teamId" name="teamId"><br>
+User ID: <input type="text" id="userId" name="userId"><br>
+Lead Source: <input type="text" id="leadSource" name="leadSource"><br>
+Recipient Domain: <input type="text" id="recipientDomain" name="recipientDomain"><br>
+Subject Contains: <input type="text" id="subjectContains" name="subjectContains"><br>
+Contact List ID: <input type="text" id="contactListId" name="contactListId"><br>
 
-        <label for="user_id">User ID:</label>
-        <input type="number" id="user_id" name="user_id"><br><br>
+<button onclick="submitRequest()">Submit</button>
 
-        <label for="lead_source">Lead Source:</label>
-        <input type="text" id="lead_source" name="lead_source"><br><br>
+## Response
 
-        <label for="recipient_domain">Recipient Domain:</label>
-        <input type="text" id="recipient_domain" name="recipient_domain"><br><br>
+<div id="responseOutput"></div>
 
-        <label for="subject_contains">Subject Contains:</label>
-        <input type="text" id="subject_contains" name="subject_contains"><br><br>
+<script>
+function submitRequest() {
+    const data = {
+        campaign_id: document.getElementById('campaignId').value,
+        time_period: document.getElementById('timePeriod').value,
+        segmentation: document.getElementById('segmentation').value,
+        start_date: document.getElementById('startDate').value,
+        end_date: document.getElementById('endDate').value,
+        team_id: document.getElementById('teamId').value,
+        user_id: document.getElementById('userId').value,
+        lead_source: document.getElementById('leadSource').value,
+        recipient_domain: document.getElementById('recipientDomain').value,
+        subject_contains: document.getElementById('subjectContains').value,
+        contactListId: document.getElementById('contactListId').value
+    };
 
-        <label for="contactListId">Contact List ID:</label>
-        <input type="number" id="contactListId" name="contactListId" value="1"><br><br>
-
-        <button type="button" onclick="submitMetricsRequest()">Submit</button>
-    </form>
-
-    <h2>Response</h2>
-    <pre id="responseOutput"></pre>
-
-    <script>
-        function submitMetricsRequest() {
-            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-            const formData = new FormData(document.getElementById('metricsForm'));
-            const data = {};
-
-            formData.forEach((value, key) => {
-                if (value) data[key] = value;
+    fetch('/api/analytics/metrics/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        const output = document.getElementById('responseOutput');
+        if (Array.isArray(data)) {
+            // Segmented data
+            let html = '<table border="1"><tr><th>Period</th>';
+            // Add headers
+            for (let key in data[0]) {
+                if (key !== 'period') {
+                    html += `<th>${key}</th>`;
+                }
+            }
+            html += '</tr>';
+            
+            // Add data rows
+            data.forEach(item => {
+                html += `<tr><td>${item.period}</td>`;
+                for (let key in item) {
+                    if (key !== 'period') {
+                        html += `<td>${item[key]}</td>`;
+                    }
+                }
+                html += '</tr>';
             });
-
-            fetch('/api/analytics/analytics/metrics/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': csrfToken,
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('responseOutput').textContent = JSON.stringify(data, null, 2);
-            })
-            .catch(error => {
-                document.getElementById('responseOutput').textContent = `Error: ${error}`;
-            });
+            html += '</table>';
+            output.innerHTML = html;
+        } else {
+            // Non-segmented data
+            let html = '<table border="1">';
+            for (let key in data) {
+                html += `<tr><th>${key}</th><td>${data[key]}</td></tr>`;
+            }
+            html += '</table>';
+            output.innerHTML = html;
         }
-    </script>
-</body>
-</html>
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        document.getElementById('responseOutput').innerHTML = 'Error: ' + error;
+    });
+}
+</script>

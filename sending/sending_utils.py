@@ -166,7 +166,7 @@ def tracked_email_sender(user_id, recipient, subject, body, cc=None, bcc=None, i
             tracked_url = generate_tracking_url(email, 'LINK', original_url)
             return f'<a href="{tracked_url}" style="color: #007bff; text-decoration: none;">{original_url}</a>'
         
-        tracked_full_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, full_body)
+        # tracked_full_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, full_body)
         tracked_body = re.sub(r'http[s]?:\/\/[^\s]*', replace_link, body)
         
         html_body = tracked_body.replace('\n', '<br>')

@@ -111,7 +111,8 @@ def track_item(request, encoded_item_id):
             EmailInteraction.objects.create(
                 email=tracking_item.email,
                 interaction_type='OPEN',
-                timestamp=timezone.now()
+                timestamp=timezone.now(),
+                tracking_item=tracking_item
             )
             
             # Serve transparent PNG
@@ -128,7 +129,8 @@ def track_item(request, encoded_item_id):
             EmailInteraction.objects.create(
                 email=tracking_item.email,
                 interaction_type='CLICK',
-                timestamp=timezone.now()
+                timestamp=timezone.now(),
+                tracking_item=tracking_item
             )
             
             return redirect(tracking_item.url)
@@ -208,6 +210,15 @@ def dashboard_data(request):
     #     print(mail.thread_id)
     #     print('<<<<<<<<<<<<<<<<< mail.in_reply_to')
     #     print(mail.in_reply_to)
+    
+    # for mail in emails:
+    #     print(mail.recipient)
+    #     print(mail.subject)
+    #     ti = TrackingItem.objects.filter(email=mail, item_type="LINK")
+    #     print(ti.count())
+    #     for item in ti:
+    #         print(item.url)
+    
       
     # Serialize the email data
     emails_data = serializers.serialize('json', emails)

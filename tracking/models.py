@@ -43,6 +43,7 @@ class EmailInteraction(models.Model):
     email = models.ForeignKey(SentEmail, on_delete=models.CASCADE)
     interaction_type = models.CharField(max_length=20, choices=INTERACTION_TYPES)
     timestamp = models.DateTimeField(auto_now_add=True)
+    tracking_item = models.ForeignKey(TrackingItem, on_delete=models.CASCADE, null=True, blank=True)
     
     def __str__(self):
         return f"{self.email} - {self.interaction_type} at {self.timestamp}"

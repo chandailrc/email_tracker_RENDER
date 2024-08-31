@@ -93,6 +93,7 @@ def reply_send_tracked_email_view(request):
 
 from django.core.paginator import Paginator
 from django.db.models import Count
+from tracking.models import TrackingItem
 
 @login_required
 def dashboard(request):
@@ -112,6 +113,14 @@ def dashboard(request):
         
         # Extract the actual model instances and reverse the order
         emails = [obj.object for obj in email_objects][::-1]
+        
+        # for mail in emails:
+        #     print(mail.recipient)
+        #     print(mail.subject)
+        #     ti = TrackingItem.objects.filter(email=mail, item_type="LINK")
+        #     print(ti.count())
+        #     for item in ti:
+        #         print(item.url)
         
         # Paginate emails
         paginator = Paginator(emails, 9)  # Show 9 emails per page
