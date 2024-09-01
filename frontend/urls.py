@@ -10,6 +10,7 @@ urlpatterns = [
     path('reply-send-tracked-email/', views.reply_send_tracked_email_view, name='reply_send_tracked_email_view'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('email/<int:email_id>/', views.email_detail, name='email_detail'),
+    path('super-panel/', views.super_panel, name='super_panel'),
     path('unsubscribe/', views.unsubscribe, name='unsubscribe'),
     path('unsubscribed-users/', views.unsubscribed_users_list, name='unsubscribed_users_list'),
     path('delete-unsubscribed-user/<str:user_email>/', views.delete_unsubscribed_user, name='delete_unsubscribed_user'),

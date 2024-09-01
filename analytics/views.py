@@ -145,7 +145,7 @@ class AnalyticsViewSet(viewsets.ViewSet):
                     interaction_type='CLICK'
                 ).count()
 
-                metric['unique_clicks'] = EmailInteraction.objects.filter(
+                unique_clicks = EmailInteraction.objects.filter(
                     email__in=period_emails, 
                     interaction_type='CLICK'
                 ).values('email').distinct().count()
@@ -154,7 +154,7 @@ class AnalyticsViewSet(viewsets.ViewSet):
                     email__in=period_emails.values_list('recipient', flat=True)
                 ).count()
 
-                metric['unique_links_clicked'] = EmailInteraction.objects.filter(
+                unique_links_clicked = EmailInteraction.objects.filter(
                     email__in=period_emails, 
                     interaction_type='CLICK'
                 ).values('email', 'tracking_item__url').distinct().count()
@@ -163,8 +163,10 @@ class AnalyticsViewSet(viewsets.ViewSet):
                 metric['contacted_percentage'] = (metric['total_sent'] / metric['total_intended'] * 100) if metric['total_intended'] > 0 else 0
                 metric['read_percentage'] = (metric['total_opens'] / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
                 metric['bounce_rate'] = (metric['total_bounced'] / metric['total_intended'] * 100) if metric['total_intended'] > 0 else 0
-                metric['click_rate'] = (metric['unique_clicks'] / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
+                metric['click_rate'] = (unique_clicks / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
                 metric['unsubscribe_rate'] = (metric['total_unsubscribes'] / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
+                metric['avg_clicks_per_email'] = metric['total_clicks'] / metric['total_sent'] if metric['total_sent']> 0 else 0
+                metric['avg_unique_links_per_email']= unique_links_clicked / metric['total_sent'] if metric['total_sent'] > 0 else 0
                 metric['prospect_quality'] = prospect_quality
 
             # Calculate overall totals
@@ -174,9 +176,9 @@ class AnalyticsViewSet(viewsets.ViewSet):
                 'total_bounced': sum(m['total_bounced'] for m in base_metrics),
                 'total_opens': sum(m['total_opens'] for m in base_metrics),
                 'total_clicks': sum(m['total_clicks'] for m in base_metrics),
-                'unique_clicks': sum(m['unique_clicks'] for m in base_metrics),
+                'avg_clicks_per_email': sum(m['avg_clicks_per_email'] for m in base_metrics),
                 'total_unsubscribes': sum(m['total_unsubscribes'] for m in base_metrics),
-                'unique_links_clicked': sum(m['unique_links_clicked'] for m in base_metrics)
+                'avg_unique_links_per_email': sum(m['avg_unique_links_per_email'] for m in base_metrics)
             }
 
             # Calculate overall percentages and rates

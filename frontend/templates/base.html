@@ -5,49 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Email Tracking{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     {% block extra_head %}{% endblock %}
 </head>
-<body class="bg-gray-100 font-sans">
-    <nav class="bg-blue-600 text-white shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-xl font-bold">
-                    {% block header %}Email Tracking{% endblock %}
-                </div>
-                <div class="space-x-4">
-                    <a href="{% url 'dashboard' %}" class="hover:text-blue-200 transition duration-300">Dashboard</a>
-                    <a href="{% url 'unsubscribed_users_list' %}" class="hover:text-blue-200 transition duration-300">Unsubscribed Users</a>
-                    <a href="{% url 'email_management' %}" class="hover:text-blue-200 transition duration-300">Receive Emails</a>
-                    <a href="{% url 'compose_email' %}" class="hover:text-blue-200 transition duration-300">Compose</a>
-                    <a href="{% url 'conversation_list' %}" class="hover:text-blue-200 transition duration-300">Conversations</a>
-                    <a href="{% url 'contact_lists_page' %}" class="hover:text-blue-200 transition duration-300">Contact Lists</a>
-                </div>
-                <div class="space-x-4">
-                    {% if user.is_authenticated %}
-                        <a href="{% url 'profile_page' %}" class="hover:text-blue-200 transition duration-300">Profile</a>
-                        <form action="{% url 'handle_logout' %}" method="post" class="inline">
-                            {% csrf_token %}
-                            <button type="submit" class="hover:text-blue-200 transition duration-300">Logout</button>
-                        </form>
-                    {% else %}
-                        <a href="{% url 'register_page' %}" class="hover:text-blue-200 transition duration-300">Register</a>
-                        <a href="{% url 'login_page' %}" class="hover:text-blue-200 transition duration-300">Login</a>
-                    {% endif %}
-                </div>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Collapsible Sidebar -->
+        <div id="sidebar" class="sidebar bg-gray-800 text-white p-4 w-64 transition-all duration-300 ease-in-out">
+            <button id="toggleSidebar" class="mb-4 text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="{% url 'super_panel' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-tachometer-alt w-6"></i>
+                    <span class="ml-2 sidebar-text">Super Panel</span>
+                </a>
+                <a href="{% url 'dashboard' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-chart-line w-6"></i>
+                    <span class="ml-2 sidebar-text">Dashboard</span>
+                </a>
+                <a href="{% url 'unsubscribed_users_list' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-user-times w-6"></i>
+                    <span class="ml-2 sidebar-text">Unsubscribed Users</span>
+                </a>
+                <a href="{% url 'email_management' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-envelope w-6"></i>
+                    <span class="ml-2 sidebar-text">Receive Emails</span>
+                </a>
+                <a href="{% url 'compose_email' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-pen w-6"></i>
+                    <span class="ml-2 sidebar-text">Compose</span>
+                </a>
+                <a href="{% url 'conversation_list' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-comments w-6"></i>
+                    <span class="ml-2 sidebar-text">Conversations</span>
+                </a>
+                <a href="{% url 'contact_lists_page' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-address-book w-6"></i>
+                    <span class="ml-2 sidebar-text">Contact Lists</span>
+                </a>
+                
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profile_page' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                        <i class="fas fa-user w-6"></i>
+                        <span class="ml-2 sidebar-text">Profile</span>
+                    </a>
+                    <form method="post" action="{% url 'handle_logout' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                        {% csrf_token %}
+                        <button type="submit" class="flex items-center w-full">
+                            <i class="fas fa-sign-out-alt w-6"></i>
+                            <span class="ml-2 sidebar-text">Logout</span>
+                        </button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'register_page' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                        <i class="fas fa-user-plus w-6"></i>
+                        <span class="ml-2 sidebar-text">Register</span>
+                    </a>
+                    <a href="{% url 'login_page' %}" class="flex items-center py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                        <i class="fas fa-sign-in-alt w-6"></i>
+                        <span class="ml-2 sidebar-text">Login</span>
+                    </a>
+                {% endif %}
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-y-auto">
+            <div class="container mx-auto p-8">
+                {% block content %}{% endblock %}
             </div>
-        </div>
-    </nav>
 
-    <main class="container mx-auto mt-8 px-4">
-        {% block content %}{% endblock %}
-    </main>
-
-    <footer class="bg-gray-200 mt-12 py-6">
-        <div class="container mx-auto px-4 text-center text-gray-600">
-            &copy; 2023 Email Tracking. All rights reserved.
+            <footer class="container mx-auto px-4 text-center text-gray-600 py-4">
+                © 2023 Email Tracking. All rights reserved.
+            </footer>
         </div>
-    </footer>
+    </div>
+
+    <script>
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarTexts = document.querySelectorAll('.sidebar-text');
+            
+            sidebar.classList.toggle('w-64');
+            sidebar.classList.toggle('w-16');
+            
+            sidebarTexts.forEach(text => {
+                text.classList.toggle('hidden');
+            });
+        });
+    </script>
 
     {% block extra_scripts %}{% endblock %}
 </body>

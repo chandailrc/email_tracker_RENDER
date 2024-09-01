@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .sidebar {
+            width: 250px;
+            transition: all 0.3s;
+        }
+        .sidebar.collapsed {
+            width: 60px;
+        }
+        .content {
+            margin-left: 250px;
+            transition: all 0.3s;
+        }
+        .content.expanded {
+            margin-left: 60px;
+        }
+        .quadrant {
+            height: calc(50vh - 2rem);
+            overflow: hidden;
+        }
+        .email-card {
+            transition: all 0.3s ease;
+        }
+        .email-card:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        .preview-window {
+            position: relative;
+        }
+        .view-more-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .preview-window:hover .view-more-overlay {
+            opacity: 1;
+        }
+        .email-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-left: 4px solid #4299e1;
+            user-select: none;
+            pointer-events: none;
+        }
+        .email-card:hover {
+            transform: translateY(5px);
+        }
+        .preview-window {
+            position: relative;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .email-preview {
+            transition: transform 15s linear;
+            padding-top: 100px; /* Increased from 80px to 100px to create more space */
+            mask-image: linear-gradient(to top, black calc(100% - 100px), transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, black calc(100% - 100px), transparent 100%);
+        }
+        .preview-window:hover .email-preview {
+            transform: translateY(calc(-100% + 100px)); /* Adjusted to match the new padding */
+        }
+        .preview-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            background: linear-gradient(to right, #3b82f6, #9333ea); /* Solid gradient background */
+            padding-bottom: 1rem; /* Add some padding at the bottom of the header */
+        }
+        .view-more-btn {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+        .preview-window:hover .view-more-btn {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Collapsible Sidebar -->
+        <div id="sidebar" class="sidebar bg-gray-800 text-white p-4 h-full">
+            <button id="toggleSidebar" class="mb-4 text-white w-full text-left">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="space-y-4">
+                <a href="{% url 'super_panel' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-columns mr-2"></i> <span class="menu-text">Super Panel</span>
+                </a>
+                <a href="{% url 'dashboard' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-tachometer-alt mr-2"></i> <span class="menu-text">Dashboard</span>
+                </a>
+                <a href="{% url 'unsubscribed_users_list' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-user-slash mr-2"></i> <span class="menu-text">Unsubscribed Users</span>
+                </a>
+                <a href="{% url 'email_management' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-inbox mr-2"></i> <span class="menu-text">Receive Emails</span>
+                </a>
+                <a href="{% url 'compose_email' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-pen mr-2"></i> <span class="menu-text">Compose</span>
+                </a>
+                <a href="{% url 'conversation_list' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-comments mr-2"></i> <span class="menu-text">Conversations</span>
+                </a>
+                <a href="{% url 'contact_lists_page' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-address-book mr-2"></i> <span class="menu-text">Contact Lists</span>
+                </a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'profile_page' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-user mr-2"></i> <span class="menu-text">Profile</span>
+                </a>
+                <form action="{% url 'handle_logout' %}" method="post" class="block">
+                    {% csrf_token %}
+                    <button type="submit" class="w-full text-left py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                        <i class="fas fa-sign-out-alt mr-2"></i> <span class="menu-text">Logout</span>
+                    </button>
+                </form>
+                {% else %}
+                <a href="{% url 'register_page' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-user-plus mr-2"></i> <span class="menu-text">Register</span>
+                </a>
+                <a href="{% url 'login_page' %}" class="block py-2 px-4 hover:bg-gray-700 rounded transition duration-200">
+                    <i class="fas fa-sign-in-alt mr-2"></i> <span class="menu-text">Login</span>
+                </a>
+                {% endif %}
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div id="content" class="content flex-1 p-8"> <!-- Increased padding from p-4 to p-8 -->
+            <div class="grid grid-cols-2 gap-8"> <!-- Increased gap from gap-4 to gap-8 -->
+                <!-- Quadrant 1: Preview Window -->
+                <div id="previewWindow" class="quadrant rounded-lg overflow-hidden preview-window">
+                    <div class="preview-header p-4 text-white">
+                        <h2 class="text-2xl font-bold mb-2">Recent Emails</h2>
+                        <p class="text-sm">Quick overview of your latest email campaigns</p>
+                    </div>
+                    <div class="email-preview space-y-4">
+                        {% for email in page_obj|slice:":7" %}
+                        <div class="email-card p-4 rounded-lg shadow-md fade-in">
+                            <h3 class="text-lg font-semibold text-gray-800">{{ email.subject }}</h3>
+                            <p class="text-sm text-gray-600">{{ email.recipient }}</p>
+                            <p class="text-sm text-gray-500">{{ email.sent_at|date:"M d, Y H:i" }}</p>
+                            <div class="mt-2 flex justify-between text-sm">
+                                <span class="text-blue-600">
+                                    <i class="fas fa-eye"></i> Opens: {{ email.trackingitem_set.all|length }}
+                                </span>
+                                <span class="text-blue-800">
+                                    <i class="fas fa-mouse-pointer"></i> Clicks: {{ email.trackingitem_set.all|length }}
+                                </span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button id="viewMore" class="view-more-btn bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">
+                        View More
+                    </button>
+                </div>
+
+                <!-- Quadrant 2: Analytics Dashboard -->
+                <div class="quadrant bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-4">
+                        <h2 class="text-2xl font-bold mb-4 text-gray-800">Analytics Dashboard</h2>
+                        
+                        <!-- Time Period Selector -->
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="space-x-2">
+                                <button class="px-3 py-1 bg-blue-500 text-white rounded-full text-sm hover:bg-blue-600 transition duration-300">24h</button>
+                                <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300">7d</button>
+                                <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300">30d</button>
+                                <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300">Custom</button>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-2 text-sm text-gray-600">Segmentation</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="segmentationToggle">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Summary Cards -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                            <div class="bg-blue-100 p-4 rounded-lg">
+                                <h3 class="text-sm font-semibold text-blue-800">Total Sent</h3>
+                                <p class="text-2xl font-bold text-blue-600">0</p>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-lg">
+                                <h3 class="text-sm font-semibold text-green-800">Open Rate</h3>
+                                <p class="text-2xl font-bold text-green-600">0%</p>
+                            </div>
+                            <div class="bg-yellow-100 p-4 rounded-lg">
+                                <h3 class="text-sm font-semibold text-yellow-800">Click Rate</h3>
+                                <p class="text-2xl font-bold text-yellow-600">0%</p>
+                            </div>
+                            <div class="bg-purple-100 p-4 rounded-lg">
+                                <h3 class="text-sm font-semibold text-purple-800">Prospect Quality</h3>
+                                <p class="text-2xl font-bold text-purple-600">0%</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Interactive Chart -->
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <select id="metricSelector" class="border rounded px-2 py-1 text-sm">
+                                    <option value="openRate">Open Rate</option>
+                                    <option value="clickRate">Click Rate</option>
+                                    <option value="bounceRate">Bounce Rate</option>
+                                    <option value="unsubscribeRate">Unsubscribe Rate</option>
+                                </select>
+                            </div>
+                            <div id="chartContainer" class="h-64 bg-gray-100 rounded-lg"></div>
+                        </div>
+                        
+                        <!-- View Details Button -->
+                        <div class="text-center">
+                            <button id="viewDetailsBtn" class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition duration-300">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quadrant 3: Placeholder -->
+                <div class="quadrant bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Alerts & Notifications</h2>
+                    <p class="text-gray-600">Placeholder for future content</p>
+                </div>
+
+                <!-- Quadrant 4: Placeholder -->
+                <div class="quadrant bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Leaderboard</h2>
+                    <p class="text-gray-600">Placeholder for future content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        const viewMore = document.getElementById('viewMore');
+        const menuTexts = document.querySelectorAll('.menu-text');
+        const previewWindow = document.getElementById('previewWindow');
+        const emailPreview = previewWindow.querySelector('.email-preview');
+
+        toggleSidebar.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+            content.classList.toggle('expanded');
+            menuTexts.forEach(text => text.classList.toggle('hidden'));
+        });
+
+        viewMore.addEventListener('click', function(e) {
+            e.stopPropagation();
+            window.location.href = "{% url 'dashboard' %}";
+        });
+
+        previewWindow.addEventListener('mouseenter', function() {
+            emailPreview.style.transition = 'transform 15s linear';
+            emailPreview.style.transform = `translateY(calc(-100% + 100px))`; // Adjusted to match the new padding
+        });
+
+        previewWindow.addEventListener('mouseleave', function() {
+            emailPreview.style.transition = 'transform 0.3s linear';
+            emailPreview.style.transform = 'translateY(0)';
+        });
+    });
+</script>
+</body>
+</html>

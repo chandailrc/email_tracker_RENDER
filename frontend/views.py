@@ -92,8 +92,6 @@ def reply_send_tracked_email_view(request):
 
 
 from django.core.paginator import Paginator
-from django.db.models import Count
-from tracking.models import TrackingItem
 
 @login_required
 def dashboard(request):
@@ -184,6 +182,42 @@ def email_detail(request, email_id):
             'error': 'Failed to fetch email detail data'
         })
 
+@login_required
+def super_panel(request):
+    # Reuse the logic from the dashboard view
+    csrf_token = get_token(request)
+    session_cookie = request.COOKIES.get('sessionid')
+    headers = {'X-CSRFToken': csrf_token,
+               'Cookie': f'sessionid={session_cookie}'}
+    
+    response = requests.get(f'{settings.BASE_URL}/api/tracking/dashboard-data/', headers=headers)
+    
+    if response.status_code == 200:
+        data = response.json()
+        unsubscribed_emails = data['unsubscribed_users']
+        
+        # Deserialize the email data
+        email_objects = list(serializers.deserialize('json', data['emails']))
+        
+        # Extract the actual model instances and reverse the order
+        emails = [obj.object for obj in email_objects][::-1]
+        
+        # Paginate emails
+        paginator = Paginator(emails, 9)  # Show 9 emails per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        
+        context = {
+            'page_obj': page_obj, 
+            'unsubscribed_emails': unsubscribed_emails,
+        }
+        
+        return render(request, 'super_panel.html', context)
+    else:
+        # Handle error case
+        return render(request, 'super_panel.html', {
+            'error': 'Failed to fetch dashboard data'
+        })
 
 def unsubscribe(request):
     csrf_token = get_token(request)
