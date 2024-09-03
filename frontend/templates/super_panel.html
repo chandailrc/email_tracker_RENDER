@@ -21,10 +21,36 @@
         .content.expanded {
             margin-left: 60px;
         }
+
+        
         .quadrant {
-            height: calc(50vh - 2rem);
-            overflow: hidden;
+            height: calc(50vh - 2rem); /* Ensure the quadrant takes full height of its container */
+            display: flex;
+            flex-direction: column;
         }
+
+        .quadrant .overflow-y-auto {
+            /* Custom scrollbar styles for webkit browsers */
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 4px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+    
+            /* Scrollbar styles for Firefox */
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+        
+        
         .email-card {
             transition: all 0.3s ease;
         }
@@ -109,14 +135,16 @@
         .switch {
             position: relative;
             display: inline-block;
-            width: 60px;
-            height: 34px;
+            width: 40px;  /* Reduced from 60px to 40px */
+            height: 20px; /* Reduced from 34px to 20px */
         }
+        
         .switch input {
             opacity: 0;
             width: 0;
             height: 0;
         }
+        
         .slider {
             position: absolute;
             cursor: pointer;
@@ -126,24 +154,28 @@
             bottom: 0;
             background-color: #ccc;
             transition: .4s;
-            border-radius: 34px;
+            border-radius: 20px; /* Adjusted to match new height */
         }
+        
         .slider:before {
             position: absolute;
             content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
+            height: 16px;  /* Reduced from 26px to 16px */
+            width: 16px;   /* Reduced from 26px to 16px */
+            left: 2px;     /* Adjusted to fit within the smaller slider */
+            bottom: 2px;   /* Adjusted to fit within the smaller slider */
             background-color: white;
             transition: .4s;
             border-radius: 50%;
         }
-        input:checked + .slider {
+        
+        /* When the switch is checked */
+        .switch input:checked + .slider {
             background-color: #2196F3;
         }
-        input:checked + .slider:before {
-            transform: translateX(26px);
+        
+        .switch input:checked + .slider:before {
+            transform: translateX(20px);  /* Adjusted to ensure the circle moves correctly */
         }
         .tooltip {
             position: relative;
@@ -255,12 +287,12 @@
                 </div>
 
                 <!-- Quadrant 2: Analytics Dashboard -->
-                <div class="quadrant bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-4">
-                        <h2 class="text-2xl font-bold mb-4 text-gray-800">Analytics Dashboard</h2>
+                <div class="quadrant bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                    <div class="quadrant-top p-4 flex-shrink-0">
+                        <h2 class="text-xl font-bold mb-2 text-gray-800">Analytics Dashboard</h2>
                         
                         <!-- Filter Selector -->
-                        <div class="mb-4 flex items-center justify-between">
+                        <div class="mb-2 flex items-center justify-between">
                             <div id="filterControls" class="flex items-center space-x-2">
                                 <div class="relative inline-block w-48">
                                     <select id="filterSelector" class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-3 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline text-sm">
@@ -284,14 +316,14 @@
 
                         
                         <!-- Time Period Selector -->
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-1">
                         <div class="space-x-2">
-                            <button class="time-period-btn px-3 py-1 bg-blue-500 text-white rounded-full text-sm hover:bg-blue-600 transition duration-300" data-period="24hrs">24h</button>
+                            <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="24hrs">24h</button>
                             <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="7days">7d</button>
                             <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="1month">30d</button>
                             <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300 relative" data-period="custom">
                                 Custom
-                                <span id="customDateIndicator" class="absolute top-0 right-0 h-2 w-2 bg-blue-500 rounded-full hidden"></span>
+                                <span id="customDateIndicator" class="absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full hidden"></span>
                             </button>
                         </div>
                             <div class="flex items-center">
@@ -300,40 +332,40 @@
                                     <input type="checkbox" id="segmentationToggle">
                                     <span class="slider round"></span>
                                 </label>
-                                <select id="segmentationOption" class="border rounded px-2 py-1 text-sm" disabled>
+                                <select id="segmentationOption" class="border rounded px-1 py-1 text-sm" disabled>
                                     <option value="daily">Daily</option>
                                     <option value="weekly">Weekly</option>
                                     <option value="monthly">Monthly</option>
                                 </select>
                             </div>
                         </div>
+                    </div>
                         
+                    <div class="flex-grow overflow-y-auto px-4 pb-4">
                         <!-- Summary Cards -->
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                            <div class="bg-blue-100 p-4 rounded-lg">
-                                <h3 class="text-sm font-semibold text-blue-800">Total Sent</h3>
-                                <p class="text-2xl font-bold text-blue-600 total-sent">0</p>
+                            <div class="bg-blue-100 p-3 rounded-lg">
+                                <h3 class="text-xs font-semibold text-blue-800">Total Sent</h3>
+                                <p class="text-xl font-bold text-blue-600 total-sent">0</p>
                             </div>
-                            <div class="bg-green-100 p-4 rounded-lg">
-                                <h3 class="text-sm font-semibold text-green-800">Open Rate</h3>
-                                <p class="text-2xl font-bold text-green-600 open-rate">0%</p>
+                            <div class="bg-green-100 p-3 rounded-lg">
+                                <h3 class="text-xs font-semibold text-green-800">Open Rate</h3>
+                                <p class="text-xl font-bold text-green-600 open-rate">0%</p>
                             </div>
-                            <div class="bg-yellow-100 p-4 rounded-lg">
-                                <h3 class="text-sm font-semibold text-yellow-800">Click Rate</h3>
-                                <p class="text-2xl font-bold text-yellow-600 click-rate">0%</p>
+                            <div class="bg-yellow-100 p-3 rounded-lg">
+                                <h3 class="text-xs font-semibold text-yellow-800">Click Rate</h3>
+                                <p class="text-xl font-bold text-yellow-600 click-rate">0%</p>
                             </div>
-                            <div class="bg-purple-100 p-4 rounded-lg">
-                                <h3 class="text-sm font-semibold text-purple-800">Prospect Quality</h3>
-                                <p class="text-2xl font-bold text-purple-600 prospect-quality">0%</p>
+                            <div class="bg-purple-100 p-3 rounded-lg">
+                                <h3 class="text-xs font-semibold text-purple-800">Prospect Quality</h3>
+                                <p class="text-xl font-bold text-purple-600 prospect-quality">0%</p>
                             </div>
                         </div>
+
                         
                         <!-- Interactive Chart -->
-                        <div class="mb-4 h-64"> <!-- Set a fixed height for the container -->
+                        <div class="mb-4 h-62"> <!-- Set a fixed height for the container -->
                             <div class="h-56">
-                                <canvas id="chartContainer"></canvas>
-                            </div>
-                            <div class="h-56"> <!-- Create a container for the canvas with a fixed height -->
                                 <canvas id="chartContainer"></canvas>
                             </div>
                         </div>
@@ -419,6 +451,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     // QUADRANT 2
+    /* Time Period - Btns */
+    const timePeriodButtons = document.querySelectorAll('.time-period-btn');
+
+    timePeriodButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            timePeriodButtons.forEach(b => {
+                b.classList.remove('bg-blue-500', 'text-white');
+                b.classList.add('bg-gray-200', 'text-gray-700');
+            });
+
+            // Add active class to clicked button
+            this.classList.remove('bg-gray-200', 'text-gray-700');
+            this.classList.add('bg-blue-500', 'text-white');
+
+            if (this.dataset.period === 'custom') {
+                showCustomDateModal();
+            } else {
+                fetchAndUpdateData();
+            }
+        });
+    });
+    
     /* Time period - Custom Date */
     const customDateModal = document.getElementById('customDateModal');
     const customDateBtn = document.querySelector('.time-period-btn[data-period="custom"]');
@@ -616,10 +671,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function resizeChart() {
         if (chart) {
-            chart.resize();
+            const container = document.querySelector('.quadrant .overflow-y-auto');
+            const containerWidth = container.clientWidth;
+            chart.resize(containerWidth, chart.height);
         }
     }
-
+    
     window.addEventListener('resize', resizeChart);
     
     // Function to format the date
@@ -680,35 +737,40 @@ document.addEventListener('DOMContentLoaded', function() {
             return null;
         }
     }
-         
+    
     function fetchAndUpdateData() {
-        const activeBtn = document.querySelector('.time-period-btn.bg-blue-500');
-        const timePeriod = activeBtn.dataset.period;
-        const segmentationToggle = document.getElementById('segmentationToggle');
-        const segmentationOption = document.getElementById('segmentationOption');
-        
-        let params = {
-            time_period: timePeriod,
-            segmentation: segmentationToggle.checked ? segmentationOption.value : null
-        };
+    const activeBtn = document.querySelector('.time-period-btn.bg-blue-500');
+    let timePeriod = '24hrs'; // Default to 24hrs if no button is active
 
-        if (timePeriod === 'custom') {
-            params.start_date = customStartDate;
-            params.end_date = customEndDate;
-        }
-
-        if (activeFilter) {
-            params[activeFilter.type] = activeFilter.value;
-        }
-
-        fetchAnalyticsData(params).then(data => {
-            if (data) {
-                currentData = data;
-                updateMetrics(data);
-                updateChart(data);
-            }
-        });
+    if (activeBtn) {
+        timePeriod = activeBtn.dataset.period;
     }
+
+    const segmentationToggle = document.getElementById('segmentationToggle');
+    const segmentationOption = document.getElementById('segmentationOption');
+    
+    let params = {
+        time_period: timePeriod,
+        segmentation: segmentationToggle.checked ? segmentationOption.value : null
+    };
+
+    if (timePeriod === 'custom' && customStartDate && customEndDate) {
+        params.start_date = customStartDate;
+        params.end_date = customEndDate;
+    }
+
+    if (activeFilter) {
+        params[activeFilter.type] = activeFilter.value;
+    }
+
+    fetchAnalyticsData(params).then(data => {
+        if (data) {
+            currentData = data;
+            updateMetrics(data);
+            updateChart(data);
+        }
+    });
+}
 
     document.getElementById('segmentationToggle').addEventListener('change', function(e) {
         document.getElementById('segmentationOption').disabled = !e.target.checked;
@@ -744,6 +806,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize chart and fetch initial data
     initChart();
     fetchAndUpdateData();
+    
+    // Initialize with 24h as active
+    const defaultButton = document.querySelector('.time-period-btn[data-period="24hrs"]');
+    if (defaultButton) {
+        defaultButton.classList.remove('bg-gray-200', 'text-gray-700');
+        defaultButton.classList.add('bg-blue-500', 'text-white');
+    }
+    
+    
 });
 
 // Helper function to get CSRF token
