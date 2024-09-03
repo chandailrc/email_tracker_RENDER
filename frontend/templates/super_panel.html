@@ -145,6 +145,32 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -233,13 +259,40 @@
                     <div class="p-4">
                         <h2 class="text-2xl font-bold mb-4 text-gray-800">Analytics Dashboard</h2>
                         
+                        <!-- Filter Selector -->
+                        <div class="mb-4 flex items-center justify-between">
+                            <div id="filterControls" class="flex items-center space-x-2">
+                                <div class="relative inline-block w-48">
+                                    <select id="filterSelector" class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-3 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline text-sm">
+                                        <option value="">Select Filter</option>
+                                        <option value="team_id">Team</option>
+                                        <option value="user_id">User</option>
+                                        <option value="lead_source">Lead Source</option>
+                                        <option value="campaign_id">Campaign</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                    </div>
+                                </div>
+                                <input id="filterInput" type="text" placeholder="Enter value" class="border border-gray-300 rounded px-3 py-2 text-sm w-40 focus:outline-none focus:shadow-outline hidden">
+                                <button id="applyFilter" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded text-sm transition duration-300 hidden">
+                                    Apply
+                                </button>
+                            </div>
+                            <div id="activeFilter" class="text-sm text-gray-600 hidden"></div>
+                        </div>
+
+                        
                         <!-- Time Period Selector -->
                         <div class="flex justify-between items-center mb-4">
                         <div class="space-x-2">
                             <button class="time-period-btn px-3 py-1 bg-blue-500 text-white rounded-full text-sm hover:bg-blue-600 transition duration-300" data-period="24hrs">24h</button>
                             <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="7days">7d</button>
                             <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="1month">30d</button>
-                            <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="custom">Custom</button>
+                            <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300 relative" data-period="custom">
+                                Custom
+                                <span id="customDateIndicator" class="absolute top-0 right-0 h-2 w-2 bg-blue-500 rounded-full hidden"></span>
+                            </button>
                         </div>
                             <div class="flex items-center">
                                 <span class="mr-2 text-sm text-gray-600">Segmentation</span>
@@ -277,24 +330,40 @@
                         
                         <!-- Interactive Chart -->
                         <div class="mb-4 h-64"> <!-- Set a fixed height for the container -->
-                            <div class="flex justify-between items-center mb-2">
-                                <select id="metricSelector" class="border rounded px-2 py-1 text-sm">
-                                    <option value="read_percentage">Open Rate</option>
-                                    <option value="click_rate">Click Rate</option>
-                                    <option value="bounce_rate">Bounce Rate</option>
-                                    <option value="unsubscribe_rate">Unsubscribe Rate</option>
-                                </select>
+                            <div class="h-56">
+                                <canvas id="chartContainer"></canvas>
                             </div>
                             <div class="h-56"> <!-- Create a container for the canvas with a fixed height -->
                                 <canvas id="chartContainer"></canvas>
                             </div>
                         </div>
                         
-                        <!-- View Details Button -->
-                        <div class="text-center">
-                            <button id="viewDetailsBtn" class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition duration-300">
-                                View Details
-                            </button>
+                    </div>
+                    
+                    <!-- Custom Date Modal -->
+                    <div id="customDateModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+                        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                            <div class="mt-3 text-center">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Select Custom Date Range</h3>
+                                <div class="mt-2 px-7 py-3">
+                                    <div class="mb-4">
+                                        <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date</label>
+                                        <input type="date" id="startDate" name="startDate" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="endDate" class="block text-sm font-medium text-gray-700">End Date</label>
+                                        <input type="date" id="endDate" name="endDate" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm">
+                                    </div>
+                                </div>
+                                <div class="items-center px-4 py-3">
+                                    <button id="applyCustomDate" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                                        Apply
+                                    </button>
+                                    <button id="cancelCustomDate" class="mt-3 px-4 py-2 bg-gray-300 text-gray-700 text-base font-medium rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -350,6 +419,135 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     // QUADRANT 2
+    /* Time period - Custom Date */
+    const customDateModal = document.getElementById('customDateModal');
+    const customDateBtn = document.querySelector('.time-period-btn[data-period="custom"]');
+    const applyCustomDateBtn = document.getElementById('applyCustomDate');
+    const cancelCustomDateBtn = document.getElementById('cancelCustomDate');
+    const startDateInput = document.getElementById('startDate');
+    const endDateInput = document.getElementById('endDate');
+    const customDateIndicator = document.getElementById('customDateIndicator');
+
+    let customStartDate = null;
+    let customEndDate = null;
+
+    function showCustomDateModal() {
+        customDateModal.classList.remove('hidden');
+    }
+
+    function hideCustomDateModal() {
+        customDateModal.classList.add('hidden');
+    }
+
+    customDateBtn.addEventListener('click', function() {
+        showCustomDateModal();
+    });
+
+    cancelCustomDateBtn.addEventListener('click', function() {
+        hideCustomDateModal();
+    });
+  
+    applyCustomDateBtn.addEventListener('click', function() {
+        customStartDate = startDateInput.value;
+        customEndDate = endDateInput.value;
+        if (customStartDate && customEndDate) {
+            hideCustomDateModal();
+            document.querySelectorAll('.time-period-btn').forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
+            customDateBtn.classList.add('bg-blue-500', 'text-white');
+            updateCustomDateButton();
+            fetchAndUpdateData();
+        } else {
+            alert('Please select both start and end dates.');
+        }
+    });
+    
+    function updateCustomDateButton() {
+        if (customStartDate && customEndDate) {
+            customDateIndicator.classList.remove('hidden');
+            customDateBtn.classList.add('tooltip');
+            
+            // Remove existing tooltip if any
+            const existingTooltip = customDateBtn.querySelector('.tooltiptext');
+            if (existingTooltip) {
+                existingTooltip.remove();
+            }
+            
+            // Add new tooltip
+            const tooltip = document.createElement('span');
+            tooltip.classList.add('tooltiptext');
+            tooltip.textContent = `${customStartDate} - ${customEndDate}`;
+            customDateBtn.appendChild(tooltip);
+        } else {
+            customDateIndicator.classList.add('hidden');
+            customDateBtn.classList.remove('tooltip');
+            const tooltip = customDateBtn.querySelector('.tooltiptext');
+            if (tooltip) {
+                tooltip.remove();
+            }
+        }
+    }
+    
+    /* Team, User, Lead Source, Campaign selector */
+    const filterControls = document.getElementById('filterControls');
+    const filterSelector = document.getElementById('filterSelector');
+    const filterInput = document.getElementById('filterInput');
+    const applyFilterBtn = document.getElementById('applyFilter');
+    const activeFilterDiv = document.getElementById('activeFilter');
+    let activeFilter = null;
+
+    filterSelector.addEventListener('change', function() {
+        if (this.value) {
+            filterInput.placeholder = `Enter ${this.options[this.selectedIndex].text} ID`;
+            filterInput.classList.remove('hidden');
+            applyFilterBtn.classList.remove('hidden');
+        } else {
+            filterInput.classList.add('hidden');
+            applyFilterBtn.classList.add('hidden');
+        }
+    });
+
+    applyFilterBtn.addEventListener('click', applyFilter);
+
+    filterInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            applyFilter();
+        }
+    });
+
+    function applyFilter() {
+        const filterType = filterSelector.value;
+        const filterValue = filterInput.value.trim();
+        if (filterValue) {
+            activeFilter = { type: filterType, value: filterValue };
+            activeFilterDiv.innerHTML = `
+                <span class="font-semibold">${filterSelector.options[filterSelector.selectedIndex].text}:</span> ${filterValue}
+                <button id="clearFilter" class="ml-2 text-blue-600 hover:text-blue-800">
+                    <svg class="h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            `;
+            activeFilterDiv.classList.remove('hidden');
+            filterControls.classList.add('hidden');
+            document.getElementById('clearFilter').addEventListener('click', clearFilter);
+            fetchAndUpdateData();
+        } else {
+            alert('Please enter a filter value');
+        }
+    }
+
+    function clearFilter() {
+        activeFilter = null;
+        filterSelector.value = '';
+        filterInput.value = '';
+        filterInput.classList.add('hidden');
+        applyFilterBtn.classList.add('hidden');
+        activeFilterDiv.classList.add('hidden');
+        filterControls.classList.remove('hidden');
+        fetchAndUpdateData();
+    }
+
+    /* Charts */    
     const ctx = document.getElementById('chartContainer').getContext('2d');
     let chart;
     let currentData;
@@ -362,19 +560,54 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'line',
             data: {
                 labels: [],
-                datasets: [{
-                    label: 'Open Rate',
-                    data: [],
-                    borderColor: 'rgb(75, 192, 192)',
-                    tension: 0.1
-                }]
+                datasets: [
+                    {
+                        label: 'Open Rate',
+                        data: [],
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Click Rate',
+                        data: [],
+                        borderColor: 'rgb(255, 99, 132)',
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Unsubscribe Rate',
+                        data: [],
+                        borderColor: 'rgb(255, 205, 86)',
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Bounce Rate',
+                        data: [],
+                        borderColor: 'rgb(54, 162, 235)',
+                        tension: 0.1
+                    }
+                ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        max: 100, // Assuming these are percentages
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y.toFixed(2) + '%';
+                            }
+                        }
                     }
                 }
             }
@@ -388,19 +621,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('resize', resizeChart);
+    
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-GB'); // You can adjust the locale and options as needed
+    }
 
     function updateChart(data) {
-        const metric = document.getElementById('metricSelector').value;
         if (Array.isArray(data)) {
-            chart.data.labels = data.map(item => item.period);
-            chart.data.datasets[0].data = data.map(item => item[metric]);
+            chart.data.labels = data.map(item => formatDate(item.period));
+            chart.data.datasets[0].data = data.map(item => item.read_percentage);
+            chart.data.datasets[1].data = data.map(item => item.click_rate);
+            chart.data.datasets[2].data = data.map(item => item.unsubscribe_rate);
+            chart.data.datasets[3].data = data.map(item => item.bounce_rate);
         } else {
             chart.data.labels = ['Total'];
-            chart.data.datasets[0].data = [data[metric]];
+            chart.data.datasets[0].data = [data.read_percentage];
+            chart.data.datasets[1].data = [data.click_rate];
+            chart.data.datasets[2].data = [data.unsubscribe_rate];
+            chart.data.datasets[3].data = [data.bounce_rate];
         }
-        chart.data.datasets[0].label = document.getElementById('metricSelector').options[document.getElementById('metricSelector').selectedIndex].text;
         chart.update();
-        resizeChart();
     }
 
     function updateMetrics(data) {
@@ -438,15 +680,27 @@ document.addEventListener('DOMContentLoaded', function() {
             return null;
         }
     }
-
+         
     function fetchAndUpdateData() {
-        const timePeriod = document.querySelector('.time-period-btn.bg-blue-500').dataset.period;
+        const activeBtn = document.querySelector('.time-period-btn.bg-blue-500');
+        const timePeriod = activeBtn.dataset.period;
         const segmentationToggle = document.getElementById('segmentationToggle');
         const segmentationOption = document.getElementById('segmentationOption');
-        const params = {
+        
+        let params = {
             time_period: timePeriod,
             segmentation: segmentationToggle.checked ? segmentationOption.value : null
         };
+
+        if (timePeriod === 'custom') {
+            params.start_date = customStartDate;
+            params.end_date = customEndDate;
+        }
+
+        if (activeFilter) {
+            params[activeFilter.type] = activeFilter.value;
+        }
+
         fetchAnalyticsData(params).then(data => {
             if (data) {
                 currentData = data;
@@ -455,11 +709,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Event listeners
-    document.getElementById('metricSelector').addEventListener('change', function() {
-        updateChart(currentData);
-    });
 
     document.getElementById('segmentationToggle').addEventListener('change', function(e) {
         document.getElementById('segmentationOption').disabled = !e.target.checked;
@@ -474,11 +723,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('bg-blue-500', 'text-white');
             fetchAndUpdateData();
         });
-    });
-
-    document.getElementById('viewDetailsBtn').addEventListener('click', function() {
-        console.log('View Details clicked');
-        // Implement view details functionality here
     });
 
     // Helper function to get CSRF token

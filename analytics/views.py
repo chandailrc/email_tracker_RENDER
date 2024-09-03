@@ -129,12 +129,15 @@ class AnalyticsViewSet(viewsets.ViewSet):
                 period_start = metric['period']
                 period_end = period_start + timedelta(days=1) if segmentation == 'daily' else (
                     period_start + timedelta(weeks=1) if segmentation == 'weekly' else (
-                        (period_start + timedelta(days=32)).replace(day=1) - timedelta(days=1)
+                        (period_start + timedelta(days=32)).replace(day=1) #- timedelta(days=1)
                     )
                 )
 
                 period_emails = sent_emails.filter(sent_at__gte=period_start, sent_at__lt=period_end)
-
+                
+                print(f'start date: {period_start}')
+                print(f'end date: {period_end}')
+                
                 metric['total_opens'] = EmailInteraction.objects.filter(
                     email__in=period_emails, 
                     interaction_type='OPEN'
@@ -178,6 +181,24 @@ class AnalyticsViewSet(viewsets.ViewSet):
                                 link within the email. It's not about the total number of clicks or the number of unique links clicked 
                                 within each email.
                 '''
+                
+                checking_unique_opens = EmailInteraction.objects.filter(
+                    email__in=period_emails, 
+                    interaction_type='OPEN'
+                ).values('email').distinct()
+                
+                print('<<<<<<<<<<<<<<< Metric: ')
+                print(metric)
+                for cemails in checking_unique_opens:
+                    print('>>>> Printing cemail')
+                    em = SentEmail.objects.get(id=cemails['email'])
+                    print(em.recipient)
+                    print(em.subject)
+                    print(em.sent_at)
+                    emIt = EmailInteraction.objects.filter(email = em)
+                    print(emIt.count())
+                    for et in emIt:
+                        print(et.interaction_type)
 
             # Calculate overall totals
             overall_totals = {
@@ -254,6 +275,22 @@ class AnalyticsViewSet(viewsets.ViewSet):
             unsubscribe_rate = (total_unsubscribes / total_sent) * 100 if total_sent > 0 else 0
             avg_clicks_per_email = total_clicks / total_sent if total_sent > 0 else 0
             avg_unique_links_per_email = unique_links_clicked / total_sent if total_sent > 0 else 0
+            
+            checking_unique_opens = EmailInteraction.objects.filter(
+                email__in=sent_emails, 
+                interaction_type='OPEN'
+            ).values('email').distinct()
+            
+            for cemails in checking_unique_opens:
+                print('>>>> Printing cemail')
+                em = SentEmail.objects.get(id=cemails['email'])
+                print(em.recipient)
+                print(em.subject)
+                print(em.sent_at)
+                emIt = EmailInteraction.objects.filter(email = em)
+                print(emIt.count())
+                for et in emIt:
+                    print(et.interaction_type)
             
             metrics = {
                 'total_intended': total_intended,
