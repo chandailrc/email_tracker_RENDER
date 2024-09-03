@@ -79,12 +79,12 @@ class AnalyticsViewSet(viewsets.ViewSet):
         # Ensure start_date is at the beginning of the day and timezone-aware
         start_date = timezone.make_aware(datetime.combine(start_date.date(), time.min))
 
-        print(start_date)
-        print(end_date)
+        # print(start_date)
+        # print(end_date)
 
         # Apply date range filter
         sent_emails = sent_emails.filter(sent_at__gte=start_date, sent_at__lte=end_date)
-        print(sent_emails.count())
+        # print(sent_emails.count())
         
         
         # Apply other filters
@@ -98,12 +98,12 @@ class AnalyticsViewSet(viewsets.ViewSet):
         contacts = ContactList.objects.filter(user=request.user, id=contactList_Id)
         prospect_quality = self.calculate_prospect_quality(contacts)
         
-        for email in sent_emails:
-            print(email.recipient)
-            print(email.subject)
-            print(email.sent_at)
+        # for email in sent_emails:
+        #     print(email.recipient)
+        #     print(email.subject)
+        #     print(email.sent_at)
             
-        print(sent_emails.count())
+        # print(sent_emails.count())
 
         if segmentation:
             if segmentation == 'daily':
@@ -138,6 +138,11 @@ class AnalyticsViewSet(viewsets.ViewSet):
                 metric['total_opens'] = EmailInteraction.objects.filter(
                     email__in=period_emails, 
                     interaction_type='OPEN'
+                ).count()
+                
+                metric['unique_opens'] = EmailInteraction.objects.filter(
+                    email__in=period_emails, 
+                    interaction_type='OPEN'
                 ).values('email').distinct().count()
 
                 metric['total_clicks'] = EmailInteraction.objects.filter(
@@ -145,7 +150,7 @@ class AnalyticsViewSet(viewsets.ViewSet):
                     interaction_type='CLICK'
                 ).count()
 
-                unique_clicks = EmailInteraction.objects.filter(
+                metric['unique_clicks'] = EmailInteraction.objects.filter(
                     email__in=period_emails, 
                     interaction_type='CLICK'
                 ).values('email').distinct().count()
@@ -154,20 +159,25 @@ class AnalyticsViewSet(viewsets.ViewSet):
                     email__in=period_emails.values_list('recipient', flat=True)
                 ).count()
 
-                unique_links_clicked = EmailInteraction.objects.filter(
+                metric['unique_links_clicked'] = EmailInteraction.objects.filter(
                     email__in=period_emails, 
                     interaction_type='CLICK'
                 ).values('email', 'tracking_item__url').distinct().count()
 
                 # Calculate percentages and rates
                 metric['contacted_percentage'] = (metric['total_sent'] / metric['total_intended'] * 100) if metric['total_intended'] > 0 else 0
-                metric['read_percentage'] = (metric['total_opens'] / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
+                metric['read_percentage'] = (metric['unique_opens'] / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
                 metric['bounce_rate'] = (metric['total_bounced'] / metric['total_intended'] * 100) if metric['total_intended'] > 0 else 0
-                metric['click_rate'] = (unique_clicks / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
+                metric['click_rate'] = (metric['unique_clicks'] / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
                 metric['unsubscribe_rate'] = (metric['total_unsubscribes'] / metric['total_sent'] * 100) if metric['total_sent'] > 0 else 0
                 metric['avg_clicks_per_email'] = metric['total_clicks'] / metric['total_sent'] if metric['total_sent']> 0 else 0
-                metric['avg_unique_links_per_email']= unique_links_clicked / metric['total_sent'] if metric['total_sent'] > 0 else 0
+                metric['avg_unique_links_per_email']= metric['unique_links_clicked'] / metric['total_sent'] if metric['total_sent'] > 0 else 0
                 metric['prospect_quality'] = prospect_quality
+                
+                '''click_rate : The click rate typically represents the percentage of emails that received at least one click on any 
+                                link within the email. It's not about the total number of clicks or the number of unique links clicked 
+                                within each email.
+                '''
 
             # Calculate overall totals
             overall_totals = {
@@ -175,7 +185,10 @@ class AnalyticsViewSet(viewsets.ViewSet):
                 'total_sent': sum(m['total_sent'] for m in base_metrics),
                 'total_bounced': sum(m['total_bounced'] for m in base_metrics),
                 'total_opens': sum(m['total_opens'] for m in base_metrics),
+                'total_unique_opens': sum(m['unique_opens'] for m in base_metrics),
                 'total_clicks': sum(m['total_clicks'] for m in base_metrics),
+                'total_unique_clicks': sum(m['unique_clicks'] for m in base_metrics),
+                'total_unique_links_clicked': sum(m['unique_links_clicked'] for m in base_metrics),
                 'avg_clicks_per_email': sum(m['avg_clicks_per_email'] for m in base_metrics),
                 'total_unsubscribes': sum(m['total_unsubscribes'] for m in base_metrics),
                 'avg_unique_links_per_email': sum(m['avg_unique_links_per_email'] for m in base_metrics)
@@ -183,14 +196,22 @@ class AnalyticsViewSet(viewsets.ViewSet):
 
             # Calculate overall percentages and rates
             overall_totals['contacted_percentage'] = (overall_totals['total_sent'] / overall_totals['total_intended'] * 100) if overall_totals['total_intended'] > 0 else 0
-            overall_totals['read_percentage'] = (overall_totals['total_opens'] / overall_totals['total_sent'] * 100) if overall_totals['total_sent'] > 0 else 0
+            overall_totals['read_percentage'] = (overall_totals['total_unique_opens'] / overall_totals['total_sent'] * 100) if overall_totals['total_sent'] > 0 else 0
             overall_totals['bounce_rate'] = (overall_totals['total_bounced'] / overall_totals['total_intended'] * 100) if overall_totals['total_intended'] > 0 else 0
-            overall_totals['click_rate'] = (overall_totals['unique_clicks'] / overall_totals['total_sent'] * 100) if overall_totals['total_sent'] > 0 else 0
+            overall_totals['click_rate'] = (overall_totals['total_unique_clicks'] / overall_totals['total_sent'] * 100) if overall_totals['total_sent'] > 0 else 0
+            overall_totals['avg_clicks_per_email'] = (overall_totals['total_clicks'] / overall_totals['total_sent']) if overall_totals['total_sent'] > 0 else 0
+            overall_totals['avg_unique_links_per_email'] = (overall_totals['total_unique_links_clicked'] / overall_totals['total_sent']) if overall_totals['total_sent'] > 0 else 0
             overall_totals['unsubscribe_rate'] = (overall_totals['total_unsubscribes'] / overall_totals['total_sent'] * 100) if overall_totals['total_sent'] > 0 else 0
             overall_totals['prospect_quality'] = prospect_quality
 
             metrics_list = list(base_metrics)
             metrics_list.append({'period': 'Total', **overall_totals})
+            
+            print(f"Segmentation: {segmentation}")
+            for metric in metrics_list:
+                print(metric)
+            print('\n')
+            print(len(metrics_list))
 
             return Response(metrics_list)
         else:
@@ -201,6 +222,11 @@ class AnalyticsViewSet(viewsets.ViewSet):
             total_unsubscribes = UnsubscribedUser.objects.filter(email__in=sent_emails.values_list('recipient', flat=True)).count()
             
             total_opens = EmailInteraction.objects.filter(
+                email__in=sent_emails, 
+                interaction_type='OPEN'
+            ).count()
+            
+            unique_opens = EmailInteraction.objects.filter(
                 email__in=sent_emails, 
                 interaction_type='OPEN'
             ).values('email').distinct().count()
@@ -222,19 +248,22 @@ class AnalyticsViewSet(viewsets.ViewSet):
             ).values('email', 'tracking_item__url').distinct().count()
             
             contacted_percentage = (total_sent / total_intended) * 100 if total_intended > 0 else 0
-            read_percentage = (total_opens / total_sent) * 100 if total_sent > 0 else 0
+            read_percentage = (unique_opens / total_sent) * 100 if total_sent > 0 else 0
             bounce_rate = (total_bounced / total_intended) * 100 if total_intended > 0 else 0
             click_rate = (unique_clicks / total_sent) * 100 if total_sent > 0 else 0
             unsubscribe_rate = (total_unsubscribes / total_sent) * 100 if total_sent > 0 else 0
             avg_clicks_per_email = total_clicks / total_sent if total_sent > 0 else 0
             avg_unique_links_per_email = unique_links_clicked / total_sent if total_sent > 0 else 0
-
-            return Response({
+            
+            metrics = {
                 'total_intended': total_intended,
                 'total_sent': total_sent,
                 'total_bounced': total_bounced,
                 'total_opens': total_opens,
+                'unique_opens': unique_opens,
                 'total_clicks': total_clicks,
+                'unique_clicks': unique_clicks,
+                'unique_links_clicked': unique_links_clicked,
                 'total_unsubscribes': total_unsubscribes,
                 'contacted_percentage': contacted_percentage,
                 'read_percentage': read_percentage,
@@ -244,7 +273,12 @@ class AnalyticsViewSet(viewsets.ViewSet):
                 'prospect_quality': prospect_quality,
                 'avg_clicks_per_email': avg_clicks_per_email,
                 'avg_unique_links_per_email': avg_unique_links_per_email,
-            })
+            }
+            
+            print("Segmentation: None")
+            print(metrics)
+
+            return Response(metrics)
     
 from django.shortcuts import render
     

@@ -104,6 +104,47 @@
         .preview-window:hover .view-more-btn {
             opacity: 1;
         }
+        
+        /* Toggle Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -194,18 +235,23 @@
                         
                         <!-- Time Period Selector -->
                         <div class="flex justify-between items-center mb-4">
-                            <div class="space-x-2">
-                                <button class="px-3 py-1 bg-blue-500 text-white rounded-full text-sm hover:bg-blue-600 transition duration-300">24h</button>
-                                <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300">7d</button>
-                                <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300">30d</button>
-                                <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300">Custom</button>
-                            </div>
+                        <div class="space-x-2">
+                            <button class="time-period-btn px-3 py-1 bg-blue-500 text-white rounded-full text-sm hover:bg-blue-600 transition duration-300" data-period="24hrs">24h</button>
+                            <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="7days">7d</button>
+                            <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="1month">30d</button>
+                            <button class="time-period-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm hover:bg-gray-300 transition duration-300" data-period="custom">Custom</button>
+                        </div>
                             <div class="flex items-center">
                                 <span class="mr-2 text-sm text-gray-600">Segmentation</span>
-                                <label class="switch">
+                                <label class="switch mr-2">
                                     <input type="checkbox" id="segmentationToggle">
                                     <span class="slider round"></span>
                                 </label>
+                                <select id="segmentationOption" class="border rounded px-2 py-1 text-sm" disabled>
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
                             </div>
                         </div>
                         
@@ -213,33 +259,35 @@
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                             <div class="bg-blue-100 p-4 rounded-lg">
                                 <h3 class="text-sm font-semibold text-blue-800">Total Sent</h3>
-                                <p class="text-2xl font-bold text-blue-600">0</p>
+                                <p class="text-2xl font-bold text-blue-600 total-sent">0</p>
                             </div>
                             <div class="bg-green-100 p-4 rounded-lg">
                                 <h3 class="text-sm font-semibold text-green-800">Open Rate</h3>
-                                <p class="text-2xl font-bold text-green-600">0%</p>
+                                <p class="text-2xl font-bold text-green-600 open-rate">0%</p>
                             </div>
                             <div class="bg-yellow-100 p-4 rounded-lg">
                                 <h3 class="text-sm font-semibold text-yellow-800">Click Rate</h3>
-                                <p class="text-2xl font-bold text-yellow-600">0%</p>
+                                <p class="text-2xl font-bold text-yellow-600 click-rate">0%</p>
                             </div>
                             <div class="bg-purple-100 p-4 rounded-lg">
                                 <h3 class="text-sm font-semibold text-purple-800">Prospect Quality</h3>
-                                <p class="text-2xl font-bold text-purple-600">0%</p>
+                                <p class="text-2xl font-bold text-purple-600 prospect-quality">0%</p>
                             </div>
                         </div>
                         
                         <!-- Interactive Chart -->
-                        <div class="mb-4">
+                        <div class="mb-4 h-64"> <!-- Set a fixed height for the container -->
                             <div class="flex justify-between items-center mb-2">
                                 <select id="metricSelector" class="border rounded px-2 py-1 text-sm">
-                                    <option value="openRate">Open Rate</option>
-                                    <option value="clickRate">Click Rate</option>
-                                    <option value="bounceRate">Bounce Rate</option>
-                                    <option value="unsubscribeRate">Unsubscribe Rate</option>
+                                    <option value="read_percentage">Open Rate</option>
+                                    <option value="click_rate">Click Rate</option>
+                                    <option value="bounce_rate">Bounce Rate</option>
+                                    <option value="unsubscribe_rate">Unsubscribe Rate</option>
                                 </select>
                             </div>
-                            <div id="chartContainer" class="h-64 bg-gray-100 rounded-lg"></div>
+                            <div class="h-56"> <!-- Create a container for the canvas with a fixed height -->
+                                <canvas id="chartContainer"></canvas>
+                            </div>
                         </div>
                         
                         <!-- View Details Button -->
@@ -266,37 +314,209 @@
         </div>
     </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sidebar = document.getElementById('sidebar');
-        const content = document.getElementById('content');
-        const toggleSidebar = document.getElementById('toggleSidebar');
-        const viewMore = document.getElementById('viewMore');
-        const menuTexts = document.querySelectorAll('.menu-text');
-        const previewWindow = document.getElementById('previewWindow');
-        const emailPreview = previewWindow.querySelector('.email-preview');
+document.addEventListener('DOMContentLoaded', function() {
 
-        toggleSidebar.addEventListener('click', function() {
-            sidebar.classList.toggle('collapsed');
-            content.classList.toggle('expanded');
-            menuTexts.forEach(text => text.classList.toggle('hidden'));
+    // QUADRANT 1
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const toggleSidebar = document.getElementById('toggleSidebar');
+    const viewMore = document.getElementById('viewMore');
+    const menuTexts = document.querySelectorAll('.menu-text');
+    const previewWindow = document.getElementById('previewWindow');
+    const emailPreview = previewWindow.querySelector('.email-preview');
+
+    toggleSidebar.addEventListener('click', function() {
+        sidebar.classList.toggle('collapsed');
+        content.classList.toggle('expanded');
+        menuTexts.forEach(text => text.classList.toggle('hidden'));
+    });
+
+    viewMore.addEventListener('click', function(e) {
+        e.stopPropagation();
+        window.location.href = "{% url 'dashboard' %}";
+    });
+
+    previewWindow.addEventListener('mouseenter', function() {
+        emailPreview.style.transition = 'transform 15s linear';
+        emailPreview.style.transform = `translateY(calc(-100% + 100px))`; // Adjusted to match the new padding
+    });
+
+    previewWindow.addEventListener('mouseleave', function() {
+        emailPreview.style.transition = 'transform 0.5s linear';
+        emailPreview.style.transform = 'translateY(0)';
+    });
+
+    
+    // QUADRANT 2
+    const ctx = document.getElementById('chartContainer').getContext('2d');
+    let chart;
+    let currentData;
+
+    function initChart() {
+        if (chart) {
+            chart.destroy(); // Destroy existing chart if it exists
+        }
+        chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Open Rate',
+                    data: [],
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
         });
+    }
 
-        viewMore.addEventListener('click', function(e) {
-            e.stopPropagation();
-            window.location.href = "{% url 'dashboard' %}";
+    function resizeChart() {
+        if (chart) {
+            chart.resize();
+        }
+    }
+
+    window.addEventListener('resize', resizeChart);
+
+    function updateChart(data) {
+        const metric = document.getElementById('metricSelector').value;
+        if (Array.isArray(data)) {
+            chart.data.labels = data.map(item => item.period);
+            chart.data.datasets[0].data = data.map(item => item[metric]);
+        } else {
+            chart.data.labels = ['Total'];
+            chart.data.datasets[0].data = [data[metric]];
+        }
+        chart.data.datasets[0].label = document.getElementById('metricSelector').options[document.getElementById('metricSelector').selectedIndex].text;
+        chart.update();
+        resizeChart();
+    }
+
+    function updateMetrics(data) {
+        if (Array.isArray(data) && data.length > 0) {
+            // Use the last item (total) for summary cards
+            const totalData = data[data.length - 1];
+            document.querySelector('.total-sent').textContent = totalData.total_sent;
+            document.querySelector('.open-rate').textContent = totalData.read_percentage.toFixed(2) + '%';
+            document.querySelector('.click-rate').textContent = totalData.click_rate.toFixed(2) + '%';
+            document.querySelector('.prospect-quality').textContent = totalData.prospect_quality.toFixed(2) + '%';
+        } else {
+            document.querySelector('.total-sent').textContent = data.total_sent;
+            document.querySelector('.open-rate').textContent = data.read_percentage.toFixed(2) + '%';
+            document.querySelector('.click-rate').textContent = data.click_rate.toFixed(2) + '%';
+            document.querySelector('.prospect-quality').textContent = data.prospect_quality.toFixed(2) + '%';
+        }
+    }
+
+    async function fetchAnalyticsData(params) {
+        try {
+            const response = await fetch('/api/analytics/metrics/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify(params)
+            });
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching analytics data:', error);
+            return null;
+        }
+    }
+
+    function fetchAndUpdateData() {
+        const timePeriod = document.querySelector('.time-period-btn.bg-blue-500').dataset.period;
+        const segmentationToggle = document.getElementById('segmentationToggle');
+        const segmentationOption = document.getElementById('segmentationOption');
+        const params = {
+            time_period: timePeriod,
+            segmentation: segmentationToggle.checked ? segmentationOption.value : null
+        };
+        fetchAnalyticsData(params).then(data => {
+            if (data) {
+                currentData = data;
+                updateMetrics(data);
+                updateChart(data);
+            }
         });
+    }
 
-        previewWindow.addEventListener('mouseenter', function() {
-            emailPreview.style.transition = 'transform 15s linear';
-            emailPreview.style.transform = `translateY(calc(-100% + 100px))`; // Adjusted to match the new padding
-        });
+    // Event listeners
+    document.getElementById('metricSelector').addEventListener('change', function() {
+        updateChart(currentData);
+    });
 
-        previewWindow.addEventListener('mouseleave', function() {
-            emailPreview.style.transition = 'transform 0.3s linear';
-            emailPreview.style.transform = 'translateY(0)';
+    document.getElementById('segmentationToggle').addEventListener('change', function(e) {
+        document.getElementById('segmentationOption').disabled = !e.target.checked;
+        fetchAndUpdateData();
+    });
+
+    document.getElementById('segmentationOption').addEventListener('change', fetchAndUpdateData);
+
+    document.querySelectorAll('.time-period-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.time-period-btn').forEach(b => b.classList.remove('bg-blue-500', 'text-white'));
+            this.classList.add('bg-blue-500', 'text-white');
+            fetchAndUpdateData();
         });
     });
+
+    document.getElementById('viewDetailsBtn').addEventListener('click', function() {
+        console.log('View Details clicked');
+        // Implement view details functionality here
+    });
+
+    // Helper function to get CSRF token
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    // Initialize chart and fetch initial data
+    initChart();
+    fetchAndUpdateData();
+});
+
+// Helper function to get CSRF token
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
 </script>
 </body>
 </html>
