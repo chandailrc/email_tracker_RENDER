@@ -127,7 +127,22 @@ def dashboard(request):
         
         # Prepare data for charts (only for current page)
         email_subjects = [email.subject[:20] + '...' if len(email.subject) > 20 else email.subject for email in page_obj][::-1]
-        email_opens = [email.trackingitem_set.count() for email in page_obj][::-1]
+        
+        email_opens=[]
+        for email in page_obj:
+            lo = 0
+            for item in email.trackingitem_set.filter(item_type='PIXEL'):
+                lo+=item.trackingevent_set.count()
+            email_opens.append(lo)
+        
+        link_opens=[]
+        for email in page_obj:
+            lo = 0
+            for item in email.trackingitem_set.filter(item_type='LINK'):
+                lo+=item.trackingevent_set.count()
+            link_opens.append(lo)
+            
+        print(link_opens[::-1])
         
         subscribed_count = len(emails) - len(unsubscribed_emails)
         unsubscribed_count = len(unsubscribed_emails)
@@ -137,6 +152,7 @@ def dashboard(request):
             'unsubscribed_emails': unsubscribed_emails,
             'email_subjects': email_subjects,
             'email_opens': email_opens,
+            'link_opens': link_opens,
             'subscribed_count': subscribed_count,
             'unsubscribed_count': unsubscribed_count,
         }
@@ -207,8 +223,18 @@ def super_panel(request):
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         
+        link_opens=[]
+        for email in page_obj:
+            lo = 0
+            for item in email.trackingitem_set.filter(item_type='LINK'):
+                lo+=item.trackingevent_set.count()
+            link_opens.append(lo)
+        
+        page_obj_with_link_counts = zip(page_obj, link_opens)
+        
         context = {
-            'page_obj': page_obj, 
+            'page_obj_with_link_counts': page_obj_with_link_counts,
+            'link_opens': link_opens,
             'unsubscribed_emails': unsubscribed_emails,
         }
         
